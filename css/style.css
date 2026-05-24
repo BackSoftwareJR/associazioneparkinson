@@ -5894,8 +5894,8 @@ body:has(.header-over-hero) {
 }
 
 .contatti-box-section {
-  padding-top: 0;
-  margin-top: -1rem;
+  padding-top: 2rem;
+  margin-top: 0;
 }
 
 .contatti-box-grid {
@@ -6030,6 +6030,188 @@ body:has(.header-over-hero) {
 
 .contatti-social-icons a[aria-label="Facebook"]:hover { background: #4267B2; }
 .contatti-social-icons a[aria-label="WhatsApp"]:hover { background: #25D366; }
+
+.contatti-welcome-section {
+  padding-top: 2.5rem;
+  padding-bottom: 0;
+}
+
+.contatti-welcome-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.75rem 2rem;
+  border-radius: var(--section-radius);
+  background: linear-gradient(135deg, rgba(129, 151, 93, 0.1) 0%, rgba(129, 151, 93, 0.04) 100%);
+  border: 1px solid rgba(129, 151, 93, 0.18);
+  box-shadow: 0 8px 28px rgba(81, 119, 87, 0.08);
+}
+
+.contatti-welcome-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.contatti-welcome-text h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  color: var(--secondary);
+}
+
+.contatti-welcome-text p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.contatti-box-section .section-header {
+  margin-bottom: 2.5rem;
+}
+
+.contatti-box-section .section-header .section-title {
+  margin-bottom: 0.75rem;
+}
+
+.contatti-visit-section {
+  padding-top: clamp(3.5rem, 6vw, 5rem);
+}
+
+.contatti-visit-layout {
+  margin-bottom: 3rem;
+}
+
+.contatti-map-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contatti-map-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.contatti-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.35rem;
+  font-size: 0.95rem;
+}
+
+.contatti-visit-note {
+  margin-bottom: 0.75rem !important;
+  display: block !important;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.contatti-directions-title {
+  text-align: center;
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  color: var(--secondary);
+}
+
+.contatti-other-sedi {
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.contatti-other-sedi-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: var(--secondary);
+}
+
+.contatti-other-sedi-lead {
+  max-width: 640px;
+  margin: 0 auto 1.75rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.contatti-other-sedi-grid {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.contatti-other-sedi-link {
+  margin: 1.5rem 0 0;
+}
+
+.contatti-other-sedi-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.contatti-other-sedi-link a:hover {
+  color: var(--secondary);
+  gap: 0.6rem;
+}
+
+.contatti-cta-section {
+  padding-top: 0;
+}
+
+.contatti-callout {
+  max-width: 760px;
+}
+
+.contatti-callout-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.contatti-cta-outline {
+  background: transparent;
+  color: var(--secondary);
+  border: 2px solid rgba(129, 151, 93, 0.45);
+  box-shadow: none;
+}
+
+.contatti-cta-outline:hover {
+  background: rgba(129, 151, 93, 0.1);
+  color: var(--secondary);
+  border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .contatti-welcome-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .contatti-callout-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contatti-callout-actions .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
 
 /* Progetto Africa page – full redesign */
 
