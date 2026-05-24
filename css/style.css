@@ -2536,8 +2536,9 @@ body:has(.header-over-hero) {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.9fr 1.1fr 1fr;
-  gap: 2.5rem 2rem;
+  grid-template-columns: 1.5fr 1fr 1.1fr;
+  gap: 2.5rem 3rem;
+  align-items: start;
 }
 
 .footer-col {
@@ -2631,7 +2632,6 @@ body:has(.header-over-hero) {
 }
 
 .footer-links,
-.footer-sedi-list,
 .footer-contact-list {
   list-style: none;
   margin: 0;
@@ -2656,56 +2656,6 @@ body:has(.header-over-hero) {
 .footer-links a:hover {
   color: var(--primary);
   transform: translateX(4px);
-}
-
-.footer-sedi-list li {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(129, 151, 93, 0.14);
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: #555;
-}
-
-.footer-sedi-list li:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
-.footer-sedi-list strong {
-  display: block;
-  color: var(--secondary);
-  font-size: 0.92rem;
-  margin-bottom: 0.2rem;
-}
-
-.footer-sedi-list a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer-sedi-list a:hover {
-  color: var(--primary);
-}
-
-.footer-sedi-list span {
-  display: block;
-}
-
-.footer-badge {
-  display: inline-block;
-  margin-left: 0.35rem;
-  padding: 0.12rem 0.5rem;
-  border-radius: 999px;
-  background: rgba(129, 151, 93, 0.14);
-  color: var(--secondary);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  vertical-align: middle;
 }
 
 .footer-contact-list li {
@@ -2846,10 +2796,6 @@ body:has(.header-over-hero) {
   .footer-logo-link {
     flex-direction: column;
     text-align: center;
-  }
-
-  .footer-sedi-list li {
-    text-align: left;
   }
 
   .footer-contact-list li {
