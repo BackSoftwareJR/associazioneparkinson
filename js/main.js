@@ -62,9 +62,53 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateSubnavOffset() {
-        const subnav = document.querySelector('.about-anchor-nav, .donations-subnav, .sede-nav');
+        const subnav = document.querySelector('.about-anchor-nav, .act-anchor-nav, .donations-subnav, .sede-nav');
         if (!subnav) return;
         document.documentElement.style.setProperty('--subnav-offset', subnav.offsetHeight + 'px');
+    }
+
+    function syncSubnavStuckStates() {
+        document.querySelectorAll('.page-subnav-sentinel').forEach(function(sentinel) {
+            const subnav = sentinel.nextElementSibling;
+            if (!subnav || !subnav.matches('.about-anchor-nav, .donations-subnav, .sede-nav')) return;
+
+            if (isBottomSubnavLayout()) {
+                subnav.classList.add('is-stuck');
+                return;
+            }
+
+            subnav.classList.toggle('is-stuck', sentinel.getBoundingClientRect().top < getHeaderOffsetPx());
+        });
+    }
+
+    function initPageSubnav() {
+        const subnavs = document.querySelectorAll('.about-anchor-nav, .donations-subnav, .sede-nav');
+        if (!subnavs.length) return;
+
+        subnavs.forEach(function(subnav) {
+            if (subnav.previousElementSibling && subnav.previousElementSibling.classList.contains('page-subnav-sentinel')) {
+                return;
+            }
+
+            const sentinel = document.createElement('div');
+            sentinel.className = 'page-subnav-sentinel';
+            sentinel.setAttribute('aria-hidden', 'true');
+            subnav.parentNode.insertBefore(sentinel, subnav);
+
+            const stuckObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (isBottomSubnavLayout()) return;
+                    subnav.classList.toggle('is-stuck', !entry.isIntersecting);
+                });
+            }, {
+                rootMargin: '-' + getHeaderOffsetPx() + 'px 0px 0px 0px',
+                threshold: 0
+            });
+
+            stuckObserver.observe(sentinel);
+        });
+
+        syncSubnavStuckStates();
     }
 
     function isBottomSubnavLayout() {
@@ -158,8 +202,12 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollHeader();
     initActiveNavLink();
     initHeroHeader();
+    initPageSubnav();
     updateHeaderOffset();
-    window.addEventListener('resize', updateHeaderOffset);
+    window.addEventListener('resize', function() {
+        updateHeaderOffset();
+        syncSubnavStuckStates();
+    });
 
     if (mobileMenuBtn && navWrapper) {
         mobileMenuBtn.addEventListener('click', function() {
@@ -652,28 +700,50 @@ document.addEventListener('DOMContentLoaded', function() {
         var subnav = document.querySelector('.donations-subnav');
         if (!subnav) return;
 
-        var links = subnav.querySelectorAll('.donations-subnav-link');
-        var sections = [];
+        var links = Array.from(subnav.querySelectorAll('.donations-subnav-link'));
+        var sections = links
+            .map(function(link) {
+                var href = link.getAttribute('href');
+                return href && href.charAt(0) === '#' ? document.querySelector(href) : null;
+            })
+            .filter(Boolean);
+
+        if (!links.length || !sections.length) return;
+
         links.forEach(function(link) {
-            var id = link.getAttribute('href');
-            if (id && id.charAt(0) === '#') {
-                var section = document.querySelector(id);
-                if (section) sections.push({ link: link, section: section });
-            }
+            link.addEventListener('click', function(event) {
+                var href = link.getAttribute('href');
+                if (!href || href.charAt(0) !== '#') return;
+
+                var target = document.querySelector(href);
+                if (!target) return;
+
+                event.preventDefault();
+                var top = target.getBoundingClientRect().top + window.scrollY - getAnchorScrollOffset(subnav);
+
+                window.scrollTo({
+                    top: top,
+                    behavior: reduceMotion ? 'auto' : 'smooth'
+                });
+            });
         });
 
-        function updateActive() {
-            var scrollPos = window.scrollY + (isBottomSubnavLayout() ? getHeaderOffsetPx() + 16 : 120);
-            var current = sections[0];
-            sections.forEach(function(item) {
-                if (item.section.offsetTop <= scrollPos) current = item;
+        var sectionObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) return;
+                var id = entry.target.id;
+                links.forEach(function(link) {
+                    link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+                });
             });
-            links.forEach(function(l) { l.classList.remove('is-active'); });
-            if (current) current.link.classList.add('is-active');
-        }
+        }, {
+            threshold: 0.35,
+            rootMargin: getAnchorObserverRootMargin(subnav)
+        });
 
-        window.addEventListener('scroll', updateActive, { passive: true });
-        updateActive();
+        sections.forEach(function(section) {
+            sectionObserver.observe(section);
+        });
     }
 
     initDonationsSubnav();
