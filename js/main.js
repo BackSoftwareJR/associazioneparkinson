@@ -197,4 +197,137 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    function initHeroCarousel() {
+        const carousel = document.getElementById('hero-carousel');
+        if (!carousel) return;
+
+        const slides = Array.from(carousel.querySelectorAll('.hero-slide'));
+        const prevBtn = carousel.querySelector('.hero-carousel-prev');
+        const nextBtn = carousel.querySelector('.hero-carousel-next');
+        const dotsContainer = carousel.querySelector('.hero-carousel-dots');
+        const statusEl = document.getElementById('hero-carousel-status');
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!slides.length || !dotsContainer) return;
+
+        let currentIndex = slides.findIndex(slide => slide.classList.contains('is-active'));
+        if (currentIndex < 0) currentIndex = 0;
+
+        let autoplayTimer = null;
+        const autoplayDelay = 6000;
+
+        function getSlideLabel(slide) {
+            const tag = slide.querySelector('.hero-slide-tag');
+            const text = slide.querySelector('.hero-slide-text');
+            return [tag ? tag.textContent.trim() : '', text ? text.textContent.trim() : '']
+                .filter(Boolean)
+                .join(': ');
+        }
+
+        function announceSlide(index) {
+            if (!statusEl) return;
+            statusEl.textContent = 'Foto ' + (index + 1) + ' di ' + slides.length + '. ' + getSlideLabel(slides[index]);
+        }
+
+        function setActiveSlide(index) {
+            currentIndex = (index + slides.length) % slides.length;
+
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('is-active', i === currentIndex);
+            });
+
+            dotsContainer.querySelectorAll('.hero-carousel-dot').forEach((dot, i) => {
+                const isActive = i === currentIndex;
+                dot.classList.toggle('is-active', isActive);
+                dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                dot.tabIndex = isActive ? 0 : -1;
+            });
+
+            announceSlide(currentIndex);
+        }
+
+        slides.forEach((slide, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'hero-carousel-dot' + (index === currentIndex ? ' is-active' : '');
+            dot.setAttribute('role', 'tab');
+            dot.setAttribute('aria-label', 'Mostra foto ' + (index + 1) + ': ' + getSlideLabel(slide));
+            dot.setAttribute('aria-selected', index === currentIndex ? 'true' : 'false');
+            dot.tabIndex = index === currentIndex ? 0 : -1;
+
+            dot.addEventListener('click', function() {
+                setActiveSlide(index);
+                restartAutoplay();
+            });
+
+            dotsContainer.appendChild(dot);
+        });
+
+        function nextSlide() {
+            setActiveSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            setActiveSlide(currentIndex - 1);
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function startAutoplay() {
+            if (reducedMotion || slides.length < 2) return;
+            stopAutoplay();
+            autoplayTimer = setInterval(nextSlide, autoplayDelay);
+        }
+
+        function restartAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+                prevSlide();
+                restartAutoplay();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                nextSlide();
+                restartAutoplay();
+            });
+        }
+
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+        carousel.addEventListener('focusin', stopAutoplay);
+        carousel.addEventListener('focusout', function(event) {
+            if (!carousel.contains(event.relatedTarget)) {
+                startAutoplay();
+            }
+        });
+
+        carousel.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                prevSlide();
+                restartAutoplay();
+            } else if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                nextSlide();
+                restartAutoplay();
+            }
+        });
+
+        setActiveSlide(currentIndex);
+        startAutoplay();
+    }
+
+    initHeroCarousel();
 });
