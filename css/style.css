@@ -5888,6 +5888,156 @@ body:has(.header-over-hero) {
   gap: 0.55rem;
 }
 
+/* Homepage – Vieni a trovarci */
+.section-home-visit {
+  background: linear-gradient(180deg, var(--background) 0%, #f4f7f1 100%);
+  padding-top: clamp(4rem, 7vw, 5.5rem);
+  padding-bottom: clamp(4rem, 7vw, 5.5rem);
+}
+
+.home-visit-card {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 0;
+  align-items: stretch;
+  border-radius: calc(var(--section-radius) + 6px);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid rgba(129, 151, 93, 0.16);
+  box-shadow: 0 16px 48px rgba(81, 119, 87, 0.12);
+}
+
+.home-visit-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 4vw, 3rem);
+  background: linear-gradient(145deg, rgba(129, 151, 93, 0.08) 0%, rgba(244, 247, 241, 0.95) 100%);
+}
+
+.home-visit-header {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.home-visit-header .section-eyebrow {
+  margin: 0 0 0.85rem;
+  display: inline-flex;
+}
+
+.home-visit-header .section-title {
+  text-align: left;
+  margin-bottom: 1rem;
+  font-size: clamp(1.85rem, 3.5vw, 2.35rem);
+  color: var(--secondary);
+}
+
+.home-visit-header .section-subtitle {
+  text-align: left;
+  margin: 0;
+  max-width: none;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.home-visit-highlights {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  margin: 0 0 1.75rem;
+  padding: 0;
+}
+
+.home-visit-highlights li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(129, 151, 93, 0.12);
+  border: 1px solid rgba(129, 151, 93, 0.2);
+  color: var(--secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.home-visit-highlights i {
+  color: var(--primary);
+}
+
+.home-visit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+
+.home-visit-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.65rem;
+  border-radius: 999px;
+  background: #25D366;
+  border: 2px solid #25D366;
+  color: #fff;
+  font-size: 1.02rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28);
+}
+
+.home-visit-whatsapp-btn i {
+  font-size: 1.35rem;
+}
+
+.home-visit-whatsapp-btn:hover {
+  background: #1da851;
+  border-color: #1da851;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+}
+
+.home-visit-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.home-visit-secondary-link:hover {
+  color: var(--primary);
+  gap: 0.65rem;
+}
+
+.home-visit-visual {
+  position: relative;
+  margin: 0;
+  min-height: 280px;
+}
+
+.home-visit-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 280px;
+}
+
+.home-visit-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(244, 247, 241, 0.35) 0%, transparent 25%);
+  pointer-events: none;
+}
+
 /* Contatti */
 .contatti-hero-section {
   padding-bottom: 0;
@@ -7111,8 +7261,24 @@ body:has(.header-over-hero) {
 
 @media (max-width: 900px) {
   .home-africa-showcase,
-  .home-donations-layout {
+  .home-donations-layout,
+  .home-visit-card {
     grid-template-columns: 1fr;
+  }
+
+  .home-visit-visual {
+    order: -1;
+    max-height: 260px;
+  }
+
+  .home-visit-visual img {
+    min-height: 260px;
+    max-height: 260px;
+  }
+
+  .home-visit-actions {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .home-africa-visual-panel {
