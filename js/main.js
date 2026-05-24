@@ -507,14 +507,68 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initAboutPage();
 
+    function showCopyToast(message) {
+        var toast = document.querySelector('.copy-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.className = 'copy-toast';
+            toast.setAttribute('role', 'status');
+            toast.setAttribute('aria-live', 'polite');
+            document.body.appendChild(toast);
+        }
+        toast.innerHTML = '<i class="fas fa-check-circle" aria-hidden="true"></i> ' + message;
+        toast.classList.add('is-visible');
+        clearTimeout(toast._hideTimer);
+        toast._hideTimer = setTimeout(function() {
+            toast.classList.remove('is-visible');
+        }, 2500);
+    }
+
     window.copyToClipboard = function(text) {
         if (!navigator.clipboard) {
             return;
         }
         navigator.clipboard.writeText(text).then(function() {
-            alert('Copiato negli appunti!');
+            showCopyToast('Copiato negli appunti!');
         }).catch(function(err) {
             console.error('Errore durante la copia:', err);
         });
     };
+
+    document.addEventListener('click', function(event) {
+        var btn = event.target.closest('[data-copy]');
+        if (!btn) return;
+        var text = btn.getAttribute('data-copy');
+        if (text) copyToClipboard(text);
+    });
+
+    function initDonationsSubnav() {
+        var subnav = document.querySelector('.donations-subnav');
+        if (!subnav) return;
+
+        var links = subnav.querySelectorAll('.donations-subnav-link');
+        var sections = [];
+        links.forEach(function(link) {
+            var id = link.getAttribute('href');
+            if (id && id.charAt(0) === '#') {
+                var section = document.querySelector(id);
+                if (section) sections.push({ link: link, section: section });
+            }
+        });
+
+        function updateActive() {
+            var scrollPos = window.scrollY + 120;
+            var current = sections[0];
+            sections.forEach(function(item) {
+                if (item.section.offsetTop <= scrollPos) current = item;
+            });
+            links.forEach(function(l) { l.classList.remove('is-active'); });
+            if (current) current.link.classList.add('is-active');
+        }
+
+        window.addEventListener('scroll', updateActive, { passive: true });
+        updateActive();
+    }
+
+    initDonationsSubnav();
 });

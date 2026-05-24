@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=221">
-    <script src="js/main.js?v=221" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=222">
+    <script src="js/main.js?v=222" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
@@ -40,9 +40,9 @@
                     <a href="donazioni.html" class="nav-cta"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
                 </div>
                 <div class="header-actions">
-                    <a href="tel:+393474539988" class="header-contact" aria-label="Chiamaci al 347 4539988">
+                    <a href="tel:+393793258612" class="header-contact" aria-label="Chiamaci al +39 379 325 8612">
                         <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                        <span class="header-contact-text">347 4539988</span>
+                        <span class="header-contact-text">+39 379 325 8612</span>
                     </a>
                     <button type="button" class="mobile-menu-btn" aria-label="Apri menu di navigazione" aria-expanded="false">
                         <i class="fas fa-bars" aria-hidden="true"></i>
@@ -346,28 +346,74 @@
         <!-- Sezione Donazioni -->
         <section class="section section-home-donations" aria-labelledby="donations-heading">
             <div class="container">
-                <header class="section-header">
+                <header class="section-header reveal" data-reveal>
                     <p class="section-eyebrow"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Sostienici</p>
                     <h2 class="section-title" id="donations-heading">Come puoi aiutarci</h2>
                     <p class="section-subtitle">Ogni contributo, grande o piccolo, ci permette di continuare ad offrire attività gratuite e supporto nel Canavese.</p>
                 </header>
-                <div class="home-donations-grid">
-                    <article class="home-donation-card">
-                        <h3>Dona il tuo 5×1000</h3>
-                        <p>Il tuo contributo può fare la differenza nella vita di molte persone, senza alcun costo aggiuntivo.</p>
-                        <div class="home-donation-highlight">
-                            <p>Codice Fiscale: <strong>92518680019</strong></p>
+
+                <div class="home-donations-layout reveal" data-reveal data-reveal-delay="1">
+                    <article class="home-donations-spotlight" aria-labelledby="home-5x1000-title">
+                        <div class="home-donations-spotlight-glow" aria-hidden="true"></div>
+                        <div class="home-donations-spotlight-inner">
+                            <span class="home-donations-badge"><i class="fas fa-gift" aria-hidden="true"></i> Non ti costa nulla</span>
+                            <h3 id="home-5x1000-title">Dona il tuo 5×1000</h3>
+                            <p class="home-donations-spotlight-lead">Destina una parte delle tue imposte al volontariato: basta indicare il nostro codice fiscale nel modulo della dichiarazione dei redditi.</p>
+
+                            <div class="home-donations-cf" role="group" aria-label="Codice fiscale per il 5 per mille">
+                                <span class="home-donations-cf-label">Codice Fiscale</span>
+                                <div class="home-donations-cf-row">
+                                    <code class="home-donations-cf-value">92518680019</code>
+                                    <button type="button" class="copy-button copy-button--compact" data-copy="92518680019" aria-label="Copia codice fiscale">
+                                        <i class="fas fa-copy" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <ol class="home-donations-steps">
+                                <li>
+                                    <span class="home-donations-step-num" aria-hidden="true">1</span>
+                                    <span class="home-donations-step-text">Compila il 730, CU o Unico</span>
+                                </li>
+                                <li>
+                                    <span class="home-donations-step-num" aria-hidden="true">2</span>
+                                    <span class="home-donations-step-text">Firma il riquadro volontariato</span>
+                                </li>
+                                <li>
+                                    <span class="home-donations-step-num" aria-hidden="true">3</span>
+                                    <span class="home-donations-step-text">Inserisci il nostro CF</span>
+                                </li>
+                            </ol>
+
+                            <a href="donazioni.html#5x1000" class="cta-button home-donations-spotlight-cta">
+                                Guida passo passo <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <a href="donazioni.html#5x1000" class="cta-button">Come donare il 5×1000</a>
                     </article>
-                    <article class="home-donation-card">
-                        <h3>Diventa Socio</h3>
-                        <p>Con soli 30€ all'anno potrai sostenere le nostre attività e ricevere vantaggi esclusivi.</p>
-                        <div class="home-donation-highlight">
-                            <p>Quota annuale: <strong>30€</strong></p>
-                        </div>
-                        <a href="donazioni.html#socio" class="cta-button">Scopri i vantaggi</a>
-                    </article>
+
+                    <div class="home-donations-options">
+                        <article class="home-donations-option-card">
+                            <div class="home-donations-option-icon" aria-hidden="true"><i class="fas fa-id-card"></i></div>
+                            <h3>Diventa Socio</h3>
+                            <p>Con soli 30€ all'anno sostieni le nostre attività e ricevi vantaggi esclusivi.</p>
+                            <span class="home-donations-option-meta">da 30€ / anno</span>
+                            <a href="donazioni.html#socio" class="home-donations-option-link">Scopri i vantaggi <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        </article>
+
+                        <article class="home-donations-option-card">
+                            <div class="home-donations-option-icon" aria-hidden="true"><i class="fas fa-university"></i></div>
+                            <h3>Bonifico</h3>
+                            <p>Effettua una donazione libera con bonifico bancario diretto.</p>
+                            <a href="donazioni.html#donazioni" class="home-donations-option-link">Vedi IBAN <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        </article>
+
+                        <article class="home-donations-option-card">
+                            <div class="home-donations-option-icon" aria-hidden="true"><i class="fas fa-hands-helping"></i></div>
+                            <h3>Volontariato</h3>
+                            <p>Il tuo tempo è il dono più prezioso che puoi offrire alla comunità.</p>
+                            <a href="donazioni.html#volontariato" class="home-donations-option-link">Unisciti a noi <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -433,7 +479,7 @@
                 <div class="footer-col">
                     <h3 class="footer-heading">Contatti</h3>
                     <ul class="footer-contact-list">
-                        <li><a href="tel:+393474539988"><i class="fas fa-phone-alt" aria-hidden="true"></i> 347 4539988</a></li>
+                        <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
                         <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
                         <li><a href="mailto:assoparkcanavese@pec.it"><i class="fas fa-shield-alt" aria-hidden="true"></i> assoparkcanavese@pec.it</a> <span class="footer-note">(PEC)</span></li>
                         <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> P.le Pietro Nenni 1<br>10081 Castellamonte (TO)</li>
@@ -441,7 +487,7 @@
                     <h3 class="footer-heading footer-heading--social">Seguici</h3>
                     <div class="footer-social">
                         <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="https://wa.me/3474539988" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/393793258612" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                         <a href="mailto:assoparkinsoncanavese@virgilio.it" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                     </div>
                 </div>

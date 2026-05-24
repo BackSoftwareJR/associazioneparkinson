@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=220">
-    <script src="js/main.js?v=220" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=222">
+    <script src="js/main.js?v=222" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
@@ -40,9 +40,9 @@
                     <a href="donazioni.html" class="nav-cta active"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
                 </div>
                 <div class="header-actions">
-                    <a href="tel:+393474539988" class="header-contact" aria-label="Chiamaci al 347 4539988">
+                    <a href="tel:+393793258612" class="header-contact" aria-label="Chiamaci al +39 379 325 8612">
                         <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                        <span class="header-contact-text">347 4539988</span>
+                        <span class="header-contact-text">+39 379 325 8612</span>
                     </a>
                     <button type="button" class="mobile-menu-btn" aria-label="Apri menu di navigazione" aria-expanded="false">
                         <i class="fas fa-bars" aria-hidden="true"></i>
@@ -59,256 +59,299 @@
                 <div class="hero-text hero-text--center">
                     <p class="hero-badge"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Sostieni la nostra missione</p>
                     <h1 id="donazioni-heading" class="hero-title">Sostienici</h1>
-                    <p class="hero-lead">La nostra associazione vive grazie all'impegno dei volontari ma anche al sostegno di tutti coloro che credono nei nostri progetti. Sostenerci significa contribuire direttamente a migliorare la vita delle persone con Parkinson del nostro territorio.</p>
+                    <p class="hero-lead">La nostra associazione vive grazie all'impegno dei volontari e al sostegno di chi crede nei nostri progetti. Ogni contributo ci aiuta a offrire attività gratuite e supporto concreto nel Canavese.</p>
                     <ul class="hero-trust" aria-label="Modalità di sostegno">
                         <li><i class="fas fa-file-invoice" aria-hidden="true"></i> 5×1000</li>
                         <li><i class="fas fa-university" aria-hidden="true"></i> Bonifico</li>
                         <li><i class="fas fa-id-card" aria-hidden="true"></i> Diventa socio</li>
+                        <li><i class="fas fa-hands-helping" aria-hidden="true"></i> Volontariato</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Sezione 5x1000 -->
-        <section id="5x1000" class="section cinque-per-mille-section">
+        <nav class="donations-subnav" aria-label="Sezioni donazioni">
             <div class="container">
-                <div class="cinque-per-mille-content">
-                    <div class="cinque-per-mille-text">
-                        <h2 class="section-title">Dona il tuo 5x1000</h2>
-                        <p class="section-subtitle">Un gesto che non costa nulla ma vale tanto</p>
-                        <div class="tax-code-box">
-                            <span>Il nostro codice fiscale:</span>
-                            <strong>92518680019</strong>
-                            <button class="copy-button" onclick="copyToClipboard('92518680019')">
-                                <i class="fas fa-copy"></i> Copia
-                            </button>
+                <ul class="donations-subnav-list">
+                    <li><a href="#5x1000" class="donations-subnav-link"><i class="fas fa-file-invoice" aria-hidden="true"></i> 5×1000</a></li>
+                    <li><a href="#donazioni" class="donations-subnav-link"><i class="fas fa-university" aria-hidden="true"></i> Dona</a></li>
+                    <li><a href="#socio" class="donations-subnav-link"><i class="fas fa-id-card" aria-hidden="true"></i> Socio</a></li>
+                    <li><a href="#volontariato" class="donations-subnav-link"><i class="fas fa-hands-helping" aria-hidden="true"></i> Volontari</a></li>
+                    <li><a href="#trasparenza" class="donations-subnav-link"><i class="fas fa-chart-pie" aria-hidden="true"></i> Trasparenza</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Sezione 5×1000 -->
+        <section id="5x1000" class="section donations-5x1000-section">
+            <div class="container">
+                <header class="section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-gift" aria-hidden="true"></i> Gratuito per te</p>
+                    <h2 class="section-title">Dona il tuo 5×1000</h2>
+                    <p class="section-subtitle">Un gesto semplice che non costa nulla, ma vale tantissimo per chi vive il Parkinson nel nostro territorio.</p>
+                </header>
+
+                <div class="donations-5x1000-grid reveal" data-reveal data-reveal-delay="1">
+                    <div class="donations-5x1000-content">
+                        <div class="donations-cf-card">
+                            <div class="donations-cf-card-header">
+                                <i class="fas fa-fingerprint" aria-hidden="true"></i>
+                                <span>Il nostro Codice Fiscale</span>
+                            </div>
+                            <div class="donations-cf-card-body">
+                                <code class="donations-cf-value">92518680019</code>
+                                <button type="button" class="copy-button" data-copy="92518680019">
+                                    <i class="fas fa-copy" aria-hidden="true"></i> Copia
+                                </button>
+                            </div>
+                            <p class="donations-cf-hint">Indicalo nel riquadro "Sostegno del volontariato e delle altre organizzazioni non lucrative..."</p>
                         </div>
-                        <div class="steps-grid">
-                            <div class="step-card">
-                                <div class="step-number">1</div>
-                                <h3>Compila il modulo</h3>
-                                <p>Nel modulo della dichiarazione dei redditi (730, CU, Unico)</p>
-                            </div>
-                            <div class="step-card">
-                                <div class="step-number">2</div>
-                                <h3>Firma il riquadro</h3>
-                                <p>Firma il riquadro "Sostegno del volontariato..."</p>
-                            </div>
-                            <div class="step-card">
-                                <div class="step-number">3</div>
-                                <h3>Inserisci il CF</h3>
-                                <p>Indica il nostro codice fiscale sotto la firma</p>
-                            </div>
-                        </div>
+
+                        <ol class="donations-steps">
+                            <li class="donations-step">
+                                <span class="donations-step-num" aria-hidden="true">1</span>
+                                <div class="donations-step-body">
+                                    <h3>Compila il modulo</h3>
+                                    <p>Nel modulo della dichiarazione dei redditi (730, CU, Unico)</p>
+                                </div>
+                            </li>
+                            <li class="donations-step">
+                                <span class="donations-step-num" aria-hidden="true">2</span>
+                                <div class="donations-step-body">
+                                    <h3>Firma il riquadro</h3>
+                                    <p>Firma il riquadro dedicato al sostegno del volontariato</p>
+                                </div>
+                            </li>
+                            <li class="donations-step">
+                                <span class="donations-step-num" aria-hidden="true">3</span>
+                                <div class="donations-step-body">
+                                    <h3>Inserisci il CF</h3>
+                                    <p>Scrivi il nostro codice fiscale sotto la firma</p>
+                                </div>
+                            </li>
+                        </ol>
                     </div>
-                    <div class="cinque-per-mille-image">
-                        <!-- Box illustrativo compilazione 5x1000 -->
-                        <div class="cf-example-box">
-                            <div class="cf-example-title">Esempio compilazione 5x1000</div>
-                            <div class="cf-form-row">
-                                <span class="cf-label">Codice fiscale del beneficiario (ODV):</span>
-                                <span class="cf-code">92518680019</span>
+
+                    <aside class="donations-form-preview" aria-label="Esempio compilazione 5 per mille">
+                        <div class="donations-form-preview-header">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
+                            <span>Esempio di compilazione</span>
+                        </div>
+                        <div class="donations-form-preview-body">
+                            <div class="donations-form-field">
+                                <label>Sostegno del volontariato</label>
+                                <div class="donations-form-checkbox">
+                                    <span class="donations-form-check" aria-hidden="true"><i class="fas fa-check"></i></span>
+                                    <span>Firma del contribuente</span>
+                                </div>
                             </div>
-                            <div class="cf-form-row">
-                                <span class="cf-label">Firma:</span>
-                                <span class="cf-signature">Mario Rossi</span>
+                            <div class="donations-form-field">
+                                <label>Codice fiscale del beneficiario (ODV)</label>
+                                <div class="donations-form-input donations-form-input--highlight">92518680019</div>
+                            </div>
+                            <div class="donations-form-field">
+                                <label>Firma</label>
+                                <div class="donations-form-signature">Mario Rossi</div>
                             </div>
                         </div>
-                    </div>
+                        <p class="donations-form-preview-note"><i class="fas fa-info-circle" aria-hidden="true"></i> Verifica sempre i dati sul modulo ufficiale dell'Agenzia delle Entrate.</p>
+                    </aside>
                 </div>
             </div>
         </section>
 
         <!-- Sezione Donazioni -->
-        <section id="donazioni" class="section donation-section">
+        <section id="donazioni" class="section donations-methods-section section-alt">
             <div class="container">
-                <h2 class="section-title">Come puoi donare</h2>
-                <p class="section-subtitle">Scegli la modalità di donazione che preferisci</p>
-                
-                <div class="donation-methods-grid">
-                    <div class="donation-method-card">
-                        <div class="method-image">
-                            <img src="images/palestra-1.jpg" alt="Bonifico Bancario" class="method-img">
-                        </div>
-                        <div class="method-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
+                <header class="section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> Dona ora</p>
+                    <h2 class="section-title">Come puoi donare</h2>
+                    <p class="section-subtitle">Scegli la modalità più comoda per te</p>
+                </header>
+
+                <div class="donations-methods-grid reveal" data-reveal data-reveal-delay="1">
+                    <article class="donations-method-card donations-method-card--featured">
+                        <div class="donations-method-icon" aria-hidden="true"><i class="fas fa-university"></i></div>
                         <h3>Bonifico Bancario</h3>
                         <p>Intestato a: Associazione Parkinsoniani del Canavese ODV ETS</p>
-                        <div class="method-details">
-                            <p><strong>IBAN:</strong> IT29D 02008 30300 0001 0341 2287</p>
-                            <p><strong>Causale:</strong> Donazione liberale a favore dell'Associazione Parkinsoniani del Canavese</p>
-                            <button class="copy-button" onclick="copyToClipboard('IT29D 02008 30300 0001 0341 2287')">
-                                <i class="fas fa-copy"></i> Copia IBAN
+                        <div class="donations-method-details">
+                            <div class="donations-detail-row">
+                                <span class="donations-detail-label">IBAN</span>
+                                <code class="donations-detail-value">IT29D 02008 30300 0001 0341 2287</code>
+                            </div>
+                            <div class="donations-detail-row">
+                                <span class="donations-detail-label">Causale</span>
+                                <span class="donations-detail-text">Donazione liberale a favore dell'Associazione Parkinsoniani del Canavese</span>
+                            </div>
+                            <button type="button" class="copy-button copy-button--outline" data-copy="IT29D0200830300000103412287">
+                                <i class="fas fa-copy" aria-hidden="true"></i> Copia IBAN
                             </button>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="donation-method-card">
-                        <div class="method-image">
-                            <img src="images/conferenza.jpg" alt="PayPal" class="method-img method-img--muted">
-                        </div>
-                        <div class="method-icon">
-                            <i class="fas fa-hand-holding-heart"></i>
-                        </div>
+                    <article class="donations-method-card donations-method-card--soon">
+                        <div class="donations-method-icon" aria-hidden="true"><i class="fab fa-paypal"></i></div>
                         <h3>PayPal <span class="badge-soon">Presto in arrivo</span></h3>
-                        <p>Dona in modo sicuro e veloce tramite PayPal</p>
-                        <div class="method-details">
-                            <a href="#" class="paypal-button disabled" aria-disabled="true" tabindex="-1">
-                                <i class="fab fa-paypal"></i> Dona con PayPal
-                            </a>
+                        <p>Dona in modo sicuro e veloce tramite PayPal. Stiamo attivando questa opzione.</p>
+                        <div class="donations-method-details">
+                            <span class="donations-soon-badge"><i class="fas fa-clock" aria-hidden="true"></i> Disponibile a breve</span>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="donation-method-card">
-                        <div class="method-image">
-                            <img src="images/canti e merenda a S.Stefano di Candia.jpg" alt="Donazione di persona" class="method-img">
-                        </div>
-                        <div class="method-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
+                    <article class="donations-method-card">
+                        <div class="donations-method-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
                         <h3>Di Persona</h3>
-                        <p>Vieni a trovarci in una delle nostre sedi</p>
-                        <div class="method-details">
-                            <a href="sedi.html" class="link-button">
-                                <i class="fas fa-map-marker-alt"></i> Trova la sede più vicina
+                        <p>Vieni a trovarci in una delle nostre sedi per consegnare la tua donazione di persona.</p>
+                        <div class="donations-method-details">
+                            <a href="sedi.html" class="donations-method-link">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Trova la sede più vicina
                             </a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Sezione Diventa Socio -->
-        <section id="socio" class="section member-section">
+        <section id="socio" class="section donations-support-section">
             <div class="container">
-                <div class="member-content">
-                    <div class="member-text">
-                        <h2 class="section-title">Diventa Socio</h2>
-                        <p class="section-subtitle">Entra a far parte della nostra famiglia</p>
-                        <div class="membership-benefits">
-                            <h3>Tipologie di Socio</h3>
-                            <ul class="benefits-list">
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    <span><strong>Socio volontario:</strong> € 20/anno (per chi offre il proprio tempo come volontario)</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    <span><strong>Socio amico (ordinario):</strong> € 30/anno (per persone con Parkinson, familiari, amici)</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    <span><strong>Familiare aggiunto:</strong> € 10/anno (per ogni ulteriore familiare di un socio già iscritto)</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    <span>Partecipazione a tutte le attività dell'associazione</span>
-                                </li>
-                            </ul>
+                <div class="donations-support-grid">
+                    <article class="donations-support-card reveal" data-reveal>
+                        <div class="donations-support-card-header">
+                            <div class="donations-support-icon" aria-hidden="true"><i class="fas fa-id-card"></i></div>
+                            <div>
+                                <h2 class="section-title donations-support-title">Diventa Socio</h2>
+                                <p class="section-subtitle donations-support-subtitle">Entra a far parte della nostra famiglia</p>
+                            </div>
                         </div>
-                        <div class="membership-fee">
-                            <div class="fee-amount">
-                                <span class="currency">€</span>
-                                <span class="amount">30</span>
-                                <span class="period">/anno</span>
+
+                        <ul class="donations-benefits-list">
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                <span><strong>Socio volontario:</strong> € 20/anno (per chi offre il proprio tempo come volontario)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                <span><strong>Socio amico (ordinario):</strong> € 30/anno (per persone con Parkinson, familiari, amici)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                <span><strong>Familiare aggiunto:</strong> € 10/anno (per ogni ulteriore familiare di un socio già iscritto)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                <span>Partecipazione a tutte le attività dell'associazione</span>
+                            </li>
+                        </ul>
+
+                        <div class="donations-fee-box">
+                            <div class="donations-fee-amount">
+                                <span class="donations-fee-currency">€</span>
+                                <span class="donations-fee-value">30</span>
+                                <span class="donations-fee-period">/anno</span>
                             </div>
                             <a href="contatti.html" class="cta-button">Diventa Socio</a>
                         </div>
-                    </div>
-                    <div class="member-image">
-                        <img src="images/palestra-1.jpg" alt="Tessera socio" class="rounded-image">
-                    </div>
-                </div>
-            </div>
-        </section>
+                    </article>
 
-        <!-- Sezione Volontariato -->
-        <section class="section member-section section-alt">
-            <div class="container">
-                <div class="member-content">
-                    <div class="member-text">
-                        <h2 class="section-title">Diventa Volontario</h2>
-                        <p class="section-subtitle">Il dono più prezioso che puoi fare è il tuo tempo</p>
-                        <div class="membership-benefits">
-                            <h3>Come puoi aiutarci</h3>
-                            <ul class="benefits-list">
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    <span>Accompagnare i malati con i nostri mezzi</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    <span>Supportare gli istruttori durante le attività motorie</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    <span>Dare una mano nell'organizzazione di eventi</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    <span>Fare compagnia per permettere riposo ai caregiver</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    <span>Svolgere piccole mansioni di segreteria</span>
-                                </li>
-                            </ul>
+                    <article id="volontariato" class="donations-support-card donations-support-card--alt reveal" data-reveal data-reveal-delay="1">
+                        <div class="donations-support-card-header">
+                            <div class="donations-support-icon" aria-hidden="true"><i class="fas fa-hands-helping"></i></div>
+                            <div>
+                                <h2 class="section-title donations-support-title">Diventa Volontario</h2>
+                                <p class="section-subtitle donations-support-subtitle">Il dono più prezioso è il tuo tempo</p>
+                            </div>
                         </div>
-                        <div class="membership-fee">
-                            <div class="fee-amount">
-                                <span class="currency">❤️</span>
-                                <span class="amount">Tempo</span>
-                                <span class="period">e Passione</span>
+
+                        <ul class="donations-benefits-list">
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                <span>Accompagnare i malati con i nostri mezzi</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                <span>Supportare gli istruttori durante le attività motorie</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                <span>Dare una mano nell'organizzazione di eventi</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                <span>Fare compagnia per permettere riposo ai caregiver</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                <span>Svolgere piccole mansioni di segreteria</span>
+                            </li>
+                        </ul>
+
+                        <div class="donations-fee-box">
+                            <div class="donations-fee-amount donations-fee-amount--heart">
+                                <span class="donations-fee-heart" aria-hidden="true">❤️</span>
+                                <span class="donations-fee-value">Tempo</span>
+                                <span class="donations-fee-period">e Passione</span>
                             </div>
                             <a href="contatti.html" class="cta-button">Diventa Volontario</a>
                         </div>
-                    </div>
-                    <div class="member-image">
-                        <img src="images/passeg.jpeg" alt="Volontariato attività di gruppo" class="rounded-image">
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Sezione Trasparenza -->
-        <section class="section transparency-section">
+        <section id="trasparenza" class="section donations-transparency-section section-alt">
             <div class="container">
-                <h2 class="section-title">Trasparenza</h2>
-                <p class="section-subtitle">Come utilizziamo le tue donazioni</p>
-                
-                <div class="transparency-grid">
-                    <div class="transparency-card">
-                        <div class="percentage">70%</div>
+                <header class="section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-chart-pie" aria-hidden="true"></i> Trasparenza</p>
+                    <h2 class="section-title">Come utilizziamo le tue donazioni</h2>
+                    <p class="section-subtitle">Ogni euro viene impiegato con cura per sostenere le nostre attività nel Canavese</p>
+                </header>
+
+                <div class="donations-transparency-grid reveal" data-reveal data-reveal-delay="1">
+                    <article class="donations-transparency-card">
+                        <div class="donations-transparency-percent">70%</div>
+                        <div class="donations-progress" role="presentation">
+                            <div class="donations-progress-bar" style="width: 70%"></div>
+                        </div>
                         <h3>Attività e Servizi</h3>
-                        <p>Finanziamento delle attività terapeutiche e ricreative</p>
-                    </div>
-                    <div class="transparency-card">
-                        <div class="percentage">20%</div>
+                        <p>Finanziamento delle attività terapeutiche e ricreative gratuite</p>
+                    </article>
+                    <article class="donations-transparency-card">
+                        <div class="donations-transparency-percent">20%</div>
+                        <div class="donations-progress" role="presentation">
+                            <div class="donations-progress-bar" style="width: 20%"></div>
+                        </div>
                         <h3>Ricerca</h3>
-                        <p>Supporto alla ricerca sul Parkinson</p>
-                    </div>
-                    <div class="transparency-card">
-                        <div class="percentage">10%</div>
+                        <p>Supporto alla ricerca scientifica sul Parkinson</p>
+                    </article>
+                    <article class="donations-transparency-card">
+                        <div class="donations-transparency-percent">10%</div>
+                        <div class="donations-progress" role="presentation">
+                            <div class="donations-progress-bar" style="width: 10%"></div>
+                        </div>
                         <h3>Gestione</h3>
-                        <p>Costi di gestione e amministrazione</p>
-                    </div>
+                        <p>Costi di gestione e amministrazione dell'associazione</p>
+                    </article>
                 </div>
 
-                <div class="documents-section">
+                <div class="donations-documents reveal" data-reveal data-reveal-delay="2">
                     <h3>Documenti</h3>
-                    <div class="documents-grid">
-                        <a href="#" class="document-link">
-                            <i class="fas fa-file-pdf"></i>
+                    <div class="donations-documents-grid">
+                        <a href="#" class="donations-document-link">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
                             <span>Bilancio 2024</span>
+                            <i class="fas fa-download donations-document-dl" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="document-link">
-                            <i class="fas fa-file-pdf"></i>
+                        <a href="#" class="donations-document-link">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
                             <span>Relazione attività 2024</span>
+                            <i class="fas fa-download donations-document-dl" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="document-link">
-                            <i class="fas fa-file-pdf"></i>
+                        <a href="#" class="donations-document-link">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
                             <span>Statuto</span>
+                            <i class="fas fa-download donations-document-dl" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -376,7 +419,7 @@
                 <div class="footer-col">
                     <h3 class="footer-heading">Contatti</h3>
                     <ul class="footer-contact-list">
-                        <li><a href="tel:+393474539988"><i class="fas fa-phone-alt" aria-hidden="true"></i> 347 4539988</a></li>
+                        <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
                         <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
                         <li><a href="mailto:assoparkcanavese@pec.it"><i class="fas fa-shield-alt" aria-hidden="true"></i> assoparkcanavese@pec.it</a> <span class="footer-note">(PEC)</span></li>
                         <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> P.le Pietro Nenni 1<br>10081 Castellamonte (TO)</li>
@@ -384,7 +427,7 @@
                     <h3 class="footer-heading footer-heading--social">Seguici</h3>
                     <div class="footer-social">
                         <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="https://wa.me/3474539988" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/393793258612" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                         <a href="mailto:assoparkinsoncanavese@virgilio.it" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                     </div>
                 </div>
