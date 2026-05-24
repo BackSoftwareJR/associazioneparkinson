@@ -162,33 +162,121 @@
         </section>
 
         <!-- Le Nostre Attività -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-activities" id="attivita" aria-labelledby="activities-heading">
             <div class="container">
-                <h2 class="section-title">Le Nostre Attività</h2>
-                <div class="activities-grid">
-                    <div class="activity-item">
-                        <i class="fas fa-walking activity-icon"></i>
-                        <h3>Attività Motorie</h3>
-                        <p>Ginnastica dolce, Tai Chi, passeggiate di gruppo e palestra riabilitativa</p>
-                    </div>
-                    <div class="activity-item">
-                        <i class="fas fa-laugh activity-icon"></i>
-                        <h3>Yoga della Risata</h3>
-                        <p>Sessioni di risata indotta e respirazione per migliorare l'umore</p>
-                    </div>
-                    <div class="activity-item">
-                        <i class="fas fa-brain activity-icon"></i>
-                        <h3>Laboratori Cognitivi</h3>
-                        <p>Stimolazione cognitiva, musicoterapia e attività creative</p>
-                    </div>
-                    <div class="activity-item">
-                        <i class="fas fa-users activity-icon"></i>
-                        <h3>Gruppi di Supporto</h3>
-                        <p>Auto-mutuo aiuto e incontri con esperti per malati e caregiver</p>
-                    </div>
+                <header class="activities-showcase-header">
+                    <p class="section-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> Benessere a 360°</p>
+                    <h2 class="section-title" id="activities-heading">Le Nostre Attività</h2>
+                    <p class="section-subtitle">Un approccio multidisciplinare che unisce movimento, mente e socialità. Scegli una categoria per scoprire cosa offriamo — tutte le attività sono gratuite per gli associati.</p>
+                </header>
+
+                <div class="activities-nav" role="tablist" aria-label="Categorie attività">
+                    <button type="button" class="activities-nav-btn is-active" role="tab" id="activities-tab-0" aria-selected="true" aria-controls="activities-panel-0" data-activity-index="0">
+                        <i class="fas fa-walking" aria-hidden="true"></i>
+                        <span>Motorie</span>
+                    </button>
+                    <button type="button" class="activities-nav-btn" role="tab" id="activities-tab-1" aria-selected="false" aria-controls="activities-panel-1" data-activity-index="1" tabindex="-1">
+                        <i class="fas fa-laugh" aria-hidden="true"></i>
+                        <span>Yoga della risata</span>
+                    </button>
+                    <button type="button" class="activities-nav-btn" role="tab" id="activities-tab-2" aria-selected="false" aria-controls="activities-panel-2" data-activity-index="2" tabindex="-1">
+                        <i class="fas fa-brain" aria-hidden="true"></i>
+                        <span>Cognitive</span>
+                    </button>
+                    <button type="button" class="activities-nav-btn" role="tab" id="activities-tab-3" aria-selected="false" aria-controls="activities-panel-3" data-activity-index="3" tabindex="-1">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <span>Supporto</span>
+                    </button>
                 </div>
-                <div style="text-align: center; margin-top: 3rem;">
+
+                <div class="activities-track" id="activities-track">
+                    <article class="activities-card is-active" id="activities-panel-0" role="tabpanel" aria-labelledby="activities-tab-0" data-activity-index="0">
+                        <a href="attivita.html" class="activities-card-link">
+                            <div class="activities-card-media">
+                                <img src="images/palestra-1.jpg" alt="Palestra riabilitativa con attrezzi a movimento assistito" width="480" height="300" loading="lazy">
+                                <span class="activities-card-icon" aria-hidden="true"><i class="fas fa-walking"></i></span>
+                            </div>
+                            <div class="activities-card-body">
+                                <h3>Attività Motorie</h3>
+                                <p>Ginnastica dolce, Tai Chi, passeggiate di gruppo e palestra riabilitativa con macchinari assistiti.</p>
+                                <ul class="activities-card-tags" aria-label="Esempi di attività">
+                                    <li><i class="fas fa-dumbbell" aria-hidden="true"></i> Palestra</li>
+                                    <li><i class="fas fa-hiking" aria-hidden="true"></i> Passeggiate</li>
+                                    <li><i class="fas fa-spa" aria-hidden="true"></i> Tai Chi</li>
+                                </ul>
+                                <span class="activities-card-cta">Scopri di più <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="activities-card" id="activities-panel-1" role="tabpanel" aria-labelledby="activities-tab-1" data-activity-index="1">
+                        <a href="attivita.html" class="activities-card-link">
+                            <div class="activities-card-media">
+                                <img src="images/canti e merenda a S.Stefano di Candia.jpg" alt="Gruppo durante un'attività di socialità e benessere" width="480" height="300" loading="lazy">
+                                <span class="activities-card-icon" aria-hidden="true"><i class="fas fa-laugh"></i></span>
+                            </div>
+                            <div class="activities-card-body">
+                                <h3>Yoga della Risata</h3>
+                                <p>Sessioni di risata indotta e respirazione guidata per alleggerire lo stress e migliorare l'umore in gruppo.</p>
+                                <ul class="activities-card-tags" aria-label="Caratteristiche">
+                                    <li><i class="fas fa-wind" aria-hidden="true"></i> Respirazione</li>
+                                    <li><i class="fas fa-smile" aria-hidden="true"></i> Benessere</li>
+                                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tutte le sedi</li>
+                                </ul>
+                                <span class="activities-card-cta">Scopri di più <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="activities-card" id="activities-panel-2" role="tabpanel" aria-labelledby="activities-tab-2" data-activity-index="2">
+                        <a href="attivita.html" class="activities-card-link">
+                            <div class="activities-card-media">
+                                <img src="images/conferenza.jpg" alt="Laboratorio cognitivo e momenti di apprendimento di gruppo" width="480" height="300" loading="lazy">
+                                <span class="activities-card-icon" aria-hidden="true"><i class="fas fa-brain"></i></span>
+                            </div>
+                            <div class="activities-card-body">
+                                <h3>Laboratori Cognitivi</h3>
+                                <p>Stimolazione cognitiva, musicoterapia, canto corale e laboratori manuali per allenare mente e creatività.</p>
+                                <ul class="activities-card-tags" aria-label="Esempi di laboratori">
+                                    <li><i class="fas fa-music" aria-hidden="true"></i> Musicoterapia</li>
+                                    <li><i class="fas fa-puzzle-piece" aria-hidden="true"></i> Memoria</li>
+                                    <li><i class="fas fa-palette" aria-hidden="true"></i> Creatività</li>
+                                </ul>
+                                <span class="activities-card-cta">Scopri di più <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="activities-card" id="activities-panel-3" role="tabpanel" aria-labelledby="activities-tab-3" data-activity-index="3">
+                        <a href="attivita.html" class="activities-card-link">
+                            <div class="activities-card-media">
+                                <img src="images/new-images/img19.jpg" alt="Incontro di gruppo di auto-mutuo aiuto" width="480" height="300" loading="lazy">
+                                <span class="activities-card-icon" aria-hidden="true"><i class="fas fa-users"></i></span>
+                            </div>
+                            <div class="activities-card-body">
+                                <h3>Gruppi di Supporto</h3>
+                                <p>Auto-mutuo aiuto, incontri con esperti e spazi di ascolto dedicati a malati, familiari e caregiver.</p>
+                                <ul class="activities-card-tags" aria-label="Tipi di supporto">
+                                    <li><i class="fas fa-comments" aria-hidden="true"></i> Ascolto</li>
+                                    <li><i class="fas fa-user-md" aria-hidden="true"></i> Esperti</li>
+                                    <li><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Caregiver</li>
+                                </ul>
+                                <span class="activities-card-cta">Scopri di più <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="activities-dots" aria-label="Navigazione attività">
+                    <button type="button" class="activities-dot is-active" aria-label="Attività motorie" data-activity-index="0" aria-current="true"></button>
+                    <button type="button" class="activities-dot" aria-label="Yoga della risata" data-activity-index="1"></button>
+                    <button type="button" class="activities-dot" aria-label="Laboratori cognitivi" data-activity-index="2"></button>
+                    <button type="button" class="activities-dot" aria-label="Gruppi di supporto" data-activity-index="3"></button>
+                </div>
+
+                <div class="activities-showcase-footer">
                     <a href="attivita.html" class="cta-button">Scopri tutte le attività</a>
+                    <a href="contatti.html" class="activities-showcase-contact-link"><i class="fas fa-calendar-check" aria-hidden="true"></i> Chiedi informazioni per partecipare</a>
                 </div>
             </div>
         </section>
