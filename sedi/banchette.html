@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css?v=209">
+    <script src="../js/main.js?v=209" defer></script>
 </head>
 <body>
     <header class="header">
@@ -52,140 +52,145 @@
     </header>
 
     <main>
-        <!-- Breadcrumb -->
         <div class="breadcrumb">
             <div class="container">
                 <a href="../index.html">Home</a> / <a href="../sedi.html">Le Nostre Sedi</a> / Banchette
             </div>
         </div>
 
-        <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="container">
-                <h1>Banchette – Sede Operativa</h1>
-                <p>La sede di Banchette rappresenta la volontà dell'associazione di essere presente capillarmente sul territorio. Inaugurata nel febbraio 2021, è situata a Banchette d'Ivrea, nei locali dell'ex consultorio ASL.</p>
+        <section class="sede-hero sede-hero--banchette" aria-labelledby="sede-title">
+            <div class="sede-hero-bg" aria-hidden="true"></div>
+            <div class="container sede-hero-inner">
+                <span class="sede-hero-badge">Sede Operativa · Canavese orientale</span>
+                <h1 id="sede-title">Banchette d'Ivrea</h1>
+                <p class="sede-hero-lead">Inaugurata nel febbraio 2021, questa sede ci permette di essere vicini alle famiglie dell'area di Ivrea con incontri di supporto, laboratori e attività di gruppo.</p>
             </div>
         </section>
 
-        <!-- Informazioni Sede -->
-        <section class="section">
+        <nav class="sede-nav" aria-label="Navigazione tra le sedi">
             <div class="container">
-                <div class="location-grid">
-                    <div class="location-info">
-                        <div class="info-card">
-                            <h2><i class="fas fa-map-marker-alt"></i> Indirizzo</h2>
+                <ul class="sede-nav-list">
+                    <li><a href="castellamonte.html" class="sede-nav-link"><i class="fas fa-building" aria-hidden="true"></i> Castellamonte</a></li>
+                    <li><a href="banchette.html" class="sede-nav-link is-active"><i class="fas fa-building" aria-hidden="true"></i> Banchette d'Ivrea</a></li>
+                    <li><a href="san-maurizio.html" class="sede-nav-link"><i class="fas fa-hospital" aria-hidden="true"></i> San Maurizio Canavese</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="sede-quick-actions">
+            <div class="container sede-quick-actions-inner">
+                <a href="tel:+393474539988" class="sede-action-btn sede-action-btn--primary"><i class="fas fa-phone-alt" aria-hidden="true"></i> Chiama 347 4539988</a>
+                <a href="mailto:assoparkinsoncanavese@virgilio.it" class="sede-action-btn"><i class="fas fa-envelope" aria-hidden="true"></i> Scrivici</a>
+                <a href="https://maps.google.com/?q=Via+Samone+24,+Banchette+d'Ivrea" target="_blank" rel="noopener noreferrer" class="sede-action-btn"><i class="fas fa-directions" aria-hidden="true"></i> Indicazioni stradali</a>
+            </div>
+        </div>
+
+        <section class="section section-sede-info">
+            <div class="container">
+                <div class="sede-info-layout">
+                    <div class="sede-info-cards">
+                        <div class="sede-info-card">
+                            <h2><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Indirizzo</h2>
                             <address>
                                 Ex Consultorio ASL<br>
                                 Via Samone 24<br>
                                 10010 Banchette d'Ivrea (TO)
                             </address>
                         </div>
-                        
-                        <div class="contact-info">
-                            <h3>Contatti</h3>
-                            <p><i class="fas fa-phone"></i> <a href="tel:3474539988">347 4539988</a></p>
-                            <p><i class="fas fa-envelope"></i> <a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></p>
-                        </div>
-
-                        <div class="opening-hours">
-                            <h3><i class="fas fa-clock"></i> Orari di Apertura</h3>
-                            <ul>
-                                <li><span>Lunedì - Venerdì:</span> <span>Su appuntamento</span></li>
-                                <li><span>Sabato:</span> <span>Su appuntamento</span></li>
-                                <li><span>Domenica:</span> <span>Chiuso</span></li>
+                        <div class="sede-info-card">
+                            <h3><i class="fas fa-clock" aria-hidden="true"></i> Orari</h3>
+                            <ul class="sede-hours-list">
+                                <li><span>Lunedì – Venerdì</span> <span>Su appuntamento</span></li>
+                                <li><span>Sabato</span> <span>Su appuntamento</span></li>
+                                <li><span>Domenica</span> <span>Chiuso</span></li>
                             </ul>
                         </div>
+                        <div class="sede-info-card">
+                            <h3><i class="fas fa-address-book" aria-hidden="true"></i> Contatti</h3>
+                            <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+393474539988">347 4539988</a></p>
+                            <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></p>
+                        </div>
                     </div>
-
-                    <div class="location-map">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.1234567890123!2d7.712345678901234!3d45.44567890123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDI2JzQ0LjQiTiA3wrA0Mic0NC40IkU!5e0!3m2!1sit!2sit!4v1234567890123"
-                            width="100%" 
-                            height="400" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
+                    <div class="sede-map-wrap">
+                        <iframe
+                            title="Mappa sede Banchette d'Ivrea"
+                            src="https://maps.google.com/maps?q=Via+Samone+24,+10010+Banchette+d'Ivrea+TO,+Italia&amp;hl=it&amp;z=15&amp;output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
                         </iframe>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Attività Specifiche -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-sede-alt">
             <div class="container">
                 <h2 class="section-title">Attività a Banchette</h2>
-                <div class="activities-grid">
-                    <div class="activity-card">
+                <p class="section-subtitle">Incontri di ascolto, formazione e momenti conviviali per la comunità locale.</p>
+                <div class="activities-grid sede-activities-grid">
+                    <article class="activity-card">
                         <div class="activity-image">
-                            <img src="../images/P7240367SITO.jpg" alt="Incontri di supporto a Banchette" style="width: 100%; height: 200px; object-fit: cover;">
+                            <img src="../images/P7240367SITO.jpg" alt="Incontri di supporto a Banchette" loading="lazy">
                         </div>
                         <div class="activity-content">
                             <h3>Incontri di Supporto</h3>
-                            <p>Incontri di supporto per malati e caregiver, dove i partecipanti possono condividere esperienze e ricevere consigli professionali.</p>
+                            <p>Spazi di condivisione per malati e caregiver, con scambio di esperienze e consigli professionali.</p>
                             <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> Periodici</li>
-                                <li><i class="far fa-calendar"></i> Su calendario</li>
-                                <li><i class="fas fa-users"></i> Gruppi locali</li>
+                                <li><i class="far fa-clock" aria-hidden="true"></i> Periodici</li>
+                                <li><i class="far fa-calendar" aria-hidden="true"></i> Su calendario</li>
+                                <li><i class="fas fa-users" aria-hidden="true"></i> Gruppi locali</li>
                             </ul>
                         </div>
-                    </div>
-
-                    <div class="activity-card">
+                    </article>
+                    <article class="activity-card">
                         <div class="activity-image">
-                            <img src="../images/conferenza.jpg" alt="Incontri con esperti a Banchette" style="width: 100%; height: 200px; object-fit: cover;">
+                            <img src="../images/conferenza.jpg" alt="Incontri con esperti a Banchette" loading="lazy">
                         </div>
                         <div class="activity-content">
                             <h3>Incontri con Esperti</h3>
-                            <p>Incontri informativi con medici specialisti e psicologi, dove i partecipanti possono condividere le proprie esperienze e ricevere consigli professionali.</p>
+                            <p>Appuntamenti informativi con medici specialisti e psicologi per rispondere a domande e dubbi.</p>
                             <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> Periodici</li>
-                                <li><i class="far fa-calendar"></i> Su calendario</li>
-                                <li><i class="fas fa-user-md"></i> Medici specialisti</li>
+                                <li><i class="far fa-clock" aria-hidden="true"></i> Periodici</li>
+                                <li><i class="fas fa-user-md" aria-hidden="true"></i> Medici specialisti</li>
+                                <li><i class="fas fa-comments" aria-hidden="true"></i> Dialogo aperto</li>
                             </ul>
                         </div>
-                    </div>
-
-                    <div class="activity-card">
+                    </article>
+                    <article class="activity-card">
                         <div class="activity-image">
-                            <img src="../images/canti e merenda a S.Stefano di Candia.jpg" alt="Laboratori ricreativi a Banchette" style="width: 100%; height: 200px; object-fit: cover;">
+                            <img src="../images/canti e merenda a S.Stefano di Candia.jpg" alt="Laboratori ricreativi a Banchette" loading="lazy">
                         </div>
                         <div class="activity-content">
                             <h3>Laboratori Ricreativi</h3>
-                            <p>Piccoli laboratori ricreativi e sessioni di esercizio fisico adeguato al gruppo locale, come ginnastica dolce o sessioni di rilassamento.</p>
+                            <p>Ginnastica dolce, sessioni di rilassamento e attività creative pensate per il gruppo locale.</p>
                             <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> Variabile</li>
-                                <li><i class="far fa-calendar"></i> Su richiesta</li>
-                                <li><i class="fas fa-palette"></i> Attività creative</li>
+                                <li><i class="far fa-calendar" aria-hidden="true"></i> Su richiesta</li>
+                                <li><i class="fas fa-palette" aria-hidden="true"></i> Attività creative</li>
+                                <li><i class="fas fa-walking" aria-hidden="true"></i> Esercizio dolce</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Servizio Trasporti -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Servizio Trasporti</h2>
-                <div class="card" style="max-width: 800px; margin: 0 auto;">
-                    <div class="card-content">
-                        <h3><i class="fas fa-bus"></i> Il Nostro Pulmino</h3>
-                        <p>Spesso da Banchette parte il nostro pulmino per raccogliere i partecipanti e portarli ad eventi o gite sociali organizzate. Partecipiamo a uscite in gruppo, convegni e altre iniziative.</p>
-                        <p>Se hai difficoltà a raggiungere la sede, contattaci: potremo organizzare il trasporto per te!</p>
-                        <a href="../contatti.html" class="cta-button">Richiedi Trasporto</a>
-                    </div>
+                <div class="sede-callout">
+                    <h3><i class="fas fa-bus" aria-hidden="true"></i> Servizio Trasporti</h3>
+                    <p>Da Banchette parte spesso il nostro pulmino per eventi, gite sociali e convegni. Se hai difficoltà a raggiungere la sede, contattaci: organizzeremo il trasporto per te.</p>
+                    <a href="../contatti.html" class="cta-button">Richiedi Trasporto</a>
                 </div>
             </div>
         </section>
 
-        <!-- Come Raggiungerci -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-sede-alt">
             <div class="container">
                 <h2 class="section-title">Come Raggiungerci</h2>
                 <div class="directions-grid">
                     <div class="direction-card">
-                        <i class="fas fa-car"></i>
+                        <i class="fas fa-car" aria-hidden="true"></i>
                         <h3>In Auto</h3>
                         <ul>
                             <li>Dall'autostrada A5: uscita Ivrea, seguire indicazioni per Banchette</li>
@@ -194,7 +199,7 @@
                         </ul>
                     </div>
                     <div class="direction-card">
-                        <i class="fas fa-bus"></i>
+                        <i class="fas fa-bus" aria-hidden="true"></i>
                         <h3>Con i Trasporti Pubblici</h3>
                         <ul>
                             <li>Linea bus GTT: fermata "Banchette - Via Samone"</li>
@@ -203,20 +208,36 @@
                         </ul>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="https://maps.google.com/?q=Via+Samone+24,+Banchette+d'Ivrea" target="_blank" class="directions-button">
-                        <i class="fas fa-directions"></i> Ottieni Indicazioni
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Altre Sedi</h2>
+                <div class="sede-other-locations">
+                    <a href="castellamonte.html" class="sede-other-card">
+                        <img src="../images/new-images/img15.jpg" alt="" width="72" height="72" loading="lazy">
+                        <div>
+                            <h4>Castellamonte</h4>
+                            <span>P.le P. Nenni 1 · Sede legale</span>
+                        </div>
+                    </a>
+                    <a href="san-maurizio.html" class="sede-other-card">
+                        <img src="../images/sanmaurizio1.jpg" alt="" width="72" height="72" loading="lazy">
+                        <div>
+                            <h4>San Maurizio Canavese</h4>
+                            <span>Via Fatebenefratelli 70 · Ospedale</span>
+                        </div>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="section cta-section">
             <div class="container">
                 <div class="cta-content">
                     <h2>Vieni a Conoscerci a Banchette!</h2>
-                    <p>Se vivi nell'area di Ivrea e dintorni, la sede di Banchette è a tua disposizione! Contattaci per sapere quando si riunisce il gruppo locale.</p>
+                    <p>Se vivi nell'area di Ivrea e dintorni, la sede di Banchette è a tua disposizione. Contattaci per sapere quando si riunisce il gruppo locale.</p>
                     <div class="cta-buttons">
                         <a href="../contatti.html" class="cta-button">Contattaci</a>
                         <a href="../attivita.html" class="cta-button secondary">Scopri le Attività</a>

@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=209">
+    <script src="js/main.js?v=209" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
@@ -29,7 +29,7 @@
                 <div class="nav-wrapper">
                     <div class="nav-pill">
                         <ul class="nav-menu">
-                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="index.html" class="nav-link active">Home</a></li>
                             <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
                             <li><a href="#" class="nav-link nav-link-sedi" id="sedi-dropdown-trigger">Sedi <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
                             <li><a href="attivita.html" class="nav-link">Attività</a></li>
@@ -79,7 +79,7 @@
 
                 <div class="hero-visual">
                 <div class="hero-carousel-wrap">
-                    <div class="hero-carousel" id="hero-carousel" role="region" aria-label="Le nostre attività ed eventi" aria-roledescription="carosello">
+                    <div class="hero-carousel" id="hero-carousel" role="region" aria-label="Le nostre attività ed eventi" aria-roledescription="carosello" tabindex="0">
                         <span class="hero-carousel-counter" id="hero-carousel-counter" aria-hidden="true">1 / 6</span>
                         <div class="hero-carousel-progress" aria-hidden="true"><span class="hero-carousel-progress-bar" id="hero-carousel-progress"></span></div>
                         <div class="hero-carousel-track" id="hero-carousel-track">
@@ -176,40 +176,79 @@
         </section>
 
         <!-- Le Nostre Sedi -->
-        <section class="section">
+        <section class="section section-sedi" id="sedi" aria-labelledby="sedi-heading">
             <div class="container">
-                <h2 class="section-title">Le Nostre Sedi</h2>
-                <div class="grid">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/new-images/img15.jpg" alt="Palestra riabilitativa di Castellamonte" style="width: 100%; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="card-content">
-                            <h3>Castellamonte - Sede Legale</h3>
-                            <p>Sede principale presso la Casa della Salute, con palestra riabilitativa e attività motorie assistite.</p>
-                            <a href="sedi/castellamonte.html" class="cta-button">Scopri di più</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/P7240367SITO.jpg" alt="Sede di Banchette d'Ivrea" style="width: 100%; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="card-content">
-                            <h3>Banchette d'Ivrea</h3>
-                            <p>Sede operativa nell'ex consultorio ASL, punto di riferimento per il Canavese orientale.</p>
-                            <a href="sedi/banchette.html" class="cta-button">Scopri di più</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/sanmaurizio1.jpg" alt="Ospedale Fatebenefratelli di San Maurizio Canavese" style="width: 100%; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="card-content">
-                            <h3>San Maurizio Canavese</h3>
-                            <p>Sede presso l'Ospedale Fatebenefratelli, specializzata in riabilitazione e supporto ospedaliero.</p>
-                            <a href="sedi/san-maurizio.html" class="cta-button">Scopri di più</a>
-                        </div>
-                    </div>
+                <header class="sedi-showcase-header">
+                    <p class="section-eyebrow"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Presenza sul territorio</p>
+                    <h2 class="section-title" id="sedi-heading">Le Nostre Sedi</h2>
+                    <p class="section-subtitle">Tre punti di riferimento nel Canavese per accoglierti, informarti e accompagnarti. Ogni sede offre attività e supporto dedicati alla comunità locale.</p>
+                </header>
+
+                <div class="sedi-showcase-grid">
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/castellamonte.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/new-images/img15.jpg" alt="Palestra riabilitativa presso la sede di Castellamonte" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge">Sede Legale</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>Castellamonte</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> P.le P. Nenni 1 · Casa della Salute</p>
+                                <p class="sedi-showcase-desc">Sede principale con palestra riabilitativa, attività motorie assistite e punto informativo per famiglie e volontari.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-dumbbell" aria-hidden="true"></i> Palestra</li>
+                                    <li><i class="fas fa-info-circle" aria-hidden="true"></i> Orientamento</li>
+                                    <li><i class="fas fa-users" aria-hidden="true"></i> Gruppi</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/banchette.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/P7240367SITO.jpg" alt="Sede operativa di Banchette d'Ivrea" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge sedi-showcase-badge--alt">Canavese orientale</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>Banchette d'Ivrea</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Via Samone 24 · Ex Consultorio ASL</p>
+                                <p class="sedi-showcase-desc">Punto di riferimento per Ivrea e dintorni: incontri di supporto, laboratori e attività di gruppo dal 2021.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-comments" aria-hidden="true"></i> Ascolto</li>
+                                    <li><i class="fas fa-user-md" aria-hidden="true"></i> Esperti</li>
+                                    <li><i class="fas fa-bus" aria-hidden="true"></i> Trasporti</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/san-maurizio.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/sanmaurizio1.jpg" alt="Sede presso l'Ospedale Fatebenefratelli di San Maurizio Canavese" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge sedi-showcase-badge--alt">Basso Canavese</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>San Maurizio Canavese</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Via Fatebenefratelli 70 · Ospedale</p>
+                                <p class="sedi-showcase-desc">Sede ospedaliera per riabilitazione, incontri formativi e continuità assistenziale con il Fatebenefratelli.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-hospital" aria-hidden="true"></i> Riabilitazione</li>
+                                    <li><i class="fas fa-graduation-cap" aria-hidden="true"></i> Formazione</li>
+                                    <li><i class="fas fa-handshake" aria-hidden="true"></i> Follow-up</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="sedi-showcase-footer">
+                    <a href="sedi.html" class="cta-button cta-secondary">Vedi tutte le sedi e la mappa</a>
+                    <a href="contatti.html" class="sedi-showcase-contact-link"><i class="fas fa-calendar-check" aria-hidden="true"></i> Prenota una visita su appuntamento</a>
                 </div>
             </div>
         </section>

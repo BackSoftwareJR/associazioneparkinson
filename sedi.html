@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=209">
+    <script src="js/main.js?v=209" defer></script>
 </head>
 <body>
     <header class="header">
@@ -52,115 +52,124 @@
     </header>
 
     <main>
-        <!-- Breadcrumb -->
         <div class="breadcrumb">
             <div class="container">
                 <a href="index.html">Home</a> / Le Nostre Sedi
             </div>
         </div>
 
-        <!-- Hero Section -->
         <section class="page-hero">
             <div class="container">
                 <h1>Le Nostre Sedi</h1>
-                <p>L'associazione è presente su tutto il territorio del Canavese attraverso tre sedi operative, per essere più vicini ai malati e alle loro famiglie in diverse zone del territorio.</p>
+                <p>L'associazione è presente su tutto il territorio del Canavese attraverso tre sedi operative, per essere più vicini ai malati e alle loro famiglie.</p>
             </div>
         </section>
 
-        <!-- Mappa delle Sedi -->
-        <section class="section">
+        <section class="section section-sedi">
+            <div class="container">
+                <div class="sedi-showcase-grid">
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/castellamonte.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/new-images/img15.jpg" alt="Sede di Castellamonte" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge">Sede Legale</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>Castellamonte</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> P.le P. Nenni 1 · Casa della Salute</p>
+                                <p class="sedi-showcase-desc">Palestra riabilitativa, attività motorie assistite e punto informativo per famiglie e volontari.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-dumbbell" aria-hidden="true"></i> Palestra</li>
+                                    <li><i class="fas fa-info-circle" aria-hidden="true"></i> Orientamento</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/banchette.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/P7240367SITO.jpg" alt="Sede di Banchette d'Ivrea" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge sedi-showcase-badge--alt">Canavese orientale</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>Banchette d'Ivrea</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Via Samone 24 · Ex Consultorio ASL</p>
+                                <p class="sedi-showcase-desc">Incontri di supporto, laboratori e attività di gruppo per Ivrea e dintorni.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-comments" aria-hidden="true"></i> Ascolto</li>
+                                    <li><i class="fas fa-bus" aria-hidden="true"></i> Trasporti</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/san-maurizio.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/sanmaurizio1.jpg" alt="Sede di San Maurizio Canavese" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge sedi-showcase-badge--alt">Basso Canavese</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>San Maurizio Canavese</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Via Fatebenefratelli 70 · Ospedale</p>
+                                <p class="sedi-showcase-desc">Riabilitazione, incontri formativi e continuità assistenziale con il Fatebenefratelli.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-hospital" aria-hidden="true"></i> Riabilitazione</li>
+                                    <li><i class="fas fa-graduation-cap" aria-hidden="true"></i> Formazione</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-sede-alt">
             <div class="container">
                 <h2 class="section-title">Dove Siamo</h2>
-                <div class="map-container" style="margin-bottom: 3rem;">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.1234567890123!2d7.712345678901234!3d45.44567890123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDI2JzQ0LjQiTiA3wrA0Mic0NC40IkU!5e0!3m2!1sit!2sit!4v1234567890123"
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
+                <p class="section-subtitle">Tre punti nel Canavese per raggiungerci comodamente da ogni zona del territorio.</p>
+                <div class="sede-map-wrap sede-map-wrap--wide">
+                    <iframe
+                        title="Mappa delle sedi nel Canavese"
+                        src="https://maps.google.com/maps?q=Canavese,+Piemonte,+Italia&amp;hl=it&amp;z=10&amp;output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
                     </iframe>
                 </div>
             </div>
         </section>
 
-        <!-- Le Tre Sedi -->
-        <section class="section" style="background-color: var(--light-bg);">
-            <div class="container">
-                <h2 class="section-title">Le Nostre Sedi Operative</h2>
-                <div class="locations-grid">
-                    <div class="location-card">
-                        <div class="location-content">
-                            <h3>Banchette d'Ivrea</h3>
-                            <p>La sede di Banchette rappresenta la volontà dell'associazione di essere presente capillarmente sul territorio. Inaugurata nel febbraio 2021, è situata nei locali dell'ex consultorio ASL.</p>
-                            <ul class="location-details">
-                                <li><i class="fas fa-map-marker-alt"></i> Ex Consultorio ASL, Via Samone 24</li>
-                                <li><i class="fas fa-users"></i> Incontri di supporto per malati e caregiver</li>
-                                <li><i class="fas fa-user-md"></i> Incontri con medici specialisti</li>
-                                <li><i class="fas fa-bus"></i> Punto di partenza per gite sociali</li>
-                            </ul>
-                            <a href="sedi/banchette.html" class="cta-button">Scopri di più</a>
-                        </div>
-                    </div>
-
-                    <div class="location-card">
-                        <div class="location-content">
-                            <h3>San Maurizio Canavese</h3>
-                            <p>La sede di San Maurizio Canavese si trova all'interno del Presidio Ospedaliero Fatebenefratelli. Ha un ruolo strategico nella zona del basso Canavese e in un contesto ospedaliero specializzato.</p>
-                            <ul class="location-details">
-                                <li><i class="fas fa-map-marker-alt"></i> Ospedale Fatebenefratelli, Via Fatebenefratelli 70</li>
-                                <li><i class="fas fa-hospital"></i> Collaborazione con personale sanitario</li>
-                                <li><i class="fas fa-graduation-cap"></i> Incontri formativi e conferenze</li>
-                                <li><i class="fas fa-handshake"></i> Continuità assistenziale post-ospedaliera</li>
-                            </ul>
-                            <a href="sedi/san-maurizio.html" class="cta-button">Scopri di più</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Servizio Trasporti -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Servizio Trasporti</h2>
-                <div class="card" style="max-width: 800px; margin: 0 auto;">
-                    <div class="card-content">
-                        <h3><i class="fas fa-bus"></i> Non Lasciamo Soli i Nostri Associati</h3>
-                        <p>Grazie a contributi ricevuti e alla collaborazione con enti locali, l'associazione dispone di due autovetture attrezzate con autisti volontari, messe a disposizione dei malati non automuniti.</p>
-                        <p>Offriamo un servizio di trasporto gratuito (o a offerta simbolica) per accompagnare i pazienti presso centri di fisioterapia, ospedali o presso le nostre sedi per le varie attività, garantendo così che nessuno debba rinunciare a un'occasione di cura o socializzazione per problemi logistici.</p>
-                        <a href="contatti.html" class="cta-button">Richiedi Trasporto</a>
-                    </div>
+                <div class="sede-callout">
+                    <h3><i class="fas fa-bus" aria-hidden="true"></i> Servizio Trasporti</h3>
+                    <p>Grazie a contributi ricevuti e alla collaborazione con enti locali, l'associazione dispone di autovetture attrezzate con autisti volontari per accompagnare i malati non automuniti.</p>
+                    <p>Offriamo un servizio di trasporto gratuito (o a offerta simbolica) per centri di fisioterapia, ospedali e le nostre sedi, così nessuno debba rinunciare a cura o socializzazione per problemi logistici.</p>
+                    <a href="contatti.html" class="cta-button">Richiedi Trasporto</a>
                 </div>
             </div>
         </section>
 
-        <!-- Orari e Contatti -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-sede-alt">
             <div class="container">
                 <h2 class="section-title">Orari e Contatti</h2>
-                <div class="grid">
-                    <div class="card">
-                        <div class="card-content">
-                            <h3><i class="fas fa-clock"></i> Orari di Apertura</h3>
-                            <p>Tutte le sedi sono aperte su appuntamento. Contattaci per fissare un incontro e scoprire da vicino le nostre attività.</p>
-                            <ul>
-                                <li><strong>Lunedì - Venerdì:</strong> Su appuntamento</li>
-                                <li><strong>Sabato:</strong> Su appuntamento</li>
-                                <li><strong>Domenica:</strong> Chiuso</li>
-                            </ul>
-                        </div>
+                <div class="sede-info-cards sede-contact-grid">
+                    <div class="sede-info-card">
+                        <h3><i class="fas fa-clock" aria-hidden="true"></i> Orari di Apertura</h3>
+                        <ul class="sede-hours-list">
+                            <li><span>Lunedì – Venerdì</span> <span>Su appuntamento</span></li>
+                            <li><span>Sabato</span> <span>Su appuntamento</span></li>
+                            <li><span>Domenica</span> <span>Chiuso</span></li>
+                        </ul>
                     </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <h3><i class="fas fa-phone"></i> Contatti Centrali</h3>
-                            <p>Per informazioni generali e appuntamenti, puoi contattarci ai seguenti recapiti:</p>
-                            <ul>
-                                <li><strong>Telefono:</strong> <a href="tel:3474539988">347 4539988</a></li>
-                                <li><strong>Email:</strong> <a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></li>
-                                <li><strong>PEC:</strong> assoparkcanavese@pec.it</li>
-                            </ul>
-                        </div>
+                    <div class="sede-info-card">
+                        <h3><i class="fas fa-phone" aria-hidden="true"></i> Contatti Centrali</h3>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+393474539988">347 4539988</a></p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></p>
+                        <p><i class="fas fa-at" aria-hidden="true"></i> PEC: assoparkcanavese@pec.it</p>
                     </div>
                 </div>
             </div>
@@ -219,6 +228,12 @@
     <div class="dropdown" id="sedi-dropdown">
         <h3 class="dropdown-title">Le Nostre Sedi</h3>
         <ul class="dropdown-list">
+            <li class="dropdown-item">
+                <a href="sedi/castellamonte.html" class="dropdown-link">
+                    <i class="fas fa-building"></i>
+                    Castellamonte - Sede Legale
+                </a>
+            </li>
             <li class="dropdown-item">
                 <a href="sedi/banchette.html" class="dropdown-link">
                     <i class="fas fa-building"></i>

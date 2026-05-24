@@ -273,6 +273,17 @@ document.addEventListener('DOMContentLoaded', function() {
             progressTimer = requestAnimationFrame(tick);
         }
 
+        function preloadAdjacentSlides(index) {
+            [index - 1, index + 1].forEach(function(offset) {
+                const slide = slides[(offset + slides.length) % slides.length];
+                const img = slide ? slide.querySelector('img') : null;
+                if (img && !img.complete) {
+                    const preload = new Image();
+                    preload.src = img.currentSrc || img.src;
+                }
+            });
+        }
+
         function setActiveSlide(index) {
             currentIndex = (index + slides.length) % slides.length;
 
@@ -290,6 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCounter(currentIndex);
             announceSlide(currentIndex);
             animateProgressBar();
+            preloadAdjacentSlides(currentIndex);
         }
 
         slides.forEach((slide, index) => {
@@ -370,6 +382,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 restartAutoplay();
             }
         });
+
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        carousel.addEventListener('touchstart', function(event) {
+            if (!event.changedTouches.length) return;
+            touchStartX = event.changedTouches[0].screenX;
+            touchStartY = event.changedTouches[0].screenY;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', function(event) {
+            if (!event.changedTouches.length) return;
+            const touchEndX = event.changedTouches[0].screenX;
+            const touchEndY = event.changedTouches[0].screenY;
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+
+            if (Math.abs(deltaX) < 50 || Math.abs(deltaX) < Math.abs(deltaY)) return;
+
+            if (deltaX > 0) {
+                prevSlide();
+            } else {
+                nextSlide();
+            }
+            restartAutoplay();
+        }, { passive: true });
 
         setActiveSlide(currentIndex);
         startAutoplay();
