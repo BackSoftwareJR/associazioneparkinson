@@ -54,9 +54,39 @@ document.addEventListener('DOMContentLoaded', function() {
     initCookieBanner();
 
     function updateHeaderOffset() {
-        if (!header) return;
-        const height = header.getBoundingClientRect().height;
-        document.documentElement.style.setProperty('--header-offset', height + 'px');
+        if (header) {
+            const height = header.getBoundingClientRect().height;
+            document.documentElement.style.setProperty('--header-offset', height + 'px');
+        }
+        updateSubnavOffset();
+    }
+
+    function updateSubnavOffset() {
+        const subnav = document.querySelector('.about-anchor-nav, .donations-subnav, .sede-nav');
+        if (!subnav) return;
+        document.documentElement.style.setProperty('--subnav-offset', subnav.offsetHeight + 'px');
+    }
+
+    function isBottomSubnavLayout() {
+        return window.matchMedia('(max-width: 768px)').matches;
+    }
+
+    function getHeaderOffsetPx() {
+        return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-offset'), 10) || 90;
+    }
+
+    function getAnchorScrollOffset(navEl) {
+        const headerOffset = getHeaderOffsetPx();
+        if (isBottomSubnavLayout()) {
+            return headerOffset + 16;
+        }
+        const navHeight = navEl ? navEl.offsetHeight : 0;
+        return headerOffset + navHeight + 12;
+    }
+
+    function getAnchorObserverRootMargin(navEl) {
+        const topOffset = getHeaderOffsetPx() + (isBottomSubnavLayout() ? 16 : ((navEl ? navEl.offsetHeight : 0) + 16));
+        return '-' + topOffset + 'px 0px -45% 0px';
     }
 
     function initScrollHeader() {
@@ -433,6 +463,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         function initAnchorNav() {
+            const nav = document.querySelector('.about-anchor-nav');
             const links = Array.from(document.querySelectorAll('.about-anchor-link'));
             const sections = links
                 .map(link => document.querySelector(link.getAttribute('href')))
@@ -449,9 +480,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (!target) return;
 
                     event.preventDefault();
-                    const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-offset'), 10) || 90;
-                    const navHeight = document.querySelector('.about-anchor-nav')?.offsetHeight || 0;
-                    const top = target.getBoundingClientRect().top + window.scrollY - offset - navHeight - 12;
+                    const top = target.getBoundingClientRect().top + window.scrollY - getAnchorScrollOffset(nav);
 
                     window.scrollTo({
                         top,
@@ -470,7 +499,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }, {
                 threshold: 0.35,
-                rootMargin: '-' + ((parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-offset'), 10) || 90) + 70) + 'px 0px -45% 0px'
+                rootMargin: getAnchorObserverRootMargin(nav)
             });
 
             sections.forEach(section => sectionObserver.observe(section));
@@ -530,9 +559,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (!target) return;
 
                     event.preventDefault();
-                    const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-offset'), 10) || 90;
-                    const navHeight = nav.offsetHeight || 0;
-                    const top = target.getBoundingClientRect().top + window.scrollY - offset - navHeight - 12;
+                    const top = target.getBoundingClientRect().top + window.scrollY - getAnchorScrollOffset(nav);
 
                     window.scrollTo({
                         top,
@@ -551,7 +578,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }, {
                 threshold: 0.35,
-                rootMargin: '-' + ((parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-offset'), 10) || 90) + 70) + 'px 0px -45% 0px'
+                rootMargin: getAnchorObserverRootMargin(nav)
             });
 
             sections.forEach(section => sectionObserver.observe(section));
@@ -636,7 +663,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         function updateActive() {
-            var scrollPos = window.scrollY + 120;
+            var scrollPos = window.scrollY + (isBottomSubnavLayout() ? getHeaderOffsetPx() + 16 : 120);
             var current = sections[0];
             sections.forEach(function(item) {
                 if (item.section.offsetTop <= scrollPos) current = item;

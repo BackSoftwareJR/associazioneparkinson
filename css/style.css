@@ -31,6 +31,7 @@ body, html {
   --body-font: 'Open Sans', system-ui, -apple-system, sans-serif;
   --heading-font: 'Montserrat', 'Open Sans', system-ui, sans-serif;
   --header-font: var(--body-font);
+  --subnav-offset: 0px;
 }
 
 * {
@@ -3888,14 +3889,22 @@ body:has(.header-over-hero) {
   opacity: 0.95;
 }
 
+/* Page sticky subnav – coerente e attaccato all'header */
+.about-anchor-nav,
+.donations-subnav,
 .sede-nav {
   position: sticky;
   top: var(--header-offset, 90px);
-  z-index: 50;
-  background: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid rgba(129, 151, 93, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  z-index: 900;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px) saturate(170%);
+  -webkit-backdrop-filter: blur(14px) saturate(170%);
+  border-bottom: 1px solid rgba(129, 151, 93, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sede-nav {
+  padding: 0.45rem 0;
 }
 
 .sede-nav-list {
@@ -3903,7 +3912,7 @@ body:has(.header-over-hero) {
   flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
-  padding: 0.85rem 0;
+  padding: 0.35rem 0;
   margin: 0;
 }
 
@@ -4870,15 +4879,7 @@ body:has(.header-over-hero) {
 }
 
 .about-anchor-nav {
-  position: sticky;
-  top: calc(var(--header-offset, 90px) + 0.5rem);
-  z-index: 900;
-  padding: 0.65rem 1rem;
-  background: linear-gradient(180deg, rgba(248, 250, 245, 0.97) 0%, rgba(248, 250, 245, 0.92) 100%);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(129, 151, 93, 0.12);
-  box-shadow: 0 4px 20px rgba(81, 119, 87, 0.06);
+  padding: 0.45rem 1rem;
 }
 
 .about-anchor-nav-track {
@@ -7085,14 +7086,7 @@ body:has(.header-over-hero) {
 }
 
 .donations-subnav {
-  position: sticky;
-  top: calc(var(--header-offset, 90px) - 0.5rem);
-  z-index: 100;
-  padding: 0.75rem 0;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(129, 151, 93, 0.12);
+  padding: 0.45rem 0;
 }
 
 .donations-subnav-list {
@@ -8409,5 +8403,52 @@ body:has(.header-over-hero) {
   .act-card-media img,
   .act-service-media img {
     transition: none;
+  }
+}
+
+/* Page sticky subnav – mobile: barra fissa in basso */
+@media (max-width: 768px) {
+  .about-anchor-nav,
+  .donations-subnav,
+  .sede-nav {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 0.45rem;
+    padding-bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px));
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: none;
+    border-top: 1px solid rgba(129, 151, 93, 0.14);
+    box-shadow: 0 -6px 28px rgba(81, 119, 87, 0.1);
+  }
+
+  .about-anchor-nav {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  body:has(.about-anchor-nav) main,
+  body:has(.donations-subnav) main,
+  body:has(.sede-nav) main {
+    padding-bottom: calc(var(--subnav-offset, 72px) + env(safe-area-inset-bottom, 0px) + 0.5rem);
+  }
+
+  html {
+    scroll-padding-bottom: calc(var(--subnav-offset, 72px) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .copy-toast {
+    bottom: calc(var(--subnav-offset, 72px) + 1rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  #cookie-banner.show {
+    bottom: calc(var(--subnav-offset, 72px) + env(safe-area-inset-bottom, 0px));
   }
 }
