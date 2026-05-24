@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=210">
-    <script src="js/main.js?v=210" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=220">
+    <script src="js/main.js?v=220" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
@@ -282,44 +282,52 @@
         </section>
 
         <!-- Progetto Africa -->
-        <section class="section">
+        <section class="section section-home-africa" id="progetto-africa" aria-labelledby="africa-heading">
             <div class="container">
-                <h2 class="section-title">Progetto Africa - MAISHA ONGD</h2>
-                <div class="card africa-card" style="max-width: 800px; margin: 0 auto; border-radius: 18px; box-shadow: 0 6px 32px rgba(0,0,0,0.08); background: linear-gradient(135deg, #80975d 0%, #517757 100%); color: white;">
-                    <div class="card-content" style="padding: 3rem 2.5rem; text-align: center;">
-                        <h3 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">Solidarietà Senza Confini</h3>
-                        <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.6; opacity: 0.95;">Dal 2016 sosteniamo MAISHA ONGD nella Repubblica Democratica del Congo, aiutando bambini e donne attraverso progetti di istruzione e empowerment. "Maisha" significa "vita" in lingala.</p>
-                        <p style="font-size: 1.1rem; margin-bottom: 2.5rem; opacity: 0.9;">Aiutiamo bambini e donne attraverso progetti di istruzione e empowerment. Scopri come puoi contribuire anche tu!</p>
-                        <a href="progetto-africa.html" class="cta-button" style="background: white; color: #517757; padding: 1rem 2.5rem; font-weight: 600; border-radius: 50px; text-decoration: none; display: inline-block; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Scopri il progetto</a>
+                <header class="section-header">
+                    <p class="section-eyebrow"><i class="fas fa-globe-africa" aria-hidden="true"></i> Solidarietà internazionale</p>
+                    <h2 class="section-title" id="africa-heading">Progetto Africa – MAISHA ONGD</h2>
+                    <p class="section-subtitle">Dal 2016 sosteniamo progetti di istruzione e empowerment nella Repubblica Democratica del Congo. "Maisha" significa "vita" in lingala.</p>
+                </header>
+                <div class="home-africa-layout">
+                    <div class="home-africa-card">
+                        <h3>Solidarietà Senza Confini</h3>
+                        <p>Aiutiamo bambini e donne attraverso progetti di istruzione e empowerment nella Repubblica Democratica del Congo, in collaborazione con MAISHA ONGD.</p>
+                        <p>Scopri come puoi contribuire anche tu a questa causa che unisce il Canavese al mondo.</p>
+                        <a href="progetto-africa.html" class="cta-button">Scopri il progetto</a>
                     </div>
-                </div>
-                
-                <!-- Immagine Africa -->
-                <div style="margin-top: 3rem; text-align: center;">
-                    <img src="images/new-images/africa1.jpeg" alt="Progetto Africa - MAISHA ONGD" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                    <figure class="home-africa-visual">
+                        <img src="images/new-images/africa1.jpeg" alt="Progetto Africa – MAISHA ONGD" width="640" height="480" loading="lazy">
+                    </figure>
                 </div>
             </div>
         </section>
 
         <!-- Sezione Donazioni -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-home-donations" aria-labelledby="donations-heading">
             <div class="container">
-                <h2 class="section-title">Sostienici</h2>
-                <div class="donation-box" style="background: linear-gradient(135deg, #517757 0%, #3d5a3d 100%); color: white; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
-                    <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Dona il tuo 5x1000</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">Il tuo contributo può fare la differenza nella vita di molte persone.</p>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
-                        <p style="font-size: 1.2rem; margin: 0; color: white;">Codice Fiscale: <strong style="color: #fff; font-size: 1.3rem; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">92518680019</strong></p>
-                    </div>
-                    <a href="donazioni.html#5x1000" class="cta-button" style="background: white; color: #517757; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">Come donare il 5x1000</a>
-                </div>
-                <div class="donation-box" style="background: linear-gradient(135deg, #517757 0%, #3d5a3d 100%); color: white; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
-                    <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Diventa Socio</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">Con soli 30€ all'anno potrai sostenere le nostre attività e ricevere vantaggi esclusivi.</p>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
-                        <p style="font-size: 1.2rem; margin: 0; color: white;">Quota annuale: <strong style="color: #fff; font-size: 1.3rem; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">30€</strong></p>
-                    </div>
-                    <a href="donazioni.html#socio" class="cta-button" style="background: white; color: #517757; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">Scopri i vantaggi</a>
+                <header class="section-header">
+                    <p class="section-eyebrow"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Sostienici</p>
+                    <h2 class="section-title" id="donations-heading">Come puoi aiutarci</h2>
+                    <p class="section-subtitle">Ogni contributo, grande o piccolo, ci permette di continuare ad offrire attività gratuite e supporto nel Canavese.</p>
+                </header>
+                <div class="home-donations-grid">
+                    <article class="home-donation-card">
+                        <h3>Dona il tuo 5×1000</h3>
+                        <p>Il tuo contributo può fare la differenza nella vita di molte persone, senza alcun costo aggiuntivo.</p>
+                        <div class="home-donation-highlight">
+                            <p>Codice Fiscale: <strong>92518680019</strong></p>
+                        </div>
+                        <a href="donazioni.html#5x1000" class="cta-button">Come donare il 5×1000</a>
+                    </article>
+                    <article class="home-donation-card">
+                        <h3>Diventa Socio</h3>
+                        <p>Con soli 30€ all'anno potrai sostenere le nostre attività e ricevere vantaggi esclusivi.</p>
+                        <div class="home-donation-highlight">
+                            <p>Quota annuale: <strong>30€</strong></p>
+                        </div>
+                        <a href="donazioni.html#socio" class="cta-button">Scopri i vantaggi</a>
+                    </article>
                 </div>
             </div>
         </section>

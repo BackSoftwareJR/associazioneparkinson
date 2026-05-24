@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=209">
-    <script src="js/main.js?v=209" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=220">
+    <script src="js/main.js?v=220" defer></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header header-over-hero">
         <div class="header-glass">
             <nav class="nav-container" aria-label="Navigazione principale">
                 <div class="header-brand">
@@ -52,16 +52,14 @@
     </header>
 
     <main>
-        <div class="breadcrumb">
-            <div class="container">
-                <a href="index.html">Home</a> / Le Nostre Sedi
-            </div>
-        </div>
-
-        <section class="page-hero">
-            <div class="container">
-                <h1>Le Nostre Sedi</h1>
-                <p>L'associazione è presente su tutto il territorio del Canavese attraverso tre sedi operative, per essere più vicini ai malati e alle loro famiglie.</p>
+        <section class="hero hero-page" aria-labelledby="sedi-page-heading">
+            <div class="hero-bg-accent" aria-hidden="true"></div>
+            <div class="hero-inner container hero-inner--center">
+                <div class="hero-text hero-text--center">
+                    <p class="hero-badge"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Presenza sul territorio</p>
+                    <h1 id="sedi-page-heading" class="hero-title">Le Nostre Sedi</h1>
+                    <p class="hero-lead">L'associazione è presente su tutto il territorio del Canavese attraverso tre sedi operative, per essere più vicini ai malati e alle loro famiglie.</p>
+                </div>
             </div>
         </section>
 

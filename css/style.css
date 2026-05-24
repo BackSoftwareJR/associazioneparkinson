@@ -1,30 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
 
 html {
   scroll-padding-top: var(--header-offset, 90px);
 }
 
 body, html {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: var(--body-font);
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --primary: #80975d;    /* Verde principale */
-  --secondary: #517757;  /* Verde oliva */
-  --accent: #aca598;     /* Beige */
-  --text: #333333;
+  --primary: #80975d;
+  --primary-color: #80975d;
+  --secondary: #517757;
+  --accent: #aca598;
+  --text: #2d3328;
+  --text-muted: #5a6454;
   --background: #FFFFFF;
-  --light-bg: #F5F5F5;
-  --overlay: rgba(0, 0, 0, 0.4); /* Per overlay video */
+  --light-bg: #f4f7f1;
+  --surface: #ffffff;
+  --overlay: rgba(0, 0, 0, 0.4);
   --glass-bg: rgba(255, 255, 255, 0.72);
   --glass-border: rgba(129, 151, 93, 0.22);
   --glass-highlight: rgba(255, 255, 255, 0.85);
   --glass-shadow: 0 8px 32px rgba(81, 119, 87, 0.12);
   --header-radius: 24px;
   --nav-pill-radius: 14px;
-  --header-font: 'Open Sans', 'Montserrat', Arial, Helvetica, sans-serif;
+  --section-radius: 20px;
+  --body-font: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --heading-font: 'Montserrat', 'Open Sans', system-ui, sans-serif;
+  --header-font: var(--body-font);
 }
 
 * {
@@ -34,10 +40,17 @@ body, html {
 }
 
 body {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  font-family: var(--body-font);
+  line-height: 1.65;
   color: var(--text);
-  font-size: 18px; /* Aumentato per maggiore leggibilità */
+  font-size: 17px;
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  line-height: 1.25;
 }
 
 /* Header – glass morphism, layout a tre zone */
@@ -788,6 +801,8 @@ body:has(.header-over-hero) {
   color: #fff !important;
   cursor: not-allowed !important;
   border: none !important;
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 .method-image img {
@@ -1431,7 +1446,8 @@ body:has(.header-over-hero) {
   color: var(--text);
 }
 
-.header-over-hero + main > .hero:first-child {
+.header-over-hero + main > .hero:first-child,
+.header-over-hero + main > .sede-hero:first-child {
   margin-top: 0;
   box-sizing: border-box;
 }
@@ -1480,7 +1496,7 @@ body:has(.header-over-hero) {
 }
 
 .hero-title {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: var(--heading-font);
   font-size: clamp(1.85rem, 4vw, 2.85rem);
   color: var(--secondary);
   font-weight: 700;
@@ -1669,25 +1685,86 @@ body:has(.header-over-hero) {
   text-decoration: underline;
 }
 
-/* Page Hero */
+/* Page Hero – legacy + modern internal pages */
 .page-hero {
-  background-color: var(--primary);
-  color: white;
-  padding: 4rem 1rem;
+  position: relative;
+  padding: calc(var(--header-offset, 90px) + 2.5rem) 1rem 3rem;
   text-align: center;
+  background: linear-gradient(160deg, #f6f8f2 0%, #eef2e8 55%, #e8ede3 100%);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 8% 20%, rgba(129, 151, 93, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 92% 80%, rgba(81, 119, 87, 0.08) 0%, transparent 35%);
+  pointer-events: none;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 2.75rem);
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  color: var(--secondary);
+  text-shadow: none;
 }
 
 .page-hero p {
-  font-size: 1.2rem;
-  max-width: 600px;
+  font-size: clamp(1.05rem, 1.6vw, 1.15rem);
+  max-width: 680px;
   margin: 0 auto;
-  opacity: 0.9;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.hero-page {
+  min-height: auto;
+  padding: calc(var(--header-offset, 90px) + 2rem) 1.25rem 2.75rem;
+}
+
+.hero-inner--center {
+  grid-template-columns: 1fr;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-text--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-text--center .hero-title {
+  max-width: none;
+}
+
+.hero-text--center .hero-lead {
+  max-width: 640px;
+}
+
+.hero-text--center .hero-trust {
+  justify-content: center;
+}
+
+.hero-text--center .hero-buttons {
+  justify-content: center;
+}
+
+.hero-page--africa {
+  background: linear-gradient(155deg, #f0f4ea 0%, #e6ede0 50%, #dce6d4 100%);
+}
+
+.hero-page--donations {
+  background: linear-gradient(155deg, #f8faf4 0%, #eef3e8 45%, #e4ebe0 100%);
 }
 
 /* Storia */
@@ -1931,18 +2008,21 @@ body:has(.header-over-hero) {
 /* CTA buttons */
 .cta-button {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0.9rem 1.75rem;
   background-color: var(--primary);
   color: white;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  font-size: 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.25s ease, box-shadow 0.25s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 14px rgba(81, 119, 87, 0.18);
 }
 
 .cta-button:hover {
   background-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(81, 119, 87, 0.22);
 }
 
 .cta-secondary {
@@ -3708,7 +3788,7 @@ body:has(.header-over-hero) {
   display: flex;
   align-items: flex-end;
   min-height: 340px;
-  padding: 5rem 1rem 3rem;
+  padding: calc(var(--header-offset, 90px) + 2.5rem) 1rem 3rem;
   color: #fff;
   overflow: hidden;
 }
@@ -5215,5 +5295,615 @@ body:has(.header-over-hero) {
   .about-stat-card,
   .about-hero-visual {
     animation: none;
+  }
+}
+
+/* ============================================
+   Unified Redesign – Home, Contatti, Africa, Legal
+   ============================================ */
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3rem;
+}
+
+.section-header .section-title {
+  margin-bottom: 1rem;
+}
+
+.section-header .section-subtitle {
+  margin-bottom: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.section-alt {
+  background: linear-gradient(180deg, var(--light-bg) 0%, var(--background) 100%);
+}
+
+/* Homepage – Progetto Africa */
+.section-home-africa {
+  background: var(--background);
+}
+
+.home-africa-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.home-africa-card {
+  padding: 2.5rem 2rem;
+  border-radius: var(--section-radius);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  box-shadow: 0 12px 40px rgba(81, 119, 87, 0.22);
+  text-align: center;
+}
+
+.home-africa-card h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #fff;
+}
+
+.home-africa-card p {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  opacity: 0.95;
+}
+
+.home-africa-card p:last-of-type {
+  margin-bottom: 1.75rem;
+}
+
+.home-africa-card .cta-button {
+  background: #fff;
+  color: var(--secondary);
+  border-radius: 999px;
+  padding: 0.9rem 1.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.home-africa-card .cta-button:hover {
+  background: #f8faf5;
+  color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.home-africa-visual {
+  margin: 0;
+  border-radius: var(--section-radius);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(81, 119, 87, 0.14);
+}
+
+.home-africa-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Homepage – Donazioni */
+.section-home-donations {
+  background: linear-gradient(180deg, var(--light-bg) 0%, #eef3ea 100%);
+}
+
+.home-donations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-donation-card {
+  padding: 2.25rem 2rem;
+  border-radius: var(--section-radius);
+  background: linear-gradient(135deg, var(--secondary) 0%, #3d5a3d 100%);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 10px 32px rgba(81, 119, 87, 0.2);
+}
+
+.home-donation-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.65rem;
+  color: #fff;
+}
+
+.home-donation-card > p {
+  margin: 0 0 1.25rem;
+  opacity: 0.92;
+  line-height: 1.6;
+}
+
+.home-donation-highlight {
+  padding: 1.15rem 1.25rem;
+  margin: 0 0 1.5rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.home-donation-highlight p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.home-donation-highlight strong {
+  font-size: 1.25rem;
+}
+
+.home-donation-card .cta-button {
+  background: #fff;
+  color: var(--secondary);
+  border-radius: 999px;
+  padding: 0.85rem 1.65rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.home-donation-card .cta-button:hover {
+  background: #f8faf5;
+  transform: translateY(-2px);
+}
+
+/* Contatti */
+.contatti-hero-section {
+  padding-bottom: 0;
+}
+
+.contatti-box-section {
+  padding-top: 0;
+  margin-top: -1rem;
+}
+
+.contatti-box-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 2.5rem;
+}
+
+.contatti-box {
+  background: var(--surface);
+  border-radius: var(--section-radius);
+  border: 1px solid rgba(129, 151, 93, 0.14);
+  box-shadow: 0 8px 28px rgba(81, 119, 87, 0.08);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contatti-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(81, 119, 87, 0.14);
+}
+
+.contatti-box i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 0.85rem;
+  border-radius: 14px;
+  background: rgba(129, 151, 93, 0.12);
+  font-size: 1.35rem;
+  color: var(--primary);
+}
+
+.contatti-box h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  color: var(--secondary);
+}
+
+.contatti-main {
+  margin: 0.25rem 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.contatti-main a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contatti-main a:hover {
+  color: var(--primary);
+}
+
+.contatti-note {
+  margin: 0.35rem 0 0;
+  color: #888;
+  font-size: 0.88rem;
+}
+
+.contatti-social-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contatti-social-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.25rem;
+  color: var(--secondary);
+}
+
+.contatti-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contatti-social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid rgba(129, 151, 93, 0.18);
+  font-size: 1.35rem;
+  color: var(--secondary);
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  box-shadow: 0 4px 14px rgba(81, 119, 87, 0.08);
+}
+
+.contatti-social-icons a:hover {
+  transform: translateY(-3px);
+  background: var(--primary);
+  color: #fff;
+}
+
+.contatti-social-icons a[aria-label="Facebook"]:hover { background: #4267B2; }
+.contatti-social-icons a[aria-label="WhatsApp"]:hover { background: #25D366; }
+
+/* Progetto Africa page */
+.maisha-intro-card {
+  padding: 3rem 2.5rem;
+  border-radius: var(--section-radius);
+  background: linear-gradient(135deg, var(--secondary) 0%, #3d5a3d 100%);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(81, 119, 87, 0.22);
+}
+
+.maisha-intro-card h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  color: #fff;
+}
+
+.maisha-intro-card p {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.maisha-intro-card p:last-child {
+  margin-bottom: 0;
+}
+
+.alfabetizzazione-card {
+  padding: 2.5rem 2rem;
+  border-radius: var(--section-radius);
+  background: var(--surface);
+  box-shadow: 0 10px 32px rgba(81, 119, 87, 0.1);
+  border-left: 5px solid var(--primary);
+}
+
+.alfabetizzazione-card h2 {
+  margin: 0 0 2rem;
+  text-align: center;
+  color: var(--primary);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.alfabetizzazione-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.alfabetizzazione-item {
+  padding: 1.75rem 1.5rem;
+  border-radius: 16px;
+  background: var(--light-bg);
+  text-align: center;
+}
+
+.alfabetizzazione-item i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 0.85rem;
+}
+
+.alfabetizzazione-item h3 {
+  margin: 0 0 0.65rem;
+  color: var(--secondary);
+  font-size: 1.1rem;
+}
+
+.alfabetizzazione-item p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.alfabetizzazione-footer {
+  margin: 1.75rem 0 0;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.africa-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+.africa-testimonial-card {
+  padding: 2.25rem 1.75rem;
+  border-radius: var(--section-radius);
+  background: var(--surface);
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(81, 119, 87, 0.1);
+  border-top: 4px solid var(--primary);
+}
+
+.africa-testimonial-card i {
+  font-size: 2.75rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.africa-testimonial-card h3 {
+  margin: 0 0 1rem;
+  color: var(--secondary);
+  font-size: 1.25rem;
+}
+
+.africa-testimonial-card p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.help-card {
+  padding: 3rem 2.5rem;
+  border-radius: var(--section-radius);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(81, 119, 87, 0.22);
+}
+
+.help-card h2 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  color: #fff;
+}
+
+.help-card p {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.help-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.help-card-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.help-card-btn--primary {
+  background: #fff;
+  color: var(--secondary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.help-card-btn--secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+}
+
+.help-card-btn:hover {
+  transform: translateY(-2px);
+}
+
+.africa-intro-text {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* Legal & content pages */
+.page-legal .hero-page {
+  padding-bottom: 2rem;
+}
+
+.legal-content {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.content-block {
+  margin-bottom: 2.25rem;
+  padding: 1.75rem 2rem;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid rgba(129, 151, 93, 0.12);
+  box-shadow: 0 4px 20px rgba(81, 119, 87, 0.06);
+}
+
+.content-block h2 {
+  margin: 0 0 1rem;
+  color: var(--secondary);
+  font-size: 1.25rem;
+}
+
+.content-block p,
+.content-block li {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.content-block ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.content-block li {
+  margin-bottom: 0.45rem;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.legal-table th,
+.legal-table td {
+  border: 1px solid rgba(129, 151, 93, 0.2);
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+}
+
+.legal-table th {
+  background: var(--light-bg);
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.legal-table tr:nth-child(even) td {
+  background: rgba(244, 247, 241, 0.5);
+}
+
+/* Enhanced cards sitewide */
+.service-card,
+.project-card,
+.recreational-card,
+.direction-card,
+.transparency-card {
+  border-radius: var(--section-radius);
+  border: 1px solid rgba(129, 151, 93, 0.12);
+  box-shadow: 0 8px 28px rgba(81, 119, 87, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.project-card:hover,
+.recreational-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(81, 119, 87, 0.14);
+}
+
+.service-icon {
+  background: rgba(129, 151, 93, 0.1);
+}
+
+.activity-card {
+  border-radius: var(--section-radius);
+  border: 1px solid rgba(129, 151, 93, 0.1);
+  box-shadow: 0 6px 24px rgba(81, 119, 87, 0.08);
+}
+
+.donation-method-card {
+  border: 1px solid rgba(129, 151, 93, 0.12);
+}
+
+.method-image img.method-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  display: block;
+}
+
+.method-image img.method-img--muted {
+  filter: grayscale(0.45);
+}
+
+.breadcrumb {
+  background: transparent;
+  padding: calc(var(--header-offset, 90px) + 0.5rem) 1rem 0;
+  font-size: 0.88rem;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .home-africa-layout,
+  .home-donations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-africa-visual {
+    order: -1;
+  }
+
+  .contatti-box-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contatti-box-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .maisha-intro-card,
+  .help-card,
+  .home-donation-card,
+  .home-africa-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .content-block {
+    padding: 1.35rem 1.15rem;
   }
 }

@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=208">
-    <script src="js/main.js?v=208" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=220">
+    <script src="js/main.js?v=220" defer></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header header-over-hero">
         <div class="header-glass">
             <nav class="nav-container" aria-label="Navigazione principale">
                 <div class="header-brand">
@@ -32,7 +32,7 @@
                             <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
                             <li><a href="#" class="nav-link nav-link-sedi" id="sedi-dropdown-trigger">Sedi <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
                             <li><a href="attivita.html" class="nav-link">Attività</a></li>
-                            <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
+                            <li><a href="progetto-africa.html" class="nav-link active">Progetto Africa</a></li>
                             <li><a href="contatti.html" class="nav-link">Contatti</a></li>
                         </ul>
                     </div>
@@ -52,35 +52,31 @@
     </header>
 
     <main>
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <div class="container">
-                <a href="index.html">Home</a> / Progetto Africa
-            </div>
-        </div>
-
-        <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="container">
-                <h1>Progetto Africa – MAISHA ONGD</h1>
-                <p>Oltre alle attività sul territorio locale, la nostra associazione ha aperto il cuore anche a una causa internazionale attraverso il Progetto Africa. Dal 2016 sosteniamo attivamente MAISHA ONGD, un'organizzazione umanitaria che opera nella Repubblica Democratica del Congo.</p>
+        <section class="hero hero-page hero-page--africa" aria-labelledby="africa-page-heading">
+            <div class="hero-bg-accent" aria-hidden="true"></div>
+            <div class="hero-inner container hero-inner--center">
+                <div class="hero-text hero-text--center">
+                    <p class="hero-badge"><i class="fas fa-globe-africa" aria-hidden="true"></i> Solidarietà internazionale</p>
+                    <h1 id="africa-page-heading" class="hero-title">Progetto Africa – MAISHA ONGD</h1>
+                    <p class="hero-lead">Oltre alle attività sul territorio locale, la nostra associazione sostiene MAISHA ONGD nella Repubblica Democratica del Congo dal 2016, con progetti di istruzione e empowerment per bambini e donne.</p>
+                </div>
             </div>
         </section>
 
         <!-- Sezione Introduzione -->
         <section class="section">
             <div class="container">
-                <div class="maisha-intro-card" style="background: linear-gradient(135deg, #517757 0%, #3d5a3d 100%); color: white; padding: 4rem 3rem; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Chi è MAISHA ONGD</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.7; opacity: 0.95;">In lingala "Maisha" significa "vita": un nome che incarna la missione di questo progetto, nato per migliorare le condizioni di vita di comunità locali particolarmente svantaggiate, attraverso iniziative di integrazione e sviluppo.</p>
-                    <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6; opacity: 0.9;">Il progetto Maisha, portato avanti da volontari locali congolesi in collaborazione con un gruppo di volontari italiani (di cui facciamo parte anche noi del Canavese), interviene in villaggi duramente colpiti da povertà, conflitti e marginalizzazione sociale.</p>
-                    <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9;">L'Associazione Parkinsoniani del Canavese ODV, pur operando in un ambito diverso, ha scelto di dare un contributo concreto a questa causa, stringendo un gemellaggio solidale con Maisha.</p>
+                <div class="maisha-intro-card">
+                    <h2>Chi è MAISHA ONGD</h2>
+                    <p>In lingala "Maisha" significa "vita": un nome che incarna la missione di questo progetto, nato per migliorare le condizioni di vita di comunità locali particolarmente svantaggiate, attraverso iniziative di integrazione e sviluppo.</p>
+                    <p>Il progetto Maisha, portato avanti da volontari locali congolesi in collaborazione con un gruppo di volontari italiani (di cui facciamo parte anche noi del Canavese), interviene in villaggi duramente colpiti da povertà, conflitti e marginalizzazione sociale.</p>
+                    <p>L'Associazione Parkinsoniani del Canavese ODV, pur operando in un ambito diverso, ha scelto di dare un contributo concreto a questa causa, stringendo un gemellaggio solidale con Maisha.</p>
                 </div>
             </div>
         </section>
 
         <!-- Sezione Progetti -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-alt">
             <div class="container">
                 <h2 class="section-title">I Nostri Progetti sul Campo</h2>
                 <p class="section-subtitle">Maisha ha attivato diversi interventi per cambiare in meglio la vita delle persone coinvolte</p>
@@ -112,27 +108,27 @@
         <!-- Sezione Alfabetizzazione -->
         <section class="section">
             <div class="container">
-                <div class="alfabetizzazione-card" style="background: white; padding: 4rem 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 6px solid #80975d;">
-                    <h2 style="color: #80975d; font-size: 2.2rem; margin-bottom: 2rem; text-align: center;">Corso di Alfabetizzazione</h2>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                        <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 15px;">
-                            <i class="fas fa-book-open" style="font-size: 3rem; color: #80975d; margin-bottom: 1rem;"></i>
-                            <h3 style="color: #517757; margin-bottom: 1rem;">Istruzione di Base</h3>
+                <div class="alfabetizzazione-card">
+                    <h2>Corso di Alfabetizzazione</h2>
+                    <div class="alfabetizzazione-grid">
+                        <div class="alfabetizzazione-item">
+                            <i class="fas fa-book-open" aria-hidden="true"></i>
+                            <h3>Istruzione di Base</h3>
                             <p>Su richiesta delle stesse partecipanti, abbiamo organizzato un corso di alfabetizzazione: molte di queste donne non avevano mai avuto accesso all'istruzione di base.</p>
                         </div>
-                        <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 15px;">
-                            <i class="fas fa-heart" style="font-size: 3rem; color: #80975d; margin-bottom: 1rem;"></i>
-                            <h3 style="color: #517757; margin-bottom: 1rem;">Emozione Indescrivibile</h3>
+                        <div class="alfabetizzazione-item">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                            <h3>Emozione Indescrivibile</h3>
                             <p>Imparare a leggere, scrivere e far di conto in età adulta è stata per loro un'emozione indescrivibile, oltre che uno strumento fondamentale per conoscere e difendere i propri diritti.</p>
                         </div>
                     </div>
-                    <p style="font-size: 1.1rem; margin-top: 2rem; text-align: center; color: #333; line-height: 1.6;">Il progetto PADIS, in sintesi, mira a rompere il ciclo di violenza e sottomissione attraverso il lavoro di comunità, l'educazione e il reciproco sostegno. Donne che prima erano isolate e prive di voce ora si aiutano l'un l'altra, diventando motore di cambiamento per l'intero villaggio.</p>
+                    <p class="alfabetizzazione-footer">Il progetto PADIS, in sintesi, mira a rompere il ciclo di violenza e sottomissione attraverso il lavoro di comunità, l'educazione e il reciproco sostegno. Donne che prima erano isolate e prive di voce ora si aiutano l'un l'altra, diventando motore di cambiamento per l'intero villaggio.</p>
                 </div>
             </div>
         </section>
 
         <!-- Sezione Guardando al Futuro -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-alt">
             <div class="container">
                 <h2 class="section-title">Guardando al Futuro</h2>
                 <p>Il gruppo italiano di cui facciamo parte continua a supportare Maisha organizzando eventi di sensibilizzazione e raccolta fondi qui in Italia. Ogni donazione raccolta viene inviata direttamente in Congo per finanziare e ampliare questi progetti.</p>
@@ -152,34 +148,35 @@
         <!-- Sezione Testimonianze -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Le Nostre Testimonianze</h2>
-                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #333;">Per la nostra associazione, il Progetto Africa rappresenta un'esperienza arricchente e coerente con i nostri valori di solidarietà. Pur operando in contesti lontani, abbiamo scoperto che la voglia di aiutarsi e di costruire un futuro migliore è universale.</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <div style="background: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-top: 4px solid #80975d;">
-                        <i class="fas fa-graduation-cap" style="font-size: 4rem; color: #80975d; margin-bottom: 1.5rem;"></i>
-                        <h3 style="color: #517757; margin-bottom: 1.5rem; font-size: 1.5rem;">Bambini a Scuola</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">I sorrisi dei bambini che finalmente possono frequentare la scuola e sognare un futuro migliore. Le testimonianze che riceviamo dal Congo sono toccanti e ci riempiono il cuore di gioia.</p>
-                    </div>
-                    <div style="background: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-top: 4px solid #80975d;">
-                        <i class="fas fa-seedling" style="font-size: 4rem; color: #80975d; margin-bottom: 1.5rem;"></i>
-                        <h3 style="color: #517757; margin-bottom: 1.5rem; font-size: 1.5rem;">Donne negli Orti</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">La fierezza delle donne nel mostrare i loro orti e i vestiti cuciti con le proprie mani. Sono immagini che condividiamo volentieri con i nostri associati durante le riunioni.</p>
-                    </div>
+                <header class="section-header">
+                    <h2 class="section-title">Le Nostre Testimonianze</h2>
+                    <p class="section-subtitle">Per la nostra associazione, il Progetto Africa rappresenta un'esperienza arricchente e coerente con i nostri valori di solidarietà. Pur operando in contesti lontani, abbiamo scoperto che la voglia di aiutarsi e di costruire un futuro migliore è universale.</p>
+                </header>
+                <div class="africa-testimonials-grid">
+                    <article class="africa-testimonial-card">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        <h3>Bambini a Scuola</h3>
+                        <p>I sorrisi dei bambini che finalmente possono frequentare la scuola e sognare un futuro migliore. Le testimonianze che riceviamo dal Congo sono toccanti e ci riempiono il cuore di gioia.</p>
+                    </article>
+                    <article class="africa-testimonial-card">
+                        <i class="fas fa-seedling" aria-hidden="true"></i>
+                        <h3>Donne negli Orti</h3>
+                        <p>La fierezza delle donne nel mostrare i loro orti e i vestiti cuciti con le proprie mani. Sono immagini che condividiamo volentieri con i nostri associati durante le riunioni.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Sezione Come Aiutare -->
-        <section class="section">
+        <section class="section section-alt">
             <div class="container">
-                <div class="help-card" style="background: linear-gradient(135deg, #80975d 0%, #517757 100%); color: white; padding: 4rem 3rem; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Come Puoi Aiutare?</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.7; opacity: 0.95;">Anche tu puoi diventare parte del Progetto Africa: con una donazione dedicata a Maisha (indicando la causale specifica) oppure partecipando alle nostre iniziative solidali (cene benefiche, mercatini, raccolte fondi) che organizziamo periodicamente a favore di Maisha.</p>
-                    <p style="font-size: 1.1rem; margin-bottom: 3rem; line-height: 1.6; opacity: 0.9;">Ogni contributo, piccolo o grande, si trasforma in istruzione, cure mediche e speranza per tante donne e tanti bambini.</p>
-                    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="donazioni.html" style="background: white; color: #517757; padding: 1.2rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">Dona Ora</a>
-                        <a href="contatti.html" style="background: rgba(255,255,255,0.2); color: white; padding: 1.2rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; border: 2px solid white; transition: all 0.3s ease;">Contattaci</a>
+                <div class="help-card">
+                    <h2>Come Puoi Aiutare?</h2>
+                    <p>Anche tu puoi diventare parte del Progetto Africa: con una donazione dedicata a Maisha (indicando la causale specifica) oppure partecipando alle nostre iniziative solidali (cene benefiche, mercatini, raccolte fondi) che organizziamo periodicamente a favore di Maisha.</p>
+                    <p>Ogni contributo, piccolo o grande, si trasforma in istruzione, cure mediche e speranza per tante donne e tanti bambini.</p>
+                    <div class="help-card-actions">
+                        <a href="donazioni.html" class="help-card-btn help-card-btn--primary">Dona Ora</a>
+                        <a href="contatti.html" class="help-card-btn help-card-btn--secondary">Contattaci</a>
                     </div>
                 </div>
             </div>

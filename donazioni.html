@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=208">
-    <script src="js/main.js?v=208" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=220">
+    <script src="js/main.js?v=220" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-    <header class="header">
+    <header class="header header-over-hero">
         <div class="header-glass">
             <nav class="nav-container" aria-label="Navigazione principale">
                 <div class="header-brand">
@@ -37,7 +37,7 @@
                             <li><a href="contatti.html" class="nav-link">Contatti</a></li>
                         </ul>
                     </div>
-                    <a href="donazioni.html" class="nav-cta"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
+                    <a href="donazioni.html" class="nav-cta active"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
                 </div>
                 <div class="header-actions">
                     <a href="tel:+393474539988" class="header-contact" aria-label="Chiamaci al 347 4539988">
@@ -53,18 +53,19 @@
     </header>
 
     <main>
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <div class="container">
-                <a href="index.html">Home</a> / Sostienici
-            </div>
-        </div>
-
-        <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="container">
-                <h1>Sostienici</h1>
-                <p>La nostra associazione vive grazie all'impegno dei volontari ma anche al sostegno di tutti coloro che credono nei nostri progetti. Sostenerci significa contribuire direttamente a migliorare la vita delle persone con Parkinson del nostro territorio.</p>
+        <section class="hero hero-page hero-page--donations" aria-labelledby="donazioni-heading">
+            <div class="hero-bg-accent" aria-hidden="true"></div>
+            <div class="hero-inner container hero-inner--center">
+                <div class="hero-text hero-text--center">
+                    <p class="hero-badge"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Sostieni la nostra missione</p>
+                    <h1 id="donazioni-heading" class="hero-title">Sostienici</h1>
+                    <p class="hero-lead">La nostra associazione vive grazie all'impegno dei volontari ma anche al sostegno di tutti coloro che credono nei nostri progetti. Sostenerci significa contribuire direttamente a migliorare la vita delle persone con Parkinson del nostro territorio.</p>
+                    <ul class="hero-trust" aria-label="Modalità di sostegno">
+                        <li><i class="fas fa-file-invoice" aria-hidden="true"></i> 5×1000</li>
+                        <li><i class="fas fa-university" aria-hidden="true"></i> Bonifico</li>
+                        <li><i class="fas fa-id-card" aria-hidden="true"></i> Diventa socio</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -127,7 +128,7 @@
                 <div class="donation-methods-grid">
                     <div class="donation-method-card">
                         <div class="method-image">
-                            <img src="images/palestra-1.jpg" alt="Bonifico Bancario" style="width:100%;height:120px;object-fit:cover;border-radius:12px 12px 0 0;">
+                            <img src="images/palestra-1.jpg" alt="Bonifico Bancario" class="method-img">
                         </div>
                         <div class="method-icon">
                             <i class="fas fa-university"></i>
@@ -145,7 +146,7 @@
 
                     <div class="donation-method-card">
                         <div class="method-image">
-                            <img src="images/conferenza.jpg" alt="PayPal" style="width:100%;height:120px;object-fit:cover;border-radius:12px 12px 0 0;filter: grayscale(0.5);">
+                            <img src="images/conferenza.jpg" alt="PayPal" class="method-img method-img--muted">
                         </div>
                         <div class="method-icon">
                             <i class="fas fa-hand-holding-heart"></i>
@@ -153,7 +154,7 @@
                         <h3>PayPal <span class="badge-soon">Presto in arrivo</span></h3>
                         <p>Dona in modo sicuro e veloce tramite PayPal</p>
                         <div class="method-details">
-                            <a href="#" class="paypal-button disabled" style="pointer-events:none;opacity:0.6;">
+                            <a href="#" class="paypal-button disabled" aria-disabled="true" tabindex="-1">
                                 <i class="fab fa-paypal"></i> Dona con PayPal
                             </a>
                         </div>
@@ -161,7 +162,7 @@
 
                     <div class="donation-method-card">
                         <div class="method-image">
-                            <img src="images/canti e merenda a S.Stefano di Candia.jpg" alt="Donazione di persona" style="width:100%;height:120px;object-fit:cover;border-radius:12px 12px 0 0;">
+                            <img src="images/canti e merenda a S.Stefano di Candia.jpg" alt="Donazione di persona" class="method-img">
                         </div>
                         <div class="method-icon">
                             <i class="fas fa-handshake"></i>
@@ -223,7 +224,7 @@
         </section>
 
         <!-- Sezione Volontariato -->
-        <section class="section member-section" style="background-color: var(--light-bg);">
+        <section class="section member-section section-alt">
             <div class="container">
                 <div class="member-content">
                     <div class="member-text">
@@ -426,15 +427,5 @@
             </li>
         </ul>
     </div>
-
-    <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Copiato negli appunti!');
-            }).catch(err => {
-                console.error('Errore durante la copia:', err);
-            });
-        }
-    </script>
 </body>
 </html>

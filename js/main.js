@@ -117,7 +117,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initHeroHeader() {
         if (!header) return;
-        const heroSection = document.querySelector('main > .hero:first-child');
+        const heroSection = document.querySelector(
+            'main > .hero:first-child, main > .sede-hero:first-child'
+        );
         if (heroSection) {
             header.classList.add('header-over-hero');
         }
@@ -503,4 +505,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     initAboutPage();
+
+    window.copyToClipboard = function(text) {
+        if (!navigator.clipboard) {
+            return;
+        }
+        navigator.clipboard.writeText(text).then(function() {
+            alert('Copiato negli appunti!');
+        }).catch(function(err) {
+            console.error('Errore durante la copia:', err);
+        });
+    };
 });

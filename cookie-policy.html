@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=208">
-    <script src="js/main.js?v=208" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=220">
+    <script src="js/main.js?v=220" defer></script>
 </head>
-<body>
-    <header class="header">
+<body class="page-legal">
+    <header class="header header-over-hero">
         <div class="header-glass">
             <nav class="nav-container" aria-label="Navigazione principale">
                 <div class="header-brand">
@@ -52,10 +52,18 @@
     </header>
 
     <main>
+        <section class="hero hero-page" aria-labelledby="cookie-heading">
+            <div class="hero-bg-accent" aria-hidden="true"></div>
+            <div class="hero-inner container hero-inner--center">
+                <div class="hero-text hero-text--center">
+                    <p class="hero-badge"><i class="fas fa-cookie-bite" aria-hidden="true"></i> Informativa legale</p>
+                    <h1 id="cookie-heading" class="hero-title">Cookie Policy</h1>
+                    <p class="hero-lead">Informativa sui cookie e tecnologie simili utilizzate su questo sito web.</p>
+                </div>
+            </div>
+        </section>
         <section class="section">
-            <div class="container">
-                <h1 class="section-title">Cookie Policy</h1>
-                
+            <div class="container legal-content">
                 <div class="content-block">
                     <h2>1. Cosa sono i Cookie</h2>
                     <p>I cookie sono piccoli file di testo che i siti web visitati dall'utente inviano al suo terminale (computer, tablet, smartphone, ecc.), dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla successiva visita del medesimo utente.</p>
@@ -93,52 +101,52 @@
                     <h2>3. Dettaglio dei Cookie Utilizzati</h2>
                     
                     <h3>3.1 Cookie Tecnici (NECESSARI)</h3>
-                    <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                    <table class="legal-table">
                         <thead>
-                            <tr style="background-color: #f5f5f5;">
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Nome Cookie</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Scopo</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Durata</th>
+                            <tr>
+                                <th>Nome Cookie</th>
+                                <th>Scopo</th>
+                                <th>Durata</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="border: 1px solid #ddd; padding: 8px;">cookie_consent</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">Memorizza le preferenze sui cookie dell'utente</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">1 anno</td>
+                                <td>cookie_consent</td>
+                                <td>Memorizza le preferenze sui cookie dell'utente</td>
+                                <td>1 anno</td>
                             </tr>
                             <tr>
-                                <td style="border: 1px solid #ddd; padding: 8px;">session_id</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">Gestisce la sessione dell'utente</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">Sessione</td>
+                                <td>session_id</td>
+                                <td>Gestisce la sessione dell'utente</td>
+                                <td>Sessione</td>
                             </tr>
                         </tbody>
                     </table>
 
                     <h3>3.2 Cookie Analitici (OPZIONALI)</h3>
-                    <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                    <table class="legal-table">
                         <thead>
-                            <tr style="background-color: #f5f5f5;">
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Nome Cookie</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Scopo</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Durata</th>
+                            <tr>
+                                <th>Nome Cookie</th>
+                                <th>Scopo</th>
+                                <th>Durata</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="border: 1px solid #ddd; padding: 8px;">_ga</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">Google Analytics - Distingue gli utenti</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">2 anni</td>
+                                <td>_ga</td>
+                                <td>Google Analytics - Distingue gli utenti</td>
+                                <td>2 anni</td>
                             </tr>
                             <tr>
-                                <td style="border: 1px solid #ddd; padding: 8px;">_gid</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">Google Analytics - Distingue gli utenti</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">24 ore</td>
+                                <td>_gid</td>
+                                <td>Google Analytics - Distingue gli utenti</td>
+                                <td>24 ore</td>
                             </tr>
                             <tr>
-                                <td style="border: 1px solid #ddd; padding: 8px;">_gat</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">Google Analytics - Limita la frequenza delle richieste</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">1 minuto</td>
+                                <td>_gat</td>
+                                <td>Google Analytics - Limita la frequenza delle richieste</td>
+                                <td>1 minuto</td>
                             </tr>
                         </tbody>
                     </table>

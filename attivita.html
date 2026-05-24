@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=208">
-    <script src="js/main.js?v=208" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=220">
+    <script src="js/main.js?v=220" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-    <header class="header">
+    <header class="header header-over-hero">
         <div class="header-glass">
             <nav class="nav-container" aria-label="Navigazione principale">
                 <div class="header-brand">
@@ -32,7 +32,7 @@
                             <li><a href="index.html" class="nav-link">Home</a></li>
                             <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
                             <li><a href="#" class="nav-link nav-link-sedi" id="sedi-dropdown-trigger">Sedi <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
-                            <li><a href="attivita.html" class="nav-link">Attività</a></li>
+                            <li><a href="attivita.html" class="nav-link active">Attività</a></li>
                             <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
                             <li><a href="contatti.html" class="nav-link">Contatti</a></li>
                         </ul>
@@ -53,18 +53,17 @@
     </header>
 
     <main>
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <div class="container">
-                <a href="index.html">Home</a> / Attività
-            </div>
-        </div>
-
-        <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="container">
-                <h1>Le Nostre Attività</h1>
-                <p>Le attività dell'Associazione Parkinsoniani del Canavese abbracciano ambiti diversi – motorio, cognitivo, emotivo e sociale – con un unico scopo: migliorare il benessere e l'autonomia dei malati di Parkinson e creare una rete di supporto intorno a loro.</p>
+        <section class="hero hero-page" aria-labelledby="attivita-heading">
+            <div class="hero-bg-accent" aria-hidden="true"></div>
+            <div class="hero-inner container hero-inner--center">
+                <div class="hero-text hero-text--center">
+                    <p class="hero-badge"><i class="fas fa-heart" aria-hidden="true"></i> Benessere a 360°</p>
+                    <h1 id="attivita-heading" class="hero-title">Le Nostre Attività</h1>
+                    <p class="hero-lead">Le attività dell'Associazione Parkinsoniani del Canavese abbracciano ambiti diversi – motorio, cognitivo, emotivo e sociale – con un unico scopo: migliorare il benessere e l'autonomia dei malati di Parkinson e creare una rete di supporto intorno a loro.</p>
+                    <div class="hero-buttons">
+                        <a href="contatti.html" class="cta-button hero-cta-primary"><i class="fas fa-calendar-check" aria-hidden="true"></i> Chiedi informazioni</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -122,7 +121,7 @@
         </section>
 
         <!-- Laboratori Cognitivi -->
-        <section class="section activities-section" style="background-color: var(--light-bg);">
+        <section class="section activities-section section-alt">
             <div class="container">
                 <h2 class="section-title">Laboratori Cognitivi e Ricreativi</h2>
                 <div class="activities-grid">
@@ -213,7 +212,7 @@
         </section>
 
         <!-- Servizi di Supporto -->
-        <section class="section recreational-section" style="background-color: var(--light-bg);">
+        <section class="section recreational-section section-alt">
             <div class="container">
                 <h2 class="section-title">Servizi di Supporto</h2>
                 <div class="recreational-grid">
