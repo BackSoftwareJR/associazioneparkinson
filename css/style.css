@@ -3452,3 +3452,443 @@ body:has(.header-over-hero) {
     flex-direction: column;
   }
 }
+
+/* ============================================
+   Chi Siamo – Page Layout & Components
+   ============================================ */
+.about-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3rem;
+}
+
+.about-section-header .section-title {
+  margin-bottom: 1rem;
+}
+
+.about-section-header .section-subtitle {
+  margin-bottom: 0;
+  color: #5a5a5a;
+  line-height: 1.7;
+}
+
+.section-about-story {
+  background: var(--background);
+}
+
+.section-about-alt {
+  background: linear-gradient(180deg, #f4f7f1 0%, var(--background) 100%);
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.about-story-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+.about-story-content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-story-visual {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 16px 40px rgba(81, 119, 87, 0.14),
+    0 0 0 1px rgba(129, 151, 93, 0.1);
+}
+
+.about-story-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.about-achievements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-achievement-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.35rem 1.25rem;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(129, 151, 93, 0.14);
+  box-shadow: 0 4px 20px rgba(81, 119, 87, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-achievement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(81, 119, 87, 0.12);
+}
+
+.about-achievement-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(129, 151, 93, 0.12);
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+.about-achievement-card h3 {
+  margin: 0 0 0.35rem;
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+.about-achievement-card p {
+  margin: 0;
+  color: #666;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.about-highlight {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2.75rem;
+  align-items: center;
+}
+
+.about-highlight-text h3 {
+  color: var(--secondary);
+  font-size: 1.45rem;
+  margin-bottom: 1rem;
+}
+
+.about-highlight-text p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: #444;
+}
+
+.about-highlight-text p:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.about-highlight-image {
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 16px 40px rgba(81, 119, 87, 0.14),
+    0 0 0 1px rgba(129, 151, 93, 0.1);
+}
+
+.about-highlight-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.about-cta-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  box-shadow: 0 4px 16px rgba(81, 119, 87, 0.16);
+}
+
+.about-cta-inline i {
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+.about-cta-inline:hover i {
+  transform: translateX(4px);
+}
+
+.about-values-grid,
+.about-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.about-value-card,
+.about-partner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(129, 151, 93, 0.14);
+  box-shadow: 0 8px 32px rgba(81, 119, 87, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.about-value-card:hover,
+.about-partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(81, 119, 87, 0.14);
+}
+
+.about-value-icon,
+.about-partner-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(129, 151, 93, 0.15) 0%, rgba(129, 151, 93, 0.08) 100%);
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.about-value-card h3,
+.about-partner-card h3 {
+  margin: 0 0 0.75rem;
+  color: var(--secondary);
+  font-size: 1.15rem;
+}
+
+.about-value-card p,
+.about-partner-card p {
+  margin: 0;
+  color: #555;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.section-about-team {
+  background: var(--background);
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.about-team-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(129, 151, 93, 0.14);
+  box-shadow: 0 8px 32px rgba(81, 119, 87, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.about-team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(81, 119, 87, 0.16);
+}
+
+.about-team-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.about-team-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-team-card:hover .about-team-media img {
+  transform: scale(1.05);
+}
+
+.about-team-body {
+  padding: 1.5rem 1.5rem 1.65rem;
+}
+
+.about-team-body h3 {
+  margin: 0 0 0.35rem;
+  color: var(--secondary);
+  font-size: 1.2rem;
+}
+
+.about-team-role {
+  margin: 0 0 0.75rem;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.about-team-body p:last-child {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.about-cta-section {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  background: linear-gradient(180deg, var(--background) 0%, #eef2e8 100%);
+}
+
+.about-cta-panel {
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  box-shadow: 0 16px 48px rgba(81, 119, 87, 0.25);
+  position: relative;
+}
+
+.about-cta-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(0, 0, 0, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.about-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.about-cta-eyebrow {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.about-cta-content h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  color: #fff;
+  line-height: 1.2;
+}
+
+.about-cta-content > p {
+  margin: 0 0 2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.about-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.about-cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.45rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--secondary);
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.about-cta-btn-primary:hover {
+  background: #f8faf5;
+  color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.about-cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1.45rem;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+}
+
+.about-cta-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .about-story-grid,
+  .about-highlight {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-story-visual,
+  .about-highlight-image {
+    order: -1;
+  }
+
+  .about-values-grid,
+  .about-partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-team-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-achievements {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values-grid,
+  .about-partners-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .about-cta-content {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .about-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-cta-btn-primary,
+  .about-cta-btn-secondary {
+    justify-content: center;
+    width: 100%;
+  }
+}

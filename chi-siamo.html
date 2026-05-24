@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=208">
-    <script src="js/main.js?v=208" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=211">
+    <script src="js/main.js?v=211" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-    <header class="header">
+    <header class="header header-over-hero">
         <div class="header-glass">
             <nav class="nav-container" aria-label="Navigazione principale">
                 <div class="header-brand">
@@ -30,7 +30,7 @@
                     <div class="nav-pill">
                         <ul class="nav-menu">
                             <li><a href="index.html" class="nav-link">Home</a></li>
-                            <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
+                            <li><a href="chi-siamo.html" class="nav-link active">Chi Siamo</a></li>
                             <li><a href="#" class="nav-link nav-link-sedi" id="sedi-dropdown-trigger">Sedi <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
                             <li><a href="attivita.html" class="nav-link">Attività</a></li>
                             <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
@@ -53,228 +53,326 @@
     </header>
 
     <main>
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <div class="container">
-                <a href="index.html">Home</a> / Chi Siamo
-            </div>
-        </div>
-
         <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="container">
-                <h1>Chi Siamo</h1>
-                <p>L'Associazione Parkinsoniani del Canavese nasce il 20 giugno 2013 dalla volontà di un piccolo gruppo di amici, uniti dal desiderio di offrire sostegno alle persone colpite dalla malattia di Parkinson e alle loro famiglie.</p>
+        <section class="hero" aria-labelledby="about-hero-heading">
+            <div class="hero-bg-accent" aria-hidden="true"></div>
+            <div class="hero-inner container">
+                <div class="hero-text">
+                    <p class="hero-badge">
+                        <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                        ODV ETS · Dal 2013
+                    </p>
+                    <h1 id="about-hero-heading" class="hero-title">Chi Siamo</h1>
+                    <p class="hero-lead">L'Associazione Parkinsoniani del Canavese nasce il 20 giugno 2013 dalla volontà di un piccolo gruppo di amici, uniti dal desiderio di offrire sostegno alle persone colpite dalla malattia di Parkinson e alle loro famiglie.</p>
+                    <ul class="hero-trust" aria-label="Punti chiave">
+                        <li><i class="fas fa-heart" aria-hidden="true"></i> Organizzazione di volontariato</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 3 sedi nel Canavese</li>
+                        <li><i class="fas fa-users" aria-hidden="true"></i> Comunità accogliente</li>
+                    </ul>
+                    <div class="hero-buttons">
+                        <a href="contatti.html" class="cta-button hero-cta-primary">
+                            <i class="fas fa-envelope" aria-hidden="true"></i> Contattaci
+                        </a>
+                        <a href="donazioni.html" class="cta-button hero-cta-secondary">Sostienici</a>
+                    </div>
+                </div>
+
+                <figure class="hero-visual">
+                    <img class="hero-image-photo" src="images/conferenza.jpg" alt="Conferenza dell'Associazione Parkinsoniani del Canavese" width="640" height="480" loading="eager">
+                    <figcaption class="hero-image-caption">Insieme, con solidarietà</figcaption>
+                </figure>
             </div>
         </section>
 
         <!-- Storia -->
-        <section class="section">
+        <section class="section section-about-story" id="storia" aria-labelledby="storia-heading">
             <div class="container">
-                <div class="story-grid">
-                    <div class="story-content">
-                        <h2>La Nostra Storia</h2>
-                        <p>L'Associazione Parkinsoniani del Canavese nasce il 20 giugno 2013 dalla volontà di un piccolo gruppo di amici, uniti dal desiderio di offrire sostegno alle persone colpite dalla malattia di Parkinson e alle loro famiglie. Siamo un'organizzazione di volontariato (ODV) iscritta nel Terzo Settore, senza scopo di lucro: fin dall'inizio abbiamo messo al centro la persona, creando una comunità accogliente dove malati, familiari e amici possano sentirsi compresi e aiutati.</p>
-                        <p>Il nostro ambito operativo si estende in particolare nel territorio del Canavese, a nord della provincia di Torino, dove vivono migliaia di persone affette da Parkinson. In questi anni abbiamo:</p>
-                        <ul class="achievement-list">
-                            <li>
-                                <i class="fas fa-users"></i>
-                                <span>Creato una comunità accogliente e solidale</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-building"></i>
-                                <span>Aperto 3 sedi operative sul territorio</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-hand-holding-heart"></i>
-                                <span>Collaborato con enti pubblici e privati</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>Promosso attività multidisciplinari</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-globe-africa"></i>
-                                <span>Avviato il Progetto Africa con MAISHA ONGD</span>
-                            </li>
-                        </ul>
+                <header class="about-section-header">
+                    <p class="section-eyebrow"><i class="fas fa-book-open" aria-hidden="true"></i> La nostra storia</p>
+                    <h2 class="section-title" id="storia-heading">Una comunità di supporto</h2>
+                    <p class="section-subtitle">Siamo un'organizzazione di volontariato (ODV) iscritta nel Terzo Settore, senza scopo di lucro: fin dall'inizio abbiamo messo al centro la persona.</p>
+                </header>
+
+                <div class="about-story-grid">
+                    <div class="about-story-content">
+                        <p>L'Associazione Parkinsoniani del Canavese nasce il 20 giugno 2013 dalla volontà di un piccolo gruppo di amici, uniti dal desiderio di offrire sostegno alle persone colpite dalla malattia di Parkinson e alle loro famiglie. Creiamo una comunità accogliente dove malati, familiari e amici possano sentirsi compresi e aiutati.</p>
+                        <p>Il nostro ambito operativo si estende in particolare nel territorio del Canavese, a nord della provincia di Torino, dove vivono migliaia di persone affette da Parkinson. In questi anni abbiamo costruito una rete solidale che continua a crescere.</p>
                     </div>
-                    <div class="story-image">
-                        <img src="images/conferenza.jpg" alt="Conferenza dell'Associazione Parkinsoniani del Canavese" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px;">
-                    </div>
+                    <figure class="about-story-visual">
+                        <img src="images/new-images/img10.jpg" alt="Momento di condivisione tra i membri dell'associazione" width="560" height="420" loading="lazy">
+                    </figure>
                 </div>
+
+                <ul class="about-achievements" aria-label="Risultati raggiunti">
+                    <li class="about-achievement-card">
+                        <span class="about-achievement-icon" aria-hidden="true"><i class="fas fa-users"></i></span>
+                        <div>
+                            <h3>Comunità solidale</h3>
+                            <p>Uno spazio accogliente per malati, familiari e amici</p>
+                        </div>
+                    </li>
+                    <li class="about-achievement-card">
+                        <span class="about-achievement-icon" aria-hidden="true"><i class="fas fa-building"></i></span>
+                        <div>
+                            <h3>3 sedi operative</h3>
+                            <p>Presenza capillare sul territorio canavesano</p>
+                        </div>
+                    </li>
+                    <li class="about-achievement-card">
+                        <span class="about-achievement-icon" aria-hidden="true"><i class="fas fa-hand-holding-heart"></i></span>
+                        <div>
+                            <h3>Collaborazioni attive</h3>
+                            <p>Partnership con enti pubblici e privati</p>
+                        </div>
+                    </li>
+                    <li class="about-achievement-card">
+                        <span class="about-achievement-icon" aria-hidden="true"><i class="fas fa-calendar-alt"></i></span>
+                        <div>
+                            <h3>Attività multidisciplinari</h3>
+                            <p>Motorie, cognitive e ricreative per ogni esigenza</p>
+                        </div>
+                    </li>
+                    <li class="about-achievement-card">
+                        <span class="about-achievement-icon" aria-hidden="true"><i class="fas fa-globe-africa"></i></span>
+                        <div>
+                            <h3>Progetto Africa</h3>
+                            <p>Partnership con MAISHA ONGD dal 2016</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <!-- Cosa Facciamo -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-about-alt" id="cosa-facciamo" aria-labelledby="cosa-facciamo-heading">
             <div class="container">
-                <h2 class="section-title">Cosa Facciamo</h2>
-                <p class="section-subtitle">Promuoviamo attività e progetti che migliorano il benessere fisico e mentale dei nostri associati</p>
-                <div class="content-grid">
-                    <div class="content-text">
+                <header class="about-section-header">
+                    <p class="section-eyebrow"><i class="fas fa-heartbeat" aria-hidden="true"></i> Il nostro approccio</p>
+                    <h2 class="section-title" id="cosa-facciamo-heading">Cosa Facciamo</h2>
+                    <p class="section-subtitle">Promuoviamo attività e progetti che migliorano il benessere fisico e mentale dei nostri associati</p>
+                </header>
+
+                <div class="about-highlight">
+                    <div class="about-highlight-text">
                         <h3>Approccio Multidisciplinare</h3>
                         <p>Crediamo fermamente in un approccio multidisciplinare alla malattia: affianchiamo alle cure mediche tradizionali attività motorie (ginnastica dolce, esercizio fisico assistito, Tai Chi, ecc.), attività cognitive e ricreative (laboratori di memoria, musicoterapia, yoga della risata, uscite di gruppo) e momenti di incontro e confronto.</p>
                         <p>Il tutto con l'obiettivo di contrastare l'isolamento, la depressione e la perdita di autonomia che spesso accompagnano il progredire del Parkinson.</p>
-                        <a href="attivita.html" class="cta-button">Scopri le nostre attività</a>
+                        <a href="attivita.html" class="cta-button about-cta-inline">
+                            Scopri le nostre attività <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    <div class="content-image">
-                        <img src="images/mov cons.jpg" alt="Attività motorie dell'associazione" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px;">
-                    </div>
+                    <figure class="about-highlight-image">
+                        <img src="images/new-images/img9.jpg" alt="Attività motorie dell'associazione" width="520" height="390" loading="lazy">
+                    </figure>
                 </div>
             </div>
         </section>
 
         <!-- Missione e Valori -->
-        <section class="section">
+        <section class="section section-about-values" id="valori" aria-labelledby="valori-heading">
             <div class="container">
-                <h2 class="section-title">I Nostri Valori</h2>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <i class="fas fa-heart"></i>
+                <header class="about-section-header">
+                    <p class="section-eyebrow"><i class="fas fa-star" aria-hidden="true"></i> I nostri principi</p>
+                    <h2 class="section-title" id="valori-heading">I Nostri Valori</h2>
+                    <p class="section-subtitle">Quattro pilastri che guidano ogni nostra iniziativa e ogni rapporto con la comunità</p>
+                </header>
+
+                <div class="about-values-grid">
+                    <article class="about-value-card">
+                        <span class="about-value-icon" aria-hidden="true"><i class="fas fa-heart"></i></span>
                         <h3>Empatia</h3>
                         <p>Ascoltiamo e comprendiamo le esigenze di ogni persona, offrendo supporto personalizzato e caloroso.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-hands-helping"></i>
+                    </article>
+                    <article class="about-value-card">
+                        <span class="about-value-icon" aria-hidden="true"><i class="fas fa-hands-helping"></i></span>
                         <h3>Solidarietà</h3>
                         <p>Creiamo una rete di supporto dove nessuno si sente solo nel proprio percorso.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-star"></i>
+                    </article>
+                    <article class="about-value-card">
+                        <span class="about-value-icon" aria-hidden="true"><i class="fas fa-award"></i></span>
                         <h3>Eccellenza</h3>
                         <p>Collaboriamo con professionisti qualificati per garantire il miglior supporto possibile.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-users"></i>
+                    </article>
+                    <article class="about-value-card">
+                        <span class="about-value-icon" aria-hidden="true"><i class="fas fa-users"></i></span>
                         <h3>Comunità</h3>
                         <p>Promuoviamo l'inclusione e la partecipazione attiva di tutti i membri.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Le Nostre Sedi -->
-        <section class="section">
+        <section class="section section-sedi" id="sedi" aria-labelledby="sedi-heading">
             <div class="container">
-                <h2 class="section-title">Le Nostre Sedi</h2>
-                <div class="locations-grid">
-                    <article class="location-card">
-                        <div class="location-image">
-                            <img src="images/palestra-1.jpg" alt="Palestra riabilitativa di Castellamonte" style="width: 100%; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="location-content">
-                            <h3>Castellamonte - Sede Legale</h3>
-                            <p>La nostra sede principale presso la Casa della Salute, con palestra riabilitativa e attività motorie assistite.</p>
-                            <ul class="location-details">
-                                <li><i class="fas fa-map-marker-alt"></i> P.le P. Nenni 1 - Castellamonte (TO)</li>
-                                <li><i class="fas fa-clock"></i> Su appuntamento</li>
-                                <li><i class="fas fa-phone"></i> Tel: 347 4539988</li>
-                            </ul>
-                            <a href="sedi/castellamonte.html" class="cta-button">Scopri la sede</a>
-                        </div>
+                <header class="sedi-showcase-header">
+                    <p class="section-eyebrow"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Presenza sul territorio</p>
+                    <h2 class="section-title" id="sedi-heading">Le Nostre Sedi</h2>
+                    <p class="section-subtitle">Tre punti di riferimento nel Canavese per accoglierti, informarti e accompagnarti. Ogni sede offre attività e supporto dedicati alla comunità locale.</p>
+                </header>
+
+                <div class="sedi-showcase-grid">
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/castellamonte.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/new-images/img15.jpg" alt="Palestra riabilitativa presso la sede di Castellamonte" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge">Sede Legale</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>Castellamonte</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> P.le P. Nenni 1 · Casa della Salute</p>
+                                <p class="sedi-showcase-desc">Sede principale con palestra riabilitativa, attività motorie assistite e punto informativo per famiglie e volontari.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-dumbbell" aria-hidden="true"></i> Palestra</li>
+                                    <li><i class="fas fa-info-circle" aria-hidden="true"></i> Orientamento</li>
+                                    <li><i class="fas fa-users" aria-hidden="true"></i> Gruppi</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
                     </article>
 
-                    <article class="location-card">
-                        <div class="location-image">
-                            <img src="images/P7240367SITO.jpg" alt="Sede di Banchette d'Ivrea" style="width: 100%; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="location-content">
-                            <h3>Banchette d'Ivrea</h3>
-                            <p>Sede operativa nell'ex consultorio ASL, punto di riferimento per il Canavese orientale.</p>
-                            <ul class="location-details">
-                                <li><i class="fas fa-map-marker-alt"></i> Via Samone 24 - Banchette d'Ivrea (TO)</li>
-                                <li><i class="fas fa-clock"></i> Su appuntamento</li>
-                                <li><i class="fas fa-phone"></i> Tel: 347 4539988</li>
-                            </ul>
-                            <a href="sedi/banchette.html" class="cta-button">Scopri la sede</a>
-                        </div>
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/banchette.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/P7240367SITO.jpg" alt="Sede operativa di Banchette d'Ivrea" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge sedi-showcase-badge--alt">Canavese orientale</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>Banchette d'Ivrea</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Via Samone 24 · Ex Consultorio ASL</p>
+                                <p class="sedi-showcase-desc">Punto di riferimento per Ivrea e dintorni: incontri di supporto, laboratori e attività di gruppo dal 2021.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-comments" aria-hidden="true"></i> Ascolto</li>
+                                    <li><i class="fas fa-user-md" aria-hidden="true"></i> Esperti</li>
+                                    <li><i class="fas fa-bus" aria-hidden="true"></i> Trasporti</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
                     </article>
 
-                    <article class="location-card">
-                        <div class="location-image">
-                            <img src="images/sanmaurizio1.jpg" alt="Ospedale Fatebenefratelli di San Maurizio Canavese" style="width: 100%; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="location-content">
-                            <h3>San Maurizio Canavese</h3>
-                            <p>Sede presso l'Ospedale Fatebenefratelli, specializzata in riabilitazione e supporto ospedaliero.</p>
-                            <ul class="location-details">
-                                <li><i class="fas fa-map-marker-alt"></i> Via Fatebenefratelli 70 - San Maurizio C.se (TO)</li>
-                                <li><i class="fas fa-clock"></i> Su appuntamento</li>
-                                <li><i class="fas fa-phone"></i> Tel: 347 4539988</li>
-                            </ul>
-                            <a href="sedi/san-maurizio.html" class="cta-button">Scopri la sede</a>
-                        </div>
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/san-maurizio.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/sanmaurizio1.jpg" alt="Sede presso l'Ospedale Fatebenefratelli di San Maurizio Canavese" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge sedi-showcase-badge--alt">Basso Canavese</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>San Maurizio Canavese</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Via Fatebenefratelli 70 · Ospedale</p>
+                                <p class="sedi-showcase-desc">Sede ospedaliera per riabilitazione, incontri formativi e continuità assistenziale con il Fatebenefratelli.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-hospital" aria-hidden="true"></i> Riabilitazione</li>
+                                    <li><i class="fas fa-graduation-cap" aria-hidden="true"></i> Formazione</li>
+                                    <li><i class="fas fa-handshake" aria-hidden="true"></i> Follow-up</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
                     </article>
+                </div>
+
+                <div class="sedi-showcase-footer">
+                    <a href="sedi.html" class="cta-button cta-secondary">Vedi tutte le sedi e la mappa</a>
+                    <a href="contatti.html" class="sedi-showcase-contact-link"><i class="fas fa-calendar-check" aria-hidden="true"></i> Prenota una visita su appuntamento</a>
                 </div>
             </div>
         </section>
 
         <!-- Collaborazioni -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-about-alt" id="collaborazioni" aria-labelledby="collaborazioni-heading">
             <div class="container">
-                <h2 class="section-title">Le Nostre Collaborazioni</h2>
-                <p class="section-subtitle">Lavoriamo in sinergia con enti pubblici e privati per offrire il miglior supporto possibile</p>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <i class="fas fa-hospital"></i>
+                <header class="about-section-header">
+                    <p class="section-eyebrow"><i class="fas fa-handshake" aria-hidden="true"></i> Rete di supporto</p>
+                    <h2 class="section-title" id="collaborazioni-heading">Le Nostre Collaborazioni</h2>
+                    <p class="section-subtitle">Lavoriamo in sinergia con enti pubblici e privati per offrire il miglior supporto possibile</p>
+                </header>
+
+                <div class="about-partners-grid">
+                    <article class="about-partner-card">
+                        <span class="about-partner-icon" aria-hidden="true"><i class="fas fa-hospital"></i></span>
                         <h3>Strutture Sanitarie</h3>
                         <p>Collaboriamo con l'ASL, il personale dell'Ospedale Fatebenefratelli di San Maurizio e altre strutture sanitarie locali.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-handshake"></i>
+                    </article>
+                    <article class="about-partner-card">
+                        <span class="about-partner-icon" aria-hidden="true"><i class="fas fa-handshake"></i></span>
                         <h3>Fondazione di Comunità</h3>
                         <p>Grazie al supporto della Fondazione di Comunità del Canavese riusciamo a proporre nuove attività e servizi.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-user-md"></i>
+                    </article>
+                    <article class="about-partner-card">
+                        <span class="about-partner-icon" aria-hidden="true"><i class="fas fa-user-md"></i></span>
                         <h3>Professionisti Specializzati</h3>
                         <p>Neurologi, fisioterapisti, psicologi, logopedisti e altri professionisti collaborano con noi.</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-building"></i>
+                    </article>
+                    <article class="about-partner-card">
+                        <span class="about-partner-icon" aria-hidden="true"><i class="fas fa-building"></i></span>
                         <h3>Enti Locali</h3>
                         <p>Lavoriamo con le amministrazioni locali per essere presenti capillarmente sul territorio.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Team -->
-        <section class="section">
+        <section class="section section-about-team" id="team" aria-labelledby="team-heading">
             <div class="container">
-                <h2 class="section-title">Il Nostro Team</h2>
-                <p class="section-subtitle">Un gruppo di professionisti e volontari dedicati al benessere della comunità</p>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="images/canti e merenda a S.Stefano di Candia.jpg" alt="Volontari dell'associazione" style="width: 100%; height: 200px; object-fit: cover;">
-                        <h3>Volontari Dedicati</h3>
-                        <p class="member-role">Il nostro team di volontari</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/conferenza.jpg" alt="Professionisti qualificati" style="width: 100%; height: 200px; object-fit: cover;">
-                        <h3>Professionisti Qualificati</h3>
-                        <p class="member-role">Collaborazioni specialistiche</p>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/passeg.jpeg" alt="Famiglie e caregiver" style="width: 100%; height: 200px; object-fit: cover;">
-                        <h3>Famiglie e Caregiver</h3>
-                        <p class="member-role">Il cuore della nostra associazione</p>
-                    </div>
+                <header class="about-section-header">
+                    <p class="section-eyebrow"><i class="fas fa-users" aria-hidden="true"></i> Le persone</p>
+                    <h2 class="section-title" id="team-heading">Il Nostro Team</h2>
+                    <p class="section-subtitle">Un gruppo di professionisti e volontari dedicati al benessere della comunità</p>
+                </header>
+
+                <div class="about-team-grid">
+                    <article class="about-team-card">
+                        <div class="about-team-media">
+                            <img src="images/canti e merenda a S.Stefano di Candia.jpg" alt="Volontari dell'associazione durante un'uscita di gruppo" width="360" height="240" loading="lazy">
+                        </div>
+                        <div class="about-team-body">
+                            <h3>Volontari Dedicati</h3>
+                            <p class="about-team-role">Il nostro team di volontari</p>
+                            <p>Il cuore pulsante dell'associazione: persone generose che dedicano tempo ed energia per accompagnare malati e famiglie.</p>
+                        </div>
+                    </article>
+                    <article class="about-team-card">
+                        <div class="about-team-media">
+                            <img src="images/conferenza.jpg" alt="Professionisti qualificati in un incontro formativo" width="360" height="240" loading="lazy">
+                        </div>
+                        <div class="about-team-body">
+                            <h3>Professionisti Qualificati</h3>
+                            <p class="about-team-role">Collaborazioni specialistiche</p>
+                            <p>Neurologi, fisioterapisti, psicologi e altri esperti che condividono competenze e aggiornamenti con la comunità.</p>
+                        </div>
+                    </article>
+                    <article class="about-team-card">
+                        <div class="about-team-media">
+                            <img src="images/passeg.jpeg" alt="Famiglie e caregiver durante una passeggiata di gruppo" width="360" height="240" loading="lazy">
+                        </div>
+                        <div class="about-team-body">
+                            <h3>Famiglie e Caregiver</h3>
+                            <p class="about-team-role">Il cuore della nostra associazione</p>
+                            <p>Partner fondamentali nel percorso: insieme costruiamo una rete di supporto che abbraccia tutta la famiglia.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Call to Action -->
-        <section class="section" style="background-color: var(--primary-color); color: white;">
+        <section class="section about-cta-section" aria-labelledby="about-cta-heading">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Unisciti alla Nostra Famiglia</h2>
-                    <p>In questi anni abbiamo imparato che "insieme è meglio": l'entusiasmo dei volontari, la partecipazione attiva dei pazienti e il sostegno della comunità sono la nostra forza. Continuiamo a crescere e a colorare il futuro con nuove idee e tanta passione.</p>
-                    <div class="cta-buttons">
-                        <a href="donazioni.html" class="cta-button secondary">Diventa Socio</a>
-                        <a href="contatti.html" class="cta-button secondary">Contattaci</a>
-                        <a href="attivita.html" class="cta-button secondary">Scopri le Attività</a>
+                <div class="about-cta-panel">
+                    <div class="about-cta-content">
+                        <p class="section-eyebrow about-cta-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> Unisciti a noi</p>
+                        <h2 id="about-cta-heading">Unisciti alla Nostra Famiglia</h2>
+                        <p>In questi anni abbiamo imparato che "insieme è meglio": l'entusiasmo dei volontari, la partecipazione attiva dei pazienti e il sostegno della comunità sono la nostra forza. Continuiamo a crescere e a colorare il futuro con nuove idee e tanta passione.</p>
+                        <div class="about-cta-buttons">
+                            <a href="donazioni.html" class="cta-button about-cta-btn-primary">
+                                <i class="fas fa-heart" aria-hidden="true"></i> Diventa Socio
+                            </a>
+                            <a href="contatti.html" class="cta-button about-cta-btn-secondary">Contattaci</a>
+                            <a href="attivita.html" class="cta-button about-cta-btn-secondary">Scopri le Attività</a>
+                        </div>
                     </div>
                 </div>
             </div>
