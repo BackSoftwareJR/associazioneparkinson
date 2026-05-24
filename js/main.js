@@ -114,8 +114,17 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     }
 
+    function initHeroHeader() {
+        if (!header) return;
+        const heroSection = document.querySelector('main > .hero:first-child');
+        if (heroSection) {
+            header.classList.add('header-over-hero');
+        }
+    }
+
     initScrollHeader();
     initActiveNavLink();
+    initHeroHeader();
     updateHeaderOffset();
     window.addEventListener('resize', updateHeaderOffset);
 

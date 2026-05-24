@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap');
 
+html {
+  scroll-padding-top: var(--header-offset, 90px);
+}
+
 body, html {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -46,12 +52,28 @@ body {
   font-family: var(--header-font);
 }
 
+/* Homepage: header flottante sopra la hero, senza spazio bianco */
+.header.header-over-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.header-over-hero + main {
+  margin: 0;
+  padding: 0;
+}
+
 .header.scrolled {
   padding: 0.55rem 1rem;
 }
 
 .header-glass {
   pointer-events: auto;
+  width: 100%;
   max-width: 1180px;
   margin: 0 auto;
   background: linear-gradient(
@@ -75,23 +97,35 @@ body {
 }
 
 .nav-container {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  position: relative;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.25rem;
   padding: 0.65rem 1.25rem;
+  min-height: 64px;
 }
 
 .header-brand {
-  justify-self: start;
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
   min-width: 0;
+  max-width: min(280px, 32vw);
+  z-index: 2;
 }
 
 .header-actions {
-  justify-self: end;
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 0.5rem;
+  z-index: 2;
 }
 
 .logo {
@@ -147,10 +181,13 @@ body {
 }
 
 .nav-wrapper {
-  justify-self: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.65rem;
+  flex: 0 1 auto;
+  max-width: calc(100% - 560px);
+  margin: 0 auto;
 }
 
 .nav-pill {
@@ -1338,6 +1375,8 @@ body {
   position: relative;
   height: 100vh;
   min-height: 600px;
+  margin-top: 0;
+  padding-top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1348,6 +1387,12 @@ body {
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+
+.header-over-hero + main > .hero:first-child {
+  margin-top: 0;
+  padding-top: var(--header-offset, 90px);
+  box-sizing: border-box;
 }
 
 .hero-overlay {
@@ -1889,9 +1934,26 @@ body {
 
 /* Responsive design */
 @media (max-width: 1100px) {
+  .header {
+    padding: 0.65rem 1rem;
+  }
+
   .nav-container {
     gap: 0.85rem;
     padding: 0.6rem 1rem;
+  }
+
+  .header-brand {
+    left: 1rem;
+    max-width: min(240px, 30vw);
+  }
+
+  .header-actions {
+    right: 1rem;
+  }
+
+  .nav-wrapper {
+    max-width: calc(100% - 420px);
   }
 
   .logo-subtitle {
@@ -1899,13 +1961,25 @@ body {
   }
 
   .nav-link {
-    padding: 0.5rem 0.7rem;
-    font-size: 0.84rem;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.82rem;
   }
 
   .nav-cta {
-    padding: 0.55rem 1rem;
-    font-size: 0.82rem;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 960px) and (min-width: 901px) {
+  .nav-pill {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-pill::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -1920,22 +1994,38 @@ body {
 }
 
 @media (max-width: 900px) {
-  .header {
+  .header,
+  .header.header-over-hero {
     padding: 0.55rem 0.85rem;
   }
 
   .nav-container {
+    display: grid;
     grid-template-columns: 1fr auto;
     gap: 0.75rem;
     padding: 0.55rem 0.85rem;
+    min-height: 0;
+    justify-content: stretch;
   }
 
   .header-brand {
+    position: static;
+    transform: none;
     grid-column: 1;
+    justify-self: start;
+    max-width: none;
   }
 
   .header-actions {
+    position: static;
+    transform: none;
     grid-column: 2;
+    justify-self: end;
+  }
+
+  .nav-wrapper {
+    max-width: none;
+    margin: 0;
   }
 
   .logo-text {
@@ -2016,7 +2106,7 @@ body {
   }
 
   .hero {
-    height: 80vh;
+    height: 100vh;
     min-height: 500px;
   }
   
@@ -2064,6 +2154,23 @@ body {
 }
 
 @media (max-width: 480px) {
+  .header,
+  .header.header-over-hero {
+    padding: 0.45rem 0.65rem;
+  }
+
+  .header-glass {
+    border-radius: 18px;
+  }
+
+  .nav-container {
+    padding: 0.45rem 0.65rem;
+  }
+
+  .header-brand {
+    max-width: calc(100% - 56px);
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
