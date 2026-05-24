@@ -79,7 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!href || href === '#') return;
 
             const linkPath = href.split('/').pop();
-            if (linkPath === currentPath) {
+            const isHome = (currentPath === '' || currentPath === 'index.html') && linkPath === 'index.html';
+            if (linkPath === currentPath || isHome) {
                 link.classList.add('active');
             }
         });
@@ -207,6 +208,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextBtn = carousel.querySelector('.hero-carousel-next');
         const dotsContainer = carousel.querySelector('.hero-carousel-dots');
         const statusEl = document.getElementById('hero-carousel-status');
+        const counterEl = document.getElementById('hero-carousel-counter');
+        const progressBar = document.getElementById('hero-carousel-progress');
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         if (!slides.length || !dotsContainer) return;
@@ -215,6 +218,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentIndex < 0) currentIndex = 0;
 
         let autoplayTimer = null;
+        let progressTimer = null;
+        let progressStart = 0;
         const autoplayDelay = 6000;
 
         function getSlideLabel(slide) {
@@ -228,6 +233,44 @@ document.addEventListener('DOMContentLoaded', function() {
         function announceSlide(index) {
             if (!statusEl) return;
             statusEl.textContent = 'Foto ' + (index + 1) + ' di ' + slides.length + '. ' + getSlideLabel(slides[index]);
+        }
+
+        function updateCounter(index) {
+            if (counterEl) {
+                counterEl.textContent = (index + 1) + ' / ' + slides.length;
+            }
+        }
+
+        function resetProgressBar() {
+            if (!progressBar) return;
+            progressBar.style.width = '0%';
+            progressStart = Date.now();
+        }
+
+        function stopProgressBar() {
+            if (progressTimer) {
+                cancelAnimationFrame(progressTimer);
+                progressTimer = null;
+            }
+        }
+
+        function animateProgressBar() {
+            if (!progressBar || reducedMotion) return;
+
+            stopProgressBar();
+
+            function tick() {
+                const elapsed = Date.now() - progressStart;
+                const pct = Math.min((elapsed / autoplayDelay) * 100, 100);
+                progressBar.style.width = pct + '%';
+
+                if (pct < 100) {
+                    progressTimer = requestAnimationFrame(tick);
+                }
+            }
+
+            resetProgressBar();
+            progressTimer = requestAnimationFrame(tick);
         }
 
         function setActiveSlide(index) {
@@ -244,7 +287,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 dot.tabIndex = isActive ? 0 : -1;
             });
 
+            updateCounter(currentIndex);
             announceSlide(currentIndex);
+            animateProgressBar();
         }
 
         slides.forEach((slide, index) => {
@@ -277,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 clearInterval(autoplayTimer);
                 autoplayTimer = null;
             }
+            stopProgressBar();
         }
 
         function startAutoplay() {
