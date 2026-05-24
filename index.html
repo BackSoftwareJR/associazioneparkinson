@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=220">
-    <script src="js/main.js?v=220" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=221">
+    <script src="js/main.js?v=221" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
@@ -283,22 +283,62 @@
 
         <!-- Progetto Africa -->
         <section class="section section-home-africa" id="progetto-africa" aria-labelledby="africa-heading">
+            <div class="home-africa-ambient" aria-hidden="true"></div>
             <div class="container">
-                <header class="section-header">
-                    <p class="section-eyebrow"><i class="fas fa-globe-africa" aria-hidden="true"></i> Solidarietà internazionale</p>
+                <header class="home-africa-header reveal" data-reveal>
+                    <p class="section-eyebrow section-eyebrow--light"><i class="fas fa-globe-africa" aria-hidden="true"></i> Solidarietà internazionale</p>
                     <h2 class="section-title" id="africa-heading">Progetto Africa – MAISHA ONGD</h2>
-                    <p class="section-subtitle">Dal 2016 sosteniamo progetti di istruzione e empowerment nella Repubblica Democratica del Congo. "Maisha" significa "vita" in lingala.</p>
+                    <p class="section-subtitle">Dal 2016 un ponte di speranza tra il Canavese e la Repubblica Democratica del Congo. In lingala, <em>Maisha</em> significa <strong>vita</strong>.</p>
                 </header>
-                <div class="home-africa-layout">
-                    <div class="home-africa-card">
-                        <h3>Solidarietà Senza Confini</h3>
-                        <p>Aiutiamo bambini e donne attraverso progetti di istruzione e empowerment nella Repubblica Democratica del Congo, in collaborazione con MAISHA ONGD.</p>
-                        <p>Scopri come puoi contribuire anche tu a questa causa che unisce il Canavese al mondo.</p>
-                        <a href="progetto-africa.html" class="cta-button">Scopri il progetto</a>
-                    </div>
-                    <figure class="home-africa-visual">
-                        <img src="images/new-images/africa1.jpeg" alt="Progetto Africa – MAISHA ONGD" width="640" height="480" loading="lazy">
+
+                <div class="home-africa-showcase">
+                    <figure class="home-africa-visual-panel reveal" data-reveal data-reveal-delay="1">
+                        <img src="images/new-images/africa1.jpeg" alt="Volontari e comunità del Progetto Africa in Congo" width="640" height="480" loading="lazy">
+                        <div class="home-africa-visual-accent" aria-hidden="true">
+                            <img src="images/new-images/africa2.jpeg" alt="" width="200" height="200" loading="lazy">
+                        </div>
+                        <figcaption class="home-africa-visual-badge">
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i> Attivo dal 2016
+                        </figcaption>
                     </figure>
+
+                    <div class="home-africa-content reveal" data-reveal data-reveal-delay="2">
+                        <h3 class="home-africa-tagline">Solidarietà senza confini</h3>
+                        <p class="home-africa-lead">Sosteniamo MAISHA ONGD con progetti di istruzione per i bambini e di empowerment per le donne nei territori di Uvira e Fizi, nel Sud Kivu.</p>
+
+                        <div class="home-africa-stats" aria-label="Impatto del progetto">
+                            <div class="home-africa-stat">
+                                <span class="home-africa-stat-value">50+</span>
+                                <span class="home-africa-stat-label">Bambini a scuola</span>
+                            </div>
+                            <div class="home-africa-stat">
+                                <span class="home-africa-stat-value">120</span>
+                                <span class="home-africa-stat-label">Donne supportate</span>
+                            </div>
+                            <div class="home-africa-stat">
+                                <span class="home-africa-stat-value">2</span>
+                                <span class="home-africa-stat-label">Progetti attivi</span>
+                            </div>
+                        </div>
+
+                        <ul class="home-africa-pills" aria-label="Aree di intervento">
+                            <li><i class="fas fa-graduation-cap" aria-hidden="true"></i> Istruzione</li>
+                            <li><i class="fas fa-seedling" aria-hidden="true"></i> Empowerment</li>
+                            <li><i class="fas fa-book-open" aria-hidden="true"></i> Alfabetizzazione</li>
+                        </ul>
+
+                        <div class="home-africa-actions">
+                            <a href="progetto-africa.html" class="cta-button home-africa-cta">Scopri il progetto</a>
+                            <a href="donazioni.html" class="home-africa-secondary-link">Sostieni Maisha <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-africa-location reveal" data-reveal data-reveal-delay="3">
+                    <span class="home-africa-location-label"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dove operiamo</span>
+                    <span class="home-africa-location-chip">Repubblica Democratica del Congo</span>
+                    <span class="home-africa-location-chip">Provincia del Sud Kivu</span>
+                    <span class="home-africa-location-chip">Uvira &amp; Fizi</span>
                 </div>
             </div>
         </section>

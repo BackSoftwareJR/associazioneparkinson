@@ -316,31 +316,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initActivitiesShowcase();
 
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function initScrollReveal() {
+        const reveals = document.querySelectorAll('[data-reveal]');
+        if (!reveals.length) return;
+
+        if (reduceMotion) {
+            reveals.forEach(el => el.classList.add('is-visible'));
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        reveals.forEach(el => observer.observe(el));
+    }
+
+    initScrollReveal();
+
     function initAboutPage() {
         if (!document.body.classList.contains('page-about')) return;
-
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        function initScrollReveal() {
-            const reveals = document.querySelectorAll('[data-reveal]');
-            if (!reveals.length) return;
-
-            if (reduceMotion) {
-                reveals.forEach(el => el.classList.add('is-visible'));
-                return;
-            }
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-            reveals.forEach(el => observer.observe(el));
-        }
 
         function initStatCounters() {
             const statEls = document.querySelectorAll('.about-stat-value[data-count-to]');
@@ -497,7 +499,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        initScrollReveal();
         initStatCounters();
         initApproachTabs();
         initAnchorNav();

@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=220">
-    <script src="js/main.js?v=220" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=221">
+    <script src="js/main.js?v=221" defer></script>
 </head>
-<body>
+<body class="page-africa">
     <header class="header header-over-hero">
         <div class="header-glass">
             <nav class="nav-container" aria-label="Navigazione principale">
@@ -52,132 +52,232 @@
     </header>
 
     <main>
-        <section class="hero hero-page hero-page--africa" aria-labelledby="africa-page-heading">
-            <div class="hero-bg-accent" aria-hidden="true"></div>
-            <div class="hero-inner container hero-inner--center">
-                <div class="hero-text hero-text--center">
-                    <p class="hero-badge"><i class="fas fa-globe-africa" aria-hidden="true"></i> Solidarietà internazionale</p>
-                    <h1 id="africa-page-heading" class="hero-title">Progetto Africa – MAISHA ONGD</h1>
-                    <p class="hero-lead">Oltre alle attività sul territorio locale, la nostra associazione sostiene MAISHA ONGD nella Repubblica Democratica del Congo dal 2016, con progetti di istruzione e empowerment per bambini e donne.</p>
+        <!-- Hero immersivo -->
+        <section class="hero-africa" aria-labelledby="africa-page-heading">
+            <div class="hero-africa-bg" aria-hidden="true">
+                <img src="images/new-images/africa3.jpeg" alt="" width="1920" height="1080" loading="eager">
+            </div>
+            <div class="hero-africa-overlay" aria-hidden="true"></div>
+            <div class="hero-africa-inner container">
+                <div class="hero-africa-text reveal" data-reveal>
+                    <p class="hero-badge hero-badge--light"><i class="fas fa-globe-africa" aria-hidden="true"></i> Solidarietà internazionale</p>
+                    <h1 id="africa-page-heading" class="hero-africa-title">Progetto Africa – MAISHA ONGD</h1>
+                    <p class="hero-africa-lead">Oltre alle attività sul territorio locale, la nostra associazione sostiene MAISHA ONGD nella Repubblica Democratica del Congo dal 2016, con progetti di istruzione e empowerment per bambini e donne.</p>
+                </div>
+                <div class="hero-africa-chips reveal" data-reveal data-reveal-delay="1">
+                    <span class="hero-africa-chip"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Sud Kivu, RDC</span>
+                    <span class="hero-africa-chip"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Dal 2016</span>
+                    <span class="hero-africa-chip"><i class="fas fa-handshake" aria-hidden="true"></i> Gemellaggio solidale</span>
                 </div>
             </div>
         </section>
 
-        <!-- Sezione Introduzione -->
-        <section class="section">
+        <!-- Chi è MAISHA – layout editoriale -->
+        <section class="section africa-section africa-section--intro" id="maisha" aria-labelledby="maisha-heading">
             <div class="container">
-                <div class="maisha-intro-card">
-                    <h2>Chi è MAISHA ONGD</h2>
-                    <p>In lingala "Maisha" significa "vita": un nome che incarna la missione di questo progetto, nato per migliorare le condizioni di vita di comunità locali particolarmente svantaggiate, attraverso iniziative di integrazione e sviluppo.</p>
-                    <p>Il progetto Maisha, portato avanti da volontari locali congolesi in collaborazione con un gruppo di volontari italiani (di cui facciamo parte anche noi del Canavese), interviene in villaggi duramente colpiti da povertà, conflitti e marginalizzazione sociale.</p>
-                    <p>L'Associazione Parkinsoniani del Canavese ODV, pur operando in un ambito diverso, ha scelto di dare un contributo concreto a questa causa, stringendo un gemellaggio solidale con Maisha.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sezione Progetti -->
-        <section class="section section-alt">
-            <div class="container">
-                <h2 class="section-title">I Nostri Progetti sul Campo</h2>
-                <p class="section-subtitle">Maisha ha attivato diversi interventi per cambiare in meglio la vita delle persone coinvolte</p>
-                
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Progetto KUA – Istruzione per i bambini</h3>
-                        <p>Grazie a questo progetto, 50 bambini (di cui 20 appartenenti alla comunità pigmea locale) possono frequentare la scuola. Vengono coperti i costi delle rette scolastiche, forniti libri, quaderni, penne e anche gli indumenti necessari per andare a scuola dignitosamente.</p>
-                        <p>Inoltre, per 10 ragazze orfane tra i 10 e i 16 anni, il progetto assicura il proseguimento degli studi oltre la scuola primaria: paghiamo le spese per la scuola secondaria e ci occupiamo della loro assistenza medica e alimentare.</p>
-                        <p>In contesti dove l'istruzione femminile spesso viene trascurata, dare a queste giovani la possibilità di studiare significa cambiare il loro destino, renderle più autonome e forti per il futuro.</p>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fas fa-seedling"></i>
-                        </div>
-                        <h3>Progetto PADIS – Empowerment per le donne</h3>
-                        <p>Un altro pilastro di Maisha riguarda 120 donne, molte delle quali vittime di violenza sessuale e traumi dovuti alla guerra. Per loro è stato organizzato un programma di formazione e lavoro, in particolare un'attività di orticoltura comunitaria.</p>
-                        <p>Coltivando insieme i campi nella pianura di Ruzizi (zona di Kagando), queste donne non solo producono cibo per le proprie famiglie, ma hanno riacquistato dignità e ruolo sociale. Dai frutti di questa attività è nata una "cassa comune": una sorta di fondo sociale alimentato dai piccoli ricavi della cooperativa agricola.</p>
-                        <p>Grazie a questo fondo le donne hanno potuto acquistare due macchine da cucire e dare vita a un laboratorio di taglio e cucito. Ora realizzano capi di abbigliamento destinati alla vendita, generando un reddito e nuove competenze professionali.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sezione Alfabetizzazione -->
-        <section class="section">
-            <div class="container">
-                <div class="alfabetizzazione-card">
-                    <h2>Corso di Alfabetizzazione</h2>
-                    <div class="alfabetizzazione-grid">
-                        <div class="alfabetizzazione-item">
-                            <i class="fas fa-book-open" aria-hidden="true"></i>
-                            <h3>Istruzione di Base</h3>
-                            <p>Su richiesta delle stesse partecipanti, abbiamo organizzato un corso di alfabetizzazione: molte di queste donne non avevano mai avuto accesso all'istruzione di base.</p>
-                        </div>
-                        <div class="alfabetizzazione-item">
-                            <i class="fas fa-heart" aria-hidden="true"></i>
-                            <h3>Emozione Indescrivibile</h3>
-                            <p>Imparare a leggere, scrivere e far di conto in età adulta è stata per loro un'emozione indescrivibile, oltre che uno strumento fondamentale per conoscere e difendere i propri diritti.</p>
+                <div class="africa-intro-grid">
+                    <figure class="africa-intro-visual reveal" data-reveal>
+                        <img src="images/new-images/africa4.jpeg" alt="Comunità locale supportata da MAISHA ONGD" width="560" height="640" loading="lazy">
+                        <figcaption class="africa-intro-quote">
+                            <i class="fas fa-quote-left" aria-hidden="true"></i>
+                            <p>Maisha significa <strong>vita</strong> in lingala</p>
+                        </figcaption>
+                    </figure>
+                    <div class="africa-intro-content reveal" data-reveal data-reveal-delay="1">
+                        <p class="section-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> La nostra missione</p>
+                        <h2 class="section-title" id="maisha-heading">Chi è MAISHA ONGD</h2>
+                        <p>Un nome che incarna la missione di questo progetto, nato per migliorare le condizioni di vita di comunità locali particolarmente svantaggiate, attraverso iniziative di integrazione e sviluppo.</p>
+                        <p>Il progetto Maisha, portato avanti da volontari locali congolesi in collaborazione con un gruppo di volontari italiani (di cui facciamo parte anche noi del Canavese), interviene in villaggi duramente colpiti da povertà, conflitti e marginalizzazione sociale.</p>
+                        <p>L'Associazione Parkinsoniani del Canavese ODV, pur operando in un ambito diverso, ha scelto di dare un contributo concreto a questa causa, stringendo un gemellaggio solidale con Maisha.</p>
+                        <div class="africa-intro-highlights">
+                            <div class="africa-intro-highlight">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                <span>Volontari congolesi e italiani</span>
+                            </div>
+                            <div class="africa-intro-highlight">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                                <span>Gemellaggio Canavese–Congo</span>
+                            </div>
                         </div>
                     </div>
-                    <p class="alfabetizzazione-footer">Il progetto PADIS, in sintesi, mira a rompere il ciclo di violenza e sottomissione attraverso il lavoro di comunità, l'educazione e il reciproco sostegno. Donne che prima erano isolate e prive di voce ora si aiutano l'un l'altra, diventando motore di cambiamento per l'intero villaggio.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Sezione Guardando al Futuro -->
-        <section class="section section-alt">
+        <!-- Progetti sul campo – card distinte -->
+        <section class="section africa-section africa-section--projects section-alt" id="progetti" aria-labelledby="projects-heading">
             <div class="container">
-                <h2 class="section-title">Guardando al Futuro</h2>
-                <p>Il gruppo italiano di cui facciamo parte continua a supportare Maisha organizzando eventi di sensibilizzazione e raccolta fondi qui in Italia. Ogni donazione raccolta viene inviata direttamente in Congo per finanziare e ampliare questi progetti.</p>
-                
-                <div class="future-goals">
-                    <h3>I Nostri Obiettivi</h3>
-                    <ul class="goals-list">
-                        <li><i class="fas fa-check"></i> Intensificazione dei corsi di alfabetizzazione (strumento essenziale per migliorare qualsiasi condizione di vita)</li>
-                        <li><i class="fas fa-check"></i> Estensione di attività generatrici di reddito, con un'attenzione particolare all'imprenditorialità femminile</li>
-                        <li><i class="fas fa-check"></i> Coinvolgimento attivo delle comunità minoritarie pigmee nei progetti di sviluppo</li>
-                        <li><i class="fas fa-check"></i> Creazione di comunità autonome, dove donne e uomini – indipendentemente dall'etnia – possano lavorare, studiare e vivere con dignità</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sezione Testimonianze -->
-        <section class="section">
-            <div class="container">
-                <header class="section-header">
-                    <h2 class="section-title">Le Nostre Testimonianze</h2>
-                    <p class="section-subtitle">Per la nostra associazione, il Progetto Africa rappresenta un'esperienza arricchente e coerente con i nostri valori di solidarietà. Pur operando in contesti lontani, abbiamo scoperto che la voglia di aiutarsi e di costruire un futuro migliore è universale.</p>
+                <header class="section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-hands-helping" aria-hidden="true"></i> Sul campo</p>
+                    <h2 class="section-title" id="projects-heading">I Nostri Progetti sul Campo</h2>
+                    <p class="section-subtitle">Maisha ha attivato diversi interventi per cambiare in meglio la vita delle persone coinvolte</p>
                 </header>
-                <div class="africa-testimonials-grid">
-                    <article class="africa-testimonial-card">
-                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                        <h3>Bambini a Scuola</h3>
-                        <p>I sorrisi dei bambini che finalmente possono frequentare la scuola e sognare un futuro migliore. Le testimonianze che riceviamo dal Congo sono toccanti e ci riempiono il cuore di gioia.</p>
+
+                <div class="africa-projects-stack">
+                    <article class="africa-project-card africa-project-card--kua reveal" data-reveal data-reveal-delay="1">
+                        <div class="africa-project-card-media">
+                            <img src="images/new-images/africa1.jpeg" alt="Bambini durante le attività scolastiche del Progetto KUA" width="600" height="400" loading="lazy">
+                            <span class="africa-project-card-badge"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Progetto KUA</span>
+                        </div>
+                        <div class="africa-project-card-body">
+                            <h3>Istruzione per i bambini</h3>
+                            <p class="africa-project-card-lead">Grazie a questo progetto, <strong>50 bambini</strong> (di cui 20 appartenenti alla comunità pigmea locale) possono frequentare la scuola.</p>
+                            <ul class="africa-project-card-list">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Rette scolastiche, libri, quaderni e indumenti</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 10 ragazze orfane (10–16 anni) seguite oltre la primaria</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Assistenza medica e alimentare per le studentesse</li>
+                            </ul>
+                            <p>In contesti dove l'istruzione femminile spesso viene trascurata, dare a queste giovani la possibilità di studiare significa cambiare il loro destino, renderle più autonome e forti per il futuro.</p>
+                        </div>
                     </article>
-                    <article class="africa-testimonial-card">
-                        <i class="fas fa-seedling" aria-hidden="true"></i>
-                        <h3>Donne negli Orti</h3>
-                        <p>La fierezza delle donne nel mostrare i loro orti e i vestiti cuciti con le proprie mani. Sono immagini che condividiamo volentieri con i nostri associati durante le riunioni.</p>
+
+                    <article class="africa-project-card africa-project-card--padis reveal" data-reveal data-reveal-delay="2">
+                        <div class="africa-project-card-media">
+                            <img src="images/new-images/africa2.jpeg" alt="Donne coinvolte nel Progetto PADIS di orticoltura comunitaria" width="600" height="400" loading="lazy">
+                            <span class="africa-project-card-badge africa-project-card-badge--padis"><i class="fas fa-seedling" aria-hidden="true"></i> Progetto PADIS</span>
+                        </div>
+                        <div class="africa-project-card-body">
+                            <h3>Empowerment per le donne</h3>
+                            <p class="africa-project-card-lead">Un programma di formazione e lavoro per <strong>120 donne</strong>, molte vittime di violenza sessuale e traumi dovuti alla guerra.</p>
+                            <ul class="africa-project-card-list">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Orticoltura comunitaria nella pianura di Ruzizi</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Cassa comune alimentata dai ricavi della cooperativa</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Laboratorio di taglio e cucito con macchine da cucire</li>
+                            </ul>
+                            <p>Coltivando insieme i campi, queste donne non solo producono cibo per le proprie famiglie, ma hanno riacquistato dignità e ruolo sociale, generando reddito e nuove competenze professionali.</p>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Sezione Come Aiutare -->
-        <section class="section section-alt">
+        <!-- Alfabetizzazione – sezione scura -->
+        <section class="section africa-section africa-section--literacy" id="alfabetizzazione" aria-labelledby="literacy-heading">
             <div class="container">
-                <div class="help-card">
-                    <h2>Come Puoi Aiutare?</h2>
-                    <p>Anche tu puoi diventare parte del Progetto Africa: con una donazione dedicata a Maisha (indicando la causale specifica) oppure partecipando alle nostre iniziative solidali (cene benefiche, mercatini, raccolte fondi) che organizziamo periodicamente a favore di Maisha.</p>
-                    <p>Ogni contributo, piccolo o grande, si trasforma in istruzione, cure mediche e speranza per tante donne e tanti bambini.</p>
-                    <div class="help-card-actions">
-                        <a href="donazioni.html" class="help-card-btn help-card-btn--primary">Dona Ora</a>
-                        <a href="contatti.html" class="help-card-btn help-card-btn--secondary">Contattaci</a>
+                <div class="africa-literacy-panel reveal" data-reveal>
+                    <header class="africa-literacy-header">
+                        <p class="section-eyebrow section-eyebrow--light"><i class="fas fa-book-open" aria-hidden="true"></i> Educazione di base</p>
+                        <h2 class="section-title" id="literacy-heading">Corso di Alfabetizzazione</h2>
+                        <p class="africa-literacy-intro">Su richiesta delle stesse partecipanti, abbiamo organizzato un corso di alfabetizzazione: molte di queste donne non avevano mai avuto accesso all'istruzione di base.</p>
+                    </header>
+
+                    <div class="africa-literacy-grid">
+                        <article class="africa-literacy-item reveal" data-reveal data-reveal-delay="1">
+                            <span class="africa-literacy-icon" aria-hidden="true"><i class="fas fa-book-open"></i></span>
+                            <h3>Istruzione di Base</h3>
+                            <p>Imparare a leggere, scrivere e far di conto in età adulta è uno strumento fondamentale per conoscere e difendere i propri diritti.</p>
+                        </article>
+                        <article class="africa-literacy-item reveal" data-reveal data-reveal-delay="2">
+                            <span class="africa-literacy-icon" aria-hidden="true"><i class="fas fa-heart"></i></span>
+                            <h3>Emozione Indescrivibile</h3>
+                            <p>Per molte partecipanti è stata un'emozione indescrivibile: la prima volta che hanno potuto firmare il proprio nome o leggere una lettera.</p>
+                        </article>
+                        <article class="africa-literacy-item reveal" data-reveal data-reveal-delay="3">
+                            <span class="africa-literacy-icon" aria-hidden="true"><i class="fas fa-hands-helping"></i></span>
+                            <h3>Comunità che Cresce</h3>
+                            <p>Donne che prima erano isolate e prive di voce ora si aiutano l'un l'altra, diventando motore di cambiamento per l'intero villaggio.</p>
+                        </article>
                     </div>
+
+                    <p class="africa-literacy-footer">Il progetto PADIS mira a rompere il ciclo di violenza e sottomissione attraverso il lavoro di comunità, l'educazione e il reciproco sostegno.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Obiettivi futuri – timeline -->
+        <section class="section africa-section africa-section--future section-alt" id="futuro" aria-labelledby="future-heading">
+            <div class="container">
+                <header class="section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-compass" aria-hidden="true"></i> Prossimi passi</p>
+                    <h2 class="section-title" id="future-heading">Guardando al Futuro</h2>
+                    <p class="section-subtitle">Il gruppo italiano di cui facciamo parte continua a supportare Maisha organizzando eventi di sensibilizzazione e raccolta fondi. Ogni donazione raccolta viene inviata direttamente in Congo.</p>
+                </header>
+
+                <ol class="africa-timeline reveal" data-reveal>
+                    <li class="africa-timeline-item">
+                        <span class="africa-timeline-marker" aria-hidden="true"><i class="fas fa-book-reader"></i></span>
+                        <div class="africa-timeline-content">
+                            <h3>Alfabetizzazione</h3>
+                            <p>Intensificazione dei corsi di alfabetizzazione, strumento essenziale per migliorare qualsiasi condizione di vita.</p>
+                        </div>
+                    </li>
+                    <li class="africa-timeline-item">
+                        <span class="africa-timeline-marker" aria-hidden="true"><i class="fas fa-female"></i></span>
+                        <div class="africa-timeline-content">
+                            <h3>Imprenditorialità femminile</h3>
+                            <p>Estensione di attività generatrici di reddito, con un'attenzione particolare all'imprenditorialità femminile.</p>
+                        </div>
+                    </li>
+                    <li class="africa-timeline-item">
+                        <span class="africa-timeline-marker" aria-hidden="true"><i class="fas fa-people-arrows"></i></span>
+                        <div class="africa-timeline-content">
+                            <h3>Inclusione delle comunità pigmee</h3>
+                            <p>Coinvolgimento attivo delle comunità minoritarie pigmee nei progetti di sviluppo, favorendo la piena integrazione.</p>
+                        </div>
+                    </li>
+                    <li class="africa-timeline-item">
+                        <span class="africa-timeline-marker" aria-hidden="true"><i class="fas fa-home"></i></span>
+                        <div class="africa-timeline-content">
+                            <h3>Comunità autonome</h3>
+                            <p>Creazione di comunità autonome dove donne e uomini – indipendentemente dall'etnia – possano lavorare, studiare e vivere con dignità.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Testimonianze -->
+        <section class="section africa-section africa-section--testimonials" id="testimonianze" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <header class="section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-comment-dots" aria-hidden="true"></i> Storie dal campo</p>
+                    <h2 class="section-title" id="testimonials-heading">Le Nostre Testimonianze</h2>
+                    <p class="section-subtitle">Pur operando in contesti lontani, abbiamo scoperto che la voglia di aiutarsi e di costruire un futuro migliore è universale.</p>
+                </header>
+
+                <div class="africa-testimonials-grid">
+                    <article class="africa-testimonial-card africa-testimonial-card--school reveal" data-reveal data-reveal-delay="1">
+                        <div class="africa-testimonial-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></div>
+                        <blockquote>
+                            <p>I sorrisi dei bambini che finalmente possono frequentare la scuola e sognare un futuro migliore. Le testimonianze che riceviamo dal Congo sono toccanti e ci riempiono il cuore di gioia.</p>
+                        </blockquote>
+                        <footer>
+                            <strong>Bambini a Scuola</strong>
+                            <span>Progetto KUA</span>
+                        </footer>
+                    </article>
+
+                    <article class="africa-testimonial-card africa-testimonial-card--garden reveal" data-reveal data-reveal-delay="2">
+                        <div class="africa-testimonial-icon" aria-hidden="true"><i class="fas fa-seedling"></i></div>
+                        <blockquote>
+                            <p>La fierezza delle donne nel mostrare i loro orti e i vestiti cuciti con le proprie mani. Sono immagini che condividiamo volentieri con i nostri associati durante le riunioni.</p>
+                        </blockquote>
+                        <footer>
+                            <strong>Donne negli Orti</strong>
+                            <span>Progetto PADIS</span>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA finale -->
+        <section class="section africa-section africa-section--cta" id="aiuta" aria-labelledby="help-heading">
+            <div class="container">
+                <div class="africa-cta-panel reveal" data-reveal>
+                    <div class="africa-cta-content">
+                        <p class="section-eyebrow section-eyebrow--light"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Partecipa</p>
+                        <h2 id="help-heading">Come Puoi Aiutare?</h2>
+                        <p>Anche tu puoi diventare parte del Progetto Africa: con una donazione dedicata a Maisha (indicando la causale specifica) oppure partecipando alle nostre iniziative solidali.</p>
+                        <p>Ogni contributo, piccolo o grande, si trasforma in istruzione, cure mediche e speranza per tante donne e tanti bambini.</p>
+                        <div class="africa-cta-actions">
+                            <a href="donazioni.html" class="africa-cta-btn africa-cta-btn--primary">Dona Ora</a>
+                            <a href="contatti.html" class="africa-cta-btn africa-cta-btn--secondary">Contattaci</a>
+                        </div>
+                    </div>
+                    <figure class="africa-cta-visual" aria-hidden="true">
+                        <img src="images/new-images/africa3.jpeg" alt="" width="480" height="360" loading="lazy">
+                    </figure>
                 </div>
             </div>
         </section>
@@ -295,4 +395,4 @@
         </ul>
     </div>
 </body>
-</html> 
+</html>
