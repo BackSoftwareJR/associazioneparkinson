@@ -6,53 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdown = document.getElementById('sedi-dropdown');
     const overlay = document.querySelector('.dropdown-overlay');
 
-    function initCookieBanner() {
-        if (localStorage.getItem('cookieConsent')) {
-            return;
-        }
-
-        const banner = document.createElement('div');
-        banner.id = 'cookie-banner';
-        banner.innerHTML = `
-            <div class="cookie-banner-content">
-                <div class="cookie-text">
-                    <h4>Utilizziamo i cookie</h4>
-                    <p>Questo sito utilizza cookie tecnici e analitici per migliorare la tua esperienza di navigazione.
-                    Continuando a navigare accetti l'utilizzo dei cookie.
-                    <a href="cookie-policy.html" target="_blank">Leggi la nostra Cookie Policy</a></p>
-                </div>
-                <div class="cookie-buttons">
-                    <button id="accept-cookies" class="cookie-btn accept">Accetta</button>
-                    <button id="reject-cookies" class="cookie-btn reject">Rifiuta</button>
-                </div>
-            </div>
-        `;
-
-        document.body.appendChild(banner);
-
-        setTimeout(() => {
-            banner.classList.add('show');
-        }, 1000);
-
-        document.getElementById('accept-cookies').addEventListener('click', function() {
-            localStorage.setItem('cookieConsent', 'accepted');
-            banner.classList.remove('show');
-            setTimeout(() => {
-                banner.remove();
-            }, 300);
-        });
-
-        document.getElementById('reject-cookies').addEventListener('click', function() {
-            localStorage.setItem('cookieConsent', 'rejected');
-            banner.classList.remove('show');
-            setTimeout(() => {
-                banner.remove();
-            }, 300);
-        });
-    }
-
-    initCookieBanner();
-
     function updateHeaderOffset() {
         if (header) {
             const height = header.getBoundingClientRect().height;
