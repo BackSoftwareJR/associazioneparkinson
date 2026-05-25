@@ -9,181 +9,200 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css?v=225">
+    <script src="../js/main.js?v=225" defer></script>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="../index.html" class="logo">APC</a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../chi-siamo.html" class="nav-link">Chi Siamo</a></li>
-                <li><a href="#" class="nav-link" id="sedi-dropdown-trigger">Le Nostre Sedi</a></li>
-                <li><a href="../attivita.html" class="nav-link">Attività</a></li>
-                <li><a href="../donazioni.html" class="nav-link">Sostienici</a></li>
-                <li><a href="../progetto-africa.html" class="nav-link">Progetto Africa</a></li>
-                <li><a href="../contatti.html" class="nav-link">Contatti</a></li>
-            </ul>
-        </nav>
+    <header class="header header-over-hero">
+        <div class="header-glass">
+            <nav class="nav-container" aria-label="Navigazione principale">
+                <div class="header-brand">
+                    <a href="../index.html" class="logo" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="../images/logo.png" alt="" class="logo-img" width="48" height="48">
+                        <span class="logo-text">
+                            <span class="logo-title">Parkinson Canavese</span>
+                            <span class="logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="nav-pill">
+                        <ul class="nav-menu">
+                            <li><a href="../index.html" class="nav-link">Home</a></li>
+                            <li><a href="../chi-siamo.html" class="nav-link">Chi Siamo</a></li>
+                            <li><a href="#" class="nav-link nav-link-sedi" id="sedi-dropdown-trigger">Sedi <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
+                            <li><a href="../attivita.html" class="nav-link">Attività</a></li>
+                            <li><a href="../progetto-africa.html" class="nav-link">Progetto Africa</a></li>
+                            <li><a href="../contatti.html" class="nav-link">Contatti</a></li>
+                        </ul>
+                    </div>
+                    <a href="../donazioni.html" class="nav-cta"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
+                </div>
+                <div class="header-actions">
+                    <a href="tel:+393793258612" class="header-contact" aria-label="Chiamaci al +39 379 325 8612">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <span class="header-contact-text">+39 379 325 8612</span>
+                    </a>
+                    <button type="button" class="mobile-menu-btn" aria-label="Apri menu di navigazione" aria-expanded="false">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <div class="container">
-                <a href="../index.html">Home</a> / <a href="../sedi.html">Le Nostre Sedi</a> / San Maurizio Canavese
-            </div>
-        </div>
-
-        <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="container">
-                <h1>San Maurizio Canavese – Sede Operativa</h1>
-                <p>La sede di San Maurizio Canavese si trova all'interno del Presidio Ospedaliero Fatebenefratelli. Questa sede ha un ruolo strategico: porta la presenza dell'associazione nella zona del basso Canavese e in un contesto ospedaliero specializzato nella riabilitazione.</p>
+        <section class="sede-hero sede-hero--san-maurizio" aria-labelledby="sede-title">
+            <div class="sede-hero-bg" aria-hidden="true"></div>
+            <div class="container sede-hero-inner">
+                <span class="sede-hero-badge">Sede Operativa · Basso Canavese</span>
+                <h1 id="sede-title">San Maurizio Canavese</h1>
+                <p class="sede-hero-lead">Presso il Presidio Ospedaliero Fatebenefratelli offriamo supporto riabilitativo, incontri formativi e continuità assistenziale per pazienti e familiari.</p>
             </div>
         </section>
 
-        <!-- Informazioni Sede -->
-        <section class="section">
+        <nav class="sede-nav" aria-label="Navigazione tra le sedi">
             <div class="container">
-                <div class="location-grid">
-                    <div class="location-info">
-                        <div class="info-card">
-                            <h2><i class="fas fa-map-marker-alt"></i> Indirizzo</h2>
+                <ul class="sede-nav-list">
+                    <li><a href="castellamonte.html" class="sede-nav-link"><i class="fas fa-building" aria-hidden="true"></i> Castellamonte</a></li>
+                    <li><a href="banchette.html" class="sede-nav-link"><i class="fas fa-building" aria-hidden="true"></i> Banchette d'Ivrea</a></li>
+                    <li><a href="san-maurizio.html" class="sede-nav-link is-active"><i class="fas fa-hospital" aria-hidden="true"></i> San Maurizio Canavese</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="sede-quick-actions">
+            <div class="container sede-quick-actions-inner">
+                <a href="tel:+393793258612" class="sede-action-btn sede-action-btn--primary"><i class="fas fa-phone-alt" aria-hidden="true"></i> Chiama +39 379 325 8612</a>
+                <a href="https://wa.me/393793258612" class="sede-action-btn sede-action-btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Scrivici su WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+                <a href="mailto:assoparkinsoncanavese@virgilio.it" class="sede-action-btn"><i class="fas fa-envelope" aria-hidden="true"></i> Scrivici</a>
+                <a href="https://maps.google.com/?q=Via+Fatebenefratelli+70,+San+Maurizio+Canavese" target="_blank" rel="noopener noreferrer" class="sede-action-btn"><i class="fas fa-directions" aria-hidden="true"></i> Indicazioni stradali</a>
+            </div>
+        </div>
+
+        <section class="section section-sede-info">
+            <div class="container">
+                <div class="sede-info-layout">
+                    <div class="sede-info-cards">
+                        <div class="sede-info-card">
+                            <h2><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Indirizzo</h2>
                             <address>
                                 Presidio Ospedaliero Fatebenefratelli<br>
                                 Via Fatebenefratelli 70<br>
                                 10077 San Maurizio Canavese (TO)
                             </address>
                         </div>
-                        
-                        <div class="contact-info">
-                            <h3>Contatti</h3>
-                            <p><i class="fas fa-phone"></i> <a href="tel:3474539988">347 4539988</a></p>
-                            <p><i class="fas fa-envelope"></i> <a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></p>
-                        </div>
-
-                        <div class="opening-hours">
-                            <h3><i class="fas fa-clock"></i> Orari di Apertura</h3>
-                            <ul>
-                                <li><span>Lunedì - Venerdì:</span> <span>Su appuntamento</span></li>
-                                <li><span>Sabato:</span> <span>Su appuntamento</span></li>
-                                <li><span>Domenica:</span> <span>Chiuso</span></li>
+                        <div class="sede-info-card">
+                            <h3><i class="fas fa-clock" aria-hidden="true"></i> Orari</h3>
+                            <ul class="sede-hours-list">
+                                <li><span>Lunedì – Venerdì</span> <span>Su appuntamento</span></li>
+                                <li><span>Sabato</span> <span>Su appuntamento</span></li>
+                                <li><span>Domenica</span> <span>Chiuso</span></li>
                             </ul>
                         </div>
+                        <div class="sede-info-card">
+                            <h3><i class="fas fa-address-book" aria-hidden="true"></i> Contatti</h3>
+                            <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+393793258612">+39 379 325 8612</a></p>
+                            <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></p>
+                        </div>
                     </div>
-
-                    <div class="location-map">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.1234567890123!2d7.712345678901234!3d45.44567890123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDI2JzQ0LjQiTiA3wrA0Mic0NC40IkU!5e0!3m2!1sit!2sit!4v1234567890123"
-                            width="100%" 
-                            height="400" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
+                    <div class="sede-map-wrap">
+                        <iframe
+                            title="Mappa sede San Maurizio Canavese"
+                            src="https://maps.google.com/maps?q=Via+Fatebenefratelli+70,+10077+San+Maurizio+Canavese+TO,+Italia&amp;hl=it&amp;z=15&amp;output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen>
                         </iframe>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Collaborazione Ospedaliera -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-sede-alt">
             <div class="container">
-                <h2 class="section-title">Collaborazione con il Fatebenefratelli</h2>
-                <div class="content-grid">
-                    <div class="content-text">
-                        <h3>Supporto ai Programmi di Riabilitazione</h3>
-                        <p>Essere all'interno di un ospedale ci consente di collaborare a stretto contatto con medici e terapisti del Fatebenefratelli. In particolare, presso questa sede operativa offriamo supporto ai programmi di riabilitazione motoria per i pazienti parkinsoniani ricoverati o ambulatoriali.</p>
-                        <p>Una medico fisiatra di riferimento (la dott.ssa Natalina Cosentino, facente parte dell'équipe del Fatebenefratelli) ha sostenuto la nascita di questa sede e guida alcune delle attività riabilitative a beneficio dei malati.</p>
-                        <p>I nostri volontari affiancano il personale sanitario quando necessario, ad esempio nell'organizzazione di esercizi di gruppo o nell'accompagnamento dei pazienti.</p>
+                <div class="sede-highlight">
+                    <div class="sede-highlight-text">
+                        <h3>Collaborazione con il Fatebenefratelli</h3>
+                        <p>Essere all'interno di un ospedale ci consente di collaborare a stretto contatto con medici e terapisti. Offriamo supporto ai programmi di riabilitazione motoria per pazienti parkinsoniani ricoverati o ambulatoriali.</p>
+                        <p>La dott.ssa Natalina Cosentino, facente parte dell'équipe del Fatebenefratelli, ha sostenuto la nascita di questa sede e guida alcune delle attività riabilitative a beneficio dei malati.</p>
+                        <p>I nostri volontari affiancano il personale sanitario nell'organizzazione di esercizi di gruppo e nell'accompagnamento dei pazienti.</p>
                     </div>
-                    <div class="content-image">
-                        <img src="../images/sanmaurizio1.jpg" alt="Ospedale Fatebenefratelli di San Maurizio Canavese" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px;">
+                    <div class="sede-highlight-image">
+                        <img src="../images/sanmaurizio1.jpg" alt="Ospedale Fatebenefratelli di San Maurizio Canavese" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Attività Specifiche -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Attività a San Maurizio Canavese</h2>
-                <div class="activities-grid">
-                    <div class="activity-card">
+                <p class="section-subtitle">Incontri, formazione e accompagnamento per chi vive il Parkinson nel basso Canavese.</p>
+                <div class="activities-grid sede-activities-grid">
+                    <article class="activity-card">
                         <div class="activity-image">
-                            <img src="../images/sanmaurizio2.jpg" alt="Gruppi di incontro a San Maurizio" style="width: 100%; height: 200px; object-fit: cover;">
+                            <img src="../images/sanmaurizio2.jpg" alt="Gruppi di incontro a San Maurizio" loading="lazy">
                         </div>
                         <div class="activity-content">
                             <h3>Gruppi di Incontro</h3>
-                            <p>In un locale dedicato all'interno del presidio, organizziamo incontri periodici dove si discute delle esigenze quotidiane di chi vive con il Parkinson.</p>
+                            <p>Incontri periodici in un locale dedicato per condividere le esigenze quotidiane di chi vive con il Parkinson.</p>
                             <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> Periodici</li>
-                                <li><i class="far fa-calendar"></i> Su calendario</li>
-                                <li><i class="fas fa-users"></i> Pazienti e familiari</li>
+                                <li><i class="far fa-clock" aria-hidden="true"></i> Periodici</li>
+                                <li><i class="fas fa-users" aria-hidden="true"></i> Pazienti e familiari</li>
+                                <li><i class="fas fa-comments" aria-hidden="true"></i> Condivisione esperienze</li>
                             </ul>
                         </div>
-                    </div>
-
-                    <div class="activity-card">
+                    </article>
+                    <article class="activity-card">
                         <div class="activity-image">
-                            <img src="../images/conferenza.jpg" alt="Incontri formativi a San Maurizio" style="width: 100%; height: 200px; object-fit: cover;">
+                            <img src="../images/conferenza.jpg" alt="Incontri formativi a San Maurizio" loading="lazy">
                         </div>
                         <div class="activity-content">
                             <h3>Incontri Formativi</h3>
-                            <p>Grazie al contatto diretto con i medici, possiamo organizzare incontri formativi (aperi-educational, conferenze) su temi come la gestione dei sintomi non motori, la nutrizione, la logopedia.</p>
+                            <p>Aperi-educational e conferenze su sintomi non motori, nutrizione, logopedia e gestione quotidiana della malattia.</p>
                             <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> Variabile</li>
-                                <li><i class="far fa-calendar"></i> Periodici</li>
-                                <li><i class="fas fa-graduation-cap"></i> Formazione continua</li>
+                                <li><i class="fas fa-graduation-cap" aria-hidden="true"></i> Formazione continua</li>
+                                <li><i class="fas fa-user-md" aria-hidden="true"></i> Con professionisti</li>
+                                <li><i class="far fa-calendar" aria-hidden="true"></i> Periodici</li>
                             </ul>
                         </div>
-                    </div>
-
-                    <div class="activity-card">
+                    </article>
+                    <article class="activity-card">
                         <div class="activity-image">
-                            <img src="../images/sbr1.jpg" alt="Continuità assistenziale a San Maurizio" style="width: 100%; height: 200px; object-fit: cover;">
+                            <img src="../images/sbr1.jpg" alt="Continuità assistenziale a San Maurizio" loading="lazy">
                         </div>
                         <div class="activity-content">
                             <h3>Continuità Assistenziale</h3>
-                            <p>Offriamo continuità al paziente che, terminate le sedute di fisioterapia ospedaliera, può essere indirizzato verso le nostre attività associative per proseguire nel percorso di miglioramento.</p>
+                            <p>Dopo le sedute di fisioterapia ospedaliera, indirizziamo i pazienti verso le attività associative per proseguire il percorso.</p>
                             <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> Continuativo</li>
-                                <li><i class="far fa-calendar"></i> Su indicazione medica</li>
-                                <li><i class="fas fa-handshake"></i> Follow-up</li>
+                                <li><i class="fas fa-handshake" aria-hidden="true"></i> Follow-up</li>
+                                <li><i class="far fa-calendar" aria-hidden="true"></i> Su indicazione medica</li>
+                                <li><i class="fas fa-heart" aria-hidden="true"></i> Accompagnamento</li>
                             </ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Servizi Informativi -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-sede-alt">
             <div class="container">
-                <h2 class="section-title">Servizi Informativi</h2>
-                <div class="card" style="max-width: 800px; margin: 0 auto;">
-                    <div class="card-content">
-                        <h3><i class="fas fa-info-circle"></i> Informazioni e Supporto</h3>
-                        <p>Durante gli incontri si condividono testimonianze e si forniscono informazioni utili sugli ausili disponibili, su come gestire la terapia, e su altri aspetti pratici della convivenza con il Parkinson.</p>
-                        <p>È un'occasione per far sentire la presenza dell'associazione anche a chi frequenta l'ospedale e magari non conosce ancora i nostri servizi.</p>
-                        <a href="../contatti.html" class="cta-button">Richiedi Informazioni</a>
-                    </div>
+                <div class="sede-callout">
+                    <h3><i class="fas fa-info-circle" aria-hidden="true"></i> Informazioni e Supporto</h3>
+                    <p>Durante gli incontri condividiamo testimonianze e informazioni utili su ausili, terapie e aspetti pratici della convivenza con il Parkinson.</p>
+                    <p>È un'occasione per far conoscere l'associazione anche a chi frequenta l'ospedale e non conosce ancora i nostri servizi.</p>
+                    <a href="../contatti.html" class="cta-button">Richiedi Informazioni</a>
                 </div>
             </div>
         </section>
 
-        <!-- Come Raggiungerci -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Come Raggiungerci</h2>
                 <div class="directions-grid">
                     <div class="direction-card">
-                        <i class="fas fa-car"></i>
+                        <i class="fas fa-car" aria-hidden="true"></i>
                         <h3>In Auto</h3>
                         <ul>
                             <li>Dall'autostrada A5: uscita Ciriè, seguire indicazioni per San Maurizio Canavese</li>
@@ -192,7 +211,7 @@
                         </ul>
                     </div>
                     <div class="direction-card">
-                        <i class="fas fa-bus"></i>
+                        <i class="fas fa-bus" aria-hidden="true"></i>
                         <h3>Con i Trasporti Pubblici</h3>
                         <ul>
                             <li>Linea bus GTT: fermata "San Maurizio - Ospedale Fatebenefratelli"</li>
@@ -201,20 +220,36 @@
                         </ul>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="https://maps.google.com/?q=Via+Fatebenefratelli+70,+San+Maurizio+Canavese" target="_blank" class="directions-button">
-                        <i class="fas fa-directions"></i> Ottieni Indicazioni
+            </div>
+        </section>
+
+        <section class="section section-sede-alt">
+            <div class="container">
+                <h2 class="section-title">Altre Sedi</h2>
+                <div class="sede-other-locations">
+                    <a href="castellamonte.html" class="sede-other-card">
+                        <img src="../images/new-images/img15.jpg" alt="" width="72" height="72" loading="lazy">
+                        <div>
+                            <h4>Castellamonte</h4>
+                            <span>P.le P. Nenni 1 · Sede legale</span>
+                        </div>
+                    </a>
+                    <a href="banchette.html" class="sede-other-card">
+                        <img src="../images/P7240367SITO.jpg" alt="" width="72" height="72" loading="lazy">
+                        <div>
+                            <h4>Banchette d'Ivrea</h4>
+                            <span>Via Samone 24 · Canavese orientale</span>
+                        </div>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="section cta-section">
             <div class="container">
                 <div class="cta-content">
                     <h2>Scopri le Iniziative a San Maurizio</h2>
-                    <p>Contattaci se vuoi saperne di più sulle attività attive in questa sede o se conosci qualcuno nella zona di Ciriè/San Maurizio che potrebbe aver bisogno di una mano.</p>
+                    <p>Contattaci per sapere di più sulle attività attive in questa sede o se conosci qualcuno nella zona di Ciriè/San Maurizio che potrebbe aver bisogno di una mano.</p>
                     <div class="cta-buttons">
                         <a href="../contatti.html" class="cta-button">Contattaci</a>
                         <a href="../attivita.html" class="cta-button secondary">Scopri le Attività</a>
@@ -224,35 +259,70 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <h3>Associazione Parkinsoniani del Canavese ODV ETS</h3>
-                <p>Organizzazione di Volontariato</p>
-                <p>C.F. 92518680019</p>
+    <footer class="footer" role="contentinfo">
+        <div class="footer-cta">
+            <div class="container footer-cta-inner">
+                <div class="footer-cta-text">
+                    <p class="footer-cta-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> Sostieni la nostra missione</p>
+                    <p class="footer-cta-title">Ogni contributo fa la differenza per chi vive il Parkinson nel Canavese</p>
+                </div>
+                <div class="footer-cta-actions">
+                    <a href="../donazioni.html#5x1000" class="footer-cta-btn footer-cta-btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dona il 5×1000</a>
+                    <a href="../donazioni.html" class="footer-cta-btn footer-cta-btn--secondary">Scopri come sostenerci</a>
+                </div>
             </div>
-            <div>
-                <h3>Contatti</h3>
-                <p><i class="fas fa-envelope"></i> assoparkinsoncanavese@virgilio.it</p>
-                <p><i class="fas fa-phone"></i> 347 4539988</p>
-                <p><i class="fas fa-map-marker-alt"></i> P.le P. Nenni 1 - Castellamonte (TO)</p>
+        </div>
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="../index.html" class="footer-logo-link" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="../images/logo.png" alt="" class="footer-logo" width="52" height="52">
+                        <span class="footer-logo-text">
+                            <span class="footer-logo-title">Parkinson Canavese</span>
+                            <span class="footer-logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                    <p class="footer-org-name">Associazione Parkinsoniani del Canavese ODV ETS</p>
+                    <p class="footer-org-meta">Organizzazione di Volontariato · Ente del Terzo Settore</p>
+                    <p class="footer-org-meta">Attiva dal 2013 con attività gratuite in tutto il Canavese</p>
+                    <p class="footer-cf"><strong>C.F.</strong> 92518680019</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigazione</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="../sedi.html">Le Sedi</a></li>
+                        <li><a href="../attivita.html">Attività</a></li>
+                        <li><a href="../progetto-africa.html">Progetto Africa</a></li>
+                        <li><a href="../contatti.html">Contatti</a></li>
+                        <li><a href="../donazioni.html">Sostienici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contatti</h3>
+                    <ul class="footer-contact-list">
+                        <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
+                        <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
+                        <li><a href="mailto:assoparkcanavese@pec.it"><i class="fas fa-shield-alt" aria-hidden="true"></i> assoparkcanavese@pec.it</a> <span class="footer-note">(PEC)</span></li>
+                    </ul>
+                    <h3 class="footer-heading footer-heading--social">Seguici</h3>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/393793258612" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="mailto:assoparkinsoncanavese@virgilio.it" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3>Link Utili</h3>
-                <ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Associazione Parkinsoniani del Canavese ODV ETS. Tutti i diritti riservati.</p>
+                <ul class="footer-legal">
                     <li><a href="../privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="../cookie-policy.html">Cookie Policy</a></li>
                     <li><a href="../termini-condizioni.html">Termini e Condizioni</a></li>
-                    <li><a href="../donazioni.html">Come sostenerci</a></li>
                 </ul>
-            </div>
-            <div>
-                <h3>Seguici</h3>
-                <div style="font-size: 1.5rem;">
-                    <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" target="_blank" style="margin-right: 1rem;"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/3474539988" target="_blank" style="margin-right: 1rem;"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope"></i></a>
-                </div>
             </div>
         </div>
     </footer>

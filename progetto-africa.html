@@ -9,192 +9,344 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=221">
+    <script src="js/main.js?v=221" defer></script>
 </head>
-<body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo">APC</a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
-                <li><a href="#" class="nav-link" id="sedi-dropdown-trigger">Le Nostre Sedi</a></li>
-                <li><a href="attivita.html" class="nav-link">Attività</a></li>
-                <li><a href="donazioni.html" class="nav-link">Sostienici</a></li>
-                <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
-                <li><a href="contatti.html" class="nav-link">Contatti</a></li>
-            </ul>
-        </nav>
+<body class="page-africa">
+    <header class="header header-over-hero">
+        <div class="header-glass">
+            <nav class="nav-container" aria-label="Navigazione principale">
+                <div class="header-brand">
+                    <a href="index.html" class="logo" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="images/logo.png" alt="" class="logo-img" width="48" height="48">
+                        <span class="logo-text">
+                            <span class="logo-title">Parkinson Canavese</span>
+                            <span class="logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="nav-pill">
+                        <ul class="nav-menu">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
+                            <li><a href="#" class="nav-link nav-link-sedi" id="sedi-dropdown-trigger">Sedi <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
+                            <li><a href="attivita.html" class="nav-link">Attività</a></li>
+                            <li><a href="progetto-africa.html" class="nav-link active">Progetto Africa</a></li>
+                            <li><a href="contatti.html" class="nav-link">Contatti</a></li>
+                        </ul>
+                    </div>
+                    <a href="donazioni.html" class="nav-cta"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
+                </div>
+                <div class="header-actions">
+                    <a href="tel:+393793258612" class="header-contact" aria-label="Chiamaci al +39 379 325 8612">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <span class="header-contact-text">+39 379 325 8612</span>
+                    </a>
+                    <button type="button" class="mobile-menu-btn" aria-label="Apri menu di navigazione" aria-expanded="false">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <div class="container">
-                <a href="index.html">Home</a> / Progetto Africa
+        <!-- Hero immersivo -->
+        <section class="hero-africa" aria-labelledby="africa-page-heading">
+            <div class="hero-africa-bg" aria-hidden="true">
+                <img src="images/new-images/africa3.jpeg" alt="" width="1920" height="1080" loading="eager">
             </div>
-        </div>
-
-        <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="container">
-                <h1>Progetto Africa – MAISHA ONGD</h1>
-                <p>Oltre alle attività sul territorio locale, la nostra associazione ha aperto il cuore anche a una causa internazionale attraverso il Progetto Africa. Dal 2016 sosteniamo attivamente MAISHA ONGD, un'organizzazione umanitaria che opera nella Repubblica Democratica del Congo.</p>
-            </div>
-        </section>
-
-        <!-- Sezione Introduzione -->
-        <section class="section">
-            <div class="container">
-                <div class="maisha-intro-card" style="background: linear-gradient(135deg, #517757 0%, #3d5a3d 100%); color: white; padding: 4rem 3rem; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Chi è MAISHA ONGD</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.7; opacity: 0.95;">In lingala "Maisha" significa "vita": un nome che incarna la missione di questo progetto, nato per migliorare le condizioni di vita di comunità locali particolarmente svantaggiate, attraverso iniziative di integrazione e sviluppo.</p>
-                    <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6; opacity: 0.9;">Il progetto Maisha, portato avanti da volontari locali congolesi in collaborazione con un gruppo di volontari italiani (di cui facciamo parte anche noi del Canavese), interviene in villaggi duramente colpiti da povertà, conflitti e marginalizzazione sociale.</p>
-                    <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9;">L'Associazione Parkinsoniani del Canavese ODV, pur operando in un ambito diverso, ha scelto di dare un contributo concreto a questa causa, stringendo un gemellaggio solidale con Maisha.</p>
+            <div class="hero-africa-overlay" aria-hidden="true"></div>
+            <div class="hero-africa-inner container">
+                <div class="hero-africa-text reveal" data-reveal>
+                    <p class="hero-badge hero-badge--light"><i class="fas fa-globe-africa" aria-hidden="true"></i> Solidarietà internazionale</p>
+                    <h1 id="africa-page-heading" class="hero-africa-title">Progetto Africa – MAISHA ONGD</h1>
+                    <p class="hero-africa-lead">Oltre alle attività sul territorio locale, la nostra associazione sostiene MAISHA ONGD nella Repubblica Democratica del Congo dal 2016, con progetti di istruzione e empowerment per bambini e donne.</p>
+                </div>
+                <div class="hero-africa-chips reveal" data-reveal data-reveal-delay="1">
+                    <span class="hero-africa-chip"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Sud Kivu, RDC</span>
+                    <span class="hero-africa-chip"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Dal 2016</span>
+                    <span class="hero-africa-chip"><i class="fas fa-handshake" aria-hidden="true"></i> Gemellaggio solidale</span>
                 </div>
             </div>
         </section>
 
-        <!-- Sezione Progetti -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <!-- Chi è MAISHA – layout editoriale -->
+        <section class="section africa-section africa-section--intro" id="maisha" aria-labelledby="maisha-heading">
             <div class="container">
-                <h2 class="section-title">I Nostri Progetti sul Campo</h2>
-                <p class="section-subtitle">Maisha ha attivato diversi interventi per cambiare in meglio la vita delle persone coinvolte</p>
-                
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Progetto KUA – Istruzione per i bambini</h3>
-                        <p>Grazie a questo progetto, 50 bambini (di cui 20 appartenenti alla comunità pigmea locale) possono frequentare la scuola. Vengono coperti i costi delle rette scolastiche, forniti libri, quaderni, penne e anche gli indumenti necessari per andare a scuola dignitosamente.</p>
-                        <p>Inoltre, per 10 ragazze orfane tra i 10 e i 16 anni, il progetto assicura il proseguimento degli studi oltre la scuola primaria: paghiamo le spese per la scuola secondaria e ci occupiamo della loro assistenza medica e alimentare.</p>
-                        <p>In contesti dove l'istruzione femminile spesso viene trascurata, dare a queste giovani la possibilità di studiare significa cambiare il loro destino, renderle più autonome e forti per il futuro.</p>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-icon">
-                            <i class="fas fa-seedling"></i>
-                        </div>
-                        <h3>Progetto PADIS – Empowerment per le donne</h3>
-                        <p>Un altro pilastro di Maisha riguarda 120 donne, molte delle quali vittime di violenza sessuale e traumi dovuti alla guerra. Per loro è stato organizzato un programma di formazione e lavoro, in particolare un'attività di orticoltura comunitaria.</p>
-                        <p>Coltivando insieme i campi nella pianura di Ruzizi (zona di Kagando), queste donne non solo producono cibo per le proprie famiglie, ma hanno riacquistato dignità e ruolo sociale. Dai frutti di questa attività è nata una "cassa comune": una sorta di fondo sociale alimentato dai piccoli ricavi della cooperativa agricola.</p>
-                        <p>Grazie a questo fondo le donne hanno potuto acquistare due macchine da cucire e dare vita a un laboratorio di taglio e cucito. Ora realizzano capi di abbigliamento destinati alla vendita, generando un reddito e nuove competenze professionali.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sezione Alfabetizzazione -->
-        <section class="section">
-            <div class="container">
-                <div class="alfabetizzazione-card" style="background: white; padding: 4rem 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 6px solid #80975d;">
-                    <h2 style="color: #80975d; font-size: 2.2rem; margin-bottom: 2rem; text-align: center;">Corso di Alfabetizzazione</h2>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                        <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 15px;">
-                            <i class="fas fa-book-open" style="font-size: 3rem; color: #80975d; margin-bottom: 1rem;"></i>
-                            <h3 style="color: #517757; margin-bottom: 1rem;">Istruzione di Base</h3>
-                            <p>Su richiesta delle stesse partecipanti, abbiamo organizzato un corso di alfabetizzazione: molte di queste donne non avevano mai avuto accesso all'istruzione di base.</p>
-                        </div>
-                        <div style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 15px;">
-                            <i class="fas fa-heart" style="font-size: 3rem; color: #80975d; margin-bottom: 1rem;"></i>
-                            <h3 style="color: #517757; margin-bottom: 1rem;">Emozione Indescrivibile</h3>
-                            <p>Imparare a leggere, scrivere e far di conto in età adulta è stata per loro un'emozione indescrivibile, oltre che uno strumento fondamentale per conoscere e difendere i propri diritti.</p>
+                <div class="africa-intro-grid">
+                    <figure class="africa-intro-visual reveal" data-reveal>
+                        <img src="images/new-images/africa4.jpeg" alt="Comunità locale supportata da MAISHA ONGD" width="560" height="640" loading="lazy">
+                        <figcaption class="africa-intro-quote">
+                            <i class="fas fa-quote-left" aria-hidden="true"></i>
+                            <p>Maisha significa <strong>vita</strong> in lingala</p>
+                        </figcaption>
+                    </figure>
+                    <div class="africa-intro-content reveal" data-reveal data-reveal-delay="1">
+                        <p class="section-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> La nostra missione</p>
+                        <h2 class="section-title" id="maisha-heading">Chi è MAISHA ONGD</h2>
+                        <p>Un nome che incarna la missione di questo progetto, nato per migliorare le condizioni di vita di comunità locali particolarmente svantaggiate, attraverso iniziative di integrazione e sviluppo.</p>
+                        <p>Il progetto Maisha, portato avanti da volontari locali congolesi in collaborazione con un gruppo di volontari italiani (di cui facciamo parte anche noi del Canavese), interviene in villaggi duramente colpiti da povertà, conflitti e marginalizzazione sociale.</p>
+                        <p>L'Associazione Parkinsoniani del Canavese ODV, pur operando in un ambito diverso, ha scelto di dare un contributo concreto a questa causa, stringendo un gemellaggio solidale con Maisha.</p>
+                        <div class="africa-intro-highlights">
+                            <div class="africa-intro-highlight">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                <span>Volontari congolesi e italiani</span>
+                            </div>
+                            <div class="africa-intro-highlight">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                                <span>Gemellaggio Canavese–Congo</span>
+                            </div>
                         </div>
                     </div>
-                    <p style="font-size: 1.1rem; margin-top: 2rem; text-align: center; color: #333; line-height: 1.6;">Il progetto PADIS, in sintesi, mira a rompere il ciclo di violenza e sottomissione attraverso il lavoro di comunità, l'educazione e il reciproco sostegno. Donne che prima erano isolate e prive di voce ora si aiutano l'un l'altra, diventando motore di cambiamento per l'intero villaggio.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Sezione Guardando al Futuro -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <!-- Progetti sul campo – card distinte -->
+        <section class="section africa-section africa-section--projects section-alt" id="progetti" aria-labelledby="projects-heading">
             <div class="container">
-                <h2 class="section-title">Guardando al Futuro</h2>
-                <p>Il gruppo italiano di cui facciamo parte continua a supportare Maisha organizzando eventi di sensibilizzazione e raccolta fondi qui in Italia. Ogni donazione raccolta viene inviata direttamente in Congo per finanziare e ampliare questi progetti.</p>
-                
-                <div class="future-goals">
-                    <h3>I Nostri Obiettivi</h3>
-                    <ul class="goals-list">
-                        <li><i class="fas fa-check"></i> Intensificazione dei corsi di alfabetizzazione (strumento essenziale per migliorare qualsiasi condizione di vita)</li>
-                        <li><i class="fas fa-check"></i> Estensione di attività generatrici di reddito, con un'attenzione particolare all'imprenditorialità femminile</li>
-                        <li><i class="fas fa-check"></i> Coinvolgimento attivo delle comunità minoritarie pigmee nei progetti di sviluppo</li>
-                        <li><i class="fas fa-check"></i> Creazione di comunità autonome, dove donne e uomini – indipendentemente dall'etnia – possano lavorare, studiare e vivere con dignità</li>
-                    </ul>
+                <header class="section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-hands-helping" aria-hidden="true"></i> Sul campo</p>
+                    <h2 class="section-title" id="projects-heading">I Nostri Progetti sul Campo</h2>
+                    <p class="section-subtitle">Maisha ha attivato diversi interventi per cambiare in meglio la vita delle persone coinvolte</p>
+                </header>
+
+                <div class="africa-projects-stack">
+                    <article class="africa-project-card africa-project-card--kua reveal" data-reveal data-reveal-delay="1">
+                        <div class="africa-project-card-media">
+                            <img src="images/new-images/africa1.jpeg" alt="Bambini durante le attività scolastiche del Progetto KUA" width="600" height="400" loading="lazy">
+                            <span class="africa-project-card-badge"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Progetto KUA</span>
+                        </div>
+                        <div class="africa-project-card-body">
+                            <h3>Istruzione per i bambini</h3>
+                            <p class="africa-project-card-lead">Grazie a questo progetto, <strong>50 bambini</strong> (di cui 20 appartenenti alla comunità pigmea locale) possono frequentare la scuola.</p>
+                            <ul class="africa-project-card-list">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Rette scolastiche, libri, quaderni e indumenti</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 10 ragazze orfane (10–16 anni) seguite oltre la primaria</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Assistenza medica e alimentare per le studentesse</li>
+                            </ul>
+                            <p>In contesti dove l'istruzione femminile spesso viene trascurata, dare a queste giovani la possibilità di studiare significa cambiare il loro destino, renderle più autonome e forti per il futuro.</p>
+                        </div>
+                    </article>
+
+                    <article class="africa-project-card africa-project-card--padis reveal" data-reveal data-reveal-delay="2">
+                        <div class="africa-project-card-media">
+                            <img src="images/new-images/africa2.jpeg" alt="Donne coinvolte nel Progetto PADIS di orticoltura comunitaria" width="600" height="400" loading="lazy">
+                            <span class="africa-project-card-badge africa-project-card-badge--padis"><i class="fas fa-seedling" aria-hidden="true"></i> Progetto PADIS</span>
+                        </div>
+                        <div class="africa-project-card-body">
+                            <h3>Empowerment per le donne</h3>
+                            <p class="africa-project-card-lead">Un programma di formazione e lavoro per <strong>120 donne</strong>, molte vittime di violenza sessuale e traumi dovuti alla guerra.</p>
+                            <ul class="africa-project-card-list">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Orticoltura comunitaria nella pianura di Ruzizi</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Cassa comune alimentata dai ricavi della cooperativa</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Laboratorio di taglio e cucito con macchine da cucire</li>
+                            </ul>
+                            <p>Coltivando insieme i campi, queste donne non solo producono cibo per le proprie famiglie, ma hanno riacquistato dignità e ruolo sociale, generando reddito e nuove competenze professionali.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Sezione Testimonianze -->
-        <section class="section">
+        <!-- Alfabetizzazione – sezione scura -->
+        <section class="section africa-section africa-section--literacy" id="alfabetizzazione" aria-labelledby="literacy-heading">
             <div class="container">
-                <h2 class="section-title">Le Nostre Testimonianze</h2>
-                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #333;">Per la nostra associazione, il Progetto Africa rappresenta un'esperienza arricchente e coerente con i nostri valori di solidarietà. Pur operando in contesti lontani, abbiamo scoperto che la voglia di aiutarsi e di costruire un futuro migliore è universale.</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <div style="background: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-top: 4px solid #80975d;">
-                        <i class="fas fa-graduation-cap" style="font-size: 4rem; color: #80975d; margin-bottom: 1.5rem;"></i>
-                        <h3 style="color: #517757; margin-bottom: 1.5rem; font-size: 1.5rem;">Bambini a Scuola</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">I sorrisi dei bambini che finalmente possono frequentare la scuola e sognare un futuro migliore. Le testimonianze che riceviamo dal Congo sono toccanti e ci riempiono il cuore di gioia.</p>
+                <div class="africa-literacy-panel reveal" data-reveal>
+                    <header class="africa-literacy-header">
+                        <p class="section-eyebrow section-eyebrow--light"><i class="fas fa-book-open" aria-hidden="true"></i> Educazione di base</p>
+                        <h2 class="section-title" id="literacy-heading">Corso di Alfabetizzazione</h2>
+                        <p class="africa-literacy-intro">Su richiesta delle stesse partecipanti, abbiamo organizzato un corso di alfabetizzazione: molte di queste donne non avevano mai avuto accesso all'istruzione di base.</p>
+                    </header>
+
+                    <div class="africa-literacy-grid">
+                        <article class="africa-literacy-item reveal" data-reveal data-reveal-delay="1">
+                            <span class="africa-literacy-icon" aria-hidden="true"><i class="fas fa-book-open"></i></span>
+                            <h3>Istruzione di Base</h3>
+                            <p>Imparare a leggere, scrivere e far di conto in età adulta è uno strumento fondamentale per conoscere e difendere i propri diritti.</p>
+                        </article>
+                        <article class="africa-literacy-item reveal" data-reveal data-reveal-delay="2">
+                            <span class="africa-literacy-icon" aria-hidden="true"><i class="fas fa-heart"></i></span>
+                            <h3>Emozione Indescrivibile</h3>
+                            <p>Per molte partecipanti è stata un'emozione indescrivibile: la prima volta che hanno potuto firmare il proprio nome o leggere una lettera.</p>
+                        </article>
+                        <article class="africa-literacy-item reveal" data-reveal data-reveal-delay="3">
+                            <span class="africa-literacy-icon" aria-hidden="true"><i class="fas fa-hands-helping"></i></span>
+                            <h3>Comunità che Cresce</h3>
+                            <p>Donne che prima erano isolate e prive di voce ora si aiutano l'un l'altra, diventando motore di cambiamento per l'intero villaggio.</p>
+                        </article>
                     </div>
-                    <div style="background: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-top: 4px solid #80975d;">
-                        <i class="fas fa-seedling" style="font-size: 4rem; color: #80975d; margin-bottom: 1.5rem;"></i>
-                        <h3 style="color: #517757; margin-bottom: 1.5rem; font-size: 1.5rem;">Donne negli Orti</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">La fierezza delle donne nel mostrare i loro orti e i vestiti cuciti con le proprie mani. Sono immagini che condividiamo volentieri con i nostri associati durante le riunioni.</p>
-                    </div>
+
+                    <p class="africa-literacy-footer">Il progetto PADIS mira a rompere il ciclo di violenza e sottomissione attraverso il lavoro di comunità, l'educazione e il reciproco sostegno.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Sezione Come Aiutare -->
-        <section class="section">
+        <!-- Obiettivi futuri – timeline -->
+        <section class="section africa-section africa-section--future section-alt" id="futuro" aria-labelledby="future-heading">
             <div class="container">
-                <div class="help-card" style="background: linear-gradient(135deg, #80975d 0%, #517757 100%); color: white; padding: 4rem 3rem; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Come Puoi Aiutare?</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.7; opacity: 0.95;">Anche tu puoi diventare parte del Progetto Africa: con una donazione dedicata a Maisha (indicando la causale specifica) oppure partecipando alle nostre iniziative solidali (cene benefiche, mercatini, raccolte fondi) che organizziamo periodicamente a favore di Maisha.</p>
-                    <p style="font-size: 1.1rem; margin-bottom: 3rem; line-height: 1.6; opacity: 0.9;">Ogni contributo, piccolo o grande, si trasforma in istruzione, cure mediche e speranza per tante donne e tanti bambini.</p>
-                    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="donazioni.html" style="background: white; color: #517757; padding: 1.2rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">Dona Ora</a>
-                        <a href="contatti.html" style="background: rgba(255,255,255,0.2); color: white; padding: 1.2rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; border: 2px solid white; transition: all 0.3s ease;">Contattaci</a>
+                <header class="section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-compass" aria-hidden="true"></i> Prossimi passi</p>
+                    <h2 class="section-title" id="future-heading">Guardando al Futuro</h2>
+                    <p class="section-subtitle">Il gruppo italiano di cui facciamo parte continua a supportare Maisha organizzando eventi di sensibilizzazione e raccolta fondi. Ogni donazione raccolta viene inviata direttamente in Congo.</p>
+                </header>
+
+                <ol class="africa-timeline reveal" data-reveal>
+                    <li class="africa-timeline-item">
+                        <span class="africa-timeline-marker" aria-hidden="true"><i class="fas fa-book-reader"></i></span>
+                        <div class="africa-timeline-content">
+                            <h3>Alfabetizzazione</h3>
+                            <p>Intensificazione dei corsi di alfabetizzazione, strumento essenziale per migliorare qualsiasi condizione di vita.</p>
+                        </div>
+                    </li>
+                    <li class="africa-timeline-item">
+                        <span class="africa-timeline-marker" aria-hidden="true"><i class="fas fa-female"></i></span>
+                        <div class="africa-timeline-content">
+                            <h3>Imprenditorialità femminile</h3>
+                            <p>Estensione di attività generatrici di reddito, con un'attenzione particolare all'imprenditorialità femminile.</p>
+                        </div>
+                    </li>
+                    <li class="africa-timeline-item">
+                        <span class="africa-timeline-marker" aria-hidden="true"><i class="fas fa-people-arrows"></i></span>
+                        <div class="africa-timeline-content">
+                            <h3>Inclusione delle comunità pigmee</h3>
+                            <p>Coinvolgimento attivo delle comunità minoritarie pigmee nei progetti di sviluppo, favorendo la piena integrazione.</p>
+                        </div>
+                    </li>
+                    <li class="africa-timeline-item">
+                        <span class="africa-timeline-marker" aria-hidden="true"><i class="fas fa-home"></i></span>
+                        <div class="africa-timeline-content">
+                            <h3>Comunità autonome</h3>
+                            <p>Creazione di comunità autonome dove donne e uomini – indipendentemente dall'etnia – possano lavorare, studiare e vivere con dignità.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Testimonianze -->
+        <section class="section africa-section africa-section--testimonials" id="testimonianze" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <header class="section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-comment-dots" aria-hidden="true"></i> Storie dal campo</p>
+                    <h2 class="section-title" id="testimonials-heading">Le Nostre Testimonianze</h2>
+                    <p class="section-subtitle">Pur operando in contesti lontani, abbiamo scoperto che la voglia di aiutarsi e di costruire un futuro migliore è universale.</p>
+                </header>
+
+                <div class="africa-testimonials-grid">
+                    <article class="africa-testimonial-card africa-testimonial-card--school reveal" data-reveal data-reveal-delay="1">
+                        <div class="africa-testimonial-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></div>
+                        <blockquote>
+                            <p>I sorrisi dei bambini che finalmente possono frequentare la scuola e sognare un futuro migliore. Le testimonianze che riceviamo dal Congo sono toccanti e ci riempiono il cuore di gioia.</p>
+                        </blockquote>
+                        <footer>
+                            <strong>Bambini a Scuola</strong>
+                            <span>Progetto KUA</span>
+                        </footer>
+                    </article>
+
+                    <article class="africa-testimonial-card africa-testimonial-card--garden reveal" data-reveal data-reveal-delay="2">
+                        <div class="africa-testimonial-icon" aria-hidden="true"><i class="fas fa-seedling"></i></div>
+                        <blockquote>
+                            <p>La fierezza delle donne nel mostrare i loro orti e i vestiti cuciti con le proprie mani. Sono immagini che condividiamo volentieri con i nostri associati durante le riunioni.</p>
+                        </blockquote>
+                        <footer>
+                            <strong>Donne negli Orti</strong>
+                            <span>Progetto PADIS</span>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA finale -->
+        <section class="section africa-section africa-section--cta" id="aiuta" aria-labelledby="help-heading">
+            <div class="container">
+                <div class="africa-cta-panel reveal" data-reveal>
+                    <div class="africa-cta-content">
+                        <p class="section-eyebrow section-eyebrow--light"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Partecipa</p>
+                        <h2 id="help-heading">Come Puoi Aiutare?</h2>
+                        <p>Anche tu puoi diventare parte del Progetto Africa: con una donazione dedicata a Maisha (indicando la causale specifica) oppure partecipando alle nostre iniziative solidali.</p>
+                        <p>Ogni contributo, piccolo o grande, si trasforma in istruzione, cure mediche e speranza per tante donne e tanti bambini.</p>
+                        <div class="africa-cta-actions">
+                            <a href="donazioni.html" class="africa-cta-btn africa-cta-btn--primary">Dona Ora</a>
+                            <a href="contatti.html" class="africa-cta-btn africa-cta-btn--secondary">Contattaci</a>
+                        </div>
                     </div>
+                    <figure class="africa-cta-visual" aria-hidden="true">
+                        <img src="images/new-images/africa3.jpeg" alt="" width="480" height="360" loading="lazy">
+                    </figure>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <h3>Associazione Parkinsoniani del Canavese ODV ETS</h3>
-                <p>Organizzazione di Volontariato</p>
-                <p>C.F. 92518680019</p>
+    <footer class="footer" role="contentinfo">
+        <div class="footer-cta">
+            <div class="container footer-cta-inner">
+                <div class="footer-cta-text">
+                    <p class="footer-cta-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> Sostieni la nostra missione</p>
+                    <p class="footer-cta-title">Ogni contributo fa la differenza per chi vive il Parkinson nel Canavese</p>
+                </div>
+                <div class="footer-cta-actions">
+                    <a href="donazioni.html#5x1000" class="footer-cta-btn footer-cta-btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dona il 5×1000</a>
+                    <a href="donazioni.html" class="footer-cta-btn footer-cta-btn--secondary">Scopri come sostenerci</a>
+                </div>
             </div>
-            <div>
-                <h3>Contatti</h3>
-                <p><i class="fas fa-envelope"></i> assoparkinsoncanavese@virgilio.it</p>
-                <p><i class="fas fa-phone"></i> 347 4539988</p>
-                <p><i class="fas fa-map-marker-alt"></i> P.le P. Nenni 1 - Castellamonte (TO)</p>
+        </div>
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo-link" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="images/logo.png" alt="" class="footer-logo" width="52" height="52">
+                        <span class="footer-logo-text">
+                            <span class="footer-logo-title">Parkinson Canavese</span>
+                            <span class="footer-logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                    <p class="footer-org-name">Associazione Parkinsoniani del Canavese ODV ETS</p>
+                    <p class="footer-org-meta">Organizzazione di Volontariato · Ente del Terzo Settore</p>
+                    <p class="footer-org-meta">Attiva dal 2013 con attività gratuite in tutto il Canavese</p>
+                    <p class="footer-cf"><strong>C.F.</strong> 92518680019</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigazione</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="sedi.html">Le Sedi</a></li>
+                        <li><a href="attivita.html">Attività</a></li>
+                        <li><a href="progetto-africa.html">Progetto Africa</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="donazioni.html">Sostienici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contatti</h3>
+                    <ul class="footer-contact-list">
+                        <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
+                        <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
+                        <li><a href="mailto:assoparkcanavese@pec.it"><i class="fas fa-shield-alt" aria-hidden="true"></i> assoparkcanavese@pec.it</a> <span class="footer-note">(PEC)</span></li>
+                    </ul>
+                    <h3 class="footer-heading footer-heading--social">Seguici</h3>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/393793258612" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="mailto:assoparkinsoncanavese@virgilio.it" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3>Link Utili</h3>
-                <ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Associazione Parkinsoniani del Canavese ODV ETS. Tutti i diritti riservati.</p>
+                <ul class="footer-legal">
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="cookie-policy.html">Cookie Policy</a></li>
                     <li><a href="termini-condizioni.html">Termini e Condizioni</a></li>
-                    <li><a href="donazioni.html">Come sostenerci</a></li>
                 </ul>
-            </div>
-            <div>
-                <h3>Seguici</h3>
-                <div style="font-size: 1.5rem;">
-                    <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" target="_blank" style="margin-right: 1rem;"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/3474539988" target="_blank" style="margin-right: 1rem;"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope"></i></a>
-                </div>
             </div>
         </div>
     </footer>
@@ -225,4 +377,4 @@
         </ul>
     </div>
 </body>
-</html> 
+</html>

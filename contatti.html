@@ -4,110 +4,306 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatti - Associazione Parkinson Canavese</title>
-    <meta name="description" content="Contatta l'Associazione Parkinson Canavese per informazioni, supporto o per unirti a noi.">
+    <meta name="description" content="Contatta l'Associazione Parkinson Canavese per informazioni, supporto o per unirti a noi. Trova indirizzo, telefono, email e indicazioni per raggiungere la sede legale.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/box-contatti.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=221">
+    <script src="js/main.js?v=221" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Logo Associazione Parkinsoniani del Canavese" style="height:48px;width:auto;vertical-align:middle;">
-            </a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
-                <li><a href="#" class="nav-link" id="sedi-dropdown-trigger">Le Nostre Sedi</a></li>
-                <li><a href="attivita.html" class="nav-link">Attività</a></li>
-                <li><a href="donazioni.html" class="nav-link">Sostienici</a></li>
-                <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
-                <li><a href="contatti.html" class="nav-link">Contatti</a></li>
-            </ul>
-        </nav>
+    <header class="header header-over-hero">
+        <div class="header-glass">
+            <nav class="nav-container" aria-label="Navigazione principale">
+                <div class="header-brand">
+                    <a href="index.html" class="logo" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="images/logo.png" alt="" class="logo-img" width="48" height="48">
+                        <span class="logo-text">
+                            <span class="logo-title">Parkinson Canavese</span>
+                            <span class="logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="nav-pill">
+                        <ul class="nav-menu">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
+                            <li><a href="#" class="nav-link nav-link-sedi" id="sedi-dropdown-trigger">Sedi <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
+                            <li><a href="attivita.html" class="nav-link">Attività</a></li>
+                            <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
+                            <li><a href="contatti.html" class="nav-link active">Contatti</a></li>
+                        </ul>
+                    </div>
+                    <a href="donazioni.html" class="nav-cta"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
+                </div>
+                <div class="header-actions">
+                    <a href="tel:+393793258612" class="header-contact" aria-label="Chiamaci al +39 379 325 8612">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <span class="header-contact-text">+39 379 325 8612</span>
+                    </a>
+                    <button type="button" class="mobile-menu-btn" aria-label="Apri menu di navigazione" aria-expanded="false">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="contatti-hero">
-            <h1 class="contatti-title">Contattaci</h1>
-            <p class="contatti-subtitle">Siamo sempre disponibili per informazioni, supporto o collaborazioni.</p>
-        </section>
-        <section class="contatti-box-section">
-            <div class="contatti-box-grid">
-                <div class="contatti-box">
-                    <i class="fas fa-phone"></i>
-                    <h3>Telefono</h3>
-                    <p class="contatti-main"><a href="tel:3474539988">347 4539988</a></p>
-                    <p class="contatti-note">Numero principale per informazioni e appuntamenti</p>
-                </div>
-                <div class="contatti-box">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p class="contatti-main"><a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></p>
-                    <p class="contatti-note">Rispondiamo il prima possibile a tutte le richieste</p>
-                </div>
-                <div class="contatti-box">
-                    <i class="fas fa-envelope"></i>
-                    <h3>PEC</h3>
-                    <p class="contatti-main"><a href="mailto:assoparkcanavese@pec.it">assoparkcanavese@pec.it</a></p>
-                    <p class="contatti-note">Per comunicazioni ufficiali</p>
-                </div>
-                <div class="contatti-box">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Sede Legale</h3>
-                    <p class="contatti-main">P.le Pietro Nenni 1<br>10081 Castellamonte (TO)</p>
-                    <p class="contatti-note">Presso Casa della Salute</p>
+        <section class="hero hero-page contatti-hero-section" aria-labelledby="contatti-heading">
+            <div class="hero-bg-accent" aria-hidden="true"></div>
+            <div class="hero-inner container hero-inner--center">
+                <div class="hero-text hero-text--center">
+                    <p class="hero-badge"><i class="fas fa-envelope" aria-hidden="true"></i> Siamo qui per te</p>
+                    <h1 id="contatti-heading" class="hero-title">Contattaci</h1>
+                    <p class="hero-lead">Siamo sempre disponibili per informazioni, supporto o collaborazioni. Chiamaci, scrivici o vieni a trovarci in una delle nostre sedi.</p>
                 </div>
             </div>
-            <div class="contatti-social-section">
-                <h2 class="contatti-social-title">Seguici sui social</h2>
-                <div class="contatti-social-icons">
-                    <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/3474539988" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:assoparkinsoncanavese@virgilio.it" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </section>
+        <section class="section contatti-welcome-section">
+            <div class="container">
+                <div class="contatti-welcome-card">
+                    <div class="contatti-welcome-icon" aria-hidden="true">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="contatti-welcome-text">
+                        <h2>Ti aspettiamo con un sorriso</h2>
+                        <p>Che tu stia cercando informazioni, supporto per te o per un familiare, o semplicemente voglia conoscerci di persona: siamo qui per te. Ogni richiesta è importante per noi e rispondiamo con cura e attenzione.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contatti-box-section" aria-labelledby="contatti-dettagli-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow"><i class="fas fa-address-book" aria-hidden="true"></i> I nostri contatti</p>
+                    <h2 id="contatti-dettagli-heading" class="section-title">Parliamo insieme</h2>
+                    <p class="section-subtitle">Scegli il canale che preferisci: siamo raggiungibili per telefono, email o di persona su appuntamento.</p>
+                </header>
+                <div class="contatti-box-grid">
+                    <div class="contatti-box">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <h3>Telefono</h3>
+                        <p class="contatti-main"><a href="tel:+393793258612">+39 379 325 8612</a></p>
+                        <a href="https://wa.me/393793258612" class="contatti-whatsapp-link" target="_blank" rel="noopener noreferrer" aria-label="Scrivici su WhatsApp al +39 379 325 8612">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Scrivici su WhatsApp
+                        </a>
+                        <p class="contatti-note">Numero principale per informazioni e appuntamenti</p>
+                    </div>
+                    <div class="contatti-box">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <h3>Email</h3>
+                        <p class="contatti-main"><a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></p>
+                        <p class="contatti-note">Rispondiamo il prima possibile a tutte le richieste</p>
+                    </div>
+                    <div class="contatti-box">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <h3>PEC</h3>
+                        <p class="contatti-main"><a href="mailto:assoparkcanavese@pec.it">assoparkcanavese@pec.it</a></p>
+                        <p class="contatti-note">Per comunicazioni ufficiali</p>
+                    </div>
+                    <div class="contatti-box">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <h3>Sede Legale</h3>
+                        <p class="contatti-main">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Piazzale+Pietro+Nenni+1,+10081+Castellamonte+TO,+Italia" target="_blank" rel="noopener noreferrer">
+                                P.le Pietro Nenni 1<br>10081 Castellamonte (TO)
+                            </a>
+                        </p>
+                        <p class="contatti-note">Presso Casa della Salute (ex Ospedale)</p>
+                    </div>
+                </div>
+                <div class="contatti-social-section">
+                    <h2 class="contatti-social-title">Seguici sui social</h2>
+                    <div class="contatti-social-icons">
+                        <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/393793258612" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:assoparkinsoncanavese@virgilio.it" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt contatti-visit-section" aria-labelledby="vieni-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Vieni a trovarci</p>
+                    <h2 id="vieni-heading" class="section-title">La nostra sede legale</h2>
+                    <p class="section-subtitle">Ti accogliamo presso la Casa della Salute di Castellamonte, cuore operativo dell'associazione e punto di riferimento per malati, familiari e volontari del Canavese.</p>
+                </header>
+
+                <div class="sede-info-layout contatti-visit-layout">
+                    <div class="sede-info-cards">
+                        <div class="sede-info-card">
+                            <h3><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Indirizzo</h3>
+                            <address>
+                                Casa della Salute (ex Ospedale)<br>
+                                Piazzale Pietro Nenni 1<br>
+                                10081 Castellamonte (TO)
+                            </address>
+                        </div>
+                        <div class="sede-info-card">
+                            <h3><i class="fas fa-clock" aria-hidden="true"></i> Orari di apertura</h3>
+                            <ul class="sede-hours-list">
+                                <li><span>Lunedì – Venerdì</span> <span>Su appuntamento</span></li>
+                                <li><span>Sabato</span> <span>Su appuntamento</span></li>
+                                <li><span>Domenica</span> <span>Chiuso</span></li>
+                            </ul>
+                        </div>
+                        <div class="sede-info-card">
+                            <h3><i class="fas fa-info-circle" aria-hidden="true"></i> Prima della visita</h3>
+                            <p class="contatti-visit-note">Ti consigliamo di contattarci telefonicamente o via WhatsApp per fissare un appuntamento. Così possiamo accoglierti al meglio e dedicarti il tempo che meriti.</p>
+                            <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+393793258612">+39 379 325 8612</a></p>
+                            <p><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/393793258612" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+                        </div>
+                    </div>
+                    <div class="contatti-map-column">
+                        <div class="sede-map-wrap">
+                            <iframe
+                                title="Mappa sede legale Castellamonte - Associazione Parkinson Canavese"
+                                src="https://maps.google.com/maps?q=Piazzale+Pietro+Nenni+1,+10081+Castellamonte+TO,+Italia&amp;hl=it&amp;z=15&amp;output=embed"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="contatti-map-actions">
+                            <a href="https://www.google.com/maps/search/?api=1&amp;query=Piazzale+Pietro+Nenni+1,+10081+Castellamonte+TO,+Italia" class="cta-button contatti-map-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-directions" aria-hidden="true"></i> Apri in Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="contatti-directions-title">Indicazioni stradali</h3>
+                <div class="directions-grid">
+                    <div class="direction-card">
+                        <i class="fas fa-car" aria-hidden="true"></i>
+                        <h3>In Auto</h3>
+                        <ul>
+                            <li>Dall'autostrada A5: uscita Ivrea, seguire indicazioni per Castellamonte</li>
+                            <li>Dalla SS 460: seguire le indicazioni per il centro di Castellamonte</li>
+                            <li>Parcheggio disponibile presso la Casa della Salute</li>
+                        </ul>
+                    </div>
+                    <div class="direction-card">
+                        <i class="fas fa-bus" aria-hidden="true"></i>
+                        <h3>Con i Trasporti Pubblici</h3>
+                        <ul>
+                            <li>Linea bus GTT: fermata "Castellamonte - Casa della Salute"</li>
+                            <li>Orari consultabili sul sito GTT</li>
+                            <li>Il nostro servizio trasporti può accompagnarti se necessario</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contatti-other-sedi">
+                    <h3 class="contatti-other-sedi-title">Operiamo anche da altre sedi nel Canavese</h3>
+                    <p class="contatti-other-sedi-lead">Oltre alla sede legale di Castellamonte, siamo presenti in altre zone del territorio per avvicinare i nostri servizi a chi ne ha bisogno.</p>
+                    <div class="sede-other-locations contatti-other-sedi-grid">
+                        <a href="sedi/banchette.html" class="sede-other-card">
+                            <img src="images/P7240367SITO.jpg" alt="" width="72" height="72" loading="lazy">
+                            <div>
+                                <h4>Banchette d'Ivrea</h4>
+                                <span>Via Samone 24 · Ex Consultorio ASL</span>
+                            </div>
+                        </a>
+                        <a href="sedi/san-maurizio.html" class="sede-other-card">
+                            <img src="images/sanmaurizio1.jpg" alt="" width="72" height="72" loading="lazy">
+                            <div>
+                                <h4>San Maurizio Canavese</h4>
+                                <span>Via Fatebenefratelli 70 · Ospedale</span>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="contatti-other-sedi-link"><a href="sedi.html">Scopri tutte le sedi <i class="fas fa-arrow-right" aria-hidden="true"></i></a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contatti-cta-section">
+            <div class="container">
+                <div class="sede-callout contatti-callout">
+                    <h3><i class="fas fa-heart" aria-hidden="true"></i> Hai bisogno di supporto?</h3>
+                    <p>Non affrontare il Parkinson da solo. Il nostro team di volontari è pronto ad ascoltarti, orientarti e accompagnarti nel percorso verso un domani più sereno.</p>
+                    <p>Chiamaci, scrivici o vieni a trovarci: insieme possiamo fare la differenza.</p>
+                    <div class="contatti-callout-actions">
+                        <a href="tel:+393793258612" class="cta-button"><i class="fas fa-phone-alt" aria-hidden="true"></i> Chiamaci ora</a>
+                        <a href="donazioni.html" class="cta-button contatti-cta-outline">Sostienici</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <img src="images/logo.png" alt="Logo Associazione Parkinsoniani del Canavese" style="height:48px;width:auto;vertical-align:middle;margin-bottom:0.5em;">
-                <h3>Associazione Parkinsoniani del Canavese ODV ETS</h3>
-                <p>Organizzazione di Volontariato</p>
-                <p>C.F. 92518680019</p>
+    <footer class="footer" role="contentinfo">
+        <div class="footer-cta">
+            <div class="container footer-cta-inner">
+                <div class="footer-cta-text">
+                    <p class="footer-cta-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> Sostieni la nostra missione</p>
+                    <p class="footer-cta-title">Ogni contributo fa la differenza per chi vive il Parkinson nel Canavese</p>
+                </div>
+                <div class="footer-cta-actions">
+                    <a href="donazioni.html#5x1000" class="footer-cta-btn footer-cta-btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dona il 5×1000</a>
+                    <a href="donazioni.html" class="footer-cta-btn footer-cta-btn--secondary">Scopri come sostenerci</a>
+                </div>
             </div>
-            <div>
-                <h3>Contatti</h3>
-                <p><i class="fas fa-envelope"></i> assoparkinsoncanavese@virgilio.it</p>
-                <p><i class="fas fa-phone"></i> 347 4539988</p>
-                <p><i class="fas fa-map-marker-alt"></i> P.le P. Nenni 1 - Castellamonte (TO)</p>
+        </div>
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo-link" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="images/logo.png" alt="" class="footer-logo" width="52" height="52">
+                        <span class="footer-logo-text">
+                            <span class="footer-logo-title">Parkinson Canavese</span>
+                            <span class="footer-logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                    <p class="footer-org-name">Associazione Parkinsoniani del Canavese ODV ETS</p>
+                    <p class="footer-org-meta">Organizzazione di Volontariato · Ente del Terzo Settore</p>
+                    <p class="footer-org-meta">Attiva dal 2013 con attività gratuite in tutto il Canavese</p>
+                    <p class="footer-cf"><strong>C.F.</strong> 92518680019</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigazione</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="sedi.html">Le Sedi</a></li>
+                        <li><a href="attivita.html">Attività</a></li>
+                        <li><a href="progetto-africa.html">Progetto Africa</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="donazioni.html">Sostienici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contatti</h3>
+                    <ul class="footer-contact-list">
+                        <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
+                        <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
+                        <li><a href="mailto:assoparkcanavese@pec.it"><i class="fas fa-shield-alt" aria-hidden="true"></i> assoparkcanavese@pec.it</a> <span class="footer-note">(PEC)</span></li>
+                    </ul>
+                    <h3 class="footer-heading footer-heading--social">Seguici</h3>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/393793258612" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="mailto:assoparkinsoncanavese@virgilio.it" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3>Link Utili</h3>
-                <ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Associazione Parkinsoniani del Canavese ODV ETS. Tutti i diritti riservati.</p>
+                <ul class="footer-legal">
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="cookie-policy.html">Cookie Policy</a></li>
                     <li><a href="termini-condizioni.html">Termini e Condizioni</a></li>
-                    <li><a href="donazioni.html">Come sostenerci</a></li>
                 </ul>
-            </div>
-            <div>
-                <h3>Seguici</h3>
-                <div style="font-size: 1.5rem;">
-                    <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" target="_blank" style="margin-right: 1rem;"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/3474539988" target="_blank" style="margin-right: 1rem;"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope"></i></a>
-                </div>
             </div>
         </div>
     </footer>

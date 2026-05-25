@@ -9,138 +9,166 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=220">
+    <script src="js/main.js?v=220" defer></script>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo">APC</a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
-                <li><a href="#" class="nav-link" id="sedi-dropdown-trigger">Le Nostre Sedi</a></li>
-                <li><a href="attivita.html" class="nav-link">Attività</a></li>
-                <li><a href="donazioni.html" class="nav-link">Sostienici</a></li>
-                <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
-                <li><a href="contatti.html" class="nav-link">Contatti</a></li>
-            </ul>
-        </nav>
+    <header class="header header-over-hero">
+        <div class="header-glass">
+            <nav class="nav-container" aria-label="Navigazione principale">
+                <div class="header-brand">
+                    <a href="index.html" class="logo" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="images/logo.png" alt="" class="logo-img" width="48" height="48">
+                        <span class="logo-text">
+                            <span class="logo-title">Parkinson Canavese</span>
+                            <span class="logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="nav-pill">
+                        <ul class="nav-menu">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
+                            <li><a href="#" class="nav-link nav-link-sedi" id="sedi-dropdown-trigger">Sedi <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
+                            <li><a href="attivita.html" class="nav-link">Attività</a></li>
+                            <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
+                            <li><a href="contatti.html" class="nav-link">Contatti</a></li>
+                        </ul>
+                    </div>
+                    <a href="donazioni.html" class="nav-cta"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
+                </div>
+                <div class="header-actions">
+                    <a href="tel:+393793258612" class="header-contact" aria-label="Chiamaci al +39 379 325 8612">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <span class="header-contact-text">+39 379 325 8612</span>
+                    </a>
+                    <button type="button" class="mobile-menu-btn" aria-label="Apri menu di navigazione" aria-expanded="false">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <div class="container">
-                <a href="index.html">Home</a> / Le Nostre Sedi
-            </div>
-        </div>
-
-        <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="container">
-                <h1>Le Nostre Sedi</h1>
-                <p>L'associazione è presente su tutto il territorio del Canavese attraverso tre sedi operative, per essere più vicini ai malati e alle loro famiglie in diverse zone del territorio.</p>
+        <section class="hero hero-page" aria-labelledby="sedi-page-heading">
+            <div class="hero-bg-accent" aria-hidden="true"></div>
+            <div class="hero-inner container hero-inner--center">
+                <div class="hero-text hero-text--center">
+                    <p class="hero-badge"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Presenza sul territorio</p>
+                    <h1 id="sedi-page-heading" class="hero-title">Le Nostre Sedi</h1>
+                    <p class="hero-lead">L'associazione è presente su tutto il territorio del Canavese attraverso tre sedi operative, per essere più vicini ai malati e alle loro famiglie.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Mappa delle Sedi -->
-        <section class="section">
+        <section class="section section-sedi">
+            <div class="container">
+                <div class="sedi-showcase-grid">
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/castellamonte.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/new-images/img15.jpg" alt="Sede di Castellamonte" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge">Sede Legale</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>Castellamonte</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> P.le P. Nenni 1 · Casa della Salute</p>
+                                <p class="sedi-showcase-desc">Palestra riabilitativa, attività motorie assistite e punto informativo per famiglie e volontari.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-dumbbell" aria-hidden="true"></i> Palestra</li>
+                                    <li><i class="fas fa-info-circle" aria-hidden="true"></i> Orientamento</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/banchette.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/P7240367SITO.jpg" alt="Sede di Banchette d'Ivrea" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge sedi-showcase-badge--alt">Canavese orientale</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>Banchette d'Ivrea</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Via Samone 24 · Ex Consultorio ASL</p>
+                                <p class="sedi-showcase-desc">Incontri di supporto, laboratori e attività di gruppo per Ivrea e dintorni.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-comments" aria-hidden="true"></i> Ascolto</li>
+                                    <li><i class="fas fa-bus" aria-hidden="true"></i> Trasporti</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/san-maurizio.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/sanmaurizio1.jpg" alt="Sede di San Maurizio Canavese" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge sedi-showcase-badge--alt">Basso Canavese</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>San Maurizio Canavese</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Via Fatebenefratelli 70 · Ospedale</p>
+                                <p class="sedi-showcase-desc">Riabilitazione, incontri formativi e continuità assistenziale con il Fatebenefratelli.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-hospital" aria-hidden="true"></i> Riabilitazione</li>
+                                    <li><i class="fas fa-graduation-cap" aria-hidden="true"></i> Formazione</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-sede-alt">
             <div class="container">
                 <h2 class="section-title">Dove Siamo</h2>
-                <div class="map-container" style="margin-bottom: 3rem;">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.1234567890123!2d7.712345678901234!3d45.44567890123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDI2JzQ0LjQiTiA3wrA0Mic0NC40IkU!5e0!3m2!1sit!2sit!4v1234567890123"
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
+                <p class="section-subtitle">Tre punti nel Canavese per raggiungerci comodamente da ogni zona del territorio.</p>
+                <div class="sede-map-wrap sede-map-wrap--wide">
+                    <iframe
+                        title="Mappa delle sedi nel Canavese"
+                        src="https://maps.google.com/maps?q=Canavese,+Piemonte,+Italia&amp;hl=it&amp;z=10&amp;output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
                     </iframe>
                 </div>
             </div>
         </section>
 
-        <!-- Le Tre Sedi -->
-        <section class="section" style="background-color: var(--light-bg);">
-            <div class="container">
-                <h2 class="section-title">Le Nostre Sedi Operative</h2>
-                <div class="locations-grid">
-                    <div class="location-card">
-                        <div class="location-content">
-                            <h3>Banchette d'Ivrea</h3>
-                            <p>La sede di Banchette rappresenta la volontà dell'associazione di essere presente capillarmente sul territorio. Inaugurata nel febbraio 2021, è situata nei locali dell'ex consultorio ASL.</p>
-                            <ul class="location-details">
-                                <li><i class="fas fa-map-marker-alt"></i> Ex Consultorio ASL, Via Samone 24</li>
-                                <li><i class="fas fa-users"></i> Incontri di supporto per malati e caregiver</li>
-                                <li><i class="fas fa-user-md"></i> Incontri con medici specialisti</li>
-                                <li><i class="fas fa-bus"></i> Punto di partenza per gite sociali</li>
-                            </ul>
-                            <a href="sedi/banchette.html" class="cta-button">Scopri di più</a>
-                        </div>
-                    </div>
-
-                    <div class="location-card">
-                        <div class="location-content">
-                            <h3>San Maurizio Canavese</h3>
-                            <p>La sede di San Maurizio Canavese si trova all'interno del Presidio Ospedaliero Fatebenefratelli. Ha un ruolo strategico nella zona del basso Canavese e in un contesto ospedaliero specializzato.</p>
-                            <ul class="location-details">
-                                <li><i class="fas fa-map-marker-alt"></i> Ospedale Fatebenefratelli, Via Fatebenefratelli 70</li>
-                                <li><i class="fas fa-hospital"></i> Collaborazione con personale sanitario</li>
-                                <li><i class="fas fa-graduation-cap"></i> Incontri formativi e conferenze</li>
-                                <li><i class="fas fa-handshake"></i> Continuità assistenziale post-ospedaliera</li>
-                            </ul>
-                            <a href="sedi/san-maurizio.html" class="cta-button">Scopri di più</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Servizio Trasporti -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Servizio Trasporti</h2>
-                <div class="card" style="max-width: 800px; margin: 0 auto;">
-                    <div class="card-content">
-                        <h3><i class="fas fa-bus"></i> Non Lasciamo Soli i Nostri Associati</h3>
-                        <p>Grazie a contributi ricevuti e alla collaborazione con enti locali, l'associazione dispone di due autovetture attrezzate con autisti volontari, messe a disposizione dei malati non automuniti.</p>
-                        <p>Offriamo un servizio di trasporto gratuito (o a offerta simbolica) per accompagnare i pazienti presso centri di fisioterapia, ospedali o presso le nostre sedi per le varie attività, garantendo così che nessuno debba rinunciare a un'occasione di cura o socializzazione per problemi logistici.</p>
-                        <a href="contatti.html" class="cta-button">Richiedi Trasporto</a>
-                    </div>
+                <div class="sede-callout">
+                    <h3><i class="fas fa-bus" aria-hidden="true"></i> Servizio Trasporti</h3>
+                    <p>Grazie a contributi ricevuti e alla collaborazione con enti locali, l'associazione dispone di autovetture attrezzate con autisti volontari per accompagnare i malati non automuniti.</p>
+                    <p>Offriamo un servizio di trasporto gratuito (o a offerta simbolica) per centri di fisioterapia, ospedali e le nostre sedi, così nessuno debba rinunciare a cura o socializzazione per problemi logistici.</p>
+                    <a href="contatti.html" class="cta-button">Richiedi Trasporto</a>
                 </div>
             </div>
         </section>
 
-        <!-- Orari e Contatti -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-sede-alt">
             <div class="container">
                 <h2 class="section-title">Orari e Contatti</h2>
-                <div class="grid">
-                    <div class="card">
-                        <div class="card-content">
-                            <h3><i class="fas fa-clock"></i> Orari di Apertura</h3>
-                            <p>Tutte le sedi sono aperte su appuntamento. Contattaci per fissare un incontro e scoprire da vicino le nostre attività.</p>
-                            <ul>
-                                <li><strong>Lunedì - Venerdì:</strong> Su appuntamento</li>
-                                <li><strong>Sabato:</strong> Su appuntamento</li>
-                                <li><strong>Domenica:</strong> Chiuso</li>
-                            </ul>
-                        </div>
+                <div class="sede-info-cards sede-contact-grid">
+                    <div class="sede-info-card">
+                        <h3><i class="fas fa-clock" aria-hidden="true"></i> Orari di Apertura</h3>
+                        <ul class="sede-hours-list">
+                            <li><span>Lunedì – Venerdì</span> <span>Su appuntamento</span></li>
+                            <li><span>Sabato</span> <span>Su appuntamento</span></li>
+                            <li><span>Domenica</span> <span>Chiuso</span></li>
+                        </ul>
                     </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <h3><i class="fas fa-phone"></i> Contatti Centrali</h3>
-                            <p>Per informazioni generali e appuntamenti, puoi contattarci ai seguenti recapiti:</p>
-                            <ul>
-                                <li><strong>Telefono:</strong> <a href="tel:3474539988">347 4539988</a></li>
-                                <li><strong>Email:</strong> <a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></li>
-                                <li><strong>PEC:</strong> assoparkcanavese@pec.it</li>
-                            </ul>
-                        </div>
+                    <div class="sede-info-card">
+                        <h3><i class="fas fa-phone" aria-hidden="true"></i> Contatti Centrali</h3>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+393793258612">+39 379 325 8612</a></p>
+                        <p><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/393793258612" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></p>
+                        <p><i class="fas fa-at" aria-hidden="true"></i> PEC: assoparkcanavese@pec.it</p>
                     </div>
                 </div>
             </div>
@@ -161,35 +189,70 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <h3>Associazione Parkinsoniani del Canavese ODV ETS</h3>
-                <p>Organizzazione di Volontariato</p>
-                <p>C.F. 92518680019</p>
+    <footer class="footer" role="contentinfo">
+        <div class="footer-cta">
+            <div class="container footer-cta-inner">
+                <div class="footer-cta-text">
+                    <p class="footer-cta-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> Sostieni la nostra missione</p>
+                    <p class="footer-cta-title">Ogni contributo fa la differenza per chi vive il Parkinson nel Canavese</p>
+                </div>
+                <div class="footer-cta-actions">
+                    <a href="donazioni.html#5x1000" class="footer-cta-btn footer-cta-btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dona il 5×1000</a>
+                    <a href="donazioni.html" class="footer-cta-btn footer-cta-btn--secondary">Scopri come sostenerci</a>
+                </div>
             </div>
-            <div>
-                <h3>Contatti</h3>
-                <p><i class="fas fa-envelope"></i> assoparkinsoncanavese@virgilio.it</p>
-                <p><i class="fas fa-phone"></i> 347 4539988</p>
-                <p><i class="fas fa-map-marker-alt"></i> P.le P. Nenni 1 - Castellamonte (TO)</p>
+        </div>
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo-link" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="images/logo.png" alt="" class="footer-logo" width="52" height="52">
+                        <span class="footer-logo-text">
+                            <span class="footer-logo-title">Parkinson Canavese</span>
+                            <span class="footer-logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                    <p class="footer-org-name">Associazione Parkinsoniani del Canavese ODV ETS</p>
+                    <p class="footer-org-meta">Organizzazione di Volontariato · Ente del Terzo Settore</p>
+                    <p class="footer-org-meta">Attiva dal 2013 con attività gratuite in tutto il Canavese</p>
+                    <p class="footer-cf"><strong>C.F.</strong> 92518680019</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigazione</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="sedi.html">Le Sedi</a></li>
+                        <li><a href="attivita.html">Attività</a></li>
+                        <li><a href="progetto-africa.html">Progetto Africa</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="donazioni.html">Sostienici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contatti</h3>
+                    <ul class="footer-contact-list">
+                        <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
+                        <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
+                        <li><a href="mailto:assoparkcanavese@pec.it"><i class="fas fa-shield-alt" aria-hidden="true"></i> assoparkcanavese@pec.it</a> <span class="footer-note">(PEC)</span></li>
+                    </ul>
+                    <h3 class="footer-heading footer-heading--social">Seguici</h3>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/393793258612" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="mailto:assoparkinsoncanavese@virgilio.it" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3>Link Utili</h3>
-                <ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Associazione Parkinsoniani del Canavese ODV ETS. Tutti i diritti riservati.</p>
+                <ul class="footer-legal">
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="cookie-policy.html">Cookie Policy</a></li>
                     <li><a href="termini-condizioni.html">Termini e Condizioni</a></li>
-                    <li><a href="donazioni.html">Come sostenerci</a></li>
                 </ul>
-            </div>
-            <div>
-                <h3>Seguici</h3>
-                <div style="font-size: 1.5rem;">
-                    <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" target="_blank" style="margin-right: 1rem;"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/3474539988" target="_blank" style="margin-right: 1rem;"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope"></i></a>
-                </div>
             </div>
         </div>
     </footer>
@@ -199,6 +262,12 @@
     <div class="dropdown" id="sedi-dropdown">
         <h3 class="dropdown-title">Le Nostre Sedi</h3>
         <ul class="dropdown-list">
+            <li class="dropdown-item">
+                <a href="sedi/castellamonte.html" class="dropdown-link">
+                    <i class="fas fa-building"></i>
+                    Castellamonte - Sede Legale
+                </a>
+            </li>
             <li class="dropdown-item">
                 <a href="sedi/banchette.html" class="dropdown-link">
                     <i class="fas fa-building"></i>

@@ -3,196 +3,515 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Associazione Parkinson Canavese - Supporto e Solidarietà</title>
+    <title>Associazione Parkinson Canavese</title>
     <meta name="description" content="Associazione no-profit dedicata al supporto delle persone affette da Parkinson attraverso attività condivise e iniziative solidali nel Canavese.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=222">
+    <script src="js/main.js?v=222" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Logo Associazione Parkinsoniani del Canavese" style="height:48px;width:auto;vertical-align:middle;">
-            </a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
-                <li><a href="#" class="nav-link" id="sedi-dropdown-trigger">Le Nostre Sedi</a></li>
-                <li><a href="attivita.html" class="nav-link">Attività</a></li>
-                <li><a href="donazioni.html" class="nav-link">Sostienici</a></li>
-                <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
-                <li><a href="contatti.html" class="nav-link">Contatti</a></li>
-            </ul>
-        </nav>
+    <header class="header header-over-hero">
+        <div class="header-glass">
+            <nav class="nav-container" aria-label="Navigazione principale">
+                <div class="header-brand">
+                    <a href="index.html" class="logo" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="images/logo.png" alt="" class="logo-img" width="48" height="48">
+                        <span class="logo-text">
+                            <span class="logo-title">Parkinson Canavese</span>
+                            <span class="logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="nav-pill">
+                        <ul class="nav-menu">
+                            <li><a href="index.html" class="nav-link active">Home</a></li>
+                            <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
+                            <li><a href="#" class="nav-link nav-link-sedi" id="sedi-dropdown-trigger">Sedi <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
+                            <li><a href="attivita.html" class="nav-link">Attività</a></li>
+                            <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
+                            <li><a href="contatti.html" class="nav-link">Contatti</a></li>
+                        </ul>
+                    </div>
+                    <a href="donazioni.html" class="nav-cta"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
+                </div>
+                <div class="header-actions">
+                    <a href="tel:+393793258612" class="header-contact" aria-label="Chiamaci al +39 379 325 8612">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <span class="header-contact-text">+39 379 325 8612</span>
+                    </a>
+                    <button type="button" class="mobile-menu-btn" aria-label="Apri menu di navigazione" aria-expanded="false">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1 class="hero-title">Coloriamo Insieme il Nostro Domani</h1>
-                <p class="hero-subtitle">Benvenuti nell'Associazione Parkinsoniani del Canavese ODV ETS. Dal 2013 offriamo supporto, solidarietà e aiuto concreto alle persone colpite dalla malattia di Parkinson e ai loro familiari. Insieme possiamo migliorare la qualità di vita e affrontare le sfide quotidiane con determinazione.</p>
-                <div class="hero-buttons">
-                    <a href="chi-siamo.html" class="cta-button">SCOPRI CHI SIAMO</a>
-                    <a href="attivita.html" class="cta-button cta-secondary">LE NOSTRE ATTIVITÀ</a>
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-bg-accent" aria-hidden="true"></div>
+            <div class="hero-inner container">
+                <div class="hero-text">
+                    <p class="hero-badge">
+                        <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                        ODV ETS · Dal 2013
+                    </p>
+                    <h1 id="hero-heading" class="hero-title">Accanto a chi vive il Parkinson nel Canavese</h1>
+                    <p class="hero-lead">Attività gratuite, ascolto e orientamento in tre sedi del territorio. Volontari pronti ad accoglierti e accompagnarti.</p>
+                    <ul class="hero-trust" aria-label="Punti di forza">
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 3 sedi nel Canavese</li>
+                        <li><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Tutto gratuito</li>
+                    </ul>
+                    <div class="hero-buttons">
+                        <a href="contatti.html" class="cta-button hero-cta-primary">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i> Contattaci
+                        </a>
+                        <a href="attivita.html" class="cta-button hero-cta-secondary">Scopri le attività</a>
+                    </div>
                 </div>
+
+                <figure class="hero-visual">
+                    <img class="hero-image-photo" src="images/new-images/img9.jpg" alt="Partecipanti durante un'attività di gruppo dell'associazione" width="640" height="480" loading="eager">
+                    <figcaption class="hero-image-caption">Insieme, con solidarietà</figcaption>
+                </figure>
             </div>
         </section>
 
         <!-- Le Nostre Sedi -->
-        <section class="section">
+        <section class="section section-sedi" id="sedi" aria-labelledby="sedi-heading">
             <div class="container">
-                <h2 class="section-title">Le Nostre Sedi</h2>
-                <div class="grid">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/new-images/img15.jpg" alt="Palestra riabilitativa di Castellamonte" style="width: 100%; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="card-content">
-                            <h3>Castellamonte - Sede Legale</h3>
-                            <p>Sede principale presso la Casa della Salute, con palestra riabilitativa e attività motorie assistite.</p>
-                            <a href="sedi/castellamonte.html" class="cta-button">Scopri di più</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/P7240367SITO.jpg" alt="Sede di Banchette d'Ivrea" style="width: 100%; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="card-content">
-                            <h3>Banchette d'Ivrea</h3>
-                            <p>Sede operativa nell'ex consultorio ASL, punto di riferimento per il Canavese orientale.</p>
-                            <a href="sedi/banchette.html" class="cta-button">Scopri di più</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/sanmaurizio1.jpg" alt="Ospedale Fatebenefratelli di San Maurizio Canavese" style="width: 100%; height: 200px; object-fit: cover;">
-                        </div>
-                        <div class="card-content">
-                            <h3>San Maurizio Canavese</h3>
-                            <p>Sede presso l'Ospedale Fatebenefratelli, specializzata in riabilitazione e supporto ospedaliero.</p>
-                            <a href="sedi/san-maurizio.html" class="cta-button">Scopri di più</a>
-                        </div>
-                    </div>
+                <header class="sedi-showcase-header">
+                    <p class="section-eyebrow"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Presenza sul territorio</p>
+                    <h2 class="section-title" id="sedi-heading">Le Nostre Sedi</h2>
+                    <p class="section-subtitle">Tre punti di riferimento nel Canavese per accoglierti, informarti e accompagnarti. Ogni sede offre attività e supporto dedicati alla comunità locale.</p>
+                </header>
+
+                <div class="sedi-showcase-grid">
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/castellamonte.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/new-images/img15.jpg" alt="Palestra riabilitativa presso la sede di Castellamonte" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge">Sede Legale</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>Castellamonte</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> P.le P. Nenni 1 · Casa della Salute</p>
+                                <p class="sedi-showcase-desc">Sede principale con palestra riabilitativa, attività motorie assistite e punto informativo per famiglie e volontari.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-dumbbell" aria-hidden="true"></i> Palestra</li>
+                                    <li><i class="fas fa-info-circle" aria-hidden="true"></i> Orientamento</li>
+                                    <li><i class="fas fa-users" aria-hidden="true"></i> Gruppi</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/banchette.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/P7240367SITO.jpg" alt="Sede operativa di Banchette d'Ivrea" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge sedi-showcase-badge--alt">Canavese orientale</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>Banchette d'Ivrea</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Via Samone 24 · Ex Consultorio ASL</p>
+                                <p class="sedi-showcase-desc">Punto di riferimento per Ivrea e dintorni: incontri di supporto, laboratori e attività di gruppo dal 2021.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-comments" aria-hidden="true"></i> Ascolto</li>
+                                    <li><i class="fas fa-user-md" aria-hidden="true"></i> Esperti</li>
+                                    <li><i class="fas fa-bus" aria-hidden="true"></i> Trasporti</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="sedi-showcase-card">
+                        <a href="sedi/san-maurizio.html" class="sedi-showcase-link">
+                            <div class="sedi-showcase-media">
+                                <img src="images/sanmaurizio1.jpg" alt="Sede presso l'Ospedale Fatebenefratelli di San Maurizio Canavese" width="400" height="280" loading="lazy">
+                                <span class="sedi-showcase-badge sedi-showcase-badge--alt">Basso Canavese</span>
+                            </div>
+                            <div class="sedi-showcase-body">
+                                <h3>San Maurizio Canavese</h3>
+                                <p class="sedi-showcase-address"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Via Fatebenefratelli 70 · Ospedale</p>
+                                <p class="sedi-showcase-desc">Sede ospedaliera per riabilitazione, incontri formativi e continuità assistenziale con il Fatebenefratelli.</p>
+                                <ul class="sedi-showcase-tags" aria-label="Servizi principali">
+                                    <li><i class="fas fa-hospital" aria-hidden="true"></i> Riabilitazione</li>
+                                    <li><i class="fas fa-graduation-cap" aria-hidden="true"></i> Formazione</li>
+                                    <li><i class="fas fa-handshake" aria-hidden="true"></i> Follow-up</li>
+                                </ul>
+                                <span class="sedi-showcase-cta">Scopri la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="sedi-showcase-footer">
+                    <a href="sedi.html" class="cta-button cta-secondary">Vedi tutte le sedi e la mappa</a>
+                    <a href="contatti.html" class="sedi-showcase-contact-link"><i class="fas fa-calendar-check" aria-hidden="true"></i> Prenota una visita su appuntamento</a>
                 </div>
             </div>
         </section>
 
         <!-- Le Nostre Attività -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-activities" id="attivita" aria-labelledby="activities-heading">
             <div class="container">
-                <h2 class="section-title">Le Nostre Attività</h2>
-                <div class="activities-grid">
-                    <div class="activity-item">
-                        <i class="fas fa-walking activity-icon"></i>
-                        <h3>Attività Motorie</h3>
-                        <p>Ginnastica dolce, Tai Chi, passeggiate di gruppo e palestra riabilitativa</p>
-                    </div>
-                    <div class="activity-item">
-                        <i class="fas fa-laugh activity-icon"></i>
-                        <h3>Yoga della Risata</h3>
-                        <p>Sessioni di risata indotta e respirazione per migliorare l'umore</p>
-                    </div>
-                    <div class="activity-item">
-                        <i class="fas fa-brain activity-icon"></i>
-                        <h3>Laboratori Cognitivi</h3>
-                        <p>Stimolazione cognitiva, musicoterapia e attività creative</p>
-                    </div>
-                    <div class="activity-item">
-                        <i class="fas fa-users activity-icon"></i>
-                        <h3>Gruppi di Supporto</h3>
-                        <p>Auto-mutuo aiuto e incontri con esperti per malati e caregiver</p>
-                    </div>
+                <header class="activities-showcase-header">
+                    <p class="section-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> Benessere a 360°</p>
+                    <h2 class="section-title" id="activities-heading">Le Nostre Attività</h2>
+                    <p class="section-subtitle">Un approccio multidisciplinare che unisce movimento, mente e socialità. Scegli una categoria per scoprire cosa offriamo — tutte le attività sono gratuite per gli associati.</p>
+                </header>
+
+                <div class="activities-nav" role="tablist" aria-label="Categorie attività">
+                    <button type="button" class="activities-nav-btn is-active" role="tab" id="activities-tab-0" aria-selected="true" aria-controls="activities-panel-0" data-activity-index="0">
+                        <i class="fas fa-walking" aria-hidden="true"></i>
+                        <span>Motorie</span>
+                    </button>
+                    <button type="button" class="activities-nav-btn" role="tab" id="activities-tab-1" aria-selected="false" aria-controls="activities-panel-1" data-activity-index="1" tabindex="-1">
+                        <i class="fas fa-laugh" aria-hidden="true"></i>
+                        <span>Yoga della risata</span>
+                    </button>
+                    <button type="button" class="activities-nav-btn" role="tab" id="activities-tab-2" aria-selected="false" aria-controls="activities-panel-2" data-activity-index="2" tabindex="-1">
+                        <i class="fas fa-brain" aria-hidden="true"></i>
+                        <span>Cognitive</span>
+                    </button>
+                    <button type="button" class="activities-nav-btn" role="tab" id="activities-tab-3" aria-selected="false" aria-controls="activities-panel-3" data-activity-index="3" tabindex="-1">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <span>Supporto</span>
+                    </button>
                 </div>
-                <div style="text-align: center; margin-top: 3rem;">
+
+                <div class="activities-track" id="activities-track">
+                    <article class="activities-card is-active" id="activities-panel-0" role="tabpanel" aria-labelledby="activities-tab-0" data-activity-index="0">
+                        <a href="attivita.html" class="activities-card-link">
+                            <div class="activities-card-media">
+                                <img src="images/palestra-1.jpg" alt="Palestra riabilitativa con attrezzi a movimento assistito" width="480" height="300" loading="lazy">
+                                <span class="activities-card-icon" aria-hidden="true"><i class="fas fa-walking"></i></span>
+                            </div>
+                            <div class="activities-card-body">
+                                <h3>Attività Motorie</h3>
+                                <p>Ginnastica dolce, Tai Chi, passeggiate di gruppo e palestra riabilitativa con macchinari assistiti.</p>
+                                <ul class="activities-card-tags" aria-label="Esempi di attività">
+                                    <li><i class="fas fa-dumbbell" aria-hidden="true"></i> Palestra</li>
+                                    <li><i class="fas fa-hiking" aria-hidden="true"></i> Passeggiate</li>
+                                    <li><i class="fas fa-spa" aria-hidden="true"></i> Tai Chi</li>
+                                </ul>
+                                <span class="activities-card-cta">Scopri di più <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="activities-card" id="activities-panel-1" role="tabpanel" aria-labelledby="activities-tab-1" data-activity-index="1">
+                        <a href="attivita.html" class="activities-card-link">
+                            <div class="activities-card-media">
+                                <img src="images/canti e merenda a S.Stefano di Candia.jpg" alt="Gruppo durante un'attività di socialità e benessere" width="480" height="300" loading="lazy">
+                                <span class="activities-card-icon" aria-hidden="true"><i class="fas fa-laugh"></i></span>
+                            </div>
+                            <div class="activities-card-body">
+                                <h3>Yoga della Risata</h3>
+                                <p>Sessioni di risata indotta e respirazione guidata per alleggerire lo stress e migliorare l'umore in gruppo.</p>
+                                <ul class="activities-card-tags" aria-label="Caratteristiche">
+                                    <li><i class="fas fa-wind" aria-hidden="true"></i> Respirazione</li>
+                                    <li><i class="fas fa-smile" aria-hidden="true"></i> Benessere</li>
+                                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tutte le sedi</li>
+                                </ul>
+                                <span class="activities-card-cta">Scopri di più <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="activities-card" id="activities-panel-2" role="tabpanel" aria-labelledby="activities-tab-2" data-activity-index="2">
+                        <a href="attivita.html" class="activities-card-link">
+                            <div class="activities-card-media">
+                                <img src="images/conferenza.jpg" alt="Laboratorio cognitivo e momenti di apprendimento di gruppo" width="480" height="300" loading="lazy">
+                                <span class="activities-card-icon" aria-hidden="true"><i class="fas fa-brain"></i></span>
+                            </div>
+                            <div class="activities-card-body">
+                                <h3>Laboratori Cognitivi</h3>
+                                <p>Stimolazione cognitiva, musicoterapia, canto corale e laboratori manuali per allenare mente e creatività.</p>
+                                <ul class="activities-card-tags" aria-label="Esempi di laboratori">
+                                    <li><i class="fas fa-music" aria-hidden="true"></i> Musicoterapia</li>
+                                    <li><i class="fas fa-puzzle-piece" aria-hidden="true"></i> Memoria</li>
+                                    <li><i class="fas fa-palette" aria-hidden="true"></i> Creatività</li>
+                                </ul>
+                                <span class="activities-card-cta">Scopri di più <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="activities-card" id="activities-panel-3" role="tabpanel" aria-labelledby="activities-tab-3" data-activity-index="3">
+                        <a href="attivita.html" class="activities-card-link">
+                            <div class="activities-card-media">
+                                <img src="images/new-images/img19.jpg" alt="Incontro di gruppo di auto-mutuo aiuto" width="480" height="300" loading="lazy">
+                                <span class="activities-card-icon" aria-hidden="true"><i class="fas fa-users"></i></span>
+                            </div>
+                            <div class="activities-card-body">
+                                <h3>Gruppi di Supporto</h3>
+                                <p>Auto-mutuo aiuto, incontri con esperti e spazi di ascolto dedicati a malati, familiari e caregiver.</p>
+                                <ul class="activities-card-tags" aria-label="Tipi di supporto">
+                                    <li><i class="fas fa-comments" aria-hidden="true"></i> Ascolto</li>
+                                    <li><i class="fas fa-user-md" aria-hidden="true"></i> Esperti</li>
+                                    <li><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Caregiver</li>
+                                </ul>
+                                <span class="activities-card-cta">Scopri di più <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="activities-dots" aria-label="Navigazione attività">
+                    <button type="button" class="activities-dot is-active" aria-label="Attività motorie" data-activity-index="0" aria-current="true"></button>
+                    <button type="button" class="activities-dot" aria-label="Yoga della risata" data-activity-index="1"></button>
+                    <button type="button" class="activities-dot" aria-label="Laboratori cognitivi" data-activity-index="2"></button>
+                    <button type="button" class="activities-dot" aria-label="Gruppi di supporto" data-activity-index="3"></button>
+                </div>
+
+                <div class="activities-showcase-footer">
                     <a href="attivita.html" class="cta-button">Scopri tutte le attività</a>
+                    <a href="contatti.html" class="activities-showcase-contact-link"><i class="fas fa-calendar-check" aria-hidden="true"></i> Chiedi informazioni per partecipare</a>
                 </div>
             </div>
         </section>
 
         <!-- Progetto Africa -->
-        <section class="section">
+        <section class="section section-home-africa" id="progetto-africa" aria-labelledby="africa-heading">
+            <div class="home-africa-ambient" aria-hidden="true"></div>
             <div class="container">
-                <h2 class="section-title">Progetto Africa - MAISHA ONGD</h2>
-                <div class="card africa-card" style="max-width: 800px; margin: 0 auto; border-radius: 18px; box-shadow: 0 6px 32px rgba(0,0,0,0.08); background: linear-gradient(135deg, #80975d 0%, #517757 100%); color: white;">
-                    <div class="card-content" style="padding: 3rem 2.5rem; text-align: center;">
-                        <h3 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 1.5rem; color: white; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">Solidarietà Senza Confini</h3>
-                        <p style="font-size: 1.2rem; margin-bottom: 2rem; line-height: 1.6; opacity: 0.95;">Dal 2016 sosteniamo MAISHA ONGD nella Repubblica Democratica del Congo, aiutando bambini e donne attraverso progetti di istruzione e empowerment. "Maisha" significa "vita" in lingala.</p>
-                        <p style="font-size: 1.1rem; margin-bottom: 2.5rem; opacity: 0.9;">Aiutiamo bambini e donne attraverso progetti di istruzione e empowerment. Scopri come puoi contribuire anche tu!</p>
-                        <a href="progetto-africa.html" class="cta-button" style="background: white; color: #517757; padding: 1rem 2.5rem; font-weight: 600; border-radius: 50px; text-decoration: none; display: inline-block; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Scopri il progetto</a>
+                <header class="home-africa-header reveal" data-reveal>
+                    <p class="section-eyebrow section-eyebrow--light"><i class="fas fa-globe-africa" aria-hidden="true"></i> Solidarietà internazionale</p>
+                    <h2 class="section-title" id="africa-heading">Progetto Africa – MAISHA ONGD</h2>
+                    <p class="section-subtitle">Dal 2016 un ponte di speranza tra il Canavese e la Repubblica Democratica del Congo. In lingala, <em>Maisha</em> significa <strong>vita</strong>.</p>
+                </header>
+
+                <div class="home-africa-showcase">
+                    <figure class="home-africa-visual-panel reveal" data-reveal data-reveal-delay="1">
+                        <img src="images/new-images/africa1.jpeg" alt="Volontari e comunità del Progetto Africa in Congo" width="640" height="480" loading="lazy">
+                        <div class="home-africa-visual-accent" aria-hidden="true">
+                            <img src="images/new-images/africa2.jpeg" alt="" width="200" height="200" loading="lazy">
+                        </div>
+                        <figcaption class="home-africa-visual-badge">
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i> Attivo dal 2016
+                        </figcaption>
+                    </figure>
+
+                    <div class="home-africa-content reveal" data-reveal data-reveal-delay="2">
+                        <h3 class="home-africa-tagline">Solidarietà senza confini</h3>
+                        <p class="home-africa-lead">Sosteniamo MAISHA ONGD con progetti di istruzione per i bambini e di empowerment per le donne nei territori di Uvira e Fizi, nel Sud Kivu.</p>
+
+                        <div class="home-africa-stats" aria-label="Impatto del progetto">
+                            <div class="home-africa-stat">
+                                <span class="home-africa-stat-value">50+</span>
+                                <span class="home-africa-stat-label">Bambini a scuola</span>
+                            </div>
+                            <div class="home-africa-stat">
+                                <span class="home-africa-stat-value">120</span>
+                                <span class="home-africa-stat-label">Donne supportate</span>
+                            </div>
+                            <div class="home-africa-stat">
+                                <span class="home-africa-stat-value">2</span>
+                                <span class="home-africa-stat-label">Progetti attivi</span>
+                            </div>
+                        </div>
+
+                        <ul class="home-africa-pills" aria-label="Aree di intervento">
+                            <li><i class="fas fa-graduation-cap" aria-hidden="true"></i> Istruzione</li>
+                            <li><i class="fas fa-seedling" aria-hidden="true"></i> Empowerment</li>
+                            <li><i class="fas fa-book-open" aria-hidden="true"></i> Alfabetizzazione</li>
+                        </ul>
+
+                        <div class="home-africa-actions">
+                            <a href="progetto-africa.html" class="cta-button home-africa-cta">Scopri il progetto</a>
+                            <a href="donazioni.html" class="home-africa-secondary-link">Sostieni Maisha <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Immagine Africa -->
-                <div style="margin-top: 3rem; text-align: center;">
-                    <img src="images/new-images/africa1.jpeg" alt="Progetto Africa - MAISHA ONGD" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+
+                <div class="home-africa-location reveal" data-reveal data-reveal-delay="3">
+                    <span class="home-africa-location-label"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dove operiamo</span>
+                    <span class="home-africa-location-chip">Repubblica Democratica del Congo</span>
+                    <span class="home-africa-location-chip">Provincia del Sud Kivu</span>
+                    <span class="home-africa-location-chip">Uvira &amp; Fizi</span>
                 </div>
             </div>
         </section>
 
         <!-- Sezione Donazioni -->
-        <section class="section" style="background-color: var(--light-bg);">
+        <section class="section section-home-donations" aria-labelledby="donations-heading">
             <div class="container">
-                <h2 class="section-title">Sostienici</h2>
-                <div class="donation-box" style="background: linear-gradient(135deg, #517757 0%, #3d5a3d 100%); color: white; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
-                    <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Dona il tuo 5x1000</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">Il tuo contributo può fare la differenza nella vita di molte persone.</p>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
-                        <p style="font-size: 1.2rem; margin: 0; color: white;">Codice Fiscale: <strong style="color: #fff; font-size: 1.3rem; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">92518680019</strong></p>
+                <header class="section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Sostienici</p>
+                    <h2 class="section-title" id="donations-heading">Come puoi aiutarci</h2>
+                    <p class="section-subtitle">Ogni contributo, grande o piccolo, ci permette di continuare ad offrire attività gratuite e supporto nel Canavese.</p>
+                </header>
+
+                <div class="home-donations-layout reveal" data-reveal data-reveal-delay="1">
+                    <article class="home-donations-spotlight" aria-labelledby="home-5x1000-title">
+                        <div class="home-donations-spotlight-glow" aria-hidden="true"></div>
+                        <div class="home-donations-spotlight-inner">
+                            <span class="home-donations-badge"><i class="fas fa-gift" aria-hidden="true"></i> Non ti costa nulla</span>
+                            <h3 id="home-5x1000-title">Dona il tuo 5×1000</h3>
+                            <p class="home-donations-spotlight-lead">Destina una parte delle tue imposte al volontariato: basta indicare il nostro codice fiscale nel modulo della dichiarazione dei redditi.</p>
+
+                            <div class="home-donations-cf" role="group" aria-label="Codice fiscale per il 5 per mille">
+                                <span class="home-donations-cf-label">Codice Fiscale</span>
+                                <div class="home-donations-cf-row">
+                                    <code class="home-donations-cf-value">92518680019</code>
+                                    <button type="button" class="copy-button copy-button--compact" data-copy="92518680019" aria-label="Copia codice fiscale">
+                                        <i class="fas fa-copy" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <ol class="home-donations-steps">
+                                <li>
+                                    <span class="home-donations-step-num" aria-hidden="true">1</span>
+                                    <span class="home-donations-step-text">Compila il 730, CU o Unico</span>
+                                </li>
+                                <li>
+                                    <span class="home-donations-step-num" aria-hidden="true">2</span>
+                                    <span class="home-donations-step-text">Firma il riquadro volontariato</span>
+                                </li>
+                                <li>
+                                    <span class="home-donations-step-num" aria-hidden="true">3</span>
+                                    <span class="home-donations-step-text">Inserisci il nostro CF</span>
+                                </li>
+                            </ol>
+
+                            <a href="donazioni.html#5x1000" class="cta-button home-donations-spotlight-cta">
+                                Guida passo passo <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <div class="home-donations-options">
+                        <article class="home-donations-option-card">
+                            <div class="home-donations-option-icon" aria-hidden="true"><i class="fas fa-id-card"></i></div>
+                            <h3>Diventa Socio</h3>
+                            <p>Con soli 30€ all'anno sostieni le nostre attività e ricevi vantaggi esclusivi.</p>
+                            <span class="home-donations-option-meta">da 30€ / anno</span>
+                            <a href="donazioni.html#socio" class="home-donations-option-link">Scopri i vantaggi <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        </article>
+
+                        <article class="home-donations-option-card">
+                            <div class="home-donations-option-icon" aria-hidden="true"><i class="fas fa-university"></i></div>
+                            <h3>Bonifico</h3>
+                            <p>Effettua una donazione libera con bonifico bancario diretto.</p>
+                            <a href="donazioni.html#donazioni" class="home-donations-option-link">Vedi IBAN <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        </article>
+
+                        <article class="home-donations-option-card">
+                            <div class="home-donations-option-icon" aria-hidden="true"><i class="fas fa-hands-helping"></i></div>
+                            <h3>Volontariato</h3>
+                            <p>Il tuo tempo è il dono più prezioso che puoi offrire alla comunità.</p>
+                            <a href="donazioni.html#volontariato" class="home-donations-option-link">Unisciti a noi <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                        </article>
                     </div>
-                    <a href="donazioni.html#5x1000" class="cta-button" style="background: white; color: #517757; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">Come donare il 5x1000</a>
                 </div>
-                <div class="donation-box" style="background: linear-gradient(135deg, #517757 0%, #3d5a3d 100%); color: white; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
-                    <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Diventa Socio</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">Con soli 30€ all'anno potrai sostenere le nostre attività e ricevere vantaggi esclusivi.</p>
-                    <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
-                        <p style="font-size: 1.2rem; margin: 0; color: white;">Quota annuale: <strong style="color: #fff; font-size: 1.3rem; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">30€</strong></p>
+            </div>
+        </section>
+
+        <!-- Vieni a trovarci -->
+        <section class="section section-home-visit" id="vieni-a-trovarci" aria-labelledby="visit-heading">
+            <div class="container">
+                <div class="home-visit-card reveal" data-reveal>
+                    <div class="home-visit-content">
+                        <header class="home-visit-header">
+                            <p class="section-eyebrow"><i class="fas fa-door-open" aria-hidden="true"></i> Ti aspettiamo</p>
+                            <h2 class="section-title" id="visit-heading">Vieni a trovarci</h2>
+                            <p class="section-subtitle">Le nostre sedi sono spazi accoglienti dove trovare ascolto, informazioni e attività gratuite. Scrivici su WhatsApp per fissare un appuntamento: saremo felici di accoglierti di persona.</p>
+                        </header>
+                        <ul class="home-visit-highlights" aria-label="Perché venirci a trovare">
+                            <li><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Accoglienza dedicata</li>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 3 sedi nel Canavese</li>
+                            <li><i class="fas fa-calendar-check" aria-hidden="true"></i> Visite su appuntamento</li>
+                        </ul>
+                        <div class="home-visit-actions">
+                            <a href="https://wa.me/393793258612?text=Contattaci%20per%20venire%20a%20trovarci" class="home-visit-whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp per venire a trovarci">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> Contattaci su WhatsApp
+                            </a>
+                            <a href="sedi.html" class="home-visit-secondary-link">Scopri le nostre sedi <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
                     </div>
-                    <a href="donazioni.html#socio" class="cta-button" style="background: white; color: #517757; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;">Scopri i vantaggi</a>
+                    <figure class="home-visit-visual">
+                        <img src="images/new-images/img19.jpg" alt="Volontari dell'associazione che accolgono i visitatori in sede" width="560" height="420" loading="lazy">
+                    </figure>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <img src="images/logo.png" alt="Logo Associazione Parkinsoniani del Canavese" style="height:48px;width:auto;vertical-align:middle;margin-bottom:0.5em;">
-                <h3>Associazione Parkinsoniani del Canavese ODV ETS</h3>
-                <p>Organizzazione di Volontariato</p>
-                <p>C.F. 92518680019</p>
+    <footer class="footer" role="contentinfo">
+        <div class="footer-cta">
+            <div class="container footer-cta-inner">
+                <div class="footer-cta-text">
+                    <p class="footer-cta-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> Sostieni la nostra missione</p>
+                    <p class="footer-cta-title">Ogni contributo fa la differenza per chi vive il Parkinson nel Canavese</p>
+                </div>
+                <div class="footer-cta-actions">
+                    <a href="donazioni.html#5x1000" class="footer-cta-btn footer-cta-btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dona il 5×1000</a>
+                    <a href="donazioni.html" class="footer-cta-btn footer-cta-btn--secondary">Scopri come sostenerci</a>
+                </div>
             </div>
-            <div>
-                <h3>Contatti</h3>
-                <p><i class="fas fa-envelope"></i> assoparkinsoncanavese@virgilio.it</p>
-                <p><i class="fas fa-phone"></i> 347 4539988</p>
-                <p><i class="fas fa-map-marker-alt"></i> P.le P. Nenni 1 - Castellamonte (TO)</p>
+        </div>
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo-link" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="images/logo.png" alt="" class="footer-logo" width="52" height="52">
+                        <span class="footer-logo-text">
+                            <span class="footer-logo-title">Parkinson Canavese</span>
+                            <span class="footer-logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                    <p class="footer-org-name">Associazione Parkinsoniani del Canavese ODV ETS</p>
+                    <p class="footer-org-meta">Organizzazione di Volontariato · Ente del Terzo Settore</p>
+                    <p class="footer-org-meta">Attiva dal 2013 con attività gratuite in tutto il Canavese</p>
+                    <p class="footer-cf"><strong>C.F.</strong> 92518680019</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigazione</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="sedi.html">Le Sedi</a></li>
+                        <li><a href="attivita.html">Attività</a></li>
+                        <li><a href="progetto-africa.html">Progetto Africa</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="donazioni.html">Sostienici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contatti</h3>
+                    <ul class="footer-contact-list">
+                        <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
+                        <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
+                        <li><a href="mailto:assoparkcanavese@pec.it"><i class="fas fa-shield-alt" aria-hidden="true"></i> assoparkcanavese@pec.it</a> <span class="footer-note">(PEC)</span></li>
+                    </ul>
+                    <h3 class="footer-heading footer-heading--social">Seguici</h3>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/393793258612" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="mailto:assoparkinsoncanavese@virgilio.it" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3>Link Utili</h3>
-                <ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Associazione Parkinsoniani del Canavese ODV ETS. Tutti i diritti riservati.</p>
+                <ul class="footer-legal">
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="cookie-policy.html">Cookie Policy</a></li>
                     <li><a href="termini-condizioni.html">Termini e Condizioni</a></li>
-                    <li><a href="donazioni.html">Come sostenerci</a></li>
                 </ul>
-            </div>
-            <div>
-                <h3>Seguici</h3>
-                <div style="font-size: 1.5rem;">
-                    <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" target="_blank" style="margin-right: 1rem;"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/3474539988" target="_blank" style="margin-right: 1rem;"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope"></i></a>
-                </div>
             </div>
         </div>
     </footer>

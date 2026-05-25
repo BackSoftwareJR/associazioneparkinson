@@ -9,135 +9,295 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=225">
+    <script src="js/main.js?v=225" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
-<body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Logo Associazione Parkinsoniani del Canavese" style="height:48px;width:auto;vertical-align:middle;">
-            </a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
-                <li><a href="#" class="nav-link" id="sedi-dropdown-trigger">Le Nostre Sedi</a></li>
-                <li><a href="attivita.html" class="nav-link">Attività</a></li>
-                <li><a href="donazioni.html" class="nav-link">Sostienici</a></li>
-                <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
-                <li><a href="contatti.html" class="nav-link">Contatti</a></li>
-            </ul>
-        </nav>
+<body class="page-activities">
+    <header class="header header-over-hero">
+        <div class="header-glass">
+            <nav class="nav-container" aria-label="Navigazione principale">
+                <div class="header-brand">
+                    <a href="index.html" class="logo" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="images/logo.png" alt="" class="logo-img" width="48" height="48">
+                        <span class="logo-text">
+                            <span class="logo-title">Parkinson Canavese</span>
+                            <span class="logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-wrapper">
+                    <div class="nav-pill">
+                        <ul class="nav-menu">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="chi-siamo.html" class="nav-link">Chi Siamo</a></li>
+                            <li><a href="#" class="nav-link nav-link-sedi" id="sedi-dropdown-trigger">Sedi <i class="fas fa-chevron-down" aria-hidden="true"></i></a></li>
+                            <li><a href="attivita.html" class="nav-link active">Attività</a></li>
+                            <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
+                            <li><a href="contatti.html" class="nav-link">Contatti</a></li>
+                        </ul>
+                    </div>
+                    <a href="donazioni.html" class="nav-cta"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
+                </div>
+                <div class="header-actions">
+                    <a href="tel:+393793258612" class="header-contact" aria-label="Chiamaci al +39 379 325 8612">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <span class="header-contact-text">+39 379 325 8612</span>
+                    </a>
+                    <button type="button" class="mobile-menu-btn" aria-label="Apri menu di navigazione" aria-expanded="false">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <div class="container">
-                <a href="index.html">Home</a> / Attività
+        <!-- Hero -->
+        <section class="hero hero-activities" aria-labelledby="attivita-heading">
+            <div class="hero-bg-accent" aria-hidden="true"></div>
+            <div class="about-hero-orbs" aria-hidden="true">
+                <span class="about-orb about-orb--1"></span>
+                <span class="about-orb about-orb--2"></span>
+                <span class="about-orb about-orb--3"></span>
             </div>
-        </div>
+            <div class="hero-inner container">
+                <div class="hero-text">
+                    <p class="hero-badge">
+                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        Benessere a 360°
+                    </p>
+                    <h1 id="attivita-heading" class="hero-title">Le Nostre Attività</h1>
+                    <p class="hero-lead">Le attività dell'Associazione Parkinsoniani del Canavese abbracciano ambiti diversi — motorio, cognitivo, emotivo e sociale — con un unico scopo: migliorare il benessere e l'autonomia dei malati di Parkinson e creare una rete di supporto intorno a loro.</p>
+                    <ul class="hero-trust" aria-label="Caratteristiche delle attività">
+                        <li><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Tutto gratuito</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 3 sedi nel Canavese</li>
+                        <li><i class="fas fa-users" aria-hidden="true"></i> Aperto a malati e famiglie</li>
+                    </ul>
+                    <div class="hero-buttons">
+                        <a href="contatti.html" class="cta-button hero-cta-primary">
+                            <i class="fas fa-calendar-check" aria-hidden="true"></i> Chiedi informazioni
+                        </a>
+                        <a href="#motoria" class="cta-button hero-cta-secondary">Esplora le attività</a>
+                    </div>
+                </div>
 
-        <!-- Hero Section -->
-        <section class="page-hero">
-            <div class="container">
-                <h1>Le Nostre Attività</h1>
-                <p>Le attività dell'Associazione Parkinsoniani del Canavese abbracciano ambiti diversi – motorio, cognitivo, emotivo e sociale – con un unico scopo: migliorare il benessere e l'autonomia dei malati di Parkinson e creare una rete di supporto intorno a loro.</p>
+                <div class="about-hero-aside">
+                    <figure class="hero-visual about-hero-visual act-hero-visual">
+                        <img class="hero-image-photo" src="images/new-images/img9.jpg" alt="Partecipanti durante un'attività di gruppo dell'associazione" width="640" height="480" loading="eager">
+                        <figcaption class="hero-image-caption">Insieme, ogni giorno</figcaption>
+                    </figure>
+                    <div class="about-hero-stats act-hero-stats" aria-label="Numeri delle attività">
+                        <div class="about-stat-card">
+                            <span class="about-stat-value about-stat-value--text" data-count-text="360°">360°</span>
+                            <span class="about-stat-label">Benessere integrato</span>
+                        </div>
+                        <div class="about-stat-card">
+                            <span class="about-stat-value" data-count-to="3">3</span>
+                            <span class="about-stat-label">Sedi operative</span>
+                        </div>
+                        <div class="about-stat-card">
+                            <span class="about-stat-value about-stat-value--text" data-count-text="Gratis">Gratis</span>
+                            <span class="about-stat-label">Per tutti gli associati</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Attività Motorie -->
-        <section class="section services-section">
+        <!-- Navigazione interna -->
+        <nav class="about-anchor-nav act-anchor-nav" aria-label="Sezioni attività">
+            <div class="about-anchor-nav-track">
+                <a href="#motoria" class="about-anchor-link is-active"><i class="fas fa-walking" aria-hidden="true"></i> Motorie</a>
+                <a href="#yoga" class="about-anchor-link"><i class="fas fa-laugh" aria-hidden="true"></i> Yoga della risata</a>
+                <a href="#cognitivo" class="about-anchor-link"><i class="fas fa-brain" aria-hidden="true"></i> Cognitive</a>
+                <a href="#supporto" class="about-anchor-link"><i class="fas fa-users" aria-hidden="true"></i> Supporto</a>
+                <a href="#nutrizione" class="about-anchor-link"><i class="fas fa-apple-alt" aria-hidden="true"></i> Nutrizione</a>
+                <a href="#servizi" class="about-anchor-link"><i class="fas fa-hands-helping" aria-hidden="true"></i> Servizi</a>
+            </div>
+        </nav>
+
+        <!-- Intro pilastri -->
+        <section class="section section-act-intro" aria-labelledby="act-intro-heading">
             <div class="container">
-                <h2 class="section-title">Attività Motorie e Riabilitative</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-walking"></i>
+                <header class="about-section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-compass" aria-hidden="true"></i> Il nostro approccio</p>
+                    <h2 class="section-title" id="act-intro-heading">Un percorso di benessere a tutto tondo</h2>
+                    <p class="section-subtitle">Ogni attività nasce dall'ascolto delle esigenze di malati e famiglie: movimento, mente, emozioni e relazioni si intrecciano per sostenere l'autonomia e la qualità della vita.</p>
+                </header>
+
+                <div class="act-pillars-grid">
+                    <article class="act-pillar-card reveal" data-reveal data-reveal-delay="1">
+                        <span class="act-pillar-icon" aria-hidden="true"><i class="fas fa-walking"></i></span>
+                        <h3>Motorio</h3>
+                        <p>Ginnastica dolce, Tai Chi, passeggiate e palestra riabilitativa per postura, equilibrio e forza.</p>
+                    </article>
+                    <article class="act-pillar-card reveal" data-reveal data-reveal-delay="2">
+                        <span class="act-pillar-icon" aria-hidden="true"><i class="fas fa-brain"></i></span>
+                        <h3>Cognitivo</h3>
+                        <p>Laboratori, giochi e musicoterapia per allenare memoria, attenzione e creatività.</p>
+                    </article>
+                    <article class="act-pillar-card reveal" data-reveal data-reveal-delay="3">
+                        <span class="act-pillar-icon" aria-hidden="true"><i class="fas fa-heart"></i></span>
+                        <h3>Emotivo</h3>
+                        <p>Yoga della risata, gruppi di ascolto e incontri con esperti per il benessere interiore.</p>
+                    </article>
+                    <article class="act-pillar-card reveal" data-reveal data-reveal-delay="4">
+                        <span class="act-pillar-icon" aria-hidden="true"><i class="fas fa-handshake"></i></span>
+                        <h3>Sociale</h3>
+                        <p>Auto-mutuo aiuto, eventi e momenti di condivisione per non sentirsi mai soli.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fascia motivazionale -->
+        <div class="about-motto-band act-motto-band" aria-hidden="false">
+            <blockquote class="about-motto">
+                <span class="about-motto-mark" aria-hidden="true">"</span>
+                <p class="about-motto-text">Tutte le attività sono gratuite e aperte a malati, familiari e amici</p>
+                <footer class="about-motto-footer">— Associazione Parkinsoniani del Canavese ODV ETS</footer>
+            </blockquote>
+        </div>
+
+        <!-- Attività Motorie -->
+        <section class="section section-act-motoria" id="motoria" aria-labelledby="motoria-heading">
+            <div class="container">
+                <header class="about-section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-dumbbell" aria-hidden="true"></i> Movimento e riabilitazione</p>
+                    <h2 class="section-title" id="motoria-heading">Attività Motorie e Riabilitative</h2>
+                    <p class="section-subtitle">Esercizio fisico adattato, seguito da volontari formati, per mantenere mobilità ed equilibrio in un ambiente accogliente e non competitivo.</p>
+                </header>
+
+                <div class="act-feature-grid">
+                    <article class="act-feature-card reveal" data-reveal id="ginnastica">
+                        <div class="act-feature-media">
+                            <img src="images/new-images/img20.jpg" alt="Sessione di ginnastica dolce in gruppo" width="480" height="320" loading="lazy">
+                            <span class="act-feature-badge"><i class="fas fa-walking" aria-hidden="true"></i> Ginnastica</span>
                         </div>
-                        <h3>Ginnastica Dolce e AFA</h3>
-                        <p>Ginnastica dolce e attività fisica adattata (AFA) in piccoli gruppi, corsi di Taijiquan e Qi Gong per postura, equilibrio e rilassamento.</p>
-                        <a href="#ginnastica" class="service-link">Scopri di più</a>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-dumbbell"></i>
+                        <div class="act-feature-body">
+                            <h3>Ginnastica Dolce e AFA</h3>
+                            <p>Ginnastica dolce e attività fisica adattata (AFA) in piccoli gruppi, corsi di Taijiquan e Qi Gong per postura, equilibrio e rilassamento.</p>
+                            <ul class="activities-card-tags" aria-label="Dettagli">
+                                <li><i class="fas fa-users" aria-hidden="true"></i> Piccoli gruppi</li>
+                                <li><i class="fas fa-spa" aria-hidden="true"></i> Tai Chi &amp; Qi Gong</li>
+                                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tutte le sedi</li>
+                            </ul>
                         </div>
-                        <h3>Palestra Riabilitativa</h3>
-                        <p>Palestra di Castellamonte con macchinari a movimento assistito per malati con difficoltà motorie importanti, seguiti dai volontari.</p>
-                        <a href="#palestra" class="service-link">Scopri di più</a>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-hiking"></i>
+                    </article>
+
+                    <article class="act-feature-card act-feature-card--reverse reveal" data-reveal data-reveal-delay="1" id="palestra">
+                        <div class="act-feature-media">
+                            <img src="images/palestra-1.jpg" alt="Palestra riabilitativa con macchinari a movimento assistito" width="480" height="320" loading="lazy">
+                            <span class="act-feature-badge"><i class="fas fa-dumbbell" aria-hidden="true"></i> Palestra</span>
                         </div>
-                        <h3>Passeggiate di Gruppo</h3>
-                        <p>Camminate tradizionali o Nordic Walking nella natura canavesana, per unire esercizio fisico e socializzazione.</p>
-                        <a href="#passeggiate" class="service-link">Scopri di più</a>
-                    </div>
+                        <div class="act-feature-body">
+                            <h3>Palestra Riabilitativa</h3>
+                            <p>Palestra di Castellamonte con macchinari a movimento assistito per malati con difficoltà motorie importanti, seguiti dai volontari con attenzione e pazienza.</p>
+                            <ul class="activities-card-tags" aria-label="Dettagli">
+                                <li><i class="fas fa-building" aria-hidden="true"></i> Castellamonte</li>
+                                <li><i class="fas fa-cogs" aria-hidden="true"></i> Movimento assistito</li>
+                                <li><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Seguiti dai volontari</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="act-feature-card reveal" data-reveal data-reveal-delay="2" id="passeggiate">
+                        <div class="act-feature-media">
+                            <img src="images/passeg.jpeg" alt="Passeggiate di gruppo nella natura canavesana" width="480" height="320" loading="lazy">
+                            <span class="act-feature-badge"><i class="fas fa-hiking" aria-hidden="true"></i> Natura</span>
+                        </div>
+                        <div class="act-feature-body">
+                            <h3>Passeggiate di Gruppo</h3>
+                            <p>Camminate tradizionali o Nordic Walking nella natura canavesana, per unire esercizio fisico e socializzazione in un contesto rigenerante.</p>
+                            <ul class="activities-card-tags" aria-label="Dettagli">
+                                <li><i class="fas fa-tree" aria-hidden="true"></i> All'aperto</li>
+                                <li><i class="fas fa-hiking" aria-hidden="true"></i> Nordic Walking</li>
+                                <li><i class="fas fa-comments" aria-hidden="true"></i> Socializzazione</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Yoga della Risata -->
-        <section class="section activities-section">
+        <section class="section section-act-yoga section-act-alt" id="yoga" aria-labelledby="yoga-heading">
             <div class="container">
-                <h2 class="section-title">Yoga della Risata</h2>
-                <div class="activities-grid">
-                    <article class="activity-card">
-                        <div class="activity-content">
-                            <h3>Sessioni di Gruppo</h3>
-                            <p>Sessioni condotte da personale formato che combinano esercizi di risata indotta, respirazione e giochi di espressione. Un potente antistress naturale!</p>
-                            <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> Durata variabile</li>
-                                <li><i class="far fa-calendar"></i> Periodiche</li>
-                                <li><i class="fas fa-map-marker-alt"></i> Tutte le sedi</li>
-                            </ul>
-                        </div>
-                    </article>
+                <div class="act-spotlight reveal" data-reveal>
+                    <figure class="act-spotlight-visual about-parallax-wrap">
+                        <img src="images/canti e merenda a S.Stefano di Candia.jpg" alt="Gruppo durante una sessione di Yoga della Risata" width="560" height="420" loading="lazy" class="about-parallax-img">
+                        <figcaption class="act-spotlight-caption"><i class="fas fa-smile" aria-hidden="true"></i> Il sorriso che cura</figcaption>
+                    </figure>
+                    <div class="act-spotlight-content">
+                        <p class="section-eyebrow act-spotlight-eyebrow"><i class="fas fa-laugh" aria-hidden="true"></i> Benessere emotivo</p>
+                        <h2 class="act-spotlight-title" id="yoga-heading">Yoga della Risata</h2>
+                        <p class="act-spotlight-lead">Sessioni condotte da personale formato che combinano esercizi di risata indotta, respirazione consapevole e giochi di espressione. Un potente antistress naturale che unisce il gruppo in un clima di leggerezza e accoglienza.</p>
+                        <ul class="act-spotlight-details">
+                            <li><i class="far fa-clock" aria-hidden="true"></i> Durata variabile</li>
+                            <li><i class="far fa-calendar" aria-hidden="true"></i> Sessioni periodiche</li>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tutte le sedi</li>
+                        </ul>
+                        <a href="contatti.html" class="cta-button act-spotlight-cta">Prenota una sessione <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Laboratori Cognitivi -->
-        <section class="section activities-section" style="background-color: var(--light-bg);">
+        <section class="section section-act-cognitive" id="cognitivo" aria-labelledby="cognitivo-heading">
             <div class="container">
-                <h2 class="section-title">Laboratori Cognitivi e Ricreativi</h2>
-                <div class="activities-grid">
-                    <article class="activity-card">
-                        <div class="activity-content">
+                <header class="about-section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-lightbulb" aria-hidden="true"></i> Mente e creatività</p>
+                    <h2 class="section-title" id="cognitivo-heading">Laboratori Cognitivi e Ricreativi</h2>
+                    <p class="section-subtitle">Stimolare la mente attraverso il gioco, la musica e le arti manuali — in un ambiente sereno dove ognuno può esprimersi liberamente.</p>
+                </header>
+
+                <div class="act-cards-grid">
+                    <article class="act-card reveal" data-reveal>
+                        <div class="act-card-media">
+                            <img src="images/conferenza.jpg" alt="Laboratorio di stimolazione cognitiva" width="400" height="260" loading="lazy">
+                            <span class="act-card-icon" aria-hidden="true"><i class="fas fa-puzzle-piece"></i></span>
+                        </div>
+                        <div class="act-card-body">
                             <h3>Stimolazione Cognitiva</h3>
-                            <p>Laboratori di stimolazione cognitiva con esercizi e giochi studiati per allenare memoria, attenzione e altre funzioni cognitive.</p>
+                            <p>Laboratori con esercizi e giochi studiati per allenare memoria, attenzione e altre funzioni cognitive.</p>
                             <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> Durata variabile</li>
-                                <li><i class="far fa-calendar"></i> Settimanali</li>
-                                <li><i class="fas fa-map-marker-alt"></i> Tutte le sedi</li>
+                                <li><i class="far fa-clock" aria-hidden="true"></i> Durata variabile</li>
+                                <li><i class="far fa-calendar" aria-hidden="true"></i> Settimanali</li>
+                                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tutte le sedi</li>
                             </ul>
                         </div>
                     </article>
-                    <article class="activity-card">
-                        <div class="activity-content">
+
+                    <article class="act-card reveal" data-reveal data-reveal-delay="1">
+                        <div class="act-card-media">
+                            <img src="images/new-images/img17.jpg" alt="Sessione di musicoterapia e canto di gruppo" width="400" height="260" loading="lazy">
+                            <span class="act-card-icon" aria-hidden="true"><i class="fas fa-music"></i></span>
+                        </div>
+                        <div class="act-card-body">
                             <h3>Musicoterapia e Canto</h3>
                             <p>Corsi di musicoterapia e canto di gruppo per esprimere le emozioni e allenare la voce in un ambiente non giudicante.</p>
                             <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> 90 minuti per sessione</li>
-                                <li><i class="far fa-calendar"></i> Mensile</li>
-                                <li><i class="fas fa-map-marker-alt"></i> Tutte le sedi</li>
+                                <li><i class="far fa-clock" aria-hidden="true"></i> 90 minuti per sessione</li>
+                                <li><i class="far fa-calendar" aria-hidden="true"></i> Mensile</li>
+                                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tutte le sedi</li>
                             </ul>
                         </div>
                     </article>
-                    <article class="activity-card">
-                        <div class="activity-content">
+
+                    <article class="act-card reveal" data-reveal data-reveal-delay="2">
+                        <div class="act-card-media">
+                            <img src="images/new-images/img14.jpg" alt="Laboratorio manuale creativo" width="400" height="260" loading="lazy">
+                            <span class="act-card-icon" aria-hidden="true"><i class="fas fa-palette"></i></span>
+                        </div>
+                        <div class="act-card-body">
                             <h3>Laboratori Manuali</h3>
-                            <p>Laboratori manuali su richiesta (disegno, origami, lavori a maglia) per mantenere la manualità fine e divertirsi imparando.</p>
+                            <p>Laboratori su richiesta (disegno, origami, lavori a maglia) per mantenere la manualità fine e divertirsi imparando.</p>
                             <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> Durata variabile</li>
-                                <li><i class="far fa-calendar"></i> Su richiesta</li>
-                                <li><i class="fas fa-map-marker-alt"></i> Tutte le sedi</li>
+                                <li><i class="far fa-clock" aria-hidden="true"></i> Durata variabile</li>
+                                <li><i class="far fa-calendar" aria-hidden="true"></i> Su richiesta</li>
+                                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tutte le sedi</li>
                             </ul>
                         </div>
                     </article>
@@ -146,128 +306,235 @@
         </section>
 
         <!-- Gruppi di Supporto -->
-        <section class="section recreational-section">
+        <section class="section section-act-support section-act-alt" id="supporto" aria-labelledby="supporto-heading">
             <div class="container">
-                <h2 class="section-title">Gruppi di Supporto e Incontri di Auto-Aiuto</h2>
-                <div class="recreational-grid">
-                    <div class="recreational-card">
-                        <i class="fas fa-users"></i>
-                        <h3>Auto-Mutuo Aiuto</h3>
-                        <p>Gruppi di auto-mutuo aiuto dove i partecipanti possono condividere liberamente esperienze, paure e conquiste quotidiane.</p>
-                    </div>
-                    <div class="recreational-card">
-                        <i class="fas fa-user-md"></i>
-                        <h3>Incontri con Esperti</h3>
-                        <p>Incontri con neurologi, logopedisti, nutrizionisti e fisioterapisti per rispondere alle domande dei presenti.</p>
-                    </div>
-                    <div class="recreational-card">
-                        <i class="fas fa-heart"></i>
-                        <h3>Supporto Emotivo</h3>
-                        <p>Incontri dedicati al supporto emotivo di malati e caregiver, a volte affiancati da psicologi.</p>
-                    </div>
-                    <div class="recreational-card">
-                        <i class="fas fa-lightbulb"></i>
-                        <h3>Consigli Pratici</h3>
-                        <p>Condivisione di strategie di convivenza con la malattia e consigli pratici per la gestione quotidiana.</p>
+                <header class="about-section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-comments" aria-hidden="true"></i> Ascolto e condivisione</p>
+                    <h2 class="section-title" id="supporto-heading">Gruppi di Supporto e Incontri di Auto-Aiuto</h2>
+                    <p class="section-subtitle">Spazi protetti dove condividere esperienze, ricevere orientamento e sentirsi compresi — per malati, familiari e caregiver.</p>
+                </header>
+
+                <div class="act-support-layout">
+                    <figure class="act-support-visual reveal" data-reveal>
+                        <img src="images/new-images/img19.jpg" alt="Incontro di auto-mutuo aiuto tra i membri dell'associazione" width="520" height="400" loading="lazy">
+                        <div class="act-support-visual-accent" aria-hidden="true">
+                            <img src="images/new-images/img10.jpg" alt="" width="160" height="160" loading="lazy">
+                        </div>
+                    </figure>
+
+                    <div class="act-support-cards">
+                        <article class="act-support-card reveal" data-reveal data-reveal-delay="1">
+                            <span class="act-support-icon" aria-hidden="true"><i class="fas fa-users"></i></span>
+                            <div>
+                                <h3>Auto-Mutuo Aiuto</h3>
+                                <p>Gruppi dove i partecipanti condividono liberamente esperienze, paure e conquiste quotidiane.</p>
+                            </div>
+                        </article>
+                        <article class="act-support-card reveal" data-reveal data-reveal-delay="2">
+                            <span class="act-support-icon" aria-hidden="true"><i class="fas fa-user-md"></i></span>
+                            <div>
+                                <h3>Incontri con Esperti</h3>
+                                <p>Neurologi, logopedisti, nutrizionisti e fisioterapisti rispondono alle domande dei presenti.</p>
+                            </div>
+                        </article>
+                        <article class="act-support-card reveal" data-reveal data-reveal-delay="3">
+                            <span class="act-support-icon" aria-hidden="true"><i class="fas fa-heart"></i></span>
+                            <div>
+                                <h3>Supporto Emotivo</h3>
+                                <p>Incontri dedicati al benessere di malati e caregiver, a volte affiancati da psicologi.</p>
+                            </div>
+                        </article>
+                        <article class="act-support-card reveal" data-reveal data-reveal-delay="4">
+                            <span class="act-support-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></span>
+                            <div>
+                                <h3>Consigli Pratici</h3>
+                                <p>Strategie di convivenza con la malattia e consigli per la gestione quotidiana.</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Educazione alla Nutrizione -->
-        <section class="section activities-section">
+        <section class="section section-act-nutrition" id="nutrizione" aria-labelledby="nutrizione-heading">
             <div class="container">
-                <h2 class="section-title">Educazione alla Nutrizione</h2>
-                <div class="activities-grid">
-                    <article class="activity-card">
-                        <div class="activity-content">
-                            <h3>Incontri Informativi</h3>
-                            <p>Incontri informativi sulla dieta e lo stile alimentare più adatti ai malati di Parkinson, con la presenza di dietisti o nutrizionisti.</p>
-                            <ul class="activity-details">
-                                <li><i class="far fa-clock"></i> Durata variabile</li>
-                                <li><i class="far fa-calendar"></i> Periodici</li>
-                                <li><i class="fas fa-map-marker-alt"></i> Tutte le sedi</li>
-                            </ul>
+                <div class="act-spotlight act-spotlight--reverse reveal" data-reveal>
+                    <figure class="act-spotlight-visual">
+                        <img src="images/sbr1.jpg" alt="Incontro informativo sull'alimentazione" width="560" height="420" loading="lazy">
+                        <figcaption class="act-spotlight-caption"><i class="fas fa-apple-alt" aria-hidden="true"></i> Alimentazione consapevole</figcaption>
+                    </figure>
+                    <div class="act-spotlight-content">
+                        <p class="section-eyebrow act-spotlight-eyebrow"><i class="fas fa-utensils" aria-hidden="true"></i> Benessere alimentare</p>
+                        <h2 class="act-spotlight-title" id="nutrizione-heading">Educazione alla Nutrizione</h2>
+                        <p class="act-spotlight-lead">Incontri informativi sulla dieta e lo stile alimentare più adatti ai malati di Parkinson, con la presenza di dietisti o nutrizionisti qualificati che rispondono alle domande del gruppo.</p>
+                        <ul class="act-spotlight-details">
+                            <li><i class="far fa-clock" aria-hidden="true"></i> Durata variabile</li>
+                            <li><i class="far fa-calendar" aria-hidden="true"></i> Incontri periodici</li>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tutte le sedi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servizi di Supporto -->
+        <section class="section section-act-services section-act-alt" id="servizi" aria-labelledby="servizi-heading">
+            <div class="container">
+                <header class="about-section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-hands-helping" aria-hidden="true"></i> Al tuo fianco</p>
+                    <h2 class="section-title" id="servizi-heading">Servizi di Supporto</h2>
+                    <p class="section-subtitle">Oltre alle attività in sede, mettiamo a disposizione servizi concreti per facilitare la partecipazione e sostenere le famiglie nel percorso quotidiano.</p>
+                </header>
+
+                <div class="act-services-grid">
+                    <article class="act-service-card reveal" data-reveal>
+                        <div class="act-service-media">
+                            <img src="images/P7240367SITO.jpg" alt="Servizio trasporti con autovetture attrezzate" width="320" height="200" loading="lazy">
+                        </div>
+                        <div class="act-service-body">
+                            <span class="act-service-icon" aria-hidden="true"><i class="fas fa-bus"></i></span>
+                            <h3>Servizio Trasporti</h3>
+                            <p>Due autovetture attrezzate con autisti volontari per accompagnare i malati non automuniti alle attività.</p>
+                        </div>
+                    </article>
+                    <article class="act-service-card reveal" data-reveal data-reveal-delay="1">
+                        <div class="act-service-media">
+                            <img src="images/sanmaurizio2.jpg" alt="Supporto ai caregiver dell'associazione" width="320" height="200" loading="lazy">
+                        </div>
+                        <div class="act-service-body">
+                            <span class="act-service-icon" aria-hidden="true"><i class="fas fa-home"></i></span>
+                            <h3>Supporto ai Caregiver</h3>
+                            <p>Servizio di sollievo con convenzione per assistenti qualificati e percorsi formativi dedicati.</p>
+                        </div>
+                    </article>
+                    <article class="act-service-card reveal" data-reveal data-reveal-delay="2">
+                        <div class="act-service-media">
+                            <img src="images/mov cons.jpg" alt="Assistenza domiciliare per le famiglie" width="320" height="200" loading="lazy">
+                        </div>
+                        <div class="act-service-body">
+                            <span class="act-service-icon" aria-hidden="true"><i class="fas fa-calendar-check"></i></span>
+                            <h3>Assistenza Domiciliare</h3>
+                            <p>Aiuto per trovare assistenti qualificati nei momenti di necessità, permettendo riposo al caregiver.</p>
+                        </div>
+                    </article>
+                    <article class="act-service-card reveal" data-reveal data-reveal-delay="3">
+                        <div class="act-service-media">
+                            <img src="images/conferenza.jpg" alt="Percorso formativo per caregiver" width="320" height="200" loading="lazy">
+                        </div>
+                        <div class="act-service-body">
+                            <span class="act-service-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+                            <h3>Formazione Caregiver</h3>
+                            <p>Percorsi con consigli pratici su gestione quotidiana, movimentazione e comunicazione.</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Servizi di Supporto -->
-        <section class="section recreational-section" style="background-color: var(--light-bg);">
+        <!-- Galleria momenti -->
+        <section class="section section-act-gallery" aria-labelledby="act-gallery-heading">
             <div class="container">
-                <h2 class="section-title">Servizi di Supporto</h2>
-                <div class="recreational-grid">
-                    <div class="recreational-card">
-                        <i class="fas fa-bus"></i>
-                        <h3>Servizio Trasporti</h3>
-                        <p>Due autovetture attrezzate con autisti volontari per accompagnare i malati non automuniti.</p>
-                    </div>
-                    <div class="recreational-card">
-                        <i class="fas fa-home"></i>
-                        <h3>Supporto ai Caregiver</h3>
-                        <p>Servizio di sollievo ai caregiver con convenzione per assistenti qualificati e percorsi formativi.</p>
-                    </div>
-                    <div class="recreational-card">
-                        <i class="fas fa-calendar-check"></i>
-                        <h3>Assistenza Domiciliare</h3>
-                        <p>Aiuto per trovare assistenti qualificati per coprire i momenti di necessità e permettere riposo al caregiver.</p>
-                    </div>
-                    <div class="recreational-card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>Formazione Caregiver</h3>
-                        <p>Percorsi formativi con consigli pratici su gestione quotidiana, movimentazione e comunicazione.</p>
-                    </div>
-                </div>
+                <header class="about-section-header reveal" data-reveal>
+                    <p class="section-eyebrow"><i class="fas fa-camera" aria-hidden="true"></i> I nostri momenti</p>
+                    <h2 class="section-title" id="act-gallery-heading">Vita di comunità</h2>
+                    <p class="section-subtitle">Ogni incontro è un'occasione per stare insieme, condividere e ritrovare energia e serenità.</p>
+                </header>
+            </div>
+            <div class="act-gallery-track reveal" data-reveal>
+                <figure class="act-gallery-item"><img src="images/new-images/img12.jpg" alt="Attività di gruppo in sede" width="320" height="240" loading="lazy"></figure>
+                <figure class="act-gallery-item"><img src="images/new-images/img15.jpg" alt="Momento di condivisione tra i partecipanti" width="320" height="240" loading="lazy"></figure>
+                <figure class="act-gallery-item"><img src="images/new-images/img18.jpg" alt="Incontro formativo dell'associazione" width="320" height="240" loading="lazy"></figure>
+                <figure class="act-gallery-item"><img src="images/sanmaurizio1.jpg" alt="Sede di San Maurizio Canavese" width="320" height="240" loading="lazy"></figure>
+                <figure class="act-gallery-item"><img src="images/new-images/img10.jpg" alt="Partecipanti durante un laboratorio" width="320" height="240" loading="lazy"></figure>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="section cta-section">
+        <section class="section about-cta-section" aria-labelledby="act-cta-heading">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Vuoi Partecipare alle Nostre Attività?</h2>
-                    <p>Contattaci per maggiori informazioni o per iscriverti alle attività.</p>
-                    <div class="cta-buttons">
-                        <a href="contatti.html" class="cta-button">Contattaci</a>
-                        <a href="donazioni.html" class="cta-button secondary">Sostienici</a>
+                <div class="about-cta-panel reveal" data-reveal>
+                    <div class="about-cta-content">
+                        <p class="section-eyebrow about-cta-eyebrow"><i class="fas fa-calendar-check" aria-hidden="true"></i> Partecipa</p>
+                        <h2 id="act-cta-heading">Vuoi Partecipare alle Nostre Attività?</h2>
+                        <p>Contattaci per maggiori informazioni o per iscriverti. Siamo pronti ad accoglierti con calore e ascolto — tutte le attività sono gratuite per gli associati.</p>
+                        <div class="about-cta-buttons">
+                            <a href="contatti.html" class="cta-button about-cta-btn-primary">
+                                <i class="fas fa-envelope" aria-hidden="true"></i> Contattaci
+                            </a>
+                            <a href="donazioni.html" class="cta-button about-cta-btn-secondary">Sostienici</a>
+                            <a href="sedi.html" class="cta-button about-cta-btn-secondary">Trova la sede più vicina</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div>
-                <img src="images/logo.png" alt="Logo Associazione Parkinsoniani del Canavese" style="height:48px;width:auto;vertical-align:middle;margin-bottom:0.5em;">
-                <h3>Associazione Parkinsoniani del Canavese ODV ETS</h3>
-                <p>Organizzazione di Volontariato</p>
-                <p>C.F. 92518680019</p>
+    <footer class="footer" role="contentinfo">
+        <div class="footer-cta">
+            <div class="container footer-cta-inner">
+                <div class="footer-cta-text">
+                    <p class="footer-cta-eyebrow"><i class="fas fa-heart" aria-hidden="true"></i> Sostieni la nostra missione</p>
+                    <p class="footer-cta-title">Ogni contributo fa la differenza per chi vive il Parkinson nel Canavese</p>
+                </div>
+                <div class="footer-cta-actions">
+                    <a href="donazioni.html#5x1000" class="footer-cta-btn footer-cta-btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dona il 5×1000</a>
+                    <a href="donazioni.html" class="footer-cta-btn footer-cta-btn--secondary">Scopri come sostenerci</a>
+                </div>
             </div>
-            <div>
-                <h3>Contatti</h3>
-                <p><i class="fas fa-envelope"></i> assoparkinsoncanavese@virgilio.it</p>
-                <p><i class="fas fa-phone"></i> 347 4539988</p>
-                <p><i class="fas fa-map-marker-alt"></i> P.le P. Nenni 1 - Castellamonte (TO)</p>
+        </div>
+        <div class="footer-main">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo-link" aria-label="Home - Associazione Parkinson Canavese">
+                        <img src="images/logo.png" alt="" class="footer-logo" width="52" height="52">
+                        <span class="footer-logo-text">
+                            <span class="footer-logo-title">Parkinson Canavese</span>
+                            <span class="footer-logo-subtitle">Insieme, con solidarietà</span>
+                        </span>
+                    </a>
+                    <p class="footer-org-name">Associazione Parkinsoniani del Canavese ODV ETS</p>
+                    <p class="footer-org-meta">Organizzazione di Volontariato · Ente del Terzo Settore</p>
+                    <p class="footer-org-meta">Attiva dal 2013 con attività gratuite in tutto il Canavese</p>
+                    <p class="footer-cf"><strong>C.F.</strong> 92518680019</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navigazione</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="sedi.html">Le Sedi</a></li>
+                        <li><a href="attivita.html">Attività</a></li>
+                        <li><a href="progetto-africa.html">Progetto Africa</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                        <li><a href="donazioni.html">Sostienici</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-heading">Contatti</h3>
+                    <ul class="footer-contact-list">
+                        <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
+                        <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
+                        <li><a href="mailto:assoparkcanavese@pec.it"><i class="fas fa-shield-alt" aria-hidden="true"></i> assoparkcanavese@pec.it</a> <span class="footer-note">(PEC)</span></li>
+                    </ul>
+                    <h3 class="footer-heading footer-heading--social">Seguici</h3>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/393793258612" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="mailto:assoparkinsoncanavese@virgilio.it" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3>Link Utili</h3>
-                <ul>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Associazione Parkinsoniani del Canavese ODV ETS. Tutti i diritti riservati.</p>
+                <ul class="footer-legal">
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="cookie-policy.html">Cookie Policy</a></li>
                     <li><a href="termini-condizioni.html">Termini e Condizioni</a></li>
-                    <li><a href="donazioni.html">Come sostenerci</a></li>
                 </ul>
-            </div>
-            <div>
-                <h3>Seguici</h3>
-                <div style="font-size: 1.5rem;">
-                    <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" target="_blank" style="margin-right: 1rem;"><i class="fab fa-facebook"></i></a>
-                    <a href="https://wa.me/3474539988" target="_blank" style="margin-right: 1rem;"><i class="fab fa-whatsapp"></i></a>
-                    <a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope"></i></a>
-                </div>
             </div>
         </div>
     </footer>
