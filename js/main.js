@@ -747,4 +747,117 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     initDonationsSubnav();
+
+    function initDonationsCarousel() {
+        var carousel = document.querySelector('[data-donations-carousel]');
+        if (!carousel) return;
+
+        var track = carousel.querySelector('.donations-carousel-track');
+        var slides = Array.from(carousel.querySelectorAll('.donations-carousel-slide'));
+        var prevBtn = carousel.querySelector('.donations-carousel-btn--prev');
+        var nextBtn = carousel.querySelector('.donations-carousel-btn--next');
+        var dotsContainer = carousel.querySelector('.donations-carousel-dots');
+        if (!track || !slides.length || !dotsContainer) return;
+
+        var currentIndex = 0;
+        var autoplayDelay = 5000;
+        var autoplayTimer = null;
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        slides.forEach(function(slide, index) {
+            var dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'donations-carousel-dot';
+            dot.setAttribute('role', 'tab');
+            dot.setAttribute('aria-label', 'Vai all\'immagine ' + (index + 1));
+            dot.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+            dot.addEventListener('click', function() {
+                goTo(index);
+                restartAutoplay();
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        var dots = Array.from(dotsContainer.querySelectorAll('.donations-carousel-dot'));
+
+        function goTo(index) {
+            currentIndex = (index + slides.length) % slides.length;
+            track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+
+            slides.forEach(function(slide, i) {
+                slide.classList.toggle('is-active', i === currentIndex);
+            });
+
+            dots.forEach(function(dot, i) {
+                dot.classList.toggle('is-active', i === currentIndex);
+                dot.setAttribute('aria-selected', i === currentIndex ? 'true' : 'false');
+            });
+        }
+
+        function next() {
+            goTo(currentIndex + 1);
+        }
+
+        function prev() {
+            goTo(currentIndex - 1);
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function startAutoplay() {
+            if (prefersReducedMotion || slides.length < 2) return;
+            stopAutoplay();
+            autoplayTimer = setInterval(next, autoplayDelay);
+        }
+
+        function restartAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+                prev();
+                restartAutoplay();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+                next();
+                restartAutoplay();
+            });
+        }
+
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+        carousel.addEventListener('focusin', stopAutoplay);
+        carousel.addEventListener('focusout', function(event) {
+            if (!carousel.contains(event.relatedTarget)) {
+                startAutoplay();
+            }
+        });
+
+        carousel.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                prev();
+                restartAutoplay();
+            } else if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                next();
+                restartAutoplay();
+            }
+        });
+
+        goTo(0);
+        startAutoplay();
+    }
+
+    initDonationsCarousel();
 });

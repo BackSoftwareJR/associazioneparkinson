@@ -8764,3 +8764,151 @@ body:has(.header-over-hero) {
     bottom: calc(var(--subnav-offset, 72px) + env(safe-area-inset-bottom, 0px));
   }
 }
+
+/* Donazioni – galleria carosello */
+.donations-gallery-section {
+  background: linear-gradient(180deg, var(--background) 0%, var(--light-bg) 100%);
+}
+
+.donations-carousel {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.donations-carousel:focus {
+  outline: none;
+}
+
+.donations-carousel:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: calc(var(--section-radius) + 4px);
+}
+
+.donations-carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--section-radius);
+  background: var(--surface);
+  border: 1px solid rgba(129, 151, 93, 0.16);
+  box-shadow: 0 12px 40px rgba(81, 119, 87, 0.12);
+}
+
+.donations-carousel-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.donations-carousel-slide {
+  flex: 0 0 100%;
+  margin: 0;
+  position: relative;
+}
+
+.donations-carousel-slide img {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 52vw, 520px);
+  object-fit: cover;
+}
+
+.donations-carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(0deg, rgba(45, 51, 40, 0.82) 0%, rgba(45, 51, 40, 0) 100%);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.donations-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.donations-carousel-btn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(129, 151, 93, 0.22);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--secondary);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 16px rgba(81, 119, 87, 0.08);
+}
+
+.donations-carousel-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(81, 119, 87, 0.18);
+}
+
+.donations-carousel-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.donations-carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 44px;
+}
+
+.donations-carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(129, 151, 93, 0.28);
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.donations-carousel-dot.is-active {
+  background: var(--secondary);
+  transform: scale(1.25);
+}
+
+.donations-carousel-dot:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .donations-carousel-track {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .donations-carousel-controls {
+    gap: 0.65rem;
+  }
+
+  .donations-carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .donations-carousel-caption {
+    font-size: 0.85rem;
+    padding: 0.85rem 1rem;
+  }
+}
