@@ -6184,7 +6184,7 @@ body:has(.header-over-hero) {
 }
 
 .contatti-visit-layout {
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 .contatti-map-column {
@@ -6213,15 +6213,10 @@ body:has(.header-over-hero) {
   color: var(--text-muted);
 }
 
-.contatti-directions-title {
-  text-align: center;
-  margin: 0 0 0.5rem;
-  font-size: 1.35rem;
-  color: var(--secondary);
-}
-
 .contatti-other-sedi {
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(129, 151, 93, 0.14);
   text-align: center;
 }
 
