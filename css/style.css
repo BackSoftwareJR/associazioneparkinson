@@ -150,6 +150,8 @@ body:has(.header-over-hero) {
   position: static;
   transform: none;
   justify-self: start;
+  grid-column: 1;
+  grid-row: 1;
   min-width: 0;
   max-width: min(260px, 28vw);
   z-index: 2;
@@ -159,6 +161,8 @@ body:has(.header-over-hero) {
   position: static;
   transform: none;
   justify-self: end;
+  grid-column: 3;
+  grid-row: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -253,6 +257,8 @@ body:has(.header-over-hero) {
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
+  grid-column: 2;
+  grid-row: 1;
   min-width: 0;
   max-width: 100%;
   justify-self: center;
