@@ -1,0 +1,671 @@
+/* ============================================
+   Castellamonte – Premium sede page (Apple HIG)
+   Scoped to body.sede-castellamonte only
+   ============================================ */
+
+body.sede-castellamonte {
+  --body-font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --heading-font: 'Inter', system-ui, -apple-system, sans-serif;
+  --castellamonte-radius: 20px;
+  --castellamonte-radius-lg: 24px;
+  --castellamonte-shadow: 0 4px 24px rgba(81, 119, 87, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --castellamonte-shadow-hover: 0 12px 40px rgba(81, 119, 87, 0.14), 0 4px 12px rgba(0, 0, 0, 0.06);
+  --castellamonte-glass: rgba(255, 255, 255, 0.78);
+  --castellamonte-glass-border: rgba(255, 255, 255, 0.55);
+  --fab-offset: 72px;
+  letter-spacing: -0.01em;
+}
+
+body.sede-castellamonte h1,
+body.sede-castellamonte h2,
+body.sede-castellamonte h3,
+body.sede-castellamonte h4 {
+  letter-spacing: -0.025em;
+}
+
+/* Header – refined floating glass */
+body.sede-castellamonte .header-glass {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.88) 0%,
+    rgba(248, 250, 245, 0.82) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.65);
+  box-shadow:
+    0 8px 32px rgba(81, 119, 87, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+body.sede-castellamonte .header-over-hero:not(.scrolled) .header-glass {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(248, 250, 245, 0.65) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Hero – stronger contrast & airy typography */
+body.sede-castellamonte .sede-hero {
+  min-height: clamp(320px, 52vh, 440px);
+  padding: calc(var(--header-offset, 90px) + 3rem) 1.25rem 3.5rem;
+  align-items: flex-end;
+}
+
+body.sede-castellamonte .sede-hero-bg::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 28, 20, 0.55) 0%,
+      rgba(45, 62, 45, 0.72) 35%,
+      rgba(61, 90, 61, 0.85) 70%,
+      rgba(30, 40, 30, 0.92) 100%
+    );
+}
+
+body.sede-castellamonte .sede-hero-badge {
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+body.sede-castellamonte .sede-hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 700;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+  margin-bottom: 1rem;
+}
+
+body.sede-castellamonte .sede-hero-lead {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.7;
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+  max-width: 36rem;
+}
+
+/* Sede subnav – pill strip below hero */
+body.sede-castellamonte .sede-nav {
+  padding: 0.75rem 0;
+  background: transparent;
+}
+
+body.sede-castellamonte .sede-nav .container {
+  background: var(--castellamonte-glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--castellamonte-glass-border);
+  border-radius: var(--castellamonte-radius-lg);
+  box-shadow: var(--castellamonte-shadow);
+  padding: 0.5rem 0.75rem;
+}
+
+body.sede-castellamonte .sede-nav-link {
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.sede-castellamonte .sede-nav-link:active {
+  transform: scale(0.97);
+}
+
+body.sede-castellamonte .sede-nav-link.is-active {
+  box-shadow: 0 4px 16px rgba(81, 119, 87, 0.28);
+}
+
+/* Quick actions – desktop toolbar */
+body.sede-castellamonte .sede-quick-actions {
+  background: transparent;
+  border-bottom: none;
+  padding: 0.5rem 0 0;
+}
+
+body.sede-castellamonte .sede-quick-actions-inner {
+  gap: 0.65rem;
+  padding: 1rem 0 1.5rem;
+}
+
+body.sede-castellamonte .sede-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(129, 151, 93, 0.18);
+  background: #fff;
+  box-shadow: var(--castellamonte-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+body.sede-castellamonte .sede-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--castellamonte-shadow-hover);
+}
+
+body.sede-castellamonte .sede-action-btn:active {
+  transform: scale(0.98);
+}
+
+body.sede-castellamonte .sede-action-btn i {
+  font-size: 1rem;
+  width: 1.1rem;
+  text-align: center;
+}
+
+body.sede-castellamonte .sede-action-btn--primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(81, 119, 87, 0.25);
+}
+
+body.sede-castellamonte .sede-action-btn--primary:hover {
+  box-shadow: 0 8px 28px rgba(81, 119, 87, 0.32);
+}
+
+body.sede-castellamonte .sede-action-btn--whatsapp {
+  background: rgba(37, 211, 102, 0.08);
+  border-color: rgba(37, 211, 102, 0.28);
+}
+
+body.sede-castellamonte .sede-action-btn--whatsapp:hover {
+  background: #25D366;
+  border-color: #25D366;
+}
+
+/* Info & map – dashboard card */
+body.sede-castellamonte .section-sede-info {
+  padding-top: 2.5rem;
+  padding-bottom: 4.5rem;
+}
+
+body.sede-castellamonte .sede-info-layout {
+  background: var(--castellamonte-glass);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--castellamonte-glass-border);
+  border-radius: var(--castellamonte-radius-lg);
+  box-shadow: var(--castellamonte-shadow);
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+body.sede-castellamonte .sede-info-cards {
+  gap: 0.85rem;
+}
+
+body.sede-castellamonte .sede-info-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: var(--castellamonte-radius);
+  padding: 1.25rem 1.35rem;
+  border: 1px solid rgba(129, 151, 93, 0.1);
+  box-shadow: 0 2px 12px rgba(81, 119, 87, 0.05);
+}
+
+body.sede-castellamonte .sede-info-card h2,
+body.sede-castellamonte .sede-info-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+body.sede-castellamonte .sede-info-card h2 i,
+body.sede-castellamonte .sede-info-card h3 i {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+body.sede-castellamonte .sede-hours-list li {
+  border-bottom-color: rgba(129, 151, 93, 0.12);
+  padding: 0.55rem 0;
+  font-size: 0.925rem;
+}
+
+body.sede-castellamonte .sede-hours-list li span:first-child {
+  font-weight: 500;
+  color: var(--text);
+}
+
+body.sede-castellamonte .sede-hours-list li span:last-child {
+  color: var(--text-muted);
+}
+
+body.sede-castellamonte .sede-map-wrap {
+  border-radius: var(--castellamonte-radius);
+  min-height: 380px;
+  border: 1px solid rgba(129, 151, 93, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+body.sede-castellamonte .sede-map-wrap iframe {
+  min-height: 380px;
+  border-radius: var(--castellamonte-radius);
+}
+
+body.sede-castellamonte .sede-map-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 1rem;
+  border: none;
+  font: inherit;
+  background: rgba(244, 247, 241, 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: var(--castellamonte-radius);
+  cursor: pointer;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+body.sede-castellamonte .sede-map-overlay span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(129, 151, 93, 0.2);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--secondary);
+  box-shadow: var(--castellamonte-shadow);
+}
+
+body.sede-castellamonte .sede-map-wrap.is-active .sede-map-overlay {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.sede-castellamonte .sede-map-wrap:not(.is-active) iframe {
+  pointer-events: none;
+}
+
+/* Activities – equal-height cards */
+body.sede-castellamonte .section-sede-alt .section-title {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+}
+
+body.sede-castellamonte .section-sede-alt .section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.sede-castellamonte .sede-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+body.sede-castellamonte .sede-activities-grid .activity-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--castellamonte-radius-lg);
+  border: 1px solid rgba(129, 151, 93, 0.1);
+  background: #fff;
+  box-shadow: var(--castellamonte-shadow);
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s ease;
+}
+
+body.sede-castellamonte .sede-activities-grid .activity-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--castellamonte-shadow-hover);
+}
+
+body.sede-castellamonte .sede-activities-grid .activity-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+body.sede-castellamonte .sede-activities-grid .activity-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body.sede-castellamonte .sede-activities-grid .activity-card:hover .activity-image img {
+  transform: scale(1.04);
+}
+
+body.sede-castellamonte .sede-activities-grid .activity-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.35rem 1.5rem 1.5rem;
+}
+
+body.sede-castellamonte .sede-activities-grid .activity-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 0.65rem;
+}
+
+body.sede-castellamonte .sede-activities-grid .activity-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  flex: 1;
+}
+
+body.sede-castellamonte .sede-activities-grid .activity-details {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(129, 151, 93, 0.1);
+}
+
+body.sede-castellamonte .sede-activities-grid .activity-details li {
+  font-size: 0.875rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Directions – schematic, borderless */
+body.sede-castellamonte .section-sede-directions .section-title {
+  font-weight: 700;
+}
+
+body.sede-castellamonte .sede-directions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 2.5rem 3rem;
+  margin-top: 2.5rem;
+}
+
+body.sede-castellamonte .sede-direction-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+body.sede-castellamonte .sede-direction-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(129, 151, 93, 0.15) 0%, rgba(81, 119, 87, 0.08) 100%);
+  color: var(--secondary);
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+body.sede-castellamonte .sede-direction-body h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 0.85rem;
+}
+
+body.sede-castellamonte .sede-direction-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body.sede-castellamonte .sede-direction-body li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+body.sede-castellamonte .sede-direction-body li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+/* Other locations – clean link cards */
+body.sede-castellamonte .section-sede-others .section-title {
+  font-weight: 700;
+}
+
+body.sede-castellamonte .sede-other-locations {
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+body.sede-castellamonte .sede-other-card {
+  padding: 1.15rem 1.35rem;
+  border-radius: var(--castellamonte-radius-lg);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(129, 151, 93, 0.1);
+  box-shadow: var(--castellamonte-shadow);
+  gap: 1.15rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.sede-castellamonte .sede-other-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--castellamonte-shadow-hover);
+}
+
+body.sede-castellamonte .sede-other-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+body.sede-castellamonte .sede-other-card h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+body.sede-castellamonte .sede-other-card span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Floating action bar – mobile iOS style */
+body.sede-castellamonte .sede-floating-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Keep sede subnav inline; reserve bottom for FAB */
+  body.sede-castellamonte .sede-nav {
+    position: sticky;
+    top: var(--header-offset, 90px);
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    margin-top: 0;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    z-index: 900;
+  }
+
+  body.sede-castellamonte .sede-nav .container {
+    max-width: 100%;
+  }
+
+  body.sede-castellamonte .sede-nav-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  body.sede-castellamonte:has(.sede-nav) main {
+    padding-bottom: calc(var(--fab-offset) + env(safe-area-inset-bottom, 0px) + 1rem);
+  }
+
+  body.sede-castellamonte .sede-quick-actions {
+    display: none;
+  }
+
+  body.sede-castellamonte .sede-floating-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 960;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(248, 250, 245, 0.88) 100%
+    );
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-top: 1px solid rgba(129, 151, 93, 0.12);
+    box-shadow: 0 -8px 32px rgba(81, 119, 87, 0.12);
+  }
+
+  body.sede-castellamonte .sede-fab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    flex: 1;
+    min-width: 0;
+    padding: 0.45rem 0.35rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: background 0.2s ease, transform 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body.sede-castellamonte .sede-fab-item i {
+    font-size: 1.25rem;
+    color: var(--primary);
+    line-height: 1;
+  }
+
+  body.sede-castellamonte .sede-fab-item:active {
+    transform: scale(0.94);
+    background: rgba(129, 151, 93, 0.1);
+  }
+
+  body.sede-castellamonte .sede-fab-item--primary i {
+    color: var(--secondary);
+  }
+
+  body.sede-castellamonte .sede-fab-item--whatsapp i {
+    color: #25D366;
+  }
+
+  body.sede-castellamonte .sede-hero {
+    min-height: clamp(280px, 48vh, 360px);
+    padding-bottom: 2.5rem;
+  }
+
+  body.sede-castellamonte .section-sede-info {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  body.sede-castellamonte .sede-info-layout {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  body.sede-castellamonte .sede-map-wrap {
+    order: -1;
+    min-height: 240px;
+    width: calc(100% + 0.5rem);
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+  }
+
+  body.sede-castellamonte .sede-map-wrap iframe {
+    min-height: 240px;
+  }
+
+  body.sede-castellamonte .sede-activities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  body.sede-castellamonte .sede-activities-grid .activity-card {
+    max-width: none;
+    margin: 0;
+  }
+
+  body.sede-castellamonte .sede-directions-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  body.sede-castellamonte .sede-other-locations {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+  html:has(body.sede-castellamonte) {
+    scroll-padding-bottom: calc(var(--fab-offset, 72px) + env(safe-area-inset-bottom, 0px) + 0.5rem);
+  }
+}
+
+@media (min-width: 769px) {
+  body.sede-castellamonte .sede-map-overlay {
+    display: none;
+  }
+
+  body.sede-castellamonte .sede-map-wrap iframe {
+    pointer-events: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.sede-castellamonte .sede-activities-grid .activity-card,
+  body.sede-castellamonte .sede-activities-grid .activity-image img,
+  body.sede-castellamonte .sede-action-btn,
+  body.sede-castellamonte .sede-other-card {
+    transition: none;
+  }
+}
