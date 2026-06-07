@@ -1,0 +1,8 @@
+{
+  "name": "associazione-parkinson-canavese",
+  "private": true,
+  "description": "Sito web statico dell'Associazione Parkinsoniani del Canavese ODV ETS",
+  "scripts": {
+    "test": "node tests/news-page.test.js"
+  }
+}
