@@ -60,6 +60,38 @@ test('news.html keeps the featured article accessible', () => {
   );
 });
 
+test('news.html shows the assembly date as 23 May 2026', () => {
+  const assemblyDateMarkers = [
+    'Ultimo: 23 Maggio 2026',
+    'datetime="2026-05-23"',
+  ];
+
+  for (const marker of assemblyDateMarkers) {
+    assert(newsHtml.includes(marker), `Missing assembly date marker: ${marker}`);
+  }
+
+  assert(
+    newsHtml.includes('Assemblea ordinaria · Maggio 2026'),
+    'Media caption should reference May 2026'
+  );
+  assert(
+    newsHtml.includes('<span class="news-date-year">2026</span>'),
+    'Featured article year badge should be 2026'
+  );
+  assert(
+    newsHtml.includes('Il 23 maggio 2026 si è svolta l\'assemblea ordinaria'),
+    'Article copy should mention 23 May 2026'
+  );
+  assert(
+    !newsHtml.includes('datetime="2025-05-23"'),
+    'Assembly date should not use 2025'
+  );
+  assert(
+    !newsHtml.includes('Maggio 2025'),
+    'Assembly month caption should not use 2025'
+  );
+});
+
 test('style.css defines bulletin board styles', () => {
   const requiredSelectors = [
     '.news-masthead',
@@ -85,4 +117,4 @@ if (failures > 0) {
   process.exit(1);
 }
 
-console.log(`\n${5} test(s) passed`);
+console.log(`\n${6} test(s) passed`);
