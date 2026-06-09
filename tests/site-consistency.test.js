@@ -87,9 +87,41 @@ test('main.js marks sedi pages as active in navigation', () => {
   assert(mainJs.includes("link.classList.add('active')"), 'Expected active class handling for sedi nav');
 });
 
+test('sede detail pages share premium layout assets and structure', () => {
+  const sedeDetailCss = fs.readFileSync(path.join(root, 'css', 'sede-detail.css'), 'utf8');
+  assert(
+    sedeDetailCss.includes('body.page-sede-detail'),
+    'Expected sede-detail.css scoped to body.page-sede-detail'
+  );
+
+  const sedePages = fs
+    .readdirSync(path.join(root, 'sedi'))
+    .filter((name) => name.endsWith('.html'))
+    .map((name) => path.join(root, 'sedi', name));
+
+  const requiredFragments = [
+    'class="page-sede-detail"',
+    'sede-detail.css?v=231',
+    'sede-floating-bar',
+    'sede-map-overlay',
+    'sede-directions-grid',
+    'section-sede-others',
+  ];
+
+  for (const filePath of sedePages) {
+    const html = fs.readFileSync(filePath, 'utf8');
+    for (const fragment of requiredFragments) {
+      assert(
+        html.includes(fragment),
+        `Missing "${fragment}" in ${path.basename(filePath)}`
+      );
+    }
+  }
+});
+
 if (failures > 0) {
   console.error(`\n${failures} test(s) failed`);
   process.exit(1);
 }
 
-console.log(`\n${4} test(s) passed`);
+console.log(`\n${5} test(s) passed`);

@@ -5,12 +5,11 @@
 
 <!-- DO NOT EDIT BELOW — managed by HyperOrchestrator -->
 
-**Current task context:** miglioriamo lo stile della sezione Ti aspettiamo con un sorriso
-nella pagina contatti. miglioriamola rendendola piu accogliente con animazioni ecc e non cosi ferma statica e brutta. miglioriamo propri
+**Current task context:** Review the provided GitHub repository and website, then ensure all visual elements and interactive components are properly aligned, functional, and match the design intent presented on the live site, 
 
 ## Project-Specific Patterns
 
-### Pattern 1 (relevance: 35%)
+### Pattern 1 (relevance: 6%)
 
 **When you see:**
 ```
@@ -35,7 +34,7 @@ _From task: miglioriamo lo stile della pagina news.html per renderlo molto piu m
 
 ## Global Patterns (cross-project)
 
-### Pattern 1
+### Pattern 1 (relevance: 21%)
 
 **When you see:**
 ```

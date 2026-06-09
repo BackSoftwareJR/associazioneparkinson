@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css?v=231">
+    <link rel="stylesheet" href="../css/sede-detail.css?v=231">
     <script src="../js/main.js?v=231" defer></script>
     <link rel="icon" type="image/png" href="../images/logo.png">
 </head>
-<body>
+<body class="page-sede-detail">
     <header class="header header-over-hero">
         <div class="header-glass">
             <nav class="nav-container" aria-label="Navigazione principale">
@@ -108,7 +109,10 @@
                             <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:assoparkinsoncanavese@virgilio.it">assoparkinsoncanavese@virgilio.it</a></p>
                         </div>
                     </div>
-                    <div class="sede-map-wrap">
+                    <div class="sede-map-wrap" id="sede-map">
+                        <button type="button" class="sede-map-overlay" aria-label="Attiva mappa interattiva">
+                            <span><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Tocca per usare la mappa</span>
+                        </button>
                         <iframe
                             title="Mappa sede Banchette d'Ivrea"
                             src="https://maps.google.com/maps?q=Via+Samone+24,+10010+Banchette+d'Ivrea+TO,+Italia&amp;hl=it&amp;z=15&amp;output=embed"
@@ -182,33 +186,41 @@
             </div>
         </section>
 
-        <section class="section section-sede-alt">
+        <section class="section section-sede-directions">
             <div class="container">
                 <h2 class="section-title">Come Raggiungerci</h2>
-                <div class="directions-grid">
-                    <div class="direction-card">
-                        <i class="fas fa-car" aria-hidden="true"></i>
-                        <h3>In Auto</h3>
-                        <ul>
-                            <li>Dall'autostrada A5: uscita Ivrea, seguire indicazioni per Banchette</li>
-                            <li>Dalla SS 460: seguire le indicazioni per Banchette d'Ivrea</li>
-                            <li>Parcheggio disponibile presso l'ex consultorio</li>
-                        </ul>
-                    </div>
-                    <div class="direction-card">
-                        <i class="fas fa-bus" aria-hidden="true"></i>
-                        <h3>Con i Trasporti Pubblici</h3>
-                        <ul>
-                            <li>Linea bus GTT: fermata "Banchette - Via Samone"</li>
-                            <li>Orari consultabili sul sito GTT</li>
-                            <li>Il nostro servizio trasporti può accompagnarti se necessario</li>
-                        </ul>
-                    </div>
+                <div class="sede-directions-grid">
+                    <article class="sede-direction-item">
+                        <div class="sede-direction-icon" aria-hidden="true">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="sede-direction-body">
+                            <h3>In Auto</h3>
+                            <ul>
+                                <li>Dall'autostrada A5: uscita Ivrea, seguire indicazioni per Banchette</li>
+                                <li>Dalla SS 460: seguire le indicazioni per Banchette d'Ivrea</li>
+                                <li>Parcheggio disponibile presso l'ex consultorio</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="sede-direction-item">
+                        <div class="sede-direction-icon" aria-hidden="true">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <div class="sede-direction-body">
+                            <h3>Con i Trasporti Pubblici</h3>
+                            <ul>
+                                <li>Linea bus GTT: fermata "Banchette - Via Samone"</li>
+                                <li>Orari consultabili sul sito GTT</li>
+                                <li>Il nostro servizio trasporti può accompagnarti se necessario</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section section-sede-others">
             <div class="container">
                 <h2 class="section-title">Altre Sedi</h2>
                 <div class="sede-other-locations">
@@ -243,6 +255,21 @@
             </div>
         </section>
     </main>
+
+    <nav class="sede-floating-bar" aria-label="Azioni rapide">
+        <a href="tel:+393793258612" class="sede-fab-item sede-fab-item--primary" aria-label="Chiama +39 379 325 8612">
+            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+            <span>Chiama</span>
+        </a>
+        <a href="https://wa.me/393793258612" class="sede-fab-item sede-fab-item--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Scrivici su WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="https://maps.google.com/?q=Via+Samone+24,+Banchette+d'Ivrea" class="sede-fab-item" target="_blank" rel="noopener noreferrer" aria-label="Indicazioni stradali">
+            <i class="fas fa-directions" aria-hidden="true"></i>
+            <span>Indicazioni</span>
+        </a>
+    </nav>
 
     <footer class="footer" role="contentinfo">
         <div class="footer-cta">
