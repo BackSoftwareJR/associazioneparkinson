@@ -5,7 +5,7 @@
 
 <!-- DO NOT EDIT BELOW — managed by HyperOrchestrator -->
 
-**Current task context:** Correggere la data dell'articolo 'approvazione bilancio 2025' in modo che rifletta la data dell'assemblea, che è il 23 maggio 2026. Assicurarsi che la nuova data venga visualizzata correttamente in tu
+**Current task context:** Ensure the website https://www.parkinsoncanavese.com/ is thoroughly reviewed for any inconsistencies, and verify that all elements, including layout, navigation, and content, are properly aligned and 
 
 ## Project-Specific Patterns
 
@@ -34,7 +34,7 @@ _From task: miglioriamo lo stile della pagina news.html per renderlo molto piu m
 
 ## Global Patterns (cross-project)
 
-### Pattern 1
+### Pattern 1 (relevance: 18%)
 
 **When you see:**
 ```
