@@ -630,7 +630,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initActivitiesPage();
 
-    function showCopyToast(message) {
+    function showCopyToast(message, isError) {
         var toast = document.querySelector('.copy-toast');
         if (!toast) {
             toast = document.createElement('div');
@@ -639,23 +639,54 @@ document.addEventListener('DOMContentLoaded', function() {
             toast.setAttribute('aria-live', 'polite');
             document.body.appendChild(toast);
         }
-        toast.innerHTML = '<i class="fas fa-check-circle" aria-hidden="true"></i> ' + message;
+        var iconClass = isError ? 'fa-exclamation-circle' : 'fa-check-circle';
+        toast.innerHTML = '<i class="fas ' + iconClass + '" aria-hidden="true"></i> ' + message;
+        toast.classList.toggle('is-error', Boolean(isError));
         toast.classList.add('is-visible');
         clearTimeout(toast._hideTimer);
         toast._hideTimer = setTimeout(function() {
             toast.classList.remove('is-visible');
+            toast.classList.remove('is-error');
         }, 2500);
     }
 
+    function fallbackCopyToClipboard(text) {
+        var textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+
+        var copied = false;
+        try {
+            copied = document.execCommand('copy');
+        } catch (err) {
+            copied = false;
+        }
+
+        document.body.removeChild(textarea);
+        return copied;
+    }
+
     window.copyToClipboard = function(text) {
-        if (!navigator.clipboard) {
+        function onSuccess() {
+            showCopyToast('Copiato negli appunti!');
+        }
+
+        function onFailure() {
+            showCopyToast('Impossibile copiare automaticamente. Seleziona e copia manualmente.', true);
+        }
+
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(text).then(onSuccess).catch(function() {
+                fallbackCopyToClipboard(text) ? onSuccess() : onFailure();
+            });
             return;
         }
-        navigator.clipboard.writeText(text).then(function() {
-            showCopyToast('Copiato negli appunti!');
-        }).catch(function(err) {
-            console.error('Errore durante la copia:', err);
-        });
+
+        fallbackCopyToClipboard(text) ? onSuccess() : onFailure();
     };
 
     document.addEventListener('click', function(event) {
@@ -830,63 +861,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initDonationsCarousel();
 
-    function initContactForm() {
-        var form = document.getElementById('contatti-form');
-        if (!form) return;
-
-        var note = document.getElementById('contatti-form-note');
-        var contactEmail = 'assoparkinsoncanavese@virgilio.it';
-
-        function setNote(message, isError) {
-            if (!note) return;
-            note.textContent = message;
-            note.classList.toggle('is-error', Boolean(isError));
-        }
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            setNote('', false);
-
-            if (!form.checkValidity()) {
-                form.reportValidity();
-                setNote('Controlla i campi obbligatori e riprova.', true);
-                return;
-            }
-
-            var nome = form.nome.value.trim();
-            var email = form.email.value.trim();
-            var telefono = form.telefono.value.trim();
-            var messaggio = form.messaggio.value.trim();
-            var subject = encodeURIComponent('Messaggio dal sito web - ' + nome);
-            var bodyLines = [
-                'Nome: ' + nome,
-                'Email: ' + email
-            ];
-
-            if (telefono) {
-                bodyLines.push('Telefono: ' + telefono);
-            }
-
-            bodyLines.push('', 'Messaggio:', messaggio);
-            var body = encodeURIComponent(bodyLines.join('\n'));
-            var mailtoUrl = 'mailto:' + contactEmail + '?subject=' + subject + '&body=' + body;
-
-            window.location.href = mailtoUrl;
-            setNote('Si aprirà il tuo programma di posta per inviare il messaggio. In alternativa puoi scriverci direttamente a ' + contactEmail + '.', false);
-        });
-    }
-
-    initContactForm();
-
     function initSedeMap() {
-        var map = document.getElementById('sede-map');
-        if (!map) return;
+        document.querySelectorAll('.sede-map-wrap').forEach(function(map) {
+            var overlay = map.querySelector('.sede-map-overlay');
+            if (!overlay) return;
 
-        var overlay = map.querySelector('.sede-map-overlay');
-        if (!overlay) return;
-
-        overlay.addEventListener('click', function() {
-            map.classList.add('is-active');
+            overlay.addEventListener('click', function() {
+                map.classList.add('is-active');
+            });
         });
     }
 

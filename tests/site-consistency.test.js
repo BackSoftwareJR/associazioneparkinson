@@ -101,7 +101,7 @@ test('sede detail pages share premium layout assets and structure', () => {
 
   const requiredFragments = [
     'class="page-sede-detail"',
-    'sede-detail.css?v=231',
+    'sede-detail.css?v=232',
     'sede-floating-bar',
     'sede-map-overlay',
     'sede-directions-grid',

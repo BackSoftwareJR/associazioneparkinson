@@ -5,11 +5,11 @@
 
 <!-- DO NOT EDIT BELOW — managed by HyperOrchestrator -->
 
-**Current task context:** Review the provided GitHub repository and website, then ensure all visual elements and interactive components are properly aligned, functional, and match the design intent presented on the live site, 
+**Current task context:** Remove the contact form from the contact page, ensuring the remaining elements are properly rearranged to maintain a clean and visually appealing layout, coherent with the existing design.
 
 ## Project-Specific Patterns
 
-### Pattern 1 (relevance: 6%)
+### Pattern 1 (relevance: 12%)
 
 **When you see:**
 ```
@@ -34,7 +34,7 @@ _From task: miglioriamo lo stile della pagina news.html per renderlo molto piu m
 
 ## Global Patterns (cross-project)
 
-### Pattern 1 (relevance: 21%)
+### Pattern 1 (relevance: 50%)
 
 **When you see:**
 ```

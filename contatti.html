@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=231">
-    <script src="js/main.js?v=231" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=232">
+    <script src="js/main.js?v=232" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
@@ -35,7 +35,7 @@
                             <li><a href="attivita.html" class="nav-link">Attività</a></li>
                             <li><a href="news.html" class="nav-link">News</a></li>
                             <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
-                            <li><a href="contatti.html" class="nav-link active">Contatti</a></li>
+                            <li><a href="contatti.html" class="nav-link">Contatti</a></li>
                         </ul>
                     </div>
                     <a href="donazioni.html" class="nav-cta"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
@@ -181,61 +181,16 @@
                         <a href="mailto:assoparkinsoncanavese@virgilio.it" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="section contatti-form-section" aria-labelledby="contatti-form-heading">
-            <div class="container">
-                <header class="section-header">
-                    <p class="section-eyebrow"><i class="fas fa-paper-plane" aria-hidden="true"></i> Modulo di contatto</p>
-                    <h2 id="contatti-form-heading" class="section-title">Scrivici un messaggio</h2>
-                    <p class="section-subtitle">Compila il form con nome, email e messaggio: ti risponderemo appena possibile all'indirizzo indicato.</p>
-                </header>
-
-                <div class="contatti-form-layout">
-                    <form class="contatti-form" id="contatti-form" novalidate>
-                        <div class="contatti-form-row">
-                            <div class="contatti-form-group">
-                                <label for="contatti-nome">Nome e cognome <span class="contatti-form-required" aria-hidden="true">*</span></label>
-                                <input type="text" id="contatti-nome" name="nome" autocomplete="name" required maxlength="120" placeholder="Il tuo nome">
-                            </div>
-                            <div class="contatti-form-group">
-                                <label for="contatti-email">Email <span class="contatti-form-required" aria-hidden="true">*</span></label>
-                                <input type="email" id="contatti-email" name="email" autocomplete="email" required maxlength="120" placeholder="nome@esempio.it">
-                            </div>
-                        </div>
-                        <div class="contatti-form-group">
-                            <label for="contatti-telefono">Telefono <span class="contatti-form-optional">(facoltativo)</span></label>
-                            <input type="tel" id="contatti-telefono" name="telefono" autocomplete="tel" maxlength="30" placeholder="+39 ...">
-                        </div>
-                        <div class="contatti-form-group">
-                            <label for="contatti-messaggio">Messaggio <span class="contatti-form-required" aria-hidden="true">*</span></label>
-                            <textarea id="contatti-messaggio" name="messaggio" rows="6" required maxlength="2000" placeholder="Scrivi qui la tua richiesta, domanda o proposta..."></textarea>
-                        </div>
-                        <div class="contatti-form-group contatti-form-privacy">
-                            <input type="checkbox" id="contatti-privacy" name="privacy" required>
-                            <label for="contatti-privacy">Ho letto l'<a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">informativa sulla privacy</a> e acconsento al trattamento dei dati per ricevere una risposta. <span class="contatti-form-required" aria-hidden="true">*</span></label>
-                        </div>
-                        <div class="contatti-form-actions">
-                            <button type="submit" class="cta-button contatti-form-submit">
-                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Invia messaggio
-                            </button>
-                            <p class="contatti-form-note" id="contatti-form-note" role="status" aria-live="polite"></p>
-                        </div>
-                    </form>
-
-                    <aside class="contatti-form-aside" aria-label="Alternative di contatto">
-                        <div class="contatti-form-aside-card">
-                            <h3>Preferisci parlare subito?</h3>
-                            <p>Per urgenze o appuntamenti, chiamaci o scrivici su WhatsApp: siamo sempre felici di ascoltarti.</p>
-                            <ul class="contatti-form-aside-list">
-                                <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
-                                <li><a href="https://wa.me/393793258612" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
-                                <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+                <aside class="contatti-direct-section" aria-label="Contatto diretto">
+                    <h3 class="contatti-direct-title">Preferisci parlare subito?</h3>
+                    <p class="contatti-direct-lead">Per urgenze o appuntamenti, chiamaci o scrivici: siamo sempre felici di ascoltarti.</p>
+                    <div class="contatti-callout-actions">
+                        <a href="tel:+393793258612" class="cta-button"><i class="fas fa-phone-alt" aria-hidden="true"></i> Chiamaci</a>
+                        <a href="https://wa.me/393793258612" class="cta-button contatti-cta-outline" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+                        <a href="mailto:assoparkinsoncanavese@virgilio.it" class="cta-button contatti-cta-outline"><i class="fas fa-envelope" aria-hidden="true"></i> Scrivici</a>
+                    </div>
+                </aside>
             </div>
         </section>
 
@@ -274,6 +229,9 @@
                     </div>
                     <div class="contatti-map-column">
                         <div class="sede-map-wrap">
+                            <button type="button" class="sede-map-overlay" aria-label="Attiva mappa interattiva">
+                                <span><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Tocca per usare la mappa</span>
+                            </button>
                             <iframe
                                 title="Mappa sede legale Castellamonte - Associazione Parkinson Canavese"
                                 src="https://maps.google.com/maps?q=Piazzale+Pietro+Nenni+1,+10081+Castellamonte+TO,+Italia&amp;hl=it&amp;z=15&amp;output=embed"
