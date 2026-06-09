@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=228">
-    <script src="js/main.js?v=228" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=231">
+    <script src="js/main.js?v=231" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
@@ -64,15 +64,50 @@
                 </div>
             </div>
         </section>
-        <section class="section contatti-welcome-section">
+        <section class="section contatti-welcome-section" aria-labelledby="contatti-welcome-heading">
             <div class="container">
-                <div class="contatti-welcome-card">
-                    <div class="contatti-welcome-icon" aria-hidden="true">
-                        <i class="fas fa-hands-helping"></i>
+                <div class="contatti-welcome-card reveal" data-reveal>
+                    <div class="contatti-welcome-decor" aria-hidden="true">
+                        <span class="contatti-welcome-orb contatti-welcome-orb--1"></span>
+                        <span class="contatti-welcome-orb contatti-welcome-orb--2"></span>
+                        <span class="contatti-welcome-sparkle contatti-welcome-sparkle--1"><i class="fas fa-star"></i></span>
+                        <span class="contatti-welcome-sparkle contatti-welcome-sparkle--2"><i class="fas fa-heart"></i></span>
                     </div>
-                    <div class="contatti-welcome-text">
-                        <h2>Ti aspettiamo con un sorriso</h2>
-                        <p>Che tu stia cercando informazioni, supporto per te o per un familiare, o semplicemente voglia conoscerci di persona: siamo qui per te. Ogni richiesta è importante per noi e rispondiamo con cura e attenzione.</p>
+                    <div class="contatti-welcome-layout">
+                        <div class="contatti-welcome-main">
+                            <p class="section-eyebrow contatti-welcome-eyebrow reveal" data-reveal data-reveal-delay="1">
+                                <i class="fas fa-smile-beam" aria-hidden="true"></i> Accoglienza e ascolto
+                            </p>
+                            <div class="contatti-welcome-icon-wrap reveal" data-reveal data-reveal-delay="2">
+                                <span class="contatti-welcome-icon-ring" aria-hidden="true"></span>
+                                <div class="contatti-welcome-icon">
+                                    <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="contatti-welcome-text reveal" data-reveal data-reveal-delay="3">
+                                <h2 id="contatti-welcome-heading">Ti aspettiamo con un sorriso</h2>
+                                <p>Che tu stia cercando informazioni, supporto per te o per un familiare, o semplicemente voglia conoscerci di persona: siamo qui per te. Ogni richiesta è importante per noi e rispondiamo con cura e attenzione.</p>
+                                <ul class="contatti-welcome-highlights" aria-label="Come possiamo aiutarti">
+                                    <li><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Ascolto dedicato</li>
+                                    <li><i class="fas fa-users" aria-hidden="true"></i> Per te e i familiari</li>
+                                    <li><i class="fas fa-reply" aria-hidden="true"></i> Risposta con cura</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="contatti-welcome-aside reveal" data-reveal data-reveal-delay="4" aria-label="Contatti rapidi">
+                            <div class="contatti-welcome-aside-card">
+                                <p class="contatti-welcome-aside-label">Hai bisogno di parlare con qualcuno?</p>
+                                <p class="contatti-welcome-aside-text">Siamo a un messaggio o una chiamata di distanza. Non esitare: per noi ogni persona conta.</p>
+                                <div class="contatti-welcome-actions">
+                                    <a href="https://wa.me/393793258612" class="contatti-welcome-btn contatti-welcome-btn--whatsapp" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Scrivici su WhatsApp
+                                    </a>
+                                    <a href="tel:+393793258612" class="contatti-welcome-btn contatti-welcome-btn--phone">
+                                        <i class="fas fa-phone-alt" aria-hidden="true"></i> Chiamaci
+                                    </a>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
@@ -126,6 +161,61 @@
                         <a href="https://wa.me/393793258612" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="mailto:assoparkinsoncanavese@virgilio.it" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contatti-form-section" aria-labelledby="contatti-form-heading">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow"><i class="fas fa-paper-plane" aria-hidden="true"></i> Modulo di contatto</p>
+                    <h2 id="contatti-form-heading" class="section-title">Scrivici un messaggio</h2>
+                    <p class="section-subtitle">Compila il form con nome, email e messaggio: ti risponderemo appena possibile all'indirizzo indicato.</p>
+                </header>
+
+                <div class="contatti-form-layout">
+                    <form class="contatti-form" id="contatti-form" novalidate>
+                        <div class="contatti-form-row">
+                            <div class="contatti-form-group">
+                                <label for="contatti-nome">Nome e cognome <span class="contatti-form-required" aria-hidden="true">*</span></label>
+                                <input type="text" id="contatti-nome" name="nome" autocomplete="name" required maxlength="120" placeholder="Il tuo nome">
+                            </div>
+                            <div class="contatti-form-group">
+                                <label for="contatti-email">Email <span class="contatti-form-required" aria-hidden="true">*</span></label>
+                                <input type="email" id="contatti-email" name="email" autocomplete="email" required maxlength="120" placeholder="nome@esempio.it">
+                            </div>
+                        </div>
+                        <div class="contatti-form-group">
+                            <label for="contatti-telefono">Telefono <span class="contatti-form-optional">(facoltativo)</span></label>
+                            <input type="tel" id="contatti-telefono" name="telefono" autocomplete="tel" maxlength="30" placeholder="+39 ...">
+                        </div>
+                        <div class="contatti-form-group">
+                            <label for="contatti-messaggio">Messaggio <span class="contatti-form-required" aria-hidden="true">*</span></label>
+                            <textarea id="contatti-messaggio" name="messaggio" rows="6" required maxlength="2000" placeholder="Scrivi qui la tua richiesta, domanda o proposta..."></textarea>
+                        </div>
+                        <div class="contatti-form-group contatti-form-privacy">
+                            <input type="checkbox" id="contatti-privacy" name="privacy" required>
+                            <label for="contatti-privacy">Ho letto l'<a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">informativa sulla privacy</a> e acconsento al trattamento dei dati per ricevere una risposta. <span class="contatti-form-required" aria-hidden="true">*</span></label>
+                        </div>
+                        <div class="contatti-form-actions">
+                            <button type="submit" class="cta-button contatti-form-submit">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Invia messaggio
+                            </button>
+                            <p class="contatti-form-note" id="contatti-form-note" role="status" aria-live="polite"></p>
+                        </div>
+                    </form>
+
+                    <aside class="contatti-form-aside" aria-label="Alternative di contatto">
+                        <div class="contatti-form-aside-card">
+                            <h3>Preferisci parlare subito?</h3>
+                            <p>Per urgenze o appuntamenti, chiamaci o scrivici su WhatsApp: siamo sempre felici di ascoltarti.</p>
+                            <ul class="contatti-form-aside-list">
+                                <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
+                                <li><a href="https://wa.me/393793258612" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+                                <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
+                            </ul>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </section>

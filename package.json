@@ -3,6 +3,6 @@
   "private": true,
   "description": "Sito web statico dell'Associazione Parkinsoniani del Canavese ODV ETS",
   "scripts": {
-    "test": "node tests/news-page.test.js"
+    "test": "node tests/news-page.test.js && node tests/site-consistency.test.js"
   }
 }

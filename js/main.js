@@ -97,6 +97,11 @@ document.addEventListener('DOMContentLoaded', function() {
         onScroll();
     }
 
+    function isSediSectionPage() {
+        const path = window.location.pathname;
+        return path.endsWith('/sedi.html') || path.includes('/sedi/');
+    }
+
     function initActiveNavLink() {
         const currentPath = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('.nav-link');
@@ -111,6 +116,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.classList.add('active');
             }
         });
+
+        if (isSediSectionPage()) {
+            document.querySelectorAll('#sedi-dropdown-trigger').forEach(function(link) {
+                link.classList.add('active');
+            });
+        }
 
         const ctaLink = document.querySelector('.nav-cta');
         if (ctaLink) {
@@ -818,4 +829,66 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     initDonationsCarousel();
+
+    function initContactForm() {
+        var form = document.getElementById('contatti-form');
+        if (!form) return;
+
+        var note = document.getElementById('contatti-form-note');
+        var contactEmail = 'assoparkinsoncanavese@virgilio.it';
+
+        function setNote(message, isError) {
+            if (!note) return;
+            note.textContent = message;
+            note.classList.toggle('is-error', Boolean(isError));
+        }
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            setNote('', false);
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                setNote('Controlla i campi obbligatori e riprova.', true);
+                return;
+            }
+
+            var nome = form.nome.value.trim();
+            var email = form.email.value.trim();
+            var telefono = form.telefono.value.trim();
+            var messaggio = form.messaggio.value.trim();
+            var subject = encodeURIComponent('Messaggio dal sito web - ' + nome);
+            var bodyLines = [
+                'Nome: ' + nome,
+                'Email: ' + email
+            ];
+
+            if (telefono) {
+                bodyLines.push('Telefono: ' + telefono);
+            }
+
+            bodyLines.push('', 'Messaggio:', messaggio);
+            var body = encodeURIComponent(bodyLines.join('\n'));
+            var mailtoUrl = 'mailto:' + contactEmail + '?subject=' + subject + '&body=' + body;
+
+            window.location.href = mailtoUrl;
+            setNote('Si aprirà il tuo programma di posta per inviare il messaggio. In alternativa puoi scriverci direttamente a ' + contactEmail + '.', false);
+        });
+    }
+
+    initContactForm();
+
+    function initSedeMap() {
+        var map = document.getElementById('sede-map');
+        if (!map) return;
+
+        var overlay = map.querySelector('.sede-map-overlay');
+        if (!overlay) return;
+
+        overlay.addEventListener('click', function() {
+            map.classList.add('is-active');
+        });
+    }
+
+    initSedeMap();
 });
