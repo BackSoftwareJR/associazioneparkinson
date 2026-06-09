@@ -5224,7 +5224,13 @@ body:has(.header-over-hero) {
   .contatti-welcome-orb,
   .contatti-welcome-icon-ring,
   .contatti-welcome-sparkle,
-  .contatti-welcome-card::before {
+  .contatti-welcome-card::before,
+  .contatti-welcome-eyebrow,
+  .contatti-welcome-icon,
+  .contatti-welcome-title-accent,
+  .contatti-welcome-visual img,
+  .contatti-welcome-aside-card,
+  .contatti-welcome-btn--whatsapp {
     animation: none;
   }
 
@@ -6058,19 +6064,61 @@ body:has(.header-over-hero) {
 .contatti-social-icons a[aria-label="WhatsApp"]:hover { background: #25D366; }
 
 .contatti-welcome-section {
-  padding-top: clamp(2.5rem, 5vw, 3.5rem);
-  padding-bottom: 0;
+  position: relative;
+  padding-top: clamp(2.5rem, 5vw, 3.75rem);
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+  overflow: hidden;
+}
+
+.contatti-welcome-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(165deg, #faf8f4 0%, #f4f7f1 45%, rgba(129, 151, 93, 0.1) 100%);
+}
+
+.contatti-welcome-bg .contatti-welcome-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(48px);
+  opacity: 0.55;
+  animation: contattiWelcomeOrbFloat 16s ease-in-out infinite;
+}
+
+.contatti-welcome-bg .contatti-welcome-orb--1 {
+  width: 280px;
+  height: 280px;
+  top: -80px;
+  left: -60px;
+  background: rgba(129, 151, 93, 0.22);
+}
+
+.contatti-welcome-bg .contatti-welcome-orb--2 {
+  width: 200px;
+  height: 200px;
+  bottom: -40px;
+  right: 10%;
+  background: rgba(255, 200, 120, 0.18);
+  animation-delay: -6s;
+}
+
+.contatti-welcome-bg .contatti-welcome-orb--3 {
+  width: 160px;
+  height: 160px;
+  top: 40%;
+  right: -40px;
+  background: rgba(81, 119, 87, 0.15);
+  animation-delay: -10s;
 }
 
 .contatti-welcome-card {
   position: relative;
-  max-width: 1040px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: clamp(2rem, 4vw, 2.75rem);
-  border-radius: calc(var(--section-radius) + 6px);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(244, 247, 241, 0.92) 55%, rgba(129, 151, 93, 0.08) 100%);
-  border: 1px solid rgba(129, 151, 93, 0.2);
-  box-shadow: 0 16px 48px rgba(81, 119, 87, 0.12);
+  border-radius: calc(var(--section-radius) + 8px);
+  background: var(--surface);
+  border: 1px solid rgba(129, 151, 93, 0.18);
+  box-shadow: 0 20px 56px rgba(81, 119, 87, 0.14);
   overflow: hidden;
 }
 
@@ -6079,9 +6127,10 @@ body:has(.header-over-hero) {
   position: absolute;
   inset: -50% -30% auto;
   height: 120%;
-  background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.45) 50%, transparent 60%);
-  animation: contattiWelcomeShine 8s ease-in-out infinite;
+  background: linear-gradient(105deg, transparent 38%, rgba(255, 255, 255, 0.5) 50%, transparent 62%);
+  animation: contattiWelcomeShine 10s ease-in-out infinite;
   pointer-events: none;
+  z-index: 2;
 }
 
 .contatti-welcome-decor {
@@ -6089,31 +6138,7 @@ body:has(.header-over-hero) {
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-}
-
-.contatti-welcome-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(36px);
-  opacity: 0.5;
-  animation: contattiWelcomeOrbFloat 14s ease-in-out infinite;
-}
-
-.contatti-welcome-orb--1 {
-  width: 220px;
-  height: 220px;
-  top: -60px;
-  right: -40px;
-  background: rgba(129, 151, 93, 0.28);
-}
-
-.contatti-welcome-orb--2 {
-  width: 160px;
-  height: 160px;
-  bottom: -50px;
-  left: -30px;
-  background: rgba(81, 119, 87, 0.2);
-  animation-delay: -5s;
+  z-index: 1;
 }
 
 .contatti-welcome-sparkle {
@@ -6121,60 +6146,84 @@ body:has(.header-over-hero) {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  color: rgba(129, 151, 93, 0.35);
-  font-size: 0.85rem;
-  animation: contattiWelcomeSparkle 6s ease-in-out infinite;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: rgba(129, 151, 93, 0.4);
+  font-size: 0.9rem;
+  animation: contattiWelcomeSparkle 5s ease-in-out infinite;
 }
 
 .contatti-welcome-sparkle--1 {
-  top: 18%;
-  right: 12%;
-  animation-delay: -2s;
+  top: 12%;
+  left: 42%;
+  animation-delay: -1s;
 }
 
 .contatti-welcome-sparkle--2 {
-  bottom: 22%;
-  left: 8%;
-  font-size: 0.75rem;
-  animation-delay: -4s;
+  top: 28%;
+  right: 6%;
+  font-size: 0.8rem;
+  color: rgba(255, 140, 100, 0.45);
+  animation-delay: -3s;
+}
+
+.contatti-welcome-sparkle--3 {
+  bottom: 18%;
+  left: 6%;
+  font-size: 0.85rem;
+  animation-delay: -2.5s;
 }
 
 .contatti-welcome-layout {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  align-items: center;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: stretch;
 }
 
-.contatti-welcome-main {
+.contatti-welcome-content {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  justify-content: center;
+  gap: 1.35rem;
+  padding: clamp(2rem, 4vw, 2.75rem);
+  background: linear-gradient(155deg, rgba(255, 252, 247, 0.98) 0%, rgba(244, 247, 241, 0.95) 60%, rgba(129, 151, 93, 0.06) 100%);
 }
 
 .contatti-welcome-eyebrow {
   margin: 0;
   display: inline-flex;
   align-self: flex-start;
+  animation: contattiWelcomeEyebrowGlow 4s ease-in-out infinite;
+}
+
+.contatti-welcome-heading-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
 }
 
 .contatti-welcome-icon-wrap {
   position: relative;
-  align-self: flex-start;
-  width: 72px;
-  height: 72px;
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
 }
 
 .contatti-welcome-icon-ring {
   position: absolute;
   inset: -6px;
-  border-radius: 20px;
+  border-radius: 22px;
   border: 2px solid rgba(129, 151, 93, 0.35);
   animation: contattiWelcomeIconPulse 3s ease-in-out infinite;
+}
+
+.contatti-welcome-icon-ring--outer {
+  inset: -14px;
+  border-radius: 26px;
+  border-color: rgba(129, 151, 93, 0.15);
+  animation: contattiWelcomeIconPulse 3s ease-in-out infinite 0.5s;
 }
 
 .contatti-welcome-icon {
@@ -6182,40 +6231,58 @@ body:has(.header-over-hero) {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 72px;
-  height: 72px;
-  border-radius: 18px;
+  width: 76px;
+  height: 76px;
+  border-radius: 20px;
   background: linear-gradient(145deg, var(--primary) 0%, var(--secondary) 100%);
   color: #fff;
-  font-size: 1.65rem;
-  box-shadow: 0 8px 24px rgba(81, 119, 87, 0.3);
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  font-size: 1.75rem;
+  box-shadow: 0 10px 28px rgba(81, 119, 87, 0.32);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: contattiWelcomeIconBob 4s ease-in-out infinite;
 }
 
 .contatti-welcome-card:hover .contatti-welcome-icon {
-  transform: scale(1.05) rotate(-3deg);
+  transform: scale(1.06) rotate(-4deg);
+  animation-play-state: paused;
 }
 
 .contatti-welcome-text h2 {
-  margin: 0 0 0.75rem;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.65rem, 3.2vw, 2.15rem);
   color: var(--secondary);
-  line-height: 1.2;
+  line-height: 1.15;
+}
+
+.contatti-welcome-title-accent {
+  display: block;
+  margin-top: 0.15rem;
+  background: linear-gradient(120deg, var(--secondary) 0%, var(--primary) 50%, #6b8f4a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: contattiWelcomeTitleShimmer 6s ease-in-out infinite;
 }
 
 .contatti-welcome-text p {
-  margin: 0 0 1.25rem;
+  margin: 0;
   color: var(--text-muted);
   line-height: 1.75;
   font-size: 1.05rem;
-  max-width: 52ch;
+  max-width: 48ch;
+}
+
+.contatti-welcome-text strong {
+  color: var(--secondary);
+  font-weight: 600;
 }
 
 .contatti-welcome-highlights {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem 1rem;
+  gap: 0.55rem 0.85rem;
   margin: 0;
   padding: 0;
 }
@@ -6224,70 +6291,148 @@ body:has(.header-over-hero) {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.5rem 1rem;
+  padding: 0.55rem 1.05rem;
   border-radius: 999px;
-  background: rgba(129, 151, 93, 0.12);
+  background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(129, 151, 93, 0.22);
   color: var(--secondary);
   font-size: 0.88rem;
   font-weight: 600;
-  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 8px rgba(81, 119, 87, 0.06);
+  transition: background 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
 }
 
 .contatti-welcome-highlights li:hover {
-  background: rgba(129, 151, 93, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(81, 119, 87, 0.12);
+  background: rgba(129, 151, 93, 0.14);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(81, 119, 87, 0.14);
 }
 
 .contatti-welcome-highlights i {
   color: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.contatti-welcome-highlights li:hover i {
+  transform: scale(1.15);
+}
+
+.contatti-welcome-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  background: rgba(129, 151, 93, 0.08);
+  border-left: 3px solid var(--primary);
+}
+
+.contatti-welcome-quote i {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  color: rgba(129, 151, 93, 0.45);
+  font-size: 0.85rem;
+}
+
+.contatti-welcome-quote p {
+  margin: 0;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.contatti-welcome-visual-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.contatti-welcome-visual {
+  position: relative;
+  flex: 1;
+  margin: 0;
+  overflow: hidden;
+}
+
+.contatti-welcome-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  animation: contattiWelcomeImageZoom 18s ease-in-out infinite alternate;
+}
+
+.contatti-welcome-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(244, 247, 241, 0.55) 0%, transparent 30%, rgba(81, 119, 87, 0.12) 100%);
+  pointer-events: none;
+}
+
+.contatti-welcome-aside {
+  position: absolute;
+  bottom: clamp(1rem, 3vw, 1.5rem);
+  left: clamp(1rem, 3vw, 1.5rem);
+  right: clamp(1rem, 3vw, 1.5rem);
+  z-index: 2;
 }
 
 .contatti-welcome-aside-card {
-  padding: clamp(1.5rem, 3vw, 2rem);
-  border-radius: var(--section-radius);
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(129, 151, 93, 0.18);
-  box-shadow: 0 8px 28px rgba(81, 119, 87, 0.08);
-  backdrop-filter: blur(8px);
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+  padding: clamp(1.25rem, 2.5vw, 1.65rem);
+  border-radius: calc(var(--section-radius) - 2px);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(129, 151, 93, 0.2);
+  box-shadow: 0 12px 36px rgba(81, 119, 87, 0.16);
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+  animation: contattiWelcomeAsideFloat 5s ease-in-out infinite;
 }
 
 .contatti-welcome-aside-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 36px rgba(81, 119, 87, 0.14);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(81, 119, 87, 0.2);
+  animation-play-state: paused;
 }
 
 .contatti-welcome-aside-label {
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.4rem;
   font-family: var(--heading-font);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contatti-welcome-aside-label i {
+  color: var(--primary);
 }
 
 .contatti-welcome-aside-text {
-  margin: 0 0 1.35rem;
+  margin: 0 0 1.1rem;
   color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .contatti-welcome-actions {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.65rem;
 }
 
 .contatti-welcome-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
-  padding: 0.85rem 1.35rem;
+  gap: 0.5rem;
+  padding: 0.75rem 1.2rem;
   border-radius: 999px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
   transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
@@ -6298,19 +6443,21 @@ body:has(.header-over-hero) {
   border: 2px solid #25D366;
   color: #fff;
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28);
+  animation: contattiWelcomeBtnPulse 3s ease-in-out infinite;
 }
 
 .contatti-welcome-btn--whatsapp:hover {
   background: #1da851;
   border-color: #1da851;
   color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.38);
+  animation-play-state: paused;
 }
 
 .contatti-welcome-btn--phone {
-  background: transparent;
-  border: 2px solid rgba(129, 151, 93, 0.45);
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(129, 151, 93, 0.4);
   color: var(--secondary);
 }
 
@@ -6323,25 +6470,55 @@ body:has(.header-over-hero) {
 
 @keyframes contattiWelcomeOrbFloat {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(10px, -14px) scale(1.06); }
-  66% { transform: translate(-8px, 8px) scale(0.96); }
+  33% { transform: translate(12px, -16px) scale(1.08); }
+  66% { transform: translate(-10px, 10px) scale(0.94); }
 }
 
 @keyframes contattiWelcomeIconPulse {
-  0%, 100% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.12); opacity: 0.25; }
+  0%, 100% { transform: scale(1); opacity: 0.55; }
+  50% { transform: scale(1.14); opacity: 0.2; }
+}
+
+@keyframes contattiWelcomeIconBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
 
 @keyframes contattiWelcomeSparkle {
-  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.35; }
-  50% { transform: translateY(-8px) rotate(12deg); opacity: 0.7; }
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.4; }
+  50% { transform: translateY(-10px) rotate(15deg) scale(1.1); opacity: 0.85; }
 }
 
 @keyframes contattiWelcomeShine {
   0%, 100% { transform: translateX(-80%) rotate(12deg); opacity: 0; }
-  45% { opacity: 0.5; }
-  55% { opacity: 0.5; }
+  45% { opacity: 0.45; }
+  55% { opacity: 0.45; }
   100% { transform: translateX(180%) rotate(12deg); opacity: 0; }
+}
+
+@keyframes contattiWelcomeTitleShimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+@keyframes contattiWelcomeEyebrowGlow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+
+@keyframes contattiWelcomeImageZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.06); }
+}
+
+@keyframes contattiWelcomeAsideFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes contattiWelcomeBtnPulse {
+  0%, 100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28); }
+  50% { box-shadow: 0 6px 28px rgba(37, 211, 102, 0.42); }
 }
 
 .contatti-box-section .section-header {
@@ -6640,14 +6817,19 @@ body:has(.header-over-hero) {
     grid-template-columns: 1fr;
   }
 
-  .contatti-welcome-main {
+  .contatti-welcome-content {
     align-items: center;
     text-align: center;
+    padding: 1.5rem 1.25rem;
   }
 
-  .contatti-welcome-eyebrow,
-  .contatti-welcome-icon-wrap {
+  .contatti-welcome-eyebrow {
     align-self: center;
+  }
+
+  .contatti-welcome-heading-wrap {
+    flex-direction: column;
+    align-items: center;
   }
 
   .contatti-welcome-text p {
@@ -6658,8 +6840,33 @@ body:has(.header-over-hero) {
     justify-content: center;
   }
 
-  .contatti-welcome-card {
-    padding: 1.5rem 1.25rem;
+  .contatti-welcome-quote {
+    text-align: left;
+  }
+
+  .contatti-welcome-visual-col {
+    min-height: 260px;
+  }
+
+  .contatti-welcome-visual img {
+    min-height: 260px;
+  }
+
+  .contatti-welcome-aside {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: -2.5rem;
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .contatti-welcome-actions {
+    flex-direction: column;
+  }
+
+  .contatti-welcome-btn {
+    width: 100%;
   }
 
   .contatti-callout-actions {
