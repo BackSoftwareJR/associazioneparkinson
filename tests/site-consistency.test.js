@@ -87,9 +87,55 @@ test('main.js marks sedi pages as active in navigation', () => {
   assert(mainJs.includes("link.classList.add('active')"), 'Expected active class handling for sedi nav');
 });
 
+test('embedded maps use tap-to-activate overlays on listing and contact pages', () => {
+  for (const relativePath of ['contatti.html', 'sedi.html']) {
+    const html = fs.readFileSync(path.join(root, relativePath), 'utf8');
+    assert(html.includes('class="sede-map-overlay"'), `Missing map overlay in ${relativePath}`);
+    assert(html.includes('Tocca per usare la mappa'), `Missing map overlay label in ${relativePath}`);
+  }
+});
+
+test('copy-to-clipboard helper includes a fallback path', () => {
+  const mainJs = fs.readFileSync(path.join(root, 'js', 'main.js'), 'utf8');
+  assert(mainJs.includes('fallbackCopyToClipboard'), 'Expected clipboard fallback helper');
+  assert(mainJs.includes("document.execCommand('copy')"), 'Expected execCommand fallback');
+});
+
+test('sede detail pages share premium layout assets and structure', () => {
+  const sedeDetailCss = fs.readFileSync(path.join(root, 'css', 'sede-detail.css'), 'utf8');
+  assert(
+    sedeDetailCss.includes('body.page-sede-detail'),
+    'Expected sede-detail.css scoped to body.page-sede-detail'
+  );
+
+  const sedePages = fs
+    .readdirSync(path.join(root, 'sedi'))
+    .filter((name) => name.endsWith('.html'))
+    .map((name) => path.join(root, 'sedi', name));
+
+  const requiredFragments = [
+    'class="page-sede-detail"',
+    'sede-detail.css?v=232',
+    'sede-floating-bar',
+    'sede-map-overlay',
+    'sede-directions-grid',
+    'section-sede-others',
+  ];
+
+  for (const filePath of sedePages) {
+    const html = fs.readFileSync(filePath, 'utf8');
+    for (const fragment of requiredFragments) {
+      assert(
+        html.includes(fragment),
+        `Missing "${fragment}" in ${path.basename(filePath)}`
+      );
+    }
+  }
+});
+
 if (failures > 0) {
   console.error(`\n${failures} test(s) failed`);
   process.exit(1);
 }
 
-console.log(`\n${4} test(s) passed`);
+console.log(`\n${7} test(s) passed`);

@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css?v=231">
-    <link rel="stylesheet" href="../css/sede-castellamonte.css?v=1">
-    <script src="../js/main.js?v=231" defer></script>
+    <link rel="stylesheet" href="../css/style.css?v=233">
+    <link rel="stylesheet" href="../css/sede-detail.css?v=232">
+    <script src="../js/main.js?v=233" defer></script>
     <link rel="icon" type="image/png" href="../images/logo.png">
 </head>
-<body class="sede-castellamonte">
+<body class="page-sede-detail">
     <header class="header header-over-hero">
         <div class="header-glass">
             <nav class="nav-container" aria-label="Navigazione principale">
@@ -274,6 +274,26 @@
                 </div>
             </div>
         </div>
+        <div class="footer-mobile-actions" aria-label="Azioni rapide">
+            <div class="container footer-mobile-actions-inner">
+                <a href="tel:+393793258612" class="footer-mobile-action">
+                    <span class="footer-mobile-action-icon" aria-hidden="true"><i class="fas fa-phone-alt"></i></span>
+                    <span class="footer-mobile-action-label">Chiama</span>
+                </a>
+                <a href="https://wa.me/393793258612" class="footer-mobile-action footer-mobile-action--whatsapp" target="_blank" rel="noopener noreferrer">
+                    <span class="footer-mobile-action-icon" aria-hidden="true"><i class="fab fa-whatsapp"></i></span>
+                    <span class="footer-mobile-action-label">WhatsApp</span>
+                </a>
+                <a href="../contatti.html" class="footer-mobile-action">
+                    <span class="footer-mobile-action-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+                    <span class="footer-mobile-action-label">Contatti</span>
+                </a>
+                <a href="../donazioni.html" class="footer-mobile-action footer-mobile-action--donate">
+                    <span class="footer-mobile-action-icon" aria-hidden="true"><i class="fas fa-hand-holding-heart"></i></span>
+                    <span class="footer-mobile-action-label">Dona</span>
+                </a>
+            </div>
+        </div>
         <div class="footer-main">
             <div class="container footer-grid">
                 <div class="footer-col footer-brand">
@@ -289,9 +309,10 @@
                     <p class="footer-org-meta">Attiva dal 2013 con attività gratuite in tutto il Canavese</p>
                     <p class="footer-cf"><strong>C.F.</strong> 92518680019</p>
                 </div>
-                <div class="footer-col">
-                    <h3 class="footer-heading">Navigazione</h3>
-                    <ul class="footer-links">
+                <div class="footer-col footer-col--nav">
+                    <details class="footer-accordion footer-accordion--nav">
+                        <summary class="footer-heading">Navigazione</summary>
+                        <ul class="footer-links">
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="../chi-siamo.html">Chi Siamo</a></li>
                         <li><a href="../sedi.html">Le Sedi</a></li>
@@ -301,21 +322,26 @@
                         <li><a href="../contatti.html">Contatti</a></li>
                         <li><a href="../donazioni.html">Sostienici</a></li>
                     </ul>
+                    </details>
                 </div>
-                <div class="footer-col">
-                    <h3 class="footer-heading">Contatti</h3>
-                    <ul class="footer-contact-list">
+                <div class="footer-col footer-col--contact">
+                    <details class="footer-accordion footer-accordion--contact" open>
+                        <summary class="footer-heading">Contatti</summary>
+                        <ul class="footer-contact-list">
                         <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
                         <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
                         <li><a href="mailto:assoparkcanavese@pec.it"><i class="fas fa-shield-alt" aria-hidden="true"></i> assoparkcanavese@pec.it</a> <span class="footer-note">(PEC)</span></li>
                     </ul>
-                    <h3 class="footer-heading footer-heading--social">Seguici</h3>
-                    <div class="footer-social">
+                    </details>
+                    <details class="footer-accordion footer-accordion--social" open>
+                        <summary class="footer-heading">Seguici</summary>
+                        <div class="footer-social">
                         <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                         <a href="https://www.instagram.com/assoparkcanavese?igsh=b3MyNm8zZ2puNTN0" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                         <a href="https://wa.me/393793258612" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                         <a href="mailto:assoparkinsoncanavese@virgilio.it" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-                    </div>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>
@@ -350,7 +376,7 @@
             </li>
             <li class="dropdown-item">
                 <a href="san-maurizio.html" class="dropdown-link">
-                    <i class="fas fa-building"></i>
+                    <i class="fas fa-hospital"></i>
                     San Maurizio Canavese
                 </a>
             </li>

@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=231">
-    <script src="js/main.js?v=231" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=233">
+    <script src="js/main.js?v=233" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
@@ -35,7 +35,7 @@
                             <li><a href="attivita.html" class="nav-link">Attività</a></li>
                             <li><a href="news.html" class="nav-link">News</a></li>
                             <li><a href="progetto-africa.html" class="nav-link">Progetto Africa</a></li>
-                            <li><a href="contatti.html" class="nav-link active">Contatti</a></li>
+                            <li><a href="contatti.html" class="nav-link">Contatti</a></li>
                         </ul>
                     </div>
                     <a href="donazioni.html" class="nav-cta"><i class="fas fa-heart" aria-hidden="true"></i> Sostienici</a>
@@ -65,49 +65,68 @@
             </div>
         </section>
         <section class="section contatti-welcome-section" aria-labelledby="contatti-welcome-heading">
+            <div class="contatti-welcome-bg" aria-hidden="true">
+                <span class="contatti-welcome-orb contatti-welcome-orb--1"></span>
+                <span class="contatti-welcome-orb contatti-welcome-orb--2"></span>
+                <span class="contatti-welcome-orb contatti-welcome-orb--3"></span>
+            </div>
             <div class="container">
                 <div class="contatti-welcome-card reveal" data-reveal>
                     <div class="contatti-welcome-decor" aria-hidden="true">
-                        <span class="contatti-welcome-orb contatti-welcome-orb--1"></span>
-                        <span class="contatti-welcome-orb contatti-welcome-orb--2"></span>
                         <span class="contatti-welcome-sparkle contatti-welcome-sparkle--1"><i class="fas fa-star"></i></span>
                         <span class="contatti-welcome-sparkle contatti-welcome-sparkle--2"><i class="fas fa-heart"></i></span>
+                        <span class="contatti-welcome-sparkle contatti-welcome-sparkle--3"><i class="fas fa-smile"></i></span>
                     </div>
                     <div class="contatti-welcome-layout">
-                        <div class="contatti-welcome-main">
+                        <div class="contatti-welcome-content">
                             <p class="section-eyebrow contatti-welcome-eyebrow reveal" data-reveal data-reveal-delay="1">
                                 <i class="fas fa-smile-beam" aria-hidden="true"></i> Accoglienza e ascolto
                             </p>
-                            <div class="contatti-welcome-icon-wrap reveal" data-reveal data-reveal-delay="2">
-                                <span class="contatti-welcome-icon-ring" aria-hidden="true"></span>
-                                <div class="contatti-welcome-icon">
-                                    <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                            <div class="contatti-welcome-heading-wrap reveal" data-reveal data-reveal-delay="2">
+                                <div class="contatti-welcome-icon-wrap" aria-hidden="true">
+                                    <span class="contatti-welcome-icon-ring contatti-welcome-icon-ring--outer"></span>
+                                    <span class="contatti-welcome-icon-ring"></span>
+                                    <div class="contatti-welcome-icon">
+                                        <i class="fas fa-hands-helping"></i>
+                                    </div>
+                                </div>
+                                <div class="contatti-welcome-text">
+                                    <h2 id="contatti-welcome-heading">
+                                        Ti aspettiamo
+                                        <span class="contatti-welcome-title-accent">con un sorriso</span>
+                                    </h2>
+                                    <p>Che tu stia cercando informazioni, supporto per te o per un familiare, o semplicemente voglia conoscerci di persona: <strong>siamo qui per te</strong>. Ogni richiesta è importante e rispondiamo con cura e attenzione.</p>
                                 </div>
                             </div>
-                            <div class="contatti-welcome-text reveal" data-reveal data-reveal-delay="3">
-                                <h2 id="contatti-welcome-heading">Ti aspettiamo con un sorriso</h2>
-                                <p>Che tu stia cercando informazioni, supporto per te o per un familiare, o semplicemente voglia conoscerci di persona: siamo qui per te. Ogni richiesta è importante per noi e rispondiamo con cura e attenzione.</p>
-                                <ul class="contatti-welcome-highlights" aria-label="Come possiamo aiutarti">
-                                    <li><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Ascolto dedicato</li>
-                                    <li><i class="fas fa-users" aria-hidden="true"></i> Per te e i familiari</li>
-                                    <li><i class="fas fa-reply" aria-hidden="true"></i> Risposta con cura</li>
-                                </ul>
+                            <ul class="contatti-welcome-highlights" aria-label="Come possiamo aiutarti">
+                                <li class="reveal" data-reveal data-reveal-delay="3"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Ascolto dedicato</li>
+                                <li class="reveal" data-reveal data-reveal-delay="4"><i class="fas fa-users" aria-hidden="true"></i> Per te e i familiari</li>
+                                <li class="reveal" data-reveal data-reveal-delay="5"><i class="fas fa-reply" aria-hidden="true"></i> Risposta con cura</li>
+                            </ul>
+                            <div class="contatti-welcome-quote reveal" data-reveal data-reveal-delay="4">
+                                <i class="fas fa-quote-left" aria-hidden="true"></i>
+                                <p>Per noi ogni persona conta: non esitare a contattarci, saremo felici di accoglierti.</p>
                             </div>
                         </div>
-                        <aside class="contatti-welcome-aside reveal" data-reveal data-reveal-delay="4" aria-label="Contatti rapidi">
-                            <div class="contatti-welcome-aside-card">
-                                <p class="contatti-welcome-aside-label">Hai bisogno di parlare con qualcuno?</p>
-                                <p class="contatti-welcome-aside-text">Siamo a un messaggio o una chiamata di distanza. Non esitare: per noi ogni persona conta.</p>
-                                <div class="contatti-welcome-actions">
-                                    <a href="https://wa.me/393793258612" class="contatti-welcome-btn contatti-welcome-btn--whatsapp" target="_blank" rel="noopener noreferrer">
-                                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Scrivici su WhatsApp
-                                    </a>
-                                    <a href="tel:+393793258612" class="contatti-welcome-btn contatti-welcome-btn--phone">
-                                        <i class="fas fa-phone-alt" aria-hidden="true"></i> Chiamaci
-                                    </a>
+                        <div class="contatti-welcome-visual-col reveal" data-reveal data-reveal-delay="2">
+                            <figure class="contatti-welcome-visual">
+                                <img src="images/new-images/img19.jpg" alt="Volontari dell'associazione che accolgono i visitatori con un sorriso" width="520" height="400" loading="lazy">
+                            </figure>
+                            <aside class="contatti-welcome-aside" aria-label="Contatti rapidi">
+                                <div class="contatti-welcome-aside-card">
+                                    <p class="contatti-welcome-aside-label"><i class="fas fa-comments" aria-hidden="true"></i> Hai bisogno di parlare con qualcuno?</p>
+                                    <p class="contatti-welcome-aside-text">Siamo a un messaggio o una chiamata di distanza.</p>
+                                    <div class="contatti-welcome-actions">
+                                        <a href="https://wa.me/393793258612" class="contatti-welcome-btn contatti-welcome-btn--whatsapp" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Scrivici su WhatsApp
+                                        </a>
+                                        <a href="tel:+393793258612" class="contatti-welcome-btn contatti-welcome-btn--phone">
+                                            <i class="fas fa-phone-alt" aria-hidden="true"></i> Chiamaci
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </aside>
+                            </aside>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -162,61 +181,16 @@
                         <a href="mailto:assoparkinsoncanavese@virgilio.it" aria-label="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="section contatti-form-section" aria-labelledby="contatti-form-heading">
-            <div class="container">
-                <header class="section-header">
-                    <p class="section-eyebrow"><i class="fas fa-paper-plane" aria-hidden="true"></i> Modulo di contatto</p>
-                    <h2 id="contatti-form-heading" class="section-title">Scrivici un messaggio</h2>
-                    <p class="section-subtitle">Compila il form con nome, email e messaggio: ti risponderemo appena possibile all'indirizzo indicato.</p>
-                </header>
-
-                <div class="contatti-form-layout">
-                    <form class="contatti-form" id="contatti-form" novalidate>
-                        <div class="contatti-form-row">
-                            <div class="contatti-form-group">
-                                <label for="contatti-nome">Nome e cognome <span class="contatti-form-required" aria-hidden="true">*</span></label>
-                                <input type="text" id="contatti-nome" name="nome" autocomplete="name" required maxlength="120" placeholder="Il tuo nome">
-                            </div>
-                            <div class="contatti-form-group">
-                                <label for="contatti-email">Email <span class="contatti-form-required" aria-hidden="true">*</span></label>
-                                <input type="email" id="contatti-email" name="email" autocomplete="email" required maxlength="120" placeholder="nome@esempio.it">
-                            </div>
-                        </div>
-                        <div class="contatti-form-group">
-                            <label for="contatti-telefono">Telefono <span class="contatti-form-optional">(facoltativo)</span></label>
-                            <input type="tel" id="contatti-telefono" name="telefono" autocomplete="tel" maxlength="30" placeholder="+39 ...">
-                        </div>
-                        <div class="contatti-form-group">
-                            <label for="contatti-messaggio">Messaggio <span class="contatti-form-required" aria-hidden="true">*</span></label>
-                            <textarea id="contatti-messaggio" name="messaggio" rows="6" required maxlength="2000" placeholder="Scrivi qui la tua richiesta, domanda o proposta..."></textarea>
-                        </div>
-                        <div class="contatti-form-group contatti-form-privacy">
-                            <input type="checkbox" id="contatti-privacy" name="privacy" required>
-                            <label for="contatti-privacy">Ho letto l'<a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">informativa sulla privacy</a> e acconsento al trattamento dei dati per ricevere una risposta. <span class="contatti-form-required" aria-hidden="true">*</span></label>
-                        </div>
-                        <div class="contatti-form-actions">
-                            <button type="submit" class="cta-button contatti-form-submit">
-                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Invia messaggio
-                            </button>
-                            <p class="contatti-form-note" id="contatti-form-note" role="status" aria-live="polite"></p>
-                        </div>
-                    </form>
-
-                    <aside class="contatti-form-aside" aria-label="Alternative di contatto">
-                        <div class="contatti-form-aside-card">
-                            <h3>Preferisci parlare subito?</h3>
-                            <p>Per urgenze o appuntamenti, chiamaci o scrivici su WhatsApp: siamo sempre felici di ascoltarti.</p>
-                            <ul class="contatti-form-aside-list">
-                                <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
-                                <li><a href="https://wa.me/393793258612" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
-                                <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+                <aside class="contatti-direct-section" aria-label="Contatto diretto">
+                    <h3 class="contatti-direct-title">Preferisci parlare subito?</h3>
+                    <p class="contatti-direct-lead">Per urgenze o appuntamenti, chiamaci o scrivici: siamo sempre felici di ascoltarti.</p>
+                    <div class="contatti-callout-actions">
+                        <a href="tel:+393793258612" class="cta-button"><i class="fas fa-phone-alt" aria-hidden="true"></i> Chiamaci</a>
+                        <a href="https://wa.me/393793258612" class="cta-button contatti-cta-outline" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+                        <a href="mailto:assoparkinsoncanavese@virgilio.it" class="cta-button contatti-cta-outline"><i class="fas fa-envelope" aria-hidden="true"></i> Scrivici</a>
+                    </div>
+                </aside>
             </div>
         </section>
 
@@ -255,6 +229,9 @@
                     </div>
                     <div class="contatti-map-column">
                         <div class="sede-map-wrap">
+                            <button type="button" class="sede-map-overlay" aria-label="Attiva mappa interattiva">
+                                <span><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Tocca per usare la mappa</span>
+                            </button>
                             <iframe
                                 title="Mappa sede legale Castellamonte - Associazione Parkinson Canavese"
                                 src="https://maps.google.com/maps?q=Piazzale+Pietro+Nenni+1,+10081+Castellamonte+TO,+Italia&amp;hl=it&amp;z=15&amp;output=embed"
@@ -323,6 +300,26 @@
                 </div>
             </div>
         </div>
+        <div class="footer-mobile-actions" aria-label="Azioni rapide">
+            <div class="container footer-mobile-actions-inner">
+                <a href="tel:+393793258612" class="footer-mobile-action">
+                    <span class="footer-mobile-action-icon" aria-hidden="true"><i class="fas fa-phone-alt"></i></span>
+                    <span class="footer-mobile-action-label">Chiama</span>
+                </a>
+                <a href="https://wa.me/393793258612" class="footer-mobile-action footer-mobile-action--whatsapp" target="_blank" rel="noopener noreferrer">
+                    <span class="footer-mobile-action-icon" aria-hidden="true"><i class="fab fa-whatsapp"></i></span>
+                    <span class="footer-mobile-action-label">WhatsApp</span>
+                </a>
+                <a href="contatti.html" class="footer-mobile-action">
+                    <span class="footer-mobile-action-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+                    <span class="footer-mobile-action-label">Contatti</span>
+                </a>
+                <a href="donazioni.html" class="footer-mobile-action footer-mobile-action--donate">
+                    <span class="footer-mobile-action-icon" aria-hidden="true"><i class="fas fa-hand-holding-heart"></i></span>
+                    <span class="footer-mobile-action-label">Dona</span>
+                </a>
+            </div>
+        </div>
         <div class="footer-main">
             <div class="container footer-grid">
                 <div class="footer-col footer-brand">
@@ -338,9 +335,10 @@
                     <p class="footer-org-meta">Attiva dal 2013 con attività gratuite in tutto il Canavese</p>
                     <p class="footer-cf"><strong>C.F.</strong> 92518680019</p>
                 </div>
-                <div class="footer-col">
-                    <h3 class="footer-heading">Navigazione</h3>
-                    <ul class="footer-links">
+                <div class="footer-col footer-col--nav">
+                    <details class="footer-accordion footer-accordion--nav">
+                        <summary class="footer-heading">Navigazione</summary>
+                        <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="chi-siamo.html">Chi Siamo</a></li>
                         <li><a href="sedi.html">Le Sedi</a></li>
@@ -350,21 +348,26 @@
                         <li><a href="contatti.html">Contatti</a></li>
                         <li><a href="donazioni.html">Sostienici</a></li>
                     </ul>
+                    </details>
                 </div>
-                <div class="footer-col">
-                    <h3 class="footer-heading">Contatti</h3>
-                    <ul class="footer-contact-list">
+                <div class="footer-col footer-col--contact">
+                    <details class="footer-accordion footer-accordion--contact" open>
+                        <summary class="footer-heading">Contatti</summary>
+                        <ul class="footer-contact-list">
                         <li><a href="tel:+393793258612"><i class="fas fa-phone-alt" aria-hidden="true"></i> +39 379 325 8612</a></li>
                         <li><a href="mailto:assoparkinsoncanavese@virgilio.it"><i class="fas fa-envelope" aria-hidden="true"></i> assoparkinsoncanavese@virgilio.it</a></li>
                         <li><a href="mailto:assoparkcanavese@pec.it"><i class="fas fa-shield-alt" aria-hidden="true"></i> assoparkcanavese@pec.it</a> <span class="footer-note">(PEC)</span></li>
                     </ul>
-                    <h3 class="footer-heading footer-heading--social">Seguici</h3>
-                    <div class="footer-social">
+                    </details>
+                    <details class="footer-accordion footer-accordion--social" open>
+                        <summary class="footer-heading">Seguici</summary>
+                        <div class="footer-social">
                         <a href="https://www.facebook.com/AssociazioneParkinsonianiDelCanaveseODV" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                         <a href="https://www.instagram.com/assoparkcanavese?igsh=b3MyNm8zZ2puNTN0" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                         <a href="https://wa.me/393793258612" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                         <a href="mailto:assoparkinsoncanavese@virgilio.it" class="footer-social-link" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-                    </div>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>
@@ -399,7 +402,7 @@
             </li>
             <li class="dropdown-item">
                 <a href="sedi/san-maurizio.html" class="dropdown-link">
-                    <i class="fas fa-building"></i>
+                    <i class="fas fa-hospital"></i>
                     San Maurizio Canavese
                 </a>
             </li>
