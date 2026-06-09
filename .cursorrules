@@ -5,11 +5,12 @@
 
 <!-- DO NOT EDIT BELOW — managed by HyperOrchestrator -->
 
-**Current task context:** Ensure the website https://www.parkinsoncanavese.com/ is thoroughly reviewed for any inconsistencies, and verify that all elements, including layout, navigation, and content, are properly aligned and 
+**Current task context:** miglioriamo lo stile della sezione Ti aspettiamo con un sorriso
+nella pagina contatti. miglioriamola rendendola piu accogliente con animazioni ecc e non cosi ferma statica e brutta. miglioriamo propri
 
 ## Project-Specific Patterns
 
-### Pattern 1 (relevance: 3%)
+### Pattern 1 (relevance: 35%)
 
 **When you see:**
 ```
@@ -34,7 +35,7 @@ _From task: miglioriamo lo stile della pagina news.html per renderlo molto piu m
 
 ## Global Patterns (cross-project)
 
-### Pattern 1 (relevance: 18%)
+### Pattern 1
 
 **When you see:**
 ```
