@@ -5,11 +5,11 @@
 
 <!-- DO NOT EDIT BELOW — managed by HyperOrchestrator -->
 
-**Current task context:** Remove the contact form from the contact page, ensuring the remaining elements are properly rearranged to maintain a clean and visually appealing layout, coherent with the existing design.
+**Current task context:** Enhance the 'Vuoi Partecipare alle Nostre Attività?' section on the 'Le Nostre Attività' page to make it more immersive, modern, and intuitive, particularly for mobile views, while maintaining consist
 
 ## Project-Specific Patterns
 
-### Pattern 1 (relevance: 12%)
+### Pattern 1 (relevance: 3%)
 
 **When you see:**
 ```
@@ -34,7 +34,7 @@ _From task: miglioriamo lo stile della pagina news.html per renderlo molto piu m
 
 ## Global Patterns (cross-project)
 
-### Pattern 1 (relevance: 50%)
+### Pattern 1 (relevance: 23%)
 
 **When you see:**
 ```
