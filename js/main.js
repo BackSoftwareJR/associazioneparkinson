@@ -873,4 +873,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     initSedeMap();
+
+    function initFooterAccordions() {
+        const accordions = document.querySelectorAll('.footer-accordion');
+        if (!accordions.length) return;
+
+        const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+        function syncFooterAccordions() {
+            accordions.forEach(function(details) {
+                if (mobileQuery.matches) {
+                    if (details.classList.contains('footer-accordion--nav')) {
+                        details.open = false;
+                    } else {
+                        details.open = true;
+                    }
+                    return;
+                }
+
+                details.open = true;
+            });
+        }
+
+        syncFooterAccordions();
+        if (typeof mobileQuery.addEventListener === 'function') {
+            mobileQuery.addEventListener('change', syncFooterAccordions);
+        } else if (typeof mobileQuery.addListener === 'function') {
+            mobileQuery.addListener(syncFooterAccordions);
+        }
+    }
+
+    initFooterAccordions();
 });

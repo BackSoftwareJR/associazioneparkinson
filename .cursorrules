@@ -5,11 +5,11 @@
 
 <!-- DO NOT EDIT BELOW — managed by HyperOrchestrator -->
 
-**Current task context:** Enhance the 'Vuoi Partecipare alle Nostre Attività?' section on the 'Le Nostre Attività' page to make it more immersive, modern, and intuitive, particularly for mobile views, while maintaining consist
+**Current task context:** Redesign the mobile footer to be more intuitive, organized, and visually appealing, ensuring a clean and modern style that aligns with the existing website's design, making it easy for users to naviga
 
 ## Project-Specific Patterns
 
-### Pattern 1 (relevance: 3%)
+### Pattern 1 (relevance: 15%)
 
 **When you see:**
 ```
@@ -34,7 +34,7 @@ _From task: miglioriamo lo stile della pagina news.html per renderlo molto piu m
 
 ## Global Patterns (cross-project)
 
-### Pattern 1 (relevance: 23%)
+### Pattern 1 (relevance: 39%)
 
 **When you see:**
 ```
