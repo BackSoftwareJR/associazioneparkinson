@@ -624,7 +624,129 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
+        function initMotoriaNav() {
+            const grid = document.getElementById('act-motoria-grid');
+            if (!grid) return;
+
+            const tabs = Array.from(document.querySelectorAll('.act-motoria-nav-btn'));
+            const cards = Array.from(grid.querySelectorAll('.act-motoria-card'));
+            const dots = Array.from(document.querySelectorAll('.act-motoria-dot'));
+            const mobileQuery = window.matchMedia('(max-width: 900px)');
+
+            function setActiveIndex(index) {
+                const safeIndex = Math.max(0, Math.min(index, cards.length - 1));
+
+                tabs.forEach((tab, i) => {
+                    const isActive = i === safeIndex;
+                    tab.classList.toggle('is-active', isActive);
+                    tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    tab.tabIndex = isActive ? 0 : -1;
+                });
+
+                cards.forEach((card, i) => {
+                    card.classList.toggle('is-active', i === safeIndex);
+                });
+
+                dots.forEach((dot, i) => {
+                    const isActive = i === safeIndex;
+                    dot.classList.toggle('is-active', isActive);
+                    if (isActive) {
+                        dot.setAttribute('aria-current', 'true');
+                    } else {
+                        dot.removeAttribute('aria-current');
+                    }
+                });
+            }
+
+            function scrollToCard(index) {
+                const card = cards[index];
+                if (!card) return;
+
+                const behavior = reduceMotion ? 'auto' : 'smooth';
+
+                if (mobileQuery.matches) {
+                    const offset = card.offsetLeft - (grid.clientWidth - card.clientWidth) / 2;
+                    grid.scrollTo({ left: offset, behavior });
+                    return;
+                }
+
+                card.scrollIntoView({ behavior, block: 'nearest' });
+            }
+
+            function getIndexFromScroll() {
+                const trackCenter = grid.scrollLeft + grid.clientWidth / 2;
+                let closestIndex = 0;
+                let closestDistance = Infinity;
+
+                cards.forEach((card, i) => {
+                    const cardCenter = card.offsetLeft + card.clientWidth / 2;
+                    const distance = Math.abs(trackCenter - cardCenter);
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestIndex = i;
+                    }
+                });
+
+                return closestIndex;
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const index = Number(tab.dataset.motoriaIndex);
+                    setActiveIndex(index);
+                    scrollToCard(index);
+                });
+
+                tab.addEventListener('keydown', (event) => {
+                    const currentIndex = tabs.indexOf(tab);
+                    let nextIndex = currentIndex;
+
+                    if (event.key === 'ArrowRight') {
+                        nextIndex = (currentIndex + 1) % tabs.length;
+                    } else if (event.key === 'ArrowLeft') {
+                        nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+                    } else {
+                        return;
+                    }
+
+                    event.preventDefault();
+                    tabs[nextIndex].focus();
+                    setActiveIndex(nextIndex);
+                    scrollToCard(nextIndex);
+                });
+            });
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const index = Number(dot.dataset.motoriaIndex);
+                    setActiveIndex(index);
+                    scrollToCard(index);
+                });
+            });
+
+            let scrollRaf = null;
+            grid.addEventListener('scroll', () => {
+                if (!mobileQuery.matches) return;
+                if (scrollRaf) cancelAnimationFrame(scrollRaf);
+                scrollRaf = requestAnimationFrame(() => {
+                    setActiveIndex(getIndexFromScroll());
+                });
+            }, { passive: true });
+
+            if (window.location.hash) {
+                const hashIndex = cards.findIndex(card => card.id === window.location.hash.slice(1));
+                if (hashIndex >= 0) {
+                    setActiveIndex(hashIndex);
+                    requestAnimationFrame(() => scrollToCard(hashIndex));
+                    return;
+                }
+            }
+
+            setActiveIndex(0);
+        }
+
         initAnchorNav();
+        initMotoriaNav();
         initParallaxImages();
     }
 

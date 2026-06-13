@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=233">
-    <script src="js/main.js?v=233" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=234">
+    <script src="js/main.js?v=234" defer></script>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body class="page-activities">
@@ -170,54 +170,85 @@
                     <p class="section-subtitle">Esercizio fisico adattato, seguito da volontari formati, per mantenere mobilità ed equilibrio in un ambiente accogliente e non competitivo.</p>
                 </header>
 
-                <div class="act-feature-grid">
-                    <article class="act-feature-card reveal" data-reveal id="ginnastica">
-                        <div class="act-feature-media">
-                            <img src="images/new-images/img20.jpg" alt="Sessione di ginnastica dolce in gruppo" width="480" height="320" loading="lazy">
-                            <span class="act-feature-badge"><i class="fas fa-walking" aria-hidden="true"></i> Ginnastica</span>
-                        </div>
-                        <div class="act-feature-body">
-                            <h3>Ginnastica Dolce e AFA</h3>
-                            <p>Ginnastica dolce e attività fisica adattata (AFA) in piccoli gruppi, corsi di Taijiquan e Qi Gong per postura, equilibrio e rilassamento.</p>
-                            <ul class="activities-card-tags" aria-label="Dettagli">
-                                <li><i class="fas fa-users" aria-hidden="true"></i> Piccoli gruppi</li>
-                                <li><i class="fas fa-spa" aria-hidden="true"></i> Tai Chi &amp; Qi Gong</li>
-                                <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tutte le sedi</li>
-                            </ul>
-                        </div>
-                    </article>
+                <div class="act-motoria-showcase reveal" data-reveal>
+                    <nav class="act-motoria-nav" role="tablist" aria-label="Tipi di attività motoria">
+                        <button type="button" class="act-motoria-nav-btn is-active" role="tab" id="motoria-tab-0" aria-selected="true" aria-controls="ginnastica" data-motoria-index="0">
+                            <i class="fas fa-walking" aria-hidden="true"></i>
+                            <span>Ginnastica dolce</span>
+                        </button>
+                        <button type="button" class="act-motoria-nav-btn" role="tab" id="motoria-tab-1" aria-selected="false" aria-controls="palestra" data-motoria-index="1" tabindex="-1">
+                            <i class="fas fa-dumbbell" aria-hidden="true"></i>
+                            <span>Palestra</span>
+                        </button>
+                        <button type="button" class="act-motoria-nav-btn" role="tab" id="motoria-tab-2" aria-selected="false" aria-controls="passeggiate" data-motoria-index="2" tabindex="-1">
+                            <i class="fas fa-hiking" aria-hidden="true"></i>
+                            <span>Passeggiate</span>
+                        </button>
+                    </nav>
 
-                    <article class="act-feature-card act-feature-card--reverse reveal" data-reveal data-reveal-delay="1" id="palestra">
-                        <div class="act-feature-media">
-                            <img src="images/palestra-1.jpg" alt="Palestra riabilitativa con macchinari a movimento assistito" width="480" height="320" loading="lazy">
-                            <span class="act-feature-badge"><i class="fas fa-dumbbell" aria-hidden="true"></i> Palestra</span>
-                        </div>
-                        <div class="act-feature-body">
-                            <h3>Palestra Riabilitativa</h3>
-                            <p>Palestra di Castellamonte con macchinari a movimento assistito per malati con difficoltà motorie importanti, seguiti dai volontari con attenzione e pazienza.</p>
-                            <ul class="activities-card-tags" aria-label="Dettagli">
-                                <li><i class="fas fa-building" aria-hidden="true"></i> Castellamonte</li>
-                                <li><i class="fas fa-cogs" aria-hidden="true"></i> Movimento assistito</li>
-                                <li><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Seguiti dai volontari</li>
-                            </ul>
-                        </div>
-                    </article>
+                    <div class="act-motoria-grid" id="act-motoria-grid">
+                        <article class="act-card act-motoria-card is-active" id="ginnastica" role="tabpanel" aria-labelledby="motoria-tab-0" data-motoria-index="0">
+                            <div class="act-card-media">
+                                <img src="images/new-images/img20.jpg" alt="Sessione di ginnastica dolce in gruppo" width="400" height="260" loading="lazy">
+                                <span class="act-card-icon" aria-hidden="true"><i class="fas fa-walking"></i></span>
+                            </div>
+                            <div class="act-card-body">
+                                <h3>Ginnastica Dolce e AFA</h3>
+                                <p>Ginnastica dolce e attività fisica adattata (AFA) in piccoli gruppi, corsi di Taijiquan e Qi Gong per postura, equilibrio e rilassamento.</p>
+                                <ul class="activity-details" aria-label="Dettagli">
+                                    <li><i class="fas fa-users" aria-hidden="true"></i> Piccoli gruppi</li>
+                                    <li><i class="fas fa-spa" aria-hidden="true"></i> Tai Chi &amp; Qi Gong</li>
+                                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tutte le sedi</li>
+                                </ul>
+                                <a href="contatti.html" class="act-motoria-cta">Chiedi informazioni <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </article>
 
-                    <article class="act-feature-card reveal" data-reveal data-reveal-delay="2" id="passeggiate">
-                        <div class="act-feature-media">
-                            <img src="images/passeg.jpeg" alt="Passeggiate di gruppo nella natura canavesana" width="480" height="320" loading="lazy">
-                            <span class="act-feature-badge"><i class="fas fa-hiking" aria-hidden="true"></i> Natura</span>
-                        </div>
-                        <div class="act-feature-body">
-                            <h3>Passeggiate di Gruppo</h3>
-                            <p>Camminate tradizionali o Nordic Walking nella natura canavesana, per unire esercizio fisico e socializzazione in un contesto rigenerante.</p>
-                            <ul class="activities-card-tags" aria-label="Dettagli">
-                                <li><i class="fas fa-tree" aria-hidden="true"></i> All'aperto</li>
-                                <li><i class="fas fa-hiking" aria-hidden="true"></i> Nordic Walking</li>
-                                <li><i class="fas fa-comments" aria-hidden="true"></i> Socializzazione</li>
-                            </ul>
-                        </div>
-                    </article>
+                        <article class="act-card act-motoria-card" id="palestra" role="tabpanel" aria-labelledby="motoria-tab-1" data-motoria-index="1">
+                            <div class="act-card-media">
+                                <img src="images/palestra-1.jpg" alt="Palestra riabilitativa con macchinari a movimento assistito" width="400" height="260" loading="lazy">
+                                <span class="act-card-icon" aria-hidden="true"><i class="fas fa-dumbbell"></i></span>
+                            </div>
+                            <div class="act-card-body">
+                                <h3>Palestra Riabilitativa</h3>
+                                <p>Palestra di Castellamonte con macchinari a movimento assistito per malati con difficoltà motorie importanti, seguiti dai volontari con attenzione e pazienza.</p>
+                                <ul class="activity-details" aria-label="Dettagli">
+                                    <li><i class="fas fa-building" aria-hidden="true"></i> Castellamonte</li>
+                                    <li><i class="fas fa-cogs" aria-hidden="true"></i> Movimento assistito</li>
+                                    <li><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Seguiti dai volontari</li>
+                                </ul>
+                                <a href="sedi/castellamonte.html" class="act-motoria-cta">Visita la sede <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="act-card act-motoria-card" id="passeggiate" role="tabpanel" aria-labelledby="motoria-tab-2" data-motoria-index="2">
+                            <div class="act-card-media">
+                                <img src="images/passeg.jpeg" alt="Passeggiate di gruppo nella natura canavesana" width="400" height="260" loading="lazy">
+                                <span class="act-card-icon" aria-hidden="true"><i class="fas fa-hiking"></i></span>
+                            </div>
+                            <div class="act-card-body">
+                                <h3>Passeggiate di Gruppo</h3>
+                                <p>Camminate tradizionali o Nordic Walking nella natura canavesana, per unire esercizio fisico e socializzazione in un contesto rigenerante.</p>
+                                <ul class="activity-details" aria-label="Dettagli">
+                                    <li><i class="fas fa-tree" aria-hidden="true"></i> All'aperto</li>
+                                    <li><i class="fas fa-hiking" aria-hidden="true"></i> Nordic Walking</li>
+                                    <li><i class="fas fa-comments" aria-hidden="true"></i> Socializzazione</li>
+                                </ul>
+                                <a href="contatti.html" class="act-motoria-cta">Partecipa alle passeggiate <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="act-motoria-dots" aria-label="Navigazione attività motorie">
+                        <button type="button" class="act-motoria-dot is-active" aria-label="Ginnastica dolce" data-motoria-index="0" aria-current="true"></button>
+                        <button type="button" class="act-motoria-dot" aria-label="Palestra riabilitativa" data-motoria-index="1"></button>
+                        <button type="button" class="act-motoria-dot" aria-label="Passeggiate di gruppo" data-motoria-index="2"></button>
+                    </div>
+
+                    <div class="act-motoria-footer">
+                        <p class="act-motoria-footer-hint"><i class="fas fa-gift" aria-hidden="true"></i> Tutte le attività motorie sono gratuite per gli associati</p>
+                        <a href="contatti.html" class="cta-button act-motoria-footer-cta"><i class="fas fa-calendar-check" aria-hidden="true"></i> Chiedi informazioni</a>
+                    </div>
                 </div>
             </div>
         </section>

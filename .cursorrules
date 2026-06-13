@@ -5,11 +5,11 @@
 
 <!-- DO NOT EDIT BELOW — managed by HyperOrchestrator -->
 
-**Current task context:** Redesign the mobile footer to be more intuitive, organized, and visually appealing, ensuring a clean and modern style that aligns with the existing website's design, making it easy for users to naviga
+**Current task context:** Migliorare la sezione Attività Motorie e Riabilitative nella pagina attività, assicurandosi che le card siano ben visibili e facilmente navigabili, con un design coerente con il resto del sito e che r
 
 ## Project-Specific Patterns
 
-### Pattern 1 (relevance: 15%)
+### Pattern 1 (relevance: 6%)
 
 **When you see:**
 ```
@@ -34,7 +34,7 @@ _From task: miglioriamo lo stile della pagina news.html per renderlo molto piu m
 
 ## Global Patterns (cross-project)
 
-### Pattern 1 (relevance: 39%)
+### Pattern 1
 
 **When you see:**
 ```
